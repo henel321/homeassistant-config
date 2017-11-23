@@ -1,4 +1,4 @@
-alias: "Turn on office light at sunset" 
+alias: "Turn on Vilhelms computer light at sunset" 
 trigger: 
   platform: sun 
   event: sunset
