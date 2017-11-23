@@ -1,0 +1,13 @@
+alias: "20:30 and Vilhelms Workstation Turned Off" 
+trigger: 
+  platform: time 
+  at: '20:30:00' 
+condition:
+  condition: state 
+  entity_id: device_tracker.workstationbarnen
+  state: 'not_home'  
+action:
+  service: switch.turn_off
+  entity_id:
+  - switch.telldusvilhelm_switch
+

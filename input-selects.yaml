@@ -1,0 +1,12 @@
+scene_lr:
+  name: Scene
+  icon: mdi:brightness-auto
+  initial: "-"
+  options:
+    - "-"
+    - "Off"
+    - Movie 
+    - Romantic
+    - Normal 
+    - Bright
+

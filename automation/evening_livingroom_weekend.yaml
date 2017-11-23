@@ -1,0 +1,15 @@
+alias: "Weekend - Turn off Living room lights in the evening"
+trigger: 
+  platform: time
+  at: "01:00:00"
+condition:
+  condition: time
+  weekday: 
+    - sat 
+    - sun 
+action: 
+  service: light.turn_off
+  entity_id:
+  - group.livingroom
+
+ 

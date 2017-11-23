@@ -1,0 +1,15 @@
+alias: "Workstation Turned Off and after 2200" 
+trigger: 
+  platform: state 
+  entity_id: device_tracker.workstationcartman
+  from: 'home'
+  to: 'not_home'
+condition:
+  condition: time
+  after: '22:00:00' 
+action:
+  service: switch.turn_off
+  entity_id:
+  - switch.nodon_msp31xx_micro_smart_plug_switch
+  - switch.telldusextra_switch
+

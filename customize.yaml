@@ -1,0 +1,6 @@
+switch.nodon_msp31xx_micro_smart_plug_switch:
+  friendly_name: "Office LED strip"
+switch.telldusvilhelm_switch: 
+  friendly_name: "Vilhelm LED strip" 
+switch.telldusextra_switch: 
+  friendly_name: "Extra switch"

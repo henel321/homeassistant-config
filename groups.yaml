@@ -1,0 +1,102 @@
+default_view:
+ view: yes
+ icon: mdi:home 
+ entities: 
+ - zone.home
+ - device_tracker.galaxy_s7__henrik
+ - device_tracker.galaxy_s7__maria
+ - device_tracker.oneplus_x__vilhelm
+ - device_tracker.workstationcartman
+ - device_tracker.workstationbarnen
+ - sun.sun
+ - sensor.weather_symbol
+ - group.bedroom
+ - group.livingroom
+ - group.vilhelms_room
+ - group.elins_room
+ - group.office
+ - group.hallway
+
+bedroom: 
+ name: Bedroom
+ icon: mdi:hotel
+ entities:
+ - light.marias_light
+ - light.henriks_light
+
+hallway:
+ name: Hallway
+ icon: mdi:home-outline
+ entities: 
+ - light.hallway
+
+livingroom: 
+ name: "Living room"
+ icon: mdi:food-fork-drink
+ entities:
+ - input_number.brightness_lr
+ - input_select.scene_lr
+ - light.living_room_1 
+ - light.living_room_2
+ - light.tv_light
+ - light.ikea_ps_uplight
+ - light.lifx_led_strip
+
+vilhelms_room: 
+ name: "Vilhelm's room"
+ icon: mdi:account-multiple
+ entities:
+ - light.vilhelms_light_bulb
+ - switch.telldusvilhelm_switch
+ 
+elins_room: 
+ name: "Elin's room"
+ icon: mdi:account-multiple
+ entities:
+ - light.elins_light_bulb
+
+office: 
+ name: "Office / Guest room"
+ icon: mdi:worker
+ entities:
+ - switch.nodon_msp31xx_micro_smart_plug_switch
+ - switch.telldusextra_switch
+
+squeezebox: 
+ control: hidden
+ name: "Squeezeboxes" 
+ view: yes
+ icon: mdi:music
+ entities: 
+ - media_player.sb_boom__bedroom
+ - media_player.sb_radio__elins_room
+ - media_player.sb_touch__living_room
+ - media_player.sb_radio__office
+
+google: 
+ control: hidden
+ name: "Google Cast" 
+ view: yes
+ icon: mdi:cast
+ entities: 
+ - media_player.kitchen_home
+ - media_player.office_speaker
+ - media_player.living_room
+ - media_player.bedroom
+
+weather: 
+ name: "Weather"
+ view: yes
+ icon: mdi:weather-cloudy
+ entities: 
+ - sun.sun
+ - sensor.weather_symbol
+ - sensor.weather_temperature
+ - sensor.weather_cloudiness
+ - sensor.weather_fog
+ - sensor.weather_precipitation
+ - sensor.weather_humidity
+ - sensor.weather_pressure
+ - sensor.weather_wind_direction
+ - sensor.weather_wind_speed
+ 

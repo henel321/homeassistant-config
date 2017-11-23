@@ -1,0 +1,9 @@
+alias: "Turn off hallway light" 
+trigger: 
+  platform: time
+  at: "20:00:00"
+action:
+  service: light.turn_off
+  entity_id:
+  - light.hallway 
+ 

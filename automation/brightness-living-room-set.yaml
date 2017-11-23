@@ -1,0 +1,16 @@
+alias: Brightness Living Room
+trigger:
+  platform: state
+  entity_id: input_number.brightness_lr
+action:
+  service: light.turn_on
+  data:
+    entity_id:
+      - light.living_room_1 
+      - light.living_room_2
+      - light.tv_light
+      - light.ikea_ps_uplight
+      - light.lifx_led_strip
+  data_template:
+    brightness: '{{ states( "input_number.brightness_lr" )|round( 0 ) }}'
+

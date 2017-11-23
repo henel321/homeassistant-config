@@ -1,0 +1,12 @@
+- name: LR Off
+  entities:
+   light.ikea_ps_uplight:
+      state: off
+   light.living_room_1:
+      state: off
+   light.living_room_2:
+      state: off
+   light.tv_light: 
+      state: off
+   light.lifx_led_strip:
+      state: off

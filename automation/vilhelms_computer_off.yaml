@@ -1,0 +1,14 @@
+alias: "Workstation Turned Off and after 20:30" 
+trigger: 
+  platform: state 
+  entity_id: device_tracker.workstationbarnen
+  from: 'home'
+  to: 'not_home'
+condition:
+  condition: time
+  after: '20:30:00' 
+action:
+  service: switch.turn_off
+  entity_id:
+  - switch.telldusvilhelm_switch
+

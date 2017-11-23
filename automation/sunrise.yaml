@@ -1,0 +1,17 @@
+alias: "Turn off lights in Kids' room, Living Room and Bedrom after sunrise"
+trigger:
+  platform: sun
+  event: sunrise
+  offset: +01:30:00
+action:
+  service: light.turn_off
+  entity_id:
+  - group.livingroom
+  - group.bedroom
+  - group.elins_room
+  - group.vilhelms_room
+  - group.hallway
+
+
+ 
+ 

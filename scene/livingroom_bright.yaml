@@ -1,0 +1,22 @@
+- name: LR Bright 
+  entities:
+   light.ikea_ps_uplight:
+      state: on
+      brightness: 255 
+      color_temp: 461
+   light.living_room_1:
+      state: on
+      brightness: 255 
+      color_temp: 461
+   light.living_room_2:
+      state: on
+      brightness: 255
+      color_temp: 461
+   light.tv_light: 
+      state: on
+      brightness: 255
+      color_temp: 461
+   light.lifx_led_strip:
+      state: on 
+      brightness: 255 
+      color_temp: 361 

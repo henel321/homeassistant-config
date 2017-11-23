@@ -1,0 +1,42 @@
+alias: Scene Living Room
+trigger:
+  platform: state
+  entity_id: input_select.scene_lr
+condition:
+  condition: or
+  conditions:
+    - condition: state
+      entity_id: 'input_select.scene_lr'
+      state: 'Romantic'
+    - condition: state
+      entity_id: 'input_select.scene_lr'
+      state: 'Movie'
+    - condition: state
+      entity_id: 'input_select.scene_lr'
+      state: 'Normal'
+    - condition: state
+      entity_id: 'input_select.scene_lr'
+      state: 'Bright'
+    - condition: state
+      entity_id: 'input_select.scene_lr'
+      state: 'Off'
+action:
+  - service: scene.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state( "input_select.scene_lr", "Romantic" ) %}
+          scene.lr_romantic
+        {%-elif is_state( "input_select.scene_lr", "Movie" ) %}
+          scene.lr_movie
+        {%-elif is_state( "input_select.scene_lr", "Normal" ) %}
+          scene.lr_normal
+        {%-elif is_state( "input_select.scene_lr", "Bright" ) %}
+          scene.lr_bright
+        {%-elif is_state( "input_select.scene_lr", "Off" ) %}
+          scene.lr_off
+        {% endif %}
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.scene_lr
+      option: "-"
+

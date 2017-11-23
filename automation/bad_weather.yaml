@@ -1,0 +1,24 @@
+alias: "Bad weather - lights on!"
+trigger: 
+  platform: sun 
+  event: sunset
+  offset: -02:00:00 
+condition: 
+  condition: numeric_state
+  entity_id: sensor.weather_cloudiness 
+  above: "50" 
+action: 
+  service: light.turn_on
+  entity_id:
+  - group.livingroom
+  - group.bedroom 
+  - group.elins_room
+  - group.vilhelms_room
+  - group.office
+  data:
+    brightness: 150
+    color_temp: 458.50527281063734
+
+
+ 
+ 

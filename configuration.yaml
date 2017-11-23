@@ -1,0 +1,117 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret latitude 
+  longitude: !secret longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 11
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: !secret time_zone 
+  #Customize names 
+  customize: !include customize.yaml
+
+# Show links to resources in log and frontend
+# introduction:
+
+# Enables the frontend
+frontend:
+  javascript_version: latest
+
+recorder: 
+  purge_interval: 7
+  purge_keep_days: 30 
+  db_url: !secret db_url
+
+# Enables configuration UI
+config:
+
+http:
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+# Weather prediction
+sensor:
+  - platform: yr
+    name: Weather
+    forecast: 24
+    monitored_conditions:
+      - temperature
+      - symbol
+      - precipitation
+      - windSpeed
+      - pressure
+      - windDirection
+      - humidity
+      - fog
+      - cloudiness
+
+# Text to speech
+tts:
+  - platform: google
+
+group: !include groups.yaml
+automation: !include_dir_list automation
+scene: !include_dir_list scene
+
+# Controls
+input_select: !include input-selects.yaml
+input_number: !include input-numbers.yaml
+
+google_assistant:
+  project_id: homeassistant-20171104 
+  client_id: !secret ga_client_id 
+  access_token: !secret ga_access_token
+  exposed_domains:
+    - switch
+    - light
+    - group
+
+# Zwave configuration
+zwave: 
+  usb_path: /dev/ttyACM0
+
+# Track wifi users through unifi
+device_tracker:
+  - platform: unifi
+    host: !secret unifi_host 
+    username: !secret unifi_username 
+    password: !secret unifi_password 
+    verify_ssl: false
+    track_new_devices: no 
+
+notify:
+  - name: pushbullet 
+    platform: pushbullet
+    api_key: !secret pb_access_token 
+
+tradfri: 
+  host: !secret tradfri_host
+  allow_tradfri_groups: false
+
+light: 
+  - platform: lifx
