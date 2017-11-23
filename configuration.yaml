@@ -18,7 +18,7 @@ homeassistant:
 
 # Enables the frontend
 frontend:
-  javascript_version: latest
+:  javascript_version: latest
 
 recorder: 
   purge_interval: 7
