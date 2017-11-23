@@ -4,5 +4,6 @@
 !automation
 !automation_off
 !.gitignore
+!.travis.yml
 secrets.yaml
 known_devices.yaml
