@@ -103,6 +103,8 @@ device_tracker:
     password: !secret unifi_password 
     verify_ssl: false
     track_new_devices: no 
+    consider_home: 180
+    interval_seconds: 10
 
 notify:
   - name: pushbullet 
