@@ -1,0 +1,2 @@
+# homeassistant-config
+Homeassistant configuration
