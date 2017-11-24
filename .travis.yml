@@ -9,5 +9,9 @@ script:
   - hass -c . --script check_config
 notifications:
   email:
-    - henrik@tillander.org
+    recipients:
+      - henrik@tillander.org
+    on_success: always
+    on_failure: always
+    
 
