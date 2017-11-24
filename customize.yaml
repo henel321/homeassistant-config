@@ -4,3 +4,7 @@ switch.telldusvilhelm_switch:
   friendly_name: "Vilhelm LED strip" 
 switch.telldusextra_switch: 
   friendly_name: "Extra switch"
+switch.tellduselin_switch:
+  friendly_name: "Elins LED strip"
+switch.telldusjulgran_switch:
+  friendly_name: "Julgran"

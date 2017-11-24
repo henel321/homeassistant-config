@@ -10,12 +10,13 @@ default_view:
  - device_tracker.workstationbarnen
  - sun.sun
  - sensor.weather_symbol
- - group.bedroom
  - group.livingroom
+ - group.bedroom
  - group.vilhelms_room
  - group.elins_room
  - group.office
  - group.hallway
+ - group.christmas
 
 bedroom: 
  name: Bedroom
@@ -54,6 +55,7 @@ elins_room:
  icon: mdi:account-multiple
  entities:
  - light.elins_light_bulb
+ - switch.tellduselin_switch
 
 office: 
  name: "Office / Guest room"
@@ -61,6 +63,12 @@ office:
  entities:
  - switch.nodon_msp31xx_micro_smart_plug_switch
  - switch.telldusextra_switch
+
+christmas: 
+  name: "Christmas lights"
+  icon: mdi:star
+  entities: 
+  - switch.telldusjulgran_switch
 
 squeezebox: 
  control: hidden
