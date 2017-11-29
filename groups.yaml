@@ -30,6 +30,7 @@ hallway:
  icon: mdi:home-outline
  entities: 
  - light.hallway
+ - camera.hallway
 
 livingroom: 
  name: "Living room"

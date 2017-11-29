@@ -54,6 +54,15 @@ logbook:
 # Track the sun
 sun:
 
+ffmpeg:
+  ffmpeg_bin: /usr/bin/avconv
+
+camera:
+  - platform: ffmpeg
+    input: rtsp://192.168.100.135/unicast
+    name: Hallway
+
+
 # Weather prediction
 sensor:
   - platform: yr
