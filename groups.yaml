@@ -50,6 +50,7 @@ vilhelms_room:
  entities:
  - light.vilhelms_light_bulb
  - switch.telldusvilhelm_switch
+ - switch.telldusjulgran_switch
  
 elins_room: 
  name: "Elin's room"
@@ -57,19 +58,14 @@ elins_room:
  entities:
  - light.elins_light_bulb
  - switch.tellduselin_switch
+ - switch.telldusextra_switch
+
 
 office: 
  name: "Office / Guest room"
  icon: mdi:worker
  entities:
  - switch.nodon_msp31xx_micro_smart_plug_switch
- - switch.telldusextra_switch
-
-christmas: 
-  name: "Christmas lights"
-  icon: mdi:star
-  entities: 
-  - switch.telldusjulgran_switch
 
 squeezebox: 
  control: hidden

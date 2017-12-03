@@ -62,6 +62,11 @@ camera:
     input: rtsp://192.168.100.135/unicast
     name: Hallway
 
+remote:
+  - platform: harmony
+    name: harmony 
+    host: 192.168.100.136 
+
 
 # Weather prediction
 sensor:
