@@ -40,7 +40,7 @@ livingroom:
  - input_select.scene_lr
  - light.living_room_1 
  - light.living_room_2
- - light.tv_light
+# - light.tv_light
  - light.ikea_ps_uplight
  - light.lifx_led_strip
 
