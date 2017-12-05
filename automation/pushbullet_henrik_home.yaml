@@ -1,0 +1,10 @@
+alias: 'Notify that Henrik is home' 
+trigger: 
+  platform: state 
+  entity_id: device_tracker.galaxy_s7__henrik 
+  from: 'not_home'
+  to: 'home'
+action:
+  service: notify.pushbullet
+  data:
+    message: 'Henrik is home'
