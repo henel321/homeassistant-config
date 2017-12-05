@@ -1,8 +1,8 @@
 alias: Update notifications
-  trigger:
-    - platform: state
-      entity_id: updater.updater
-  action:
-    service: notify.pushbullet
-    data:
-      message: 'There is a new Home Assistant release available.'
+trigger:
+  platform: state
+  entity_id: updater.updater
+action:
+  service: notify.pushbullet
+  data:
+    message: 'There is a new Home Assistant release available.'
