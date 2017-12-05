@@ -1,0 +1,15 @@
+alias: "Turn on LIFX when lights turned on in living room."
+trigger: 
+  platform: state
+  entity_id: light.ikea_ps_uplight
+  from: "off" 
+  to: "on"
+action:
+  service: light.turn_on
+  entity_id:
+  - light.lifx_led_strip
+  data: 
+    brightness: 140 
+    color_temp: 285
+  
+ 

@@ -1,0 +1,12 @@
+alias: "Turn off LIFX when lights turned off in living room."
+trigger: 
+  platform: state
+  entity_id: light.ikea_ps_uplight
+  from: "on" 
+  to: "off"
+action:
+  service: light.turn_off
+  entity_id:
+  - light.lifx_led_strip
+  
+ 
