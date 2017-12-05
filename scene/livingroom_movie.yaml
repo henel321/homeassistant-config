@@ -4,14 +4,17 @@
       state: on
       brightness: 150 
       color_temp: 461
+      transition: 10
    light.living_room_1:
       state: on
       brightness: 35 
       color_temp: 461
+      transition: 10 
    light.living_room_2:
       state: on
       brightness: 35 
       color_temp: 461
+      transition: 10
    light.lifx_led_strip:
       state: on 
       brightness: 76 
