@@ -30,7 +30,12 @@ config:
 
 http:
   api_password: !secret api_password
-  trusted_networks: 192.168.100.0/24
+  trusted_networks: 
+    - 192.168.100.0/24
+    - 127.0.0.1
+
+logger: 
+  default: warning
 
 # Checks for available updates
 # Note: This component will send some information about your system to
