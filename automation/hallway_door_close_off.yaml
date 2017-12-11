@@ -1,0 +1,12 @@
+alias: Turn off light five mintes after door close.  
+trigger:
+  platform: state
+  entity_id: binary_sensor.neo_coolcam_doorwindow_detector_sensor
+  from: 'on'
+  to: 'off'
+  for:
+    minutes: 5
+action:
+  service: light.turn_off
+  entity_id: 
+    - light.hallway

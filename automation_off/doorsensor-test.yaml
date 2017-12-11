@@ -1,0 +1,12 @@
+alias: 'Test door sensor in hallway'
+trigger: 
+  platform: state
+  entity_id: binary_sensor.neo_coolcam_doorwindow_detector_sensor 
+  from: 'off'
+  to: 'on'
+action:
+  service: switch.turn_on
+  entity_id:
+  - switch.nodon_msp31xx_micro_smart_plug_switch 
+
+

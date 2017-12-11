@@ -1,0 +1,11 @@
+alias: Turn off hallway light 3 minutes after last movement
+trigger:
+  platform: state
+  entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor
+  to: 'off'
+  for:
+    minutes: 5 
+action:
+  service: light.turn_off
+  entity_id: 
+    - light.hallway

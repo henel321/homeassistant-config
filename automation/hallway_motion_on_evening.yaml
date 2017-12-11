@@ -1,0 +1,17 @@
+alias: 'Turn on Hallway light when movement'
+trigger: 
+  platform: state
+  entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor 
+  from: 'off'
+  to: 'on'
+condition:
+  condition: time
+  after: '14:00:00'
+  before: '20:00:00' 
+action:
+  service: light.turn_on
+  entity_id:
+    - light.hallway
+  data:
+    brightness: 50
+

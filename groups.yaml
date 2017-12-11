@@ -18,6 +18,7 @@ default_view:
  - group.hallway
  - group.christmas
 
+
 bedroom: 
  name: Bedroom
  icon: mdi:hotel
@@ -104,4 +105,4 @@ weather:
  - sensor.weather_pressure
  - sensor.weather_wind_direction
  - sensor.weather_wind_speed
- 
+

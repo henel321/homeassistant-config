@@ -1,0 +1,12 @@
+alias: 'Turn on Hallway light when door opens'
+trigger:
+  platform: state
+  entity_id: binary_sensor.neo_coolcam_doorwindow_detector_sensor
+  from: 'off'
+  to: 'on'
+action:
+  service: light.turn_on
+  entity_id:
+    - light.hallway
+  data:
+    brightness: 200

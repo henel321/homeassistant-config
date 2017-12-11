@@ -1,0 +1,11 @@
+alias: 'Notify that outer door is open' 
+trigger:
+  platform: state
+  entity_id: binary_sensor.neo_coolcam_doorwindow_detector_sensor
+  from: 'off'
+  to: 'on'
+action:
+  service: notify.pushbullet
+  data:
+    message: 'Outer door has been opened'
+
