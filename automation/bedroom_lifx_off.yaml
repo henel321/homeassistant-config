@@ -1,7 +1,7 @@
 alias: "Turn off LIFX when lights turned off in bedroom."
 trigger: 
   platform: state
-  entity_id: light.marias.light
+  entity_id: light.marias_light
   from: "on" 
   to: "off"
 action:

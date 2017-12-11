@@ -10,6 +10,7 @@ action:
   - light.bedroom_led_strip_
   data: 
     brightness: 100
-    color_name: burlywood
+    color_name: mistyrose
   
+
  
