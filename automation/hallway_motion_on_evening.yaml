@@ -13,5 +13,5 @@ action:
   entity_id:
     - light.hallway
   data:
-    brightness: 50
+    brightness: 50 
 

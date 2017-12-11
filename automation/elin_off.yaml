@@ -1,7 +1,7 @@
 alias: "Turn off Elins LED strip in the evening"
 trigger: 
   platform: time
-  at: "20:00:00"
+  at: "19:30:00"
 action:
   service: switch.turn_off
   entity_id:

@@ -25,6 +25,7 @@ bedroom:
  entities:
  - light.marias_light
  - light.henriks_light
+ - light.bedroom_led_strip_
 
 hallway:
  name: Hallway
