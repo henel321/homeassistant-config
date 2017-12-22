@@ -5,7 +5,7 @@ switch.telldusvilhelm_switch:
 switch.telldusextra_switch: 
   friendly_name: "Elin christmas light"
 switch.tellduselin_switch:
-  friendly_name: "Elins LED strip"
+  friendly_name: "Christmas tree"
 switch.telldusjulgran_switch:
   friendly_name: "Vilhelms christmas light"
 light.living_room_1:

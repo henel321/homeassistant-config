@@ -1,0 +1,8 @@
+alias: "Turn off Christmas tree in the evening" 
+trigger: 
+  platform: time
+  at: "23:30:00"
+action:
+  service: switch.turn_off
+  entity_id:
+  - switch.tellduselin_switch

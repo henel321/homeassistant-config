@@ -6,7 +6,6 @@ trigger:
 action:
   service: switch.turn_on
   entity_id:
-  - switch.tellduselin_switch
   - switch.telldusextra_switch
 
 

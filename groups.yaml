@@ -34,6 +34,12 @@ hallway:
  - light.hallway
  - camera.hallway
 
+christmas:
+ name: Christmas 
+ icon: mdi:christmas
+ entities: 
+ - switch.tellduselin_switch
+
 livingroom: 
  name: "Living room"
  icon: mdi:food-fork-drink
@@ -59,7 +65,6 @@ elins_room:
  icon: mdi:account-multiple
  entities:
  - light.elins_light_bulb
- - switch.tellduselin_switch
  - switch.telldusextra_switch
 
 
