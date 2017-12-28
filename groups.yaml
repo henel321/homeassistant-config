@@ -3,7 +3,7 @@ default_view:
  icon: mdi:home 
  entities: 
  - zone.home
- - device_tracker.galaxy_s7__henrik
+ - device_tracker.cc9f7a9f9afb
  - device_tracker.galaxy_s7__maria
  - device_tracker.oneplus_x__vilhelm
  - device_tracker.workstationcartman
@@ -66,6 +66,7 @@ elins_room:
  entities:
  - light.elins_light_bulb
  - switch.telldusextra_switch
+ - light.elins_led_strip
 
 
 office: 

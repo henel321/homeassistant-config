@@ -1,7 +1,7 @@
 alias: 'Notify that Henrik is home' 
 trigger: 
   platform: state 
-  entity_id: device_tracker.galaxy_s7__henrik 
+  entity_id: device_tracker.cc9f7a9f9afb
   from: 'not_home'
   to: 'home'
 action:
