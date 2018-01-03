@@ -16,7 +16,7 @@ action:
   - group.vilhelms_room
   - group.office
   data:
-    brightness: 150
+    brightness: 100
     color_temp: 458.50527281063734
 
  

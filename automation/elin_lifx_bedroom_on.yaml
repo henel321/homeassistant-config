@@ -1,0 +1,15 @@
+alias: "Turn on Elins LIFX when Elins light on."
+trigger: 
+  platform: state
+  entity_id: light.elins_light_bulb
+  from: "off" 
+  to: "on"
+action:
+  service: light.turn_on
+  entity_id:
+  - light.elins_led_strip
+  data: 
+    brightness: 100
+    color_name: violet
+
+ 

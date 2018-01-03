@@ -1,0 +1,12 @@
+alias: "Turn off Elins LIFX when Elins light off."
+trigger: 
+  platform: state
+  entity_id: light.elins_light_bulb
+  from: "on" 
+  to: "off"
+action:
+  service: light.turn_off
+  entity_id:
+  - light.elins_led_strip
+  
+ 

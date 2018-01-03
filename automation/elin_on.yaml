@@ -4,8 +4,14 @@ trigger:
   event: sunset
   offset: -01:30:00
 action:
-  service: switch.turn_on
-  entity_id:
-  - switch.telldusextra_switch
+  - service: switch.turn_on
+    entity_id:
+    - switch.telldusextra_switch
+  - service: light.turn_on
+    entity_id:
+    - light.elins_led_strip
+    data: 
+      brightness: 100
+      color_name: brightpink
 
 
