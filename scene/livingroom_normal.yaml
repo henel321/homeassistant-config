@@ -15,5 +15,4 @@
    light.lifx_led_strip:
       state: on 
       brightness: 130
-      transition: 10
       color_name: cornsilk
