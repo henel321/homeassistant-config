@@ -1,0 +1,4 @@
+- name: OR Normal 
+  entities:
+   switch.nodon_msp31xx_micro_smart_plug_switch:
+      state: on

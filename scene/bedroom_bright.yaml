@@ -10,5 +10,5 @@
       color_temp: 461
    light.bedroom_led_strip_:
       state: on 
-      brightness: 2551
-      color_name: cornsilk
+      brightness: 255
+      color_name: white 

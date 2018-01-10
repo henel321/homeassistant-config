@@ -1,0 +1,8 @@
+- name: ER Off 
+  entities:
+   light.elins_light_bulb:
+      state: off
+   light.elins_led_strip:
+      state: off 
+   switch.telldusextra_switch:
+      state: off

@@ -20,3 +20,26 @@ scene_br:
     - "Romantic"
     - "Normal"
     - "Bright"
+
+scene_er:
+  name: Scene
+  icon: mdi:brightness-auto
+  initial: "-"
+  options:
+    - "-"
+    - "Off"
+    - "Normal"
+    - "Party" 
+    - "Sleep"
+    - "Bright"
+
+scene_vr:
+  name: Scene
+  icon: mdi:brightness-auto
+  initial: "-"
+  options:
+    - "-"
+    - "Off"
+    - "Normal"
+    - "Sleep"
+    - "Bright"

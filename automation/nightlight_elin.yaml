@@ -1,0 +1,9 @@
+alias: "Set Elins room to night mode at 20:00" 
+trigger: 
+  platform: time
+  at: "20:00:00"
+action:
+  service: scene.turn_on
+  entity_id:
+  - scene.er_sleep
+ 

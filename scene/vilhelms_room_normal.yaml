@@ -1,0 +1,8 @@
+- name: VR Normal 
+  entities:
+   light.vilhelms_light_bulb:
+      state: on
+      brightness: 130
+      color_temp: 461
+   switch.telldusvilhelm_switch:
+      state: on

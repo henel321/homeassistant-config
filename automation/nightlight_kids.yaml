@@ -1,13 +1,11 @@
-alias: "Set kids lights to night mode at 22:00" 
+alias: "Set lights to night mode at 22:00" 
 trigger: 
   platform: time
   at: "22:00:00"
 action:
-  service: light.turn_on
+  service: scene.turn_on
   entity_id:
-  - light.elins_light_bulb
-  - light.vilhelms_light_bulb 
-  data: 
-    brightness: 1 
-    color_temp: 458.50527281063734
+  - scene.er_sleep
+  - scene.vr_sleep
+  - scene.br_romantic 
  

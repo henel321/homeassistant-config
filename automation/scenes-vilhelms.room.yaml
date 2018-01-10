@@ -1,0 +1,37 @@
+alias: Scene Vilehlms Room
+trigger:
+  platform: state
+  entity_id: input_select.scene_vr
+condition:
+  condition: or
+  conditions:
+    - condition: state
+      entity_id: 'input_select.scene_vr'
+      state: 'Normal'
+    - condition: state
+      entity_id: 'input_select.scene_vr'
+      state: 'Sleep'
+    - condition: state
+      entity_id: 'input_select.scene_vr'
+      state: 'Bright'
+    - condition: state
+      entity_id: 'input_select.scene_vr'
+      state: 'Off'
+action:
+  - service: scene.turn_on
+    data_template:
+      entity_id: >
+        {%-if is_state( "input_select.scene_vr", "Normal" ) %}
+          scene.vr_normal
+        {%-elif is_state( "input_select.scene_vr", "Sleep" ) %}
+          scene.vr_sleep
+        {%-elif is_state( "input_select.scene_vr", "Bright" ) %}
+          scene.vr_bright
+        {%-elif is_state( "input_select.scene_vr", "Off" ) %}
+          scene.vr_off
+        {% endif %}
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.scene_vr
+      option: "-"
+

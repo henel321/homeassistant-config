@@ -1,0 +1,8 @@
+- name: VR Sleep
+  entities:
+   light.vilhelms_light_bulb:
+      state: on
+      brightness: 1 
+      color_temp: 461
+   switch.telldusvilhelm_switch:
+      state: off

@@ -1,0 +1,13 @@
+- name: ER Bright
+  entities:
+   light.elins_light_bulb:
+      state: on
+      brightness: 255 
+      color_temp: 461
+   light.elins_led_strip:
+      state: on 
+      brightness: 255
+      color_name: white 
+   switch.telldusextra_switch:
+      state: on
+   

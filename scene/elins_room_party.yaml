@@ -1,0 +1,12 @@
+- name: ER Party 
+  entities:
+   light.elins_light_bulb:
+      state: on
+      brightness: 30
+      color_temp: 461
+   light.elins_led_strip:
+      state: on 
+      brightness: 200
+      color_name: magenta 
+   switch.telldusextra_switch:
+      state: off 

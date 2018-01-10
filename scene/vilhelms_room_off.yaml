@@ -1,0 +1,6 @@
+- name: VR Off 
+  entities:
+   light.vilhelms_light_bulb:
+      state: off
+   switch.telldusvilhelm_switch:
+      state: off

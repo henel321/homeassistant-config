@@ -58,6 +58,7 @@ vilhelms_room:
  name: "Vilhelm's room"
  icon: mdi:account-multiple
  entities:
+ - input_select.scene_vr
  - light.vilhelms_light_bulb
  - switch.telldusvilhelm_switch
 # - switch.telldusjulgran_switch
@@ -66,6 +67,7 @@ elins_room:
  name: "Elin's room"
  icon: mdi:account-multiple
  entities:
+ - input_select.scene_er
  - light.elins_light_bulb
  - switch.telldusextra_switch
  - light.elins_led_strip

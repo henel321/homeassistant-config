@@ -4,14 +4,13 @@ trigger:
   event: sunrise
   offset: +01:30:00
 action:
-  service: light.turn_off
+  service: scene.turn_on
   entity_id:
-  - group.livingroom
-  - group.bedroom
-  - group.elins_room
-  - group.vilhelms_room
-  - group.hallway
-
+  - scene.br_off
+  - scene.lr_off
+  - scene.er_off
+  - scene.vr_off
+  - scene.or_off
 
  
  

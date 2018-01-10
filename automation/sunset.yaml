@@ -3,17 +3,13 @@ trigger:
   platform: sun
   event: sunset 
   offset: -01:00:00
-action: 
-  service: light.turn_on
+action:
+  service: scene.turn_on
   entity_id:
-    - group.livingroom
-    - group.bedroom 
-    - group.elins_room
-    - group.vilhelms_room
-    - group.hallway
-  data: 
-    brightness: 100
-    color_temp: 458.50527281063734
-
+  - scene.br_normal
+  - scene.lr_normal
+  - scene.er_normal
+  - scene.vr_normal
+  - scene.or_normal
  
  

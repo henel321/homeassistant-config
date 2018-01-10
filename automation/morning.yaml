@@ -1,11 +1,15 @@
-alias: "Turn on Living Room lights in the morning" 
+alias: "Turn on Living Room lights in the morning at first movement" 
 trigger: 
-  platform: time
-  at: "06:00:00"
-action:
-  service: light.turn_on
+  platform: state
+  entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor 
+  from: 'off'
+  to: 'on'
+condition:
+  condition: time
+  after: '06:00:00'
+  before: '08:00:00' 
+action: 
+  service: scene.turn_on
   entity_id:
-  - group.livingroom
-  data: 
-    brightness: 50 
+  - scene.lr_normal
  

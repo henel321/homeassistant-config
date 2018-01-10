@@ -1,0 +1,42 @@
+alias: Scene Elins Room
+trigger:
+  platform: state
+  entity_id: input_select.scene_er
+condition:
+  condition: or
+  conditions:
+    - condition: state
+      entity_id: 'input_select.scene_er'
+      state: 'Sleep'
+    - condition: state
+      entity_id: 'input_select.scene_er'
+      state: 'Party'
+    - condition: state
+      entity_id: 'input_select.scene_er'
+      state: 'Normal'
+    - condition: state
+      entity_id: 'input_select.scene_er'
+      state: 'Bright'
+    - condition: state
+      entity_id: 'input_select.scene_er'
+      state: 'Off'
+action:
+  - service: scene.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state( "input_select.scene_er", "Sleep" ) %}
+          scene.er_sleep
+        {%-elif is_state( "input_select.scene_er", "Party" ) %}
+          scene.er_party
+        {%-elif is_state( "input_select.scene_er", "Normal" ) %}
+          scene.er_normal
+        {%-elif is_state( "input_select.scene_er", "Bright" ) %}
+          scene.er_bright
+        {%-elif is_state( "input_select.scene_er", "Off" ) %}
+          scene.er_off
+        {% endif %}
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.scene_er
+      option: "-"
+
