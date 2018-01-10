@@ -5,9 +5,10 @@ scene_lr:
   options:
     - "-"
     - "Off"
-    - Movie 
-    - Romantic
     - Normal 
+    - Cozy 
+    - Romantic
+    - Movie
     - Bright
 
 scene_br:
@@ -17,8 +18,8 @@ scene_br:
   options:
     - "-"
     - "Off"
-    - "Romantic"
     - "Normal"
+    - "Romantic"
     - "Bright"
 
 scene_er:

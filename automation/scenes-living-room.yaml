@@ -16,6 +16,9 @@ condition:
       state: 'Normal'
     - condition: state
       entity_id: 'input_select.scene_lr'
+      state: 'Cozy'
+    - condition: state
+      entity_id: 'input_select.scene_lr'
       state: 'Bright'
     - condition: state
       entity_id: 'input_select.scene_lr'
@@ -30,8 +33,10 @@ action:
           scene.lr_movie
         {%-elif is_state( "input_select.scene_lr", "Normal" ) %}
           scene.lr_normal
+        {%-elif is_state( "input_select.scene_lr", "Cozy" ) %}
+          scene.lr_normal
         {%-elif is_state( "input_select.scene_lr", "Bright" ) %}
-          scene.lr_bright
+          scene.lr_cozy
         {%-elif is_state( "input_select.scene_lr", "Off" ) %}
           scene.lr_off
         {% endif %}

@@ -1,0 +1,11 @@
+alias: "Turn on cozy light in the Living room and bedroom in the evening"
+trigger: 
+  platform: time
+  at: "21:00:00"
+action: 
+  service: scene.turn_on
+  entity_id:
+  - scene.lr_cozy
+  - scene.br_romantic
+
+ 

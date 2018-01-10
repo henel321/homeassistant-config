@@ -1,19 +1,19 @@
-- name: LR Normal 
+- name: LR Cozy 
   entities:
    light.ikea_ps_uplight:
       state: on
-      brightness: 150 
+      brightness: 80
       color_temp: 461
    light.living_room_1:
       state: on
-      brightness: 150 
+      brightness: 100 
       color_temp: 461
    light.living_room_2:
       state: on
-      brightness: 150
+      brightness: 100
       color_temp: 461
    light.lifx_led_strip:
       state: on 
-      brightness: 130
+      brightness: 80 
       transition: 10
       color_name: cornsilk
