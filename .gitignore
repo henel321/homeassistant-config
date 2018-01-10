@@ -7,3 +7,5 @@
 !.travis.yml
 secrets.yaml
 known_devices.yaml
+privkey.pem
+certificate.pem
