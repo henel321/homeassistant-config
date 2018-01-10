@@ -1,0 +1,8 @@
+- name: BR Off 
+  entities:
+   light.henriks_light:
+      state: off
+   light.marias_light: 
+      state: off
+   light.bedroom_led_strip_:
+      state: off 

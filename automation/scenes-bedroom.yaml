@@ -1,0 +1,37 @@
+alias: Scene Bedroom
+trigger:
+  platform: state
+  entity_id: input_select.scene_br
+condition:
+  condition: or
+  conditions:
+    - condition: state
+      entity_id: 'input_select.scene_br'
+      state: 'Romantic'
+    - condition: state
+      entity_id: 'input_select.scene_br'
+      state: 'Normal'
+    - condition: state
+      entity_id: 'input_select.scene_br'
+      state: 'Bright'
+    - condition: state
+      entity_id: 'input_select.scene_br'
+      state: 'Off'
+action:
+  - service: scene.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state( "input_select.scene_br", "Romantic" ) %}
+          scene.br_romantic
+        {%-elif is_state( "input_select.scene_br", "Normal" ) %}
+          scene.br_normal
+        {%-elif is_state( "input_select.scene_br", "Bright" ) %}
+          scene.br_bright
+        {%-elif is_state( "input_select.scene_br", "Off" ) %}
+          scene.br_off
+        {% endif %}
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.scene_br
+      option: "-"
+

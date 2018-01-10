@@ -1,0 +1,14 @@
+alias: Brightness Bedroom
+trigger:
+  platform: state
+  entity_id: input_number.brightness_br
+action:
+  service: light.turn_on
+  data:
+    entity_id:
+      - light.henriks_light 
+      - light.marias_light
+      - light.bedroom_led_strip_
+  data_template:
+    brightness: '{{ states( "input_number.brightness_br" )|round( 0 ) }}'
+

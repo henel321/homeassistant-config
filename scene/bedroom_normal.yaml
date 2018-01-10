@@ -1,0 +1,14 @@
+- name: BR Normal 
+  entities:
+   light.henriks_light:
+      state: on
+      brightness: 130
+      color_temp: 461
+   light.marias_light: 
+      state: on
+      brightness: 130 
+      color_temp: 461
+   light.bedroom_led_strip_:
+      state: on 
+      brightness: 100 
+      color_name: darkorchid 

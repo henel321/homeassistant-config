@@ -10,7 +10,7 @@ action:
   - light.bedroom_led_strip_
   data: 
     brightness: 50 
-    color_name: bluepurple  
+    color_name: cornsilk
   
 
  

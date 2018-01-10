@@ -23,6 +23,8 @@ bedroom:
  name: Bedroom
  icon: mdi:hotel
  entities:
+ - input_number.brightness_br
+ - input_select.scene_br
  - light.marias_light
  - light.henriks_light
  - light.bedroom_led_strip_
@@ -34,11 +36,11 @@ hallway:
  - light.hallway
  - camera.hallway
 
-christmas:
- name: Christmas 
- icon: mdi:christmas
- entities: 
- - switch.tellduselin_switch
+# christmas:
+#  name: Christmas 
+#  icon: mdi:christmas
+#  entities: 
+#  - switch.tellduselin_switch
 
 livingroom: 
  name: "Living room"
@@ -58,7 +60,7 @@ vilhelms_room:
  entities:
  - light.vilhelms_light_bulb
  - switch.telldusvilhelm_switch
- - switch.telldusjulgran_switch
+# - switch.telldusjulgran_switch
  
 elins_room: 
  name: "Elin's room"
@@ -67,7 +69,6 @@ elins_room:
  - light.elins_light_bulb
  - switch.telldusextra_switch
  - light.elins_led_strip
-
 
 office: 
  name: "Office / Guest room"

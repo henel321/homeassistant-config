@@ -3,10 +3,8 @@ switch.nodon_msp31xx_micro_smart_plug_switch:
 switch.telldusvilhelm_switch: 
   friendly_name: "Vilhelms LED strip" 
 switch.telldusextra_switch: 
-  friendly_name: "Elin christmas light"
+  friendly_name: "Elin Bed light"
 switch.tellduselin_switch:
-  friendly_name: "Christmas tree"
+  friendly_name: "Hallway table light"
 switch.telldusjulgran_switch:
-  friendly_name: "Vilhelms christmas light"
-light.living_room_1:
-  friendly_name: "Christmas church"
+  friendly_name: "Unused"
