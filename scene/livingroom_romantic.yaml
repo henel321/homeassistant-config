@@ -2,18 +2,18 @@
   entities:
    light.ikea_ps_uplight:
       state: on
-      brightness: 100
-      color_temp: 461
+      brightness: 50
+      color_temp: 458
       transition: 10
    light.living_room_1:
       state: on
-      brightness: 403
-      color_temp: 461
+      brightness: 30
+      color_temp: 458
       transition: 10
    light.living_room_2:
       state: on
-      brightness: 40
-      color_temp: 461
+      brightness: 30
+      color_temp: 458
       transition: 10
    light.lifx_led_strip:
       state: on 
