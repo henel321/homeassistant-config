@@ -1,10 +1,10 @@
 - name: ER Sleep
   entities:
    light.elins_light_bulb:
-      state: off
+      state: on
+      brightness: 1 
+      color_temp: 461
    light.elins_led_strip:
-      state: on 
-      brightness: 70 
-      color_name: magenta 
+      state: off
    switch.telldusextra_switch:
       state: off 
