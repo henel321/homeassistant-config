@@ -4,6 +4,7 @@
 !automation
 !automation_off
 !packages
+!themes
 !.gitignore
 !.travis.yml
 secrets.yaml
