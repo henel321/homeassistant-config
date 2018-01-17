@@ -6,6 +6,7 @@ default_view:
  - device_tracker.cc9f7a9f9afb
  - device_tracker.galaxy_s7__maria
  - device_tracker.oneplus_x__vilhelm
+ - device_tracker.androidff3e595e35e8a0a1
  - device_tracker.workstationcartman
  - device_tracker.workstationbarnen
  - sun.sun
@@ -116,3 +117,12 @@ weather:
  - sensor.weather_wind_direction
  - sensor.weather_wind_speed
 
+system_info_view:
+  name: System info
+  icon: mdi:lan
+  view: yes
+  entities:
+    - group.device_states
+    - group.internet_card
+    - group.system_monitor_card
+    - history_graph.internet_speed_tests

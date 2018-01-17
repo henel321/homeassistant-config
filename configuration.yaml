@@ -12,6 +12,7 @@ homeassistant:
   time_zone: !secret time_zone 
   #Customize names 
   customize: !include customize.yaml
+  packages: !include_dir_named packages
 
 # Show links to resources in log and frontend
 # introduction:
@@ -128,6 +129,13 @@ device_tracker:
     track_new_devices: no 
     consider_home: 180
     interval_seconds: 10
+  
+  - platform: ping 
+    hosts: 
+      firewall: 192.168.100.1
+      switch: 192.168.100.52
+      ap: 192.168.100.85
+     
 
 notify:
   - name: pushbullet 
