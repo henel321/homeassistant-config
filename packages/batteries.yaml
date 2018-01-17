@@ -217,21 +217,27 @@ automation:
     trigger:
       - platform: numeric_state
         entity_id: sensor.zwave_pir_hallway
+        above: 1
         below: 10
       - platform: numeric_state
         entity_id: sensor.zwave_door_hallway
+        above: 1
         below: 10
       - platform: numeric_state
         entity_id: sensor.ikea_remote_livingroom
+        above: 1
         below: 10
       - platform: numeric_state
         entity_id: sensor.ikea_remote_bedroom
+        above: 1
         below: 10
       - platform: numeric_state
         entity_id: sensor.ikea_remote_elin
+        above: 1
         below: 10     
       - platform: numeric_state
         entity_id: sensor.ikea_remote_vilhelm
+        above: 1
         below: 10
     action:
       - service: notify.pushbullet

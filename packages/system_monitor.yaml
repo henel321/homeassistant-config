@@ -2,6 +2,9 @@ homeassistant:
   customize:
     sensor.uptime:
       friendly_name: 'Home Assistant Uptime'
+    sensor.process_squeezeboxserve: 
+      friendly_name: 'Squeezebox Server process status' 
+
 
 group:
   system_monitor_card:
@@ -28,7 +31,7 @@ group:
       - sensor.disk_used_homestorage
       - sensor.disk_used_homestorage_2
       - sensor.since_last_boot
-      - sensor.process_squeezebox
+      - sensor.process_squeezeboxserve
 
 sensor:
   - platform: systemmonitor
@@ -73,7 +76,9 @@ sensor:
       - type: last_boot
       - type: since_last_boot
       - type: process
-        arg: squeezebox 
+        arg: squeezeboxserve
+      - type: process 
+        arg: Plex Media Serv
   
   - platform: uptime
     unit_of_measurement: hours
