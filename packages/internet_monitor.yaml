@@ -12,10 +12,9 @@ sensor:
       - ping
       - download
       - upload
-    minute: 30
-    hour:
-      - 6
-      - 18
+    minute: 
+      - 0 
+      - 30
 
 group:
   internet_card:

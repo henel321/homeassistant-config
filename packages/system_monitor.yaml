@@ -10,6 +10,13 @@ group:
       - alert.disk_use_critical
       - sensor.uptime
       - sensor.last_boot
+      - sensor.cpu_used
+      - sensor.average_load_1m
+      - sensor.average_load_5m
+      - sensor.average_load_15m
+      - sensor.ram_used
+      - sensor.ram_available
+      - sensor.ram_used_2
       - sensor.disk_used_
       - sensor.disk_used__2
       - sensor.disk_used_usr
@@ -57,6 +64,12 @@ sensor:
       - type: disk_free
         arg: /home/storage
       - type: memory_free
+      - type: processor_use
+      - type: load_1m
+      - type: load_5m
+      - type: load_15m
+      - type: memory_use 
+      - type: memory_use_percent
       - type: last_boot
       - type: since_last_boot
       - type: process

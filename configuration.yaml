@@ -133,8 +133,8 @@ device_tracker:
   - platform: ping 
     hosts: 
       firewall: 192.168.100.1
-      switch: 192.168.100.52
-      ap: 192.168.100.85
+      switch: 192.168.100.253
+      ap: 192.168.100.250
      
 
 notify:

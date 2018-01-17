@@ -6,6 +6,12 @@ homeassistant:
       icon: mdi:access-point
     sensor.switch:
       icon: mdi:switch
+    sensor.office_switch: 
+      icon: mdi:switch
+    sensor.livingroom_switch:
+      icon: mdi:switch
+    sensor.gigaset_voip: 
+      icon: mdi:phone-classic
     sensor.mini_app: 
       icon: mdi:server
     sensor.mini:
@@ -30,7 +36,7 @@ sensor:
           friendly_name: 'Wifi Access point'
           value_template: "{{ 'Online' if is_state('device_tracker.ap', 'home') else 'Offline' }}"
         switch:
-          friendly_name: 'Switch'
+          friendly_name: 'Core Switch'
           value_template: "{{ 'Online' if is_state('device_tracker.switch', 'home') else 'Offline' }}"
         mini:
           friendly_name: 'mini - Hypervisor and NAS'
@@ -50,6 +56,15 @@ sensor:
         ip_camera:
           friendly_name: 'IP Camera'
           value_template: "{{ 'Online' if is_state('device_tracker.34ce00d8b3e4', 'home') else 'Offline' }}"
+        livingroom_switch:
+          friendly_name: 'Livingroom Switch'
+          value_template: "{{ 'Online' if is_state('device_tracker.living_room_switch__admin_ip', 'home') else 'Offline' }}"
+        office_switch:
+          friendly_name: 'Office Switch'
+          value_template: "{{ 'Online' if is_state('device_tracker.office_switch__admin_ip', 'home') else 'Offline' }}"
+        gigaset_voip:
+          friendly_name: 'Gigaset VOIP gateway'
+          value_template: "{{ 'Online' if is_state('device_tracker.siemens_gigaset_voip', 'home') else 'Offline' }}"
 
 
 group:
@@ -59,9 +74,12 @@ group:
     - sensor.firewall
     - sensor.ap 
     - sensor.switch
+    - sensor.office_switch
+    - sensor.livingroom_switch
     - sensor.mini
     - sensor.mini_app
     - sensor.ike
+    - sensor.gigaset_voip
     - sensor.ip_camera
     - sensor.ikea_tradfri
     - sensor.logitech_harmony
@@ -81,6 +99,9 @@ automation:
               - sensor.ip_camera
               - sensor.ikea_tradfri
               - sensor.logitech_harmony
+              - sensor.office_switch
+              - sensor.livingroom_switch
+              - sensor.gigaset_voip
            to: 'offline'
            for:
              minutes: 5
