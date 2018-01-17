@@ -1,0 +1,94 @@
+homeassistant:
+  customize:
+    sensor.firewall: 
+      icon: mdi:security
+    sensor.ap: 
+      icon: mdi:access-point
+    sensor.switch:
+      icon: mdi:switch
+    sensor.mini_app: 
+      icon: mdi:server
+    sensor.mini:
+      icon: mdi:server
+    sensor.ike:
+      icon: mdi:server
+    sensor.ikea_gateway:
+      icon: mdi:google-keep
+    sensor.ip_camera:
+      icon: mdi:webcam
+    sensor.logitech_harmony:
+      icon: mdi:remote
+
+
+sensor:
+  - platform: template
+    sensors:
+        firewall:
+          friendly_name: 'Firewall'
+          value_template: "{{ 'Online' if is_state('device_tracker.firewall', 'home') else 'Offline' }}"
+        ap:
+          friendly_name: 'Wifi Access point'
+          value_template: "{{ 'Online' if is_state('device_tracker.ap', 'home') else 'Offline' }}"
+        switch:
+          friendly_name: 'Switch'
+          value_template: "{{ 'Online' if is_state('device_tracker.switch', 'home') else 'Offline' }}"
+        mini:
+          friendly_name: 'mini - Hypervisor and NAS'
+          value_template: "{{ 'Online' if is_state('device_tracker.minitillanderorg', 'home') else 'Offline' }}"
+        mini_app:
+          friendly_name: 'mini-app - Server VM'
+          value_template: "{{ 'Online' if is_state('device_tracker.miniapptillanderorg', 'home') else 'Offline' }}"
+        ike:
+          friendly_name: 'ike - VPN Server VM'
+          value_template: "{{ 'Online' if is_state('device_tracker.iketillanderorg', 'home') else 'Offline' }}"
+        ikea_tradfri:
+          friendly_name: 'Ikea Gateway'
+          value_template: "{{ 'Online' if is_state('device_tracker.ikea_tradfri', 'home') else 'Offline' }}"
+        logitech_harmony:
+          friendly_name: 'Harmony Hub'
+          value_template: "{{ 'Online' if is_state('device_tracker.harmonyhub', 'home') else 'Offline' }}"
+        ip_camera:
+          friendly_name: 'IP Camera'
+          value_template: "{{ 'Online' if is_state('device_tracker.34ce00d8b3e4', 'home') else 'Offline' }}"
+
+
+group:
+  device_states:
+    name: Device status
+    entities:
+    - sensor.firewall
+    - sensor.ap 
+    - sensor.switch
+    - sensor.mini
+    - sensor.mini_app
+    - sensor.ike
+    - sensor.ip_camera
+    - sensor.ikea_tradfri
+    - sensor.logitech_harmony
+
+automation:
+  - alias: 'Device Status'
+    initial_state: 'on'
+    trigger:
+         - platform: state
+           entity_id:
+              - sensor.firewall
+              - sensor.switch 
+              - sensor.ap
+              - sensor.mini
+              - sensor.ike
+              - sensor.mini_app
+              - sensor.ip_camera
+              - sensor.ikea_tradfri
+              - sensor.logitech_harmony
+           to: 'offline'
+           for:
+             minutes: 5
+    action:
+      - service: notify.pushbullet
+        data_template:
+          title: 'Device {{ trigger.to_state.name }} is'
+          message: >
+            '{{ trigger.to_state.state }}'
+
+

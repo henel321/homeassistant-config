@@ -1,0 +1,105 @@
+homeassistant:
+  customize:
+    sensor.uptime:
+      friendly_name: 'Home Assistant Uptime'
+
+group:
+  system_monitor_card:
+    name: System Monitor 
+    entities:
+      - alert.disk_use_critical
+      - sensor.uptime
+      - sensor.last_boot
+      - sensor.disk_used_
+      - sensor.disk_used__2
+      - sensor.disk_used_usr
+      - sensor.disk_used_usr_2
+      - sensor.disk_used_var
+      - sensor.disk_used_var_2
+      - sensor.disk_used_home
+      - sensor.disk_used_home_2
+      - sensor.disk_used_homestorage
+      - sensor.disk_used_homestorage_2
+      - sensor.since_last_boot
+      - sensor.process_squeezebox
+
+sensor:
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /
+      - type: disk_use
+        arg: /
+      - type: disk_free
+        arg: /
+      - type: disk_use_percent
+        arg: /var
+      - type: disk_use
+        arg: /var
+      - type: disk_free
+        arg: /var
+      - type: disk_use_percent
+        arg: /usr
+      - type: disk_use
+        arg: /usr
+      - type: disk_free
+        arg: /usr
+      - type: disk_use_percent
+        arg: /home
+      - type: disk_use
+        arg: /home
+      - type: disk_free
+        arg: /home
+      - type: disk_use_percent
+        arg: /home/storage
+      - type: disk_use
+        arg: /home/storage
+      - type: disk_free
+        arg: /home/storage
+      - type: memory_free
+      - type: last_boot
+      - type: since_last_boot
+      - type: process
+        arg: squeezebox 
+  
+  - platform: uptime
+    unit_of_measurement: hours
+
+binary_sensor:
+  - platform: template
+    sensors:
+      critical_disk_use:
+        value_template: '{{ states.sensor.disk_used_|float > 70 }}'
+        friendly_name: 'Critical Disk Use'
+
+alert:
+  disk_use_critical:
+    name: Mini-app disk usage is criticalp
+    entity_id: binary_sensor.critical_disk_use
+    repeat: 60
+    skip_first: False
+    notifiers:
+      - pushbullet
+
+automation: 
+  - alias: Hass New Device Tracked
+    trigger:
+      platform: event
+      event_type: device_tracker_new_device
+    action:
+      - service: notify.pushbullet
+        data_template:
+          title: 'New device tracked'
+          message: >
+            {{trigger.event.data.host_name}} 
+            ({{trigger.event.data.entity_id}})
+
+  - alias: Hass Updater
+    trigger:
+      - platform: state
+        entity_id: updater.updater
+    action:
+      - service: notify.pushbullet
+        data_template: 
+          title: 'New Home Assistant Release Available'
+          message: "Home Assistant  {{ states.updater.updater.state }}  is now available."

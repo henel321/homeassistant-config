@@ -3,6 +3,7 @@
 !scene
 !automation
 !automation_off
+!packages
 !.gitignore
 !.travis.yml
 secrets.yaml
