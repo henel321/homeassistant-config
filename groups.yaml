@@ -136,7 +136,7 @@ system_info_view:
     - history_graph.internet_speed_tests
 
 vacuum_short_status:
-  name: Städis-status
+  name: Städis - Vacuum status
   entities:
     - vacuum.stadis
     - sensor.vacuum_status
