@@ -1,0 +1,161 @@
+homeassistant:
+  customize:
+    vacuum.stadis:
+      icon: mdi:roomba
+      friendly_name: "Städis - Robot Vacuum"
+    sensor.vacuum_side_brush_left: 
+      icon: mdi:timer
+    sensor.vacuum_main_brush_left:
+      icon: mdi:timer
+    sensor.vacuum_filter_left:
+      icon: mdi:timer
+    sensor.vacuum_cleaned_area:
+      icon: mdi:map-marker
+    sensor.vacuum_total_area:
+      icon: mdi:map-marker
+    sensor.vacuum_do_not_disturb_start:
+      icon: mdi:clock
+    sensor.vacuum_do_not_disturb_end:
+      icon: mdi:clock
+    sensor.vacuum_cleaning_time:
+      icon: mdi:clock
+    sensor.vacuum_total_time:
+      icon: mdi:clock
+    sensor.vacuum_status:
+      icon: mdi:roomba
+    sensor.vacuum_fan_speed:
+      icon: mdi:settings
+    sensor.vacuum_do_not_disturb: 
+      icon: mdi:settings
+
+
+sensor:
+  - platform: template
+    sensors:
+      vacuum_battery_level:
+        friendly_name: 'Vacuum - Battery Level'
+        value_template: "{{ states.vacuum.stadis.attributes.battery_level|default(-1)|int if states.vacuum.stadis is not none }}"
+        unit_of_measurement: '%'
+        entity_id: vacuum.stadis
+        icon_template: '{% if states.vacuum.stadis.attributes.battery_level == 100 %}
+                           mdi:battery
+                        {% elif states.vacuum.stadis.attributes.battery_level >= 90 %}
+                           mdi:battery-90
+                        {% elif states.vacuum.stadis.attributes.battery_level >= 80 %}
+                           mdi:battery-80
+                        {% elif states.vacuum.stadis.attributes.battery_level >= 70 %}
+                           mdi:battery-70
+                        {% elif states.vacuum.stadis.attributes.battery_level >= 60 %}
+                           mdi:battery-60
+                        {% elif states.vacuum.stadis.attributes.battery_level >= 50 %}
+                           mdi:battery-50
+                        {% elif states.vacuum.stadis.attributes.battery_level >= 40 %}
+                           mdi:battery-40
+                        {% elif states.vacuum.stadis.attributes.battery_level >= 30 %}
+                           mdi:battery-30
+                        {% elif states.vacuum.stadis.attributes.battery_level >= 20 %}
+                           mdi:battery-20
+                        {% elif states.vacuum.stadis.attributes.battery_level >= 10 %}
+                           mdi:battery-10
+                        {% else %}
+                           battery-outline
+                        {% endif %}'
+
+
+  - platform: template
+    sensors:
+      vacuum_side_brush_left:
+        value_template: '{{  states.vacuum.stadis.attributes.side_brush_left }}'
+        friendly_name: 'Side brush life left (hours)'
+
+  - platform: template
+    sensors:
+      vacuum_cleaned_area:
+        value_template: '{{  states.vacuum.stadis.attributes.cleaned_area }}'
+        friendly_name: 'Last cleaned area (m2)'
+
+  - platform: template
+    sensors:
+      vacuum_total_area:
+        value_template: '{{  states.vacuum.stadis.attributes.total_cleaned_area }}'
+        friendly_name: 'Lifetime cleaned area (m2)'
+
+  - platform: template
+    sensors:
+      vacuum_status:
+        value_template: '{{  states.vacuum.stadis.attributes.status }}'
+        friendly_name: 'Vacuum status'
+
+  - platform: template
+    sensors:
+      vacuum_do_not_disturb_start:
+        value_template: '{{  states.vacuum.stadis.attributes.do_not_disturb_start }}'
+        friendly_name: 'DnD start time'
+
+  - platform: template
+    sensors:
+      vacuum_do_not_disturb_end:
+        value_template: '{{  states.vacuum.stadis.attributes.do_not_disturb_end }}'
+        friendly_name: 'DnD end time'
+
+  - platform: template
+    sensors:
+      vacuum_cleaning_time:
+        value_template: '{{  states.vacuum.stadis.attributes.cleaning_time }}'
+        friendly_name: 'Last cleaning time (minutes)'
+
+  - platform: template
+    sensors:
+      vacuum_filter_left:
+        value_template: '{{  states.vacuum.stadis.attributes.filter_left }}'
+        friendly_name: 'Filter life left (hours)'
+
+  - platform: template
+    sensors:
+      vacuum_total_time:
+        value_template: '{{  states.vacuum.stadis.attributes.total_cleaning_time }}'
+        friendly_name: 'Lifetime cleaning time (minutes)'
+
+  - platform: template
+    sensors:
+      vacuum_cleaning_count:
+        value_template: '{{  states.vacuum.stadis.attributes.cleaning_count }}'
+        friendly_name: 'Lifetime cleaning count'
+
+  - platform: template
+    sensors:
+      vacuum_main_brush_left:
+        value_template: '{{  states.vacuum.stadis.attributes.main_brush_left }}'
+        friendly_name: 'Main Brush life left (hours)'
+
+  - platform: template
+    sensors:
+      vacuum_do_not_disturb:
+        value_template: '{{  states.vacuum.stadis.attributes.do_not_disturb }}'
+        friendly_name: 'Do Not Disturb State'
+
+  - platform: template
+    sensors:
+      vacuum_fan_speed:
+        value_template: '{{  states.vacuum.stadis.attributes.fan_speed }}'
+        friendly_name: 'Fan speed setting'
+
+group:
+  vacuum_status:
+    name: Städis - Vacuum Status 
+    entities:
+      - vacuum.stadis
+      - sensor.vacuum_status
+      - sensor.vacuum_battery_level
+      - sensor.vacuum_fan_speed
+      - sensor.vacuum_do_not_disturb
+      - sensor.vacuum_do_not_disturb_start
+      - sensor.vacuum_do_not_disturb_end
+      - sensor.vacuum_cleaning_time
+      - sensor.vacuum_cleaned_area
+      - sensor.vacuum_total_time
+      - sensor.vacuum_total_area
+      - sensor.vacuum_filter_left
+      - sensor.vacuum_main_brush_left
+      - sensor.vacuum_side_brush_left
+

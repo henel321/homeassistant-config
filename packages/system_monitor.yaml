@@ -13,6 +13,8 @@ group:
       - alert.disk_use_critical
       - sensor.uptime
       - sensor.last_boot
+      - sensor.since_last_boot
+      - sensor.process_squeezeboxserve
       - sensor.cpu_used
       - sensor.average_load_1m
       - sensor.average_load_5m
@@ -30,8 +32,6 @@ group:
       - sensor.disk_used_home_2
       - sensor.disk_used_homestorage
       - sensor.disk_used_homestorage_2
-      - sensor.since_last_boot
-      - sensor.process_squeezeboxserve
 
 sensor:
   - platform: systemmonitor

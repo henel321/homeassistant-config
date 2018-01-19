@@ -18,6 +18,14 @@ default_view:
  - group.office
  - group.hallway
  - group.christmas
+ - group.vacuum_short_status
+
+
+vacuum_status_view:
+ view: yes
+ icon: mdi:roomba
+ entities:
+ - group.vacuum_status
 
 
 bedroom: 
@@ -126,3 +134,11 @@ system_info_view:
     - group.internet_card
     - group.system_monitor_card
     - history_graph.internet_speed_tests
+
+vacuum_short_status:
+  name: Städis-status
+  entities:
+    - vacuum.stadis
+    - sensor.vacuum_status
+    - sensor.vacuum_battery_level
+

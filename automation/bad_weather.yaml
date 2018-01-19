@@ -6,7 +6,7 @@ trigger:
 condition: 
   condition: numeric_state
   entity_id: sensor.weather_cloudiness 
-  above: "50" 
+  above: "80" 
 action: 
   service: scene.turn_on
   entity_id:
