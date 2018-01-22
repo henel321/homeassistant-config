@@ -17,5 +17,6 @@ On the Improvement list.
 - Add zwave dimmers to current in wall switches 
 - Add zwave thermostats for electric floor heating in bathrooms 
 - Create switches for "cleaning" scenes for all rooms and a few more shortcuts. 
+- Automate vacuum schedule in HA together with precense detection. 
 
 
