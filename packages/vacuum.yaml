@@ -27,6 +27,8 @@ homeassistant:
       icon: mdi:settings
     sensor.vacuum_do_not_disturb: 
       icon: mdi:settings
+    sensor.vacuum_cleaning_count:
+      icon: mdi:pound-box
 
 
 sensor:
@@ -153,9 +155,42 @@ group:
       - sensor.vacuum_do_not_disturb_end
       - sensor.vacuum_cleaning_time
       - sensor.vacuum_cleaned_area
+      - sensor.vacuum_cleaning_count
       - sensor.vacuum_total_time
       - sensor.vacuum_total_area
       - sensor.vacuum_filter_left
       - sensor.vacuum_main_brush_left
       - sensor.vacuum_side_brush_left
+
+
+automation: 
+
+  - alias: 'Vacuum Starting'
+    trigger:
+      platform: state
+      entity_id: sensor.vacuum_status 
+      to: 'Cleaning'
+    action:
+      - service: notify.pushbullet
+        data:
+           message: 'Städis is cleaning!'
+
+  - alias: 'Vacuum Error'
+    trigger:
+      platform: state
+      entity_id: sensor.vacuum_status
+      to: 'Error'
+    action:
+      - service: notify.pushbullet
+        data:
+           message: 'Städis is having a problem! Check if he is stuck or locked in somewhere!' 
+
+  - alias: 'Vacuum finished'
+    trigger:
+      platform: state
+      entity_id: sensor.vacuum_cleaning_count 
+    action:
+      - service: notify.pushbullet
+        data:
+           message: 'Städis is done cleaning! {{ states.vacuum.stadis.attributes.cleaned_area }} m2 was cleaned in {{  states.vacuum.stadis.attributes.cleaning_time }} minutes.'
 
