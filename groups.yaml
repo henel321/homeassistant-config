@@ -144,3 +144,9 @@ vacuum_short_status:
     - sensor.vacuum_status
     - sensor.vacuum_battery_level
 
+parents: 
+  name: "Parents device tracker group"
+  view: no
+  entities: 
+    - device_tracker.cc9f7a9f9afb
+    - device_tracker.galaxy_s7__maria

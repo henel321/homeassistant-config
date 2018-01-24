@@ -194,3 +194,23 @@ automation:
         data:
            message: 'Städis is done cleaning! {{ states.vacuum.stadis.attributes.cleaned_area }} m2 was cleaned in {{  states.vacuum.stadis.attributes.cleaning_time }} minutes.'
 
+
+  - alias: 'Vacuum schedyling weekdays when everyone away'
+    trigger: 
+      platform: time
+      at: "10:00:00"
+    condition:
+      condition: and 
+      conditions:
+        - condition: time 
+          weekday:
+          - mon
+          - tue
+          - thu
+          - fri 
+        - condition: state
+          entity_id: group.parents 
+          state: 'not_home'
+    action: 
+      - service: vacuum.turn_on
+        entity_id: vacuum.stadis
