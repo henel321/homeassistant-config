@@ -5,7 +5,6 @@ sensor:
         friendly_name: 'Ikea Remote - Bedroom'
         value_template: "{{ states.sensor.bedroom.attributes.battery_level|default(-1)|int if states.sensor.bedroom is not none }}"
         unit_of_measurement: '%'
-        entity_id: sensor.bedroom
         icon_template: '{% if states.sensor.bedroom.attributes.battery_level == 100 %}
                            mdi:battery
                         {% elif states.sensor.bedroom.attributes.battery_level >= 90 %}
@@ -36,7 +35,6 @@ sensor:
         friendly_name: 'Ikea Remote - Living room'
         value_template: "{{ states.sensor.living_room_remote.attributes.battery_level|default(-1)|int if states.sensor.living_room_remote is not none }}"
         unit_of_measurement: '%'
-        entity_id: sensor.living_room_remote
         icon_template: '{% if states.sensor.living_room_remote.attributes.battery_level == 100 %}
                            mdi:battery
                         {% elif states.sensor.living_room_remote.attributes.battery_level >= 90 %}
@@ -67,7 +65,6 @@ sensor:
         friendly_name: 'Ikea Remote - Elin'
         value_template: "{{ states.sensor.elins_remote.attributes.battery_level|default(-1)|int if states.sensor.elins_remote is not none }}"
         unit_of_measurement: '%'
-        entity_id: sensor.elins_remote
         icon_template: '{% if states.sensor.elins_remote.attributes.battery_level == 100 %}
                            mdi:battery
                         {% elif states.sensor.elins_remote.attributes.battery_level >= 90 %}
@@ -99,7 +96,6 @@ sensor:
         friendly_name: 'Ikea Remote - Vilhelm'
         value_template: "{{ states.sensor.vilhelms_remote.attributes.battery_level|default(-1)|int if states.sensor.vilhelms_remote is not none }}"
         unit_of_measurement: '%'
-        entity_id: sensor.vilhelms_remote
         icon_template: '{% if states.sensor.vilhelms_remote.attributes.battery_level == 100 %}
                            mdi:battery
                         {% elif states.sensor.vilhelms_remote.attributes.battery_level >= 90 %}
@@ -131,7 +127,6 @@ sensor:
         friendly_name: 'PIR - Hallway'
         value_template: "{{ states.zwave.neo_coolcam_battery_powered_pir_sensor.attributes.battery_level|default(-1)|int if states.zwave.neo_coolcam_battery_powered_pir_sensor is not none }}"
         unit_of_measurement: '%'
-        entity_id: zwave.neo_coolcam_battery_powered_pir_sensor 
         icon_template: '{% if states.zwave.neo_coolcam_battery_powered_pir_sensor.attributes.battery_level == 100 %}
                            mdi:battery
                         {% elif states.zwave.neo_coolcam_battery_powered_pir_sensor.attributes.battery_level >= 90 %}
@@ -163,7 +158,6 @@ sensor:
         friendly_name: 'Door Sensor - Hallway'
         value_template: "{{ states.zwave.neo_coolcam_doorwindow_detector.attributes.battery_level|default(-1)|int if states.zwave.neo_coolcam_doorwindow_detector is not none }}"
         unit_of_measurement: '%'
-        entity_id: zwave.neo_coolcam_doorwindow_detector
         icon_template: '{% if states.zwave.neo_coolcam_doorwindow_detector.attributes.battery_level == 100 %}
                            mdi:battery
                         {% elif states.zwave.neo_coolcam_doorwindow_detector.attributes.battery_level >= 90 %}
@@ -195,7 +189,6 @@ sensor:
         friendly_name: 'Fire Alarm - Hallway'
         value_template: "{{ states.zwave.fibaro_system_fgsd002_smoke_sensor.attributes.battery_level|default(-1)|int if states.zwave.neo_coolcam_doorwindow_detector is not none }}"
         unit_of_measurement: '%'
-        entity_id: zwave.neo_coolcam_doorwindow_detector
         icon_template: '{% if states.zwave.fibaro_system_fgsd002_smoke_sensor.attributes.battery_level == 100 %}
                            mdi:battery
                         {% elif states.zwave.fibaro_system_fgsd002_smoke_sensor.attributes.battery_level >= 90 %}
