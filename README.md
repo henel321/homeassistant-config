@@ -19,6 +19,4 @@ On the Improvement list.
 - Add zwave thermostats for electric floor heating in bathrooms 
 - Create switches for "cleaning" scenes for all rooms and a few more shortcuts. 
 - Re-Add tamper alert for fire alarm once fixed in HA. 
-- Automate vacuum schedule in HA together with precense detection. 
-
 
