@@ -59,8 +59,8 @@ livingroom:
  - input_select.scene_lr
  - light.living_room_1 
  - light.living_room_2
-# - light.tv_light
  - light.ikea_ps_uplight
+ - switch.tellduslivingroom_switch
  - light.lifx_led_strip
 
 vilhelms_room: 
@@ -85,7 +85,7 @@ office:
  name: "Office / Guest room"
  icon: mdi:worker
  entities:
- - switch.nodon_msp31xx_micro_smart_plug_switch
+ - switch.telldusoffice_switch
 
 mediaplayer: 
  name: "Mediaplayers" 

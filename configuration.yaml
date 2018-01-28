@@ -24,7 +24,7 @@ frontend:
 
 recorder: 
   purge_interval: 7
-  purge_keep_days: 30 
+  purge_keep_days: 14
   db_url: !secret db_url
 
 # Enables configuration UI
@@ -120,6 +120,7 @@ google_assistant:
 # Zwave configuration
 zwave: 
   usb_path: /dev/ttyACM0
+  polling_interval: 60000
 
 # Track wifi users through unifi
 device_tracker:

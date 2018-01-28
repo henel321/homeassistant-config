@@ -5,11 +5,8 @@ trigger:
   from: "on" 
   to: "off"
 action:
-  - service: light.turn_off
-    entity_id:
-    - light.lifx_led_strip
-  - service: switch.turn_off
-    entity_id:
-    - switch.tellduslivingroom_switch
+  service: switch.turn_off
+   entity_id:
+   - switch.tellduslivingroom_switch
   
  

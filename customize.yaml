@@ -1,4 +1,4 @@
-switch.nodon_msp31xx_micro_smart_plug_switch:
+switch.telldusoffice_switch:
   friendly_name: "Office LED strip"
 switch.telldusvilhelm_switch: 
   friendly_name: "Vilhelms LED strip" 
@@ -6,5 +6,5 @@ switch.telldusextra_switch:
   friendly_name: "Elin Bed light"
 switch.tellduselin_switch:
   friendly_name: "Hallway table light"
-switch.telldusjulgran_switch:
-  friendly_name: "Unused"
+switch.tellduslivingroom_switch:
+  friendly_name: "Herstal Tentacle"

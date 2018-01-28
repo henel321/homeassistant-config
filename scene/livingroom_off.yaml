@@ -10,3 +10,5 @@
       state: off
    light.lifx_led_strip:
       state: off
+   switch.tellduslivingroom_switch:
+      state: off

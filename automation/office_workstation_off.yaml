@@ -10,6 +10,4 @@ condition:
 action:
   service: switch.turn_off
   entity_id:
-  - switch.nodon_msp31xx_micro_smart_plug_switch
-  - switch.telldusextra_switch
-
+  - switch.telldusoffice_switch

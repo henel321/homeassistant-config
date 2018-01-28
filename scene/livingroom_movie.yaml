@@ -20,3 +20,5 @@
       brightness: 76 
       color_name: royalblue
       transition: 10
+   switch.tellduslivingroom_switch:
+      state: on

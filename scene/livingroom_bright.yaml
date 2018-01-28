@@ -16,3 +16,5 @@
       state: on 
       brightness: 255 
       color_temp: 370
+   switch.tellduslivingroom_switch:
+      state: on

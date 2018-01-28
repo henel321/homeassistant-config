@@ -5,11 +5,14 @@ trigger:
   from: "off" 
   to: "on"
 action:
-  service: light.turn_on
-  entity_id:
-  - light.lifx_led_strip
-  data: 
-    brightness: 140 
-    color_temp: 285
+  - service: light.turn_on
+    entity_id:
+    - light.lifx_led_strip
+    data: 
+      brightness: 140 
+      color_temp: 285
+  - service: switch.turn_on
+    entity_id: 
+    - switch.tellduslivingroom_switch
   
  

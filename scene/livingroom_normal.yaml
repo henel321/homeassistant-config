@@ -20,3 +20,5 @@
       brightness: 130
       color_name: cornsilk
       transition: 10
+   switch.tellduslivingroom_switch:
+      state: on
