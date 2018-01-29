@@ -213,6 +213,23 @@ sensor:
                            mdi:battery-outline
                         {% endif %}'
 
+history_graph:
+  battery_status:
+    name: Battery Status
+    entities:
+      - sensor.zwave_pir_hallway
+      - sensor.zwave_door_hallway
+      - sensor.zwave_fire_alarm
+      - sensor.ikea_remote_livingroom
+      - sensor.ikea_remote_bedroom
+      - sensor.ikea_remote_elin
+      - sensor.ikea_remote_vilhelm
+    hours_to_show: 168 
+    refresh: 300
+
+
+
+
 
 
 group:
@@ -222,6 +239,7 @@ group:
     entities:
       - group.device_batteries
       - group.tradfri_batteries
+      - history_graph.battery_status
 
   device_batteries:
     name: Zwave Batteries
