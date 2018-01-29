@@ -59,7 +59,7 @@ sensor:
                         {% elif states.vacuum.stadis.attributes.battery_level >= 10 %}
                            mdi:battery-10
                         {% else %}
-                           battery-outline
+                           mdi:battery-outline
                         {% endif %}'
 
 

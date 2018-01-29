@@ -26,7 +26,7 @@ sensor:
                         {% elif states.sensor.bedroom.attributes.battery_level >= 10 %}
                            mdi:battery-10
                         {% else %}
-                           battery-outline
+                           mdi:battery-outline
                         {% endif %}'
 
   - platform: template
@@ -56,7 +56,7 @@ sensor:
                         {% elif states.sensor.living_room_remote.attributes.battery_level >= 10 %}
                            mdi:battery-10
                         {% else %}
-                           battery-outline
+                           mdi:battery-outline
                         {% endif %}'
 
   - platform: template
@@ -86,7 +86,7 @@ sensor:
                         {% elif states.sensor.elins_remote.attributes.battery_level >= 10 %}
                            mdi:battery-10
                         {% else %}
-                           battery-outline
+                           mdi:battery-outline
                         {% endif %}'
 
 
@@ -117,7 +117,7 @@ sensor:
                         {% elif states.sensor.vilhelms_remote.attributes.battery_level >= 10 %}
                            mdi:battery-10
                         {% else %}
-                           battery-outline
+                           mdi:battery-outline
                         {% endif %}'
 
 
@@ -148,7 +148,7 @@ sensor:
                         {% elif states.zwave.neo_coolcam_battery_powered_pir_sensor.attributes.battery_level >= 10 %}
                            mdi:battery-10
                         {% else %}
-                           battery-outline
+                           mdi:battery-outline
                         {% endif %}'
 
 
@@ -179,7 +179,7 @@ sensor:
                         {% elif states.zwave.neo_coolcam_doorwindow_detector.attributes.battery_level >= 10 %}
                            mdi:battery-10
                         {% else %}
-                           battery-outline
+                           mdi:battery-outline
                         {% endif %}'
 
 
@@ -210,7 +210,7 @@ sensor:
                         {% elif states.zwave.fibaro_system_fgsd002_smoke_sensor.attributes.battery_level >= 10 %}
                            mdi:battery-10
                         {% else %}
-                           battery-outline
+                           mdi:battery-outline
                         {% endif %}'
 
 
