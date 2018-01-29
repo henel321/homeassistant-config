@@ -126,6 +126,8 @@ weather:
  - sensor.weather_pressure
  - sensor.weather_wind_direction
  - sensor.weather_wind_speed
+ - history_graph.temperature_graph
+ - history_graph.weather_graph
 
 system_info_view:
   name: System info

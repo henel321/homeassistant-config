@@ -5,6 +5,9 @@ history_graph:
       - sensor.speedtest_download
       - sensor.speedtest_ping
       - sensor.speedtest_upload
+    hours_to_show: 168
+    refresh: 300
+
 
 sensor:
   - platform: speedtest

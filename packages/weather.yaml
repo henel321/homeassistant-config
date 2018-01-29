@@ -1,0 +1,22 @@
+
+history_graph:
+  temperature:
+    name: Temperature Graph
+    entities:
+      - sensor.weather_temperature
+      - sensor.fibaro_system_fgsd002_smoke_sensor_temperature
+    hours_to_show: 24
+    refresh: 300 
+
+  weather_other: 
+    name: Weather Graph
+    entities: 
+      - sensor.weather_humidity
+      - sensor.weather_pressure
+      - sensor.weather_wind_speed
+      - sensor.weather_precipitation
+      - sensor.weather_cloudiness
+    hours_to_show: 24
+    refresh: 300
+
+ 

@@ -8,3 +8,8 @@ switch.tellduselin_switch:
   friendly_name: "Hallway table light"
 switch.tellduslivingroom_switch:
   friendly_name: "Herstal Tentacle"
+sensor.weather_temperature:
+  friendly_name: "Outside temperature"
+sensor.fibaro_system_fgsd002_smoke_sensor_temperature:
+  friendly_name: "Inside temperature"
+
