@@ -7,12 +7,12 @@
       transition: 10
    light.living_room_1:
       state: on
-      brightness: 35 
+      brightness: 10 
       color_temp: 458
       transition: 10 
    light.living_room_2:
       state: on
-      brightness: 35 
+      brightness: 10 
       color_temp: 458
       transition: 10
    light.lifx_led_strip:
