@@ -3,14 +3,15 @@ default_view:
  icon: mdi:home 
  entities: 
  - zone.home
+ - sensor.weather_symbol
+ - sensor.fibaro_system_fgsd002_smoke_sensor_temperature
+ - sensor.weather_temperature
  - device_tracker.cc9f7a9f9afb
  - device_tracker.galaxy_s7__maria
  - device_tracker.oneplus_x__vilhelm
  - device_tracker.androidff3e595e35e8a0a1
  - device_tracker.workstationcartman
  - device_tracker.workstationbarnen
- - sun.sun
- - sensor.weather_symbol
  - group.livingroom
  - group.bedroom
  - group.vilhelms_room
