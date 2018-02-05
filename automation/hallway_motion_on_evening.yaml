@@ -7,11 +7,11 @@ trigger:
 condition:
   condition: time
   after: '14:00:00'
-  before: '20:00:00' 
+  before: '19:55:00' 
 action:
   service: light.turn_on
   entity_id:
     - light.hallway
   data:
-    brightness: 50 
+    brightness: 100 
 
