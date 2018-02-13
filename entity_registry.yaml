@@ -1,0 +1,144 @@
+light.lifx_led_strip:
+  platform: lifx
+  unique_id: d0:73:d5:14:a0:b5
+light.elins_led_strip:
+  platform: lifx
+  unique_id: d0:73:d5:26:a3:c0
+switch.telldusvilhelm_switch:
+  platform: zwave
+  unique_id: 3-72057594093060096
+switch.telldusextra_switch:
+  platform: zwave
+  unique_id: 4-72057594109837312
+switch.tellduslivingroom_switch:
+  platform: zwave
+  unique_id: 6-72057594143391744
+binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor:
+  platform: zwave
+  unique_id: 12-72057594244235264
+sensor.neo_coolcam_battery_powered_pir_sensor_luminance:
+  platform: zwave
+  unique_id: 12-72057594244251698
+sensor.neo_coolcam_battery_powered_pir_sensor_alarm_type:
+  platform: zwave
+  unique_id: 12-72057594245300225
+sensor.neo_coolcam_battery_powered_pir_sensor_alarm_level:
+  platform: zwave
+  unique_id: 12-72057594245300241
+sensor.neo_coolcam_battery_powered_pir_sensor_sourcenodeid:
+  platform: zwave
+  unique_id: 12-72057594245300257
+sensor.neo_coolcam_battery_powered_pir_sensor_burglar:
+  platform: zwave
+  unique_id: 12-72057594245300385
+binary_sensor.neo_coolcam_doorwindow_detector_sensor:
+  platform: zwave
+  unique_id: 13-72057594261012480
+sensor.neo_coolcam_doorwindow_detector_alarm_type:
+  platform: zwave
+  unique_id: 13-72057594262077441
+sensor.neo_coolcam_doorwindow_detector_alarm_level:
+  platform: zwave
+  unique_id: 13-72057594262077457
+sensor.neo_coolcam_doorwindow_detector_sourcenodeid:
+  platform: zwave
+  unique_id: 13-72057594262077473
+sensor.neo_coolcam_doorwindow_detector_access_control:
+  platform: zwave
+  unique_id: 13-72057594262077585
+binary_sensor.fibaro_system_fgsd002_smoke_sensor_sensor:
+  platform: zwave
+  unique_id: 14-72057594277789696
+sensor.fibaro_system_fgsd002_smoke_sensor_temperature:
+  platform: zwave
+  unique_id: 14-72057594277806098
+sensor.fibaro_system_fgsd002_smoke_sensor_alarm_type:
+  platform: zwave
+  unique_id: 14-72057594278854657
+sensor.fibaro_system_fgsd002_smoke_sensor_alarm_level:
+  platform: zwave
+  unique_id: 14-72057594278854673
+sensor.fibaro_system_fgsd002_smoke_sensor_sourcenodeid:
+  platform: zwave
+  unique_id: 14-72057594278854689
+sensor.fibaro_system_fgsd002_smoke_sensor_smoke:
+  platform: zwave
+  unique_id: 14-72057594278854721
+sensor.fibaro_system_fgsd002_smoke_sensor_heat:
+  platform: zwave
+  unique_id: 14-72057594278854769
+sensor.fibaro_system_fgsd002_smoke_sensor_burglar:
+  platform: zwave
+  unique_id: 14-72057594278854817
+sensor.fibaro_system_fgsd002_smoke_sensor_power_management:
+  platform: zwave
+  unique_id: 14-72057594278854833
+sensor.fibaro_system_fgsd002_smoke_sensor_system:
+  platform: zwave
+  unique_id: 14-72057594278854849
+sensor.fibaro_system_fgsd002_smoke_sensor_general:
+  platform: zwave
+  unique_id: 14-72057594279559169
+sensor.fibaro_system_fgsd002_smoke_sensor_smoke_2:
+  platform: zwave
+  unique_id: 14-72057594279559185
+sensor.fibaro_system_fgsd002_smoke_sensor_heat_2:
+  platform: zwave
+  unique_id: 14-72057594279559233
+switch.telldusoffice_switch:
+  platform: zwave
+  unique_id: 15-72057594294386688
+switch.nodonsmartplugmicro_switch:
+  platform: zwave
+  unique_id: 16-72057594311163904
+sensor.nodonsmartplugmicro_energy:
+  platform: zwave
+  unique_id: 16-72057594311376898
+sensor.nodonsmartplugmicro_previous_reading:
+  platform: zwave
+  unique_id: 16-72057594311376914
+sensor.nodonsmartplugmicro_interval:
+  platform: zwave
+  unique_id: 16-72057594311376931
+sensor.nodonsmartplugmicro_power:
+  platform: zwave
+  unique_id: 16-72057594311377026
+sensor.nodonsmartplugmicro_previous_reading_2:
+  platform: zwave
+  unique_id: 16-72057594311377042
+sensor.nodonsmartplugmicro_interval_2:
+  platform: zwave
+  unique_id: 16-72057594311377059
+sensor.nodonsmartplugmicro_exporting:
+  platform: zwave
+  unique_id: 16-72057594311377408
+sensor.nodonsmartplugmicro_alarm_type:
+  platform: zwave
+  unique_id: 16-72057594312409089
+sensor.nodonsmartplugmicro_alarm_level:
+  platform: zwave
+  unique_id: 16-72057594312409105
+sensor.nodonsmartplugmicro_sourcenodeid:
+  platform: zwave
+  unique_id: 16-72057594312409121
+sensor.nodonsmartplugmicro_power_management:
+  platform: zwave
+  unique_id: 16-72057594312409265
+sensor.nodonsmartplugmicro_system:
+  platform: zwave
+  unique_id: 16-72057594312409281
+media_player.sb_boom__bedroom:
+  platform: squeezebox
+  unique_id: 00:04:20:1e:84:de
+media_player.sb_radio__elins_room:
+  platform: squeezebox
+  unique_id: 00:04:20:2a:f3:58
+media_player.sb_touch__living_room:
+  platform: squeezebox
+  unique_id: 00:04:20:23:8b:f3
+light.bedroom_led_strip_:
+  platform: lifx
+  unique_id: d0:73:d5:27:10:26
+media_player.galaxy_tab_s2_97:
+  platform: plex
+  unique_id: 3efbb45efd229b67-com-plexapp-android

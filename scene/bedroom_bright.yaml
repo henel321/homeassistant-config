@@ -11,4 +11,4 @@
    light.bedroom_led_strip_:
       state: on 
       brightness: 255
-      color_name: white 
+      color_temp: 350 

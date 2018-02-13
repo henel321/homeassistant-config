@@ -7,7 +7,7 @@
    light.elins_led_strip:
       state: on 
       brightness: 255
-      color_name: white 
+      color_temp: 350 
    switch.telldusextra_switch:
       state: on
    
