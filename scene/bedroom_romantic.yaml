@@ -13,5 +13,5 @@
    light.bedroom_led_strip_:
       state: on 
       brightness: 60 
-      color_name: red
+      color_name: darkorchid 
       transition: 10

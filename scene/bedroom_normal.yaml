@@ -2,17 +2,16 @@
   entities:
    light.henriks_light:
       state: on
-      brightness: 130
+      brightness: 80 
       color_temp: 461
       transition: 10 
    light.marias_light: 
       state: on
-      brightness: 130 
+      brightness: 80
       color_temp: 461
       transition: 10 
    light.bedroom_led_strip_:
       state: on 
-      brightness: 100 
+      brightness: 80
       transition: 10
-      color_temp: 350 
-#      color_name: darkorchid 
+      color_temp: 380 

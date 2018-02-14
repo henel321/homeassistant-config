@@ -142,3 +142,12 @@ light.bedroom_led_strip_:
 media_player.galaxy_tab_s2_97:
   platform: plex
   unique_id: 3efbb45efd229b67-com-plexapp-android
+media_player.plex_web_chrome:
+  platform: plex
+  unique_id: zw97nukdxzll35gve5skxgdt
+media_player.nokia_8:
+  platform: plex
+  unique_id: 3b1ccc29d7c7e536-com-plexapp-android
+media_player.nexus_9_lte:
+  platform: plex
+  unique_id: bff39b70cb342e02-com-plexapp-android
