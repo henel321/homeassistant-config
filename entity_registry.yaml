@@ -151,3 +151,252 @@ media_player.nokia_8:
 media_player.nexus_9_lte:
   platform: plex
   unique_id: bff39b70cb342e02-com-plexapp-android
+switch.switch:
+  platform: zwave
+  unique_id: 17-72057594327941120
+sensor.unknown:
+  platform: zwave
+  unique_id: 17-72057594328154114
+switch.qubino_zmnhbdx_flush_2_relays_switch:
+  platform: zwave
+  unique_id: 17-144115188365869056
+sensor.qubino_zmnhbdx_flush_2_relays_unknown:
+  platform: zwave
+  unique_id: 17-144115188366082050
+switch.qubino_zmnhbdx_flush_2_relays_switch_2:
+  platform: zwave
+  unique_id: 17-216172782403796992
+sensor.qubino_zmnhbdx_flush_2_relays_unknown_2:
+  platform: zwave
+  unique_id: 17-216172782404009986
+sensor.qubino_zmnhbdx_flush_2_relays_power:
+  platform: zwave
+  unique_id: 17-72057594328154242
+sensor.qubino_zmnhbdx_flush_2_relays_power_2:
+  platform: zwave
+  unique_id: 17-144115188366082178
+sensor.qubino_zmnhbdx_flush_2_relays_power_3:
+  platform: zwave
+  unique_id: 17-216172782404010114
+switch.switch_2:
+  platform: zwave
+  unique_id: 18-72057594344718336
+binary_sensor.sensor:
+  platform: zwave
+  unique_id: 18-72057594344898560
+sensor.alarm_type:
+  platform: zwave
+  unique_id: 18-72057594345963521
+sensor.alarm_level:
+  platform: zwave
+  unique_id: 18-72057594345963537
+sensor.unknown_2:
+  platform: zwave
+  unique_id: 18-72057594344931330
+binary_sensor.qubino_zmnhadx_flush_1_relay_int3:
+  platform: zwave
+  unique_id: 18-144115188382826496
+sensor.qubino_zmnhadx_flush_1_relay_alarm_type:
+  platform: zwave
+  unique_id: 18-144115188383891457
+sensor.qubino_zmnhadx_flush_1_relay_alarm_level:
+  platform: zwave
+  unique_id: 18-144115188383891473
+sensor.qubino_zmnhadx_flush_1_relay_power:
+  platform: zwave
+  unique_id: 18-72057594344931458
+sensor.qubino_zmnhadx_flush_1_relay_exporting:
+  platform: zwave
+  unique_id: 18-72057594344931840
+sensor.qubino_zmnhadx_flush_1_relay_sourcenodeid:
+  platform: zwave
+  unique_id: 18-72057594345963553
+sensor.qubino_zmnhadx_flush_1_relay_clock:
+  platform: zwave
+  unique_id: 18-72057594345963745
+sensor.qubino_zmnhadx_flush_1_relay_appliance:
+  platform: zwave
+  unique_id: 18-72057594345963761
+sensor.qubino_zmnhadx_flush_1_relay_homehealth:
+  platform: zwave
+  unique_id: 18-72057594345963777
+sensor.qubino_zmnhadx_flush_1_relay_sourcenodeid_2:
+  platform: zwave
+  unique_id: 18-144115188383891489
+sensor.qubino_zmnhadx_flush_1_relay_power_management:
+  platform: zwave
+  unique_id: 18-144115188383891633
+sensor.qubino_zmnhadx_flush_1_relay_clock_2:
+  platform: zwave
+  unique_id: 18-144115188383891681
+sensor.qubino_zmnhadx_flush_1_relay_appliance_2:
+  platform: zwave
+  unique_id: 18-144115188383891697
+sensor.qubino_zmnhadx_flush_1_relay_homehealth_2:
+  platform: zwave
+  unique_id: 18-144115188383891713
+sensor.qubino_zmnhadx_flush_1_relay_previous_reading:
+  platform: zwave
+  unique_id: 18-72057594344931346
+sensor.qubino_zmnhadx_flush_1_relay_interval:
+  platform: zwave
+  unique_id: 18-72057594344931363
+switch.switch_3:
+  platform: zwave
+  unique_id: 19-72057594361495552
+binary_sensor.sensor_2:
+  platform: zwave
+  unique_id: 19-72057594361675776
+sensor.alarm_type_2:
+  platform: zwave
+  unique_id: 19-72057594362740737
+sensor.alarm_level_2:
+  platform: zwave
+  unique_id: 19-72057594362740753
+sensor.unknown_3:
+  platform: zwave
+  unique_id: 19-72057594361708546
+binary_sensor.qubino_zmnhadx_flush_1_relay_int3_2:
+  platform: zwave
+  unique_id: 19-144115188399603712
+sensor.qubino_zmnhadx_flush_1_relay_alarm_type_2:
+  platform: zwave
+  unique_id: 19-144115188400668673
+sensor.qubino_zmnhadx_flush_1_relay_alarm_level_2:
+  platform: zwave
+  unique_id: 19-144115188400668689
+sensor.qubino_zmnhadx_flush_1_relay_power_2:
+  platform: zwave
+  unique_id: 19-72057594361708674
+sensor.qubino_zmnhadx_flush_1_relay_exporting_2:
+  platform: zwave
+  unique_id: 19-72057594361709056
+sensor.qubino_zmnhadx_flush_1_relay_sourcenodeid_3:
+  platform: zwave
+  unique_id: 19-72057594362740769
+sensor.qubino_zmnhadx_flush_1_relay_power_management_2:
+  platform: zwave
+  unique_id: 19-72057594362740913
+sensor.qubino_zmnhadx_flush_1_relay_sourcenodeid_4:
+  platform: zwave
+  unique_id: 19-144115188400668705
+sensor.qubino_zmnhadx_flush_1_relay_power_management_3:
+  platform: zwave
+  unique_id: 19-144115188400668849
+sensor.qubino_zmnhadx_flush_1_relay_previous_reading_2:
+  platform: zwave
+  unique_id: 19-72057594361708562
+sensor.qubino_zmnhadx_flush_1_relay_interval_2:
+  platform: zwave
+  unique_id: 19-72057594361708579
+light.level:
+  platform: zwave
+  unique_id: 20-72057594378289153
+switch.switch_4:
+  platform: zwave
+  unique_id: 20-72057594378272768
+sensor.unknown_4:
+  platform: zwave
+  unique_id: 20-72057594378485762
+sensor.alarm_type_3:
+  platform: zwave
+  unique_id: 20-72057594379517953
+sensor.alarm_level_3:
+  platform: zwave
+  unique_id: 20-72057594379517969
+sensor.qubino_zmnhdd1_flush_dimmer_power:
+  platform: zwave
+  unique_id: 20-72057594378485890
+sensor.qubino_zmnhdd1_flush_dimmer_exporting:
+  platform: zwave
+  unique_id: 20-72057594378486272
+sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid:
+  platform: zwave
+  unique_id: 20-72057594379517985
+sensor.qubino_zmnhdd1_flush_dimmer_power_management:
+  platform: zwave
+  unique_id: 20-72057594379518129
+light.level_2:
+  platform: zwave
+  unique_id: 21-72057594395066369
+switch.switch_5:
+  platform: zwave
+  unique_id: 21-72057594395049984
+sensor.unknown_5:
+  platform: zwave
+  unique_id: 21-72057594395262978
+sensor.alarm_type_4:
+  platform: zwave
+  unique_id: 21-72057594396295169
+sensor.alarm_level_4:
+  platform: zwave
+  unique_id: 21-72057594396295185
+sensor.qubino_zmnhdd1_flush_dimmer_power_2:
+  platform: zwave
+  unique_id: 21-72057594395263106
+sensor.qubino_zmnhdd1_flush_dimmer_exporting_2:
+  platform: zwave
+  unique_id: 21-72057594395263488
+sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_2:
+  platform: zwave
+  unique_id: 21-72057594396295201
+sensor.qubino_zmnhdd1_flush_dimmer_power_management_2:
+  platform: zwave
+  unique_id: 21-72057594396295345
+light.level_3:
+  platform: zwave
+  unique_id: 22-72057594411843585
+switch.switch_6:
+  platform: zwave
+  unique_id: 22-72057594411827200
+sensor.unknown_6:
+  platform: zwave
+  unique_id: 22-72057594412040194
+sensor.alarm_type_5:
+  platform: zwave
+  unique_id: 22-72057594413072385
+sensor.alarm_level_5:
+  platform: zwave
+  unique_id: 22-72057594413072401
+sensor.qubino_zmnhdd1_flush_dimmer_power_3:
+  platform: zwave
+  unique_id: 22-72057594412040322
+sensor.qubino_zmnhdd1_flush_dimmer_exporting_3:
+  platform: zwave
+  unique_id: 22-72057594412040704
+sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_3:
+  platform: zwave
+  unique_id: 22-72057594413072417
+sensor.qubino_zmnhdd1_flush_dimmer_power_management_3:
+  platform: zwave
+  unique_id: 22-72057594413072561
+sensor.unknown_7:
+  platform: zwave
+  unique_id: 23-72057594428817410
+climate.thermofloor_as_heatit_thermostat_tf_021_heating:
+  platform: zwave
+  unique_id: 23-72057594429095954
+climate.thermofloor_as_heatit_thermostat_tf_021_energy_heat:
+  platform: zwave
+  unique_id: 23-72057594429096114
+sensor.thermofloor_as_heatit_thermostat_tf_021_temperature:
+  platform: zwave
+  unique_id: 23-72057594428801042
+sensor.thermofloor_as_heatit_thermostat_tf_021_exporting:
+  platform: zwave
+  unique_id: 23-72057594428817920
+sensor.unknown_8:
+  platform: zwave
+  unique_id: 24-72057594445594626
+climate.thermofloor_as_heatit_thermostat_tf_021_heating_2:
+  platform: zwave
+  unique_id: 24-72057594445873170
+climate.thermofloor_as_heatit_thermostat_tf_021_energy_heat_2:
+  platform: zwave
+  unique_id: 24-72057594445873330
+sensor.thermofloor_as_heatit_thermostat_tf_021_temperature_2:
+  platform: zwave
+  unique_id: 24-72057594445578258
+sensor.thermofloor_as_heatit_thermostat_tf_021_exporting_2:
+  platform: zwave
+  unique_id: 24-72057594445595136

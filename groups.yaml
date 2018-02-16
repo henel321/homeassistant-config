@@ -18,7 +18,9 @@ default_view:
  - group.elins_room
  - group.office
  - group.hallway
- - group.christmas
+# - group.bathroom
+# - group.shower
+# - group.christmas
  - group.vacuum_short_status
 
 
@@ -44,7 +46,23 @@ hallway:
  icon: mdi:home-outline
  entities: 
  - light.hallway
+ - switch.switch_3
  - camera.hallway
+
+bathroom: 
+ name: Bathroom
+ icon: mdi:water
+ entities:
+ - switch.qubino_zmnhbdx_flush_2_relays_switch
+ - switch.qubino_zmnhbdx_flush_2_relays_switch_2
+
+shower:
+ name: Shower
+ icon: mdi:human-male-female
+ entities:
+ - switch.switch_2
+
+ 
 
 # christmas:
 #  name: Christmas 
@@ -63,6 +81,8 @@ livingroom:
  - light.ikea_ps_uplight
  - switch.tellduslivingroom_switch
  - light.lifx_led_strip
+ - light.level_2
+ - light.level_3
 
 vilhelms_room: 
  name: "Vilhelm's room"
@@ -81,6 +101,7 @@ elins_room:
  - light.elins_light_bulb
  - switch.telldusextra_switch
  - light.elins_led_strip
+ - light.level 
 
 office: 
  name: "Office / Guest room"

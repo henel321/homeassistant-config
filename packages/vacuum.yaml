@@ -206,7 +206,7 @@ automation:
           - mon
           - tue
           - thu
-          - fri 
+          - fri
         - condition: state
           entity_id: group.parents 
           state: 'not_home'

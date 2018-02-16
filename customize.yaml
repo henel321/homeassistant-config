@@ -12,4 +12,25 @@ sensor.weather_temperature:
   friendly_name: "Outside temperature"
 sensor.fibaro_system_fgsd002_smoke_sensor_temperature:
   friendly_name: "Inside temperature"
+switch.switch_5:
+  friendly_name: "Kitchen Counter LED"
+switch.switch_3:
+  friendly_name: "Hallway Ceiling Light"
+switch.switch_6:
+  friendly_name: "Livingroom Ceiling Light"
+switch.switch_4:
+  friendly_name: "Elin Ceiling Light"
+light.level_2:
+  friendly_name: "Kitchen Counter LED"
+light.level_3:
+  friendly_name: "Livingroom Ceiling Light"
+light.level:
+  friendly_name: "Elin Ceiling Light" 
+switch.qubino_zmnhbdx_flush_2_relays_switch:
+  friendly_name: "Bathroom Ceiling light"
+switch.qubino_zmnhbdx_flush_2_relays_switch_2:
+  friendly_name: "Bathroom Mirror Light"
+switch.switch_2:
+  friendly_name: "Shower Ceiling Light"
 
+ 
