@@ -400,3 +400,258 @@ sensor.thermofloor_as_heatit_thermostat_tf_021_temperature_2:
 sensor.thermofloor_as_heatit_thermostat_tf_021_exporting_2:
   platform: zwave
   unique_id: 24-72057594445595136
+light.level_4:
+  platform: zwave
+  unique_id: 25-72057594462175233
+switch.switch_7:
+  platform: zwave
+  unique_id: 25-72057594462158848
+binary_sensor.sensor_3:
+  platform: zwave
+  unique_id: 25-72057594462339072
+sensor.unknown_9:
+  platform: zwave
+  unique_id: 25-72057594462371842
+sensor.alarm_type_6:
+  platform: zwave
+  unique_id: 25-72057594463404033
+sensor.alarm_level_6:
+  platform: zwave
+  unique_id: 25-72057594463404049
+sensor.qubino_zmnhdd1_flush_dimmer_alarm_type:
+  platform: zwave
+  unique_id: 25-144115188501331969
+sensor.qubino_zmnhdd1_flush_dimmer_alarm_level:
+  platform: zwave
+  unique_id: 25-144115188501331985
+binary_sensor.qubino_zmnhdd1_flush_dimmer_sensor:
+  platform: zwave
+  unique_id: 25-144115188500267008
+sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_2:
+  platform: zwave
+  unique_id: 25-216172782539259905
+sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_2:
+  platform: zwave
+  unique_id: 25-216172782539259921
+sensor.qubino_zmnhdd1_flush_dimmer_power_4:
+  platform: zwave
+  unique_id: 25-72057594462371970
+sensor.qubino_zmnhdd1_flush_dimmer_exporting_4:
+  platform: zwave
+  unique_id: 25-72057594462372352
+sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_4:
+  platform: zwave
+  unique_id: 25-72057594463404065
+sensor.qubino_zmnhdd1_flush_dimmer_power_management_4:
+  platform: zwave
+  unique_id: 25-72057594463404209
+sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_5:
+  platform: zwave
+  unique_id: 25-144115188501332001
+sensor.qubino_zmnhdd1_flush_dimmer_burglar:
+  platform: zwave
+  unique_id: 25-144115188501332129
+sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_6:
+  platform: zwave
+  unique_id: 25-216172782539259937
+sensor.qubino_zmnhdd1_flush_dimmer_burglar_2:
+  platform: zwave
+  unique_id: 25-216172782539260065
+light.level_5:
+  platform: zwave
+  unique_id: 26-72057594478952449
+switch.switch_8:
+  platform: zwave
+  unique_id: 26-72057594478936064
+binary_sensor.sensor_4:
+  platform: zwave
+  unique_id: 26-72057594479116288
+sensor.unknown_10:
+  platform: zwave
+  unique_id: 26-72057594479149058
+sensor.alarm_type_7:
+  platform: zwave
+  unique_id: 26-72057594480181249
+sensor.alarm_level_7:
+  platform: zwave
+  unique_id: 26-72057594480181265
+sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_3:
+  platform: zwave
+  unique_id: 26-144115188518109185
+sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_3:
+  platform: zwave
+  unique_id: 26-144115188518109201
+binary_sensor.qubino_zmnhdd1_flush_dimmer_sensor_2:
+  platform: zwave
+  unique_id: 26-144115188517044224
+sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_4:
+  platform: zwave
+  unique_id: 26-216172782556037121
+sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_4:
+  platform: zwave
+  unique_id: 26-216172782556037137
+sensor.qubino_zmnhdd1_flush_dimmer_power_5:
+  platform: zwave
+  unique_id: 26-72057594479149186
+sensor.qubino_zmnhdd1_flush_dimmer_exporting_5:
+  platform: zwave
+  unique_id: 26-72057594479149568
+sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_7:
+  platform: zwave
+  unique_id: 26-72057594480181281
+sensor.qubino_zmnhdd1_flush_dimmer_power_management_5:
+  platform: zwave
+  unique_id: 26-72057594480181425
+sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_8:
+  platform: zwave
+  unique_id: 26-144115188518109217
+sensor.qubino_zmnhdd1_flush_dimmer_burglar_3:
+  platform: zwave
+  unique_id: 26-144115188518109345
+sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_9:
+  platform: zwave
+  unique_id: 26-216172782556037153
+sensor.qubino_zmnhdd1_flush_dimmer_burglar_4:
+  platform: zwave
+  unique_id: 26-216172782556037281
+light.level_6:
+  platform: zwave
+  unique_id: 27-72057594495729665
+switch.switch_9:
+  platform: zwave
+  unique_id: 27-72057594495713280
+binary_sensor.sensor_5:
+  platform: zwave
+  unique_id: 27-72057594495893504
+sensor.unknown_11:
+  platform: zwave
+  unique_id: 27-72057594495926274
+sensor.alarm_type_8:
+  platform: zwave
+  unique_id: 27-72057594496958465
+sensor.alarm_level_8:
+  platform: zwave
+  unique_id: 27-72057594496958481
+sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_5:
+  platform: zwave
+  unique_id: 27-144115188534886401
+sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_5:
+  platform: zwave
+  unique_id: 27-144115188534886417
+binary_sensor.qubino_zmnhdd1_flush_dimmer_sensor_3:
+  platform: zwave
+  unique_id: 27-144115188533821440
+sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_6:
+  platform: zwave
+  unique_id: 27-216172782572814337
+sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_6:
+  platform: zwave
+  unique_id: 27-216172782572814353
+sensor.qubino_zmnhdd1_flush_dimmer_power_6:
+  platform: zwave
+  unique_id: 27-72057594495926402
+sensor.qubino_zmnhdd1_flush_dimmer_exporting_6:
+  platform: zwave
+  unique_id: 27-72057594495926784
+sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_10:
+  platform: zwave
+  unique_id: 27-72057594496958497
+sensor.qubino_zmnhdd1_flush_dimmer_power_management_6:
+  platform: zwave
+  unique_id: 27-72057594496958641
+sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_11:
+  platform: zwave
+  unique_id: 27-144115188534886433
+sensor.qubino_zmnhdd1_flush_dimmer_burglar_5:
+  platform: zwave
+  unique_id: 27-144115188534886561
+sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_12:
+  platform: zwave
+  unique_id: 27-216172782572814369
+sensor.qubino_zmnhdd1_flush_dimmer_burglar_6:
+  platform: zwave
+  unique_id: 27-216172782572814497
+light.level_7:
+  platform: zwave
+  unique_id: 28-72057594512506881
+switch.switch_10:
+  platform: zwave
+  unique_id: 28-72057594512490496
+binary_sensor.sensor_6:
+  platform: zwave
+  unique_id: 28-72057594512670720
+sensor.unknown_12:
+  platform: zwave
+  unique_id: 28-72057594512703490
+sensor.alarm_type_9:
+  platform: zwave
+  unique_id: 28-72057594513735681
+sensor.alarm_level_9:
+  platform: zwave
+  unique_id: 28-72057594513735697
+sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_7:
+  platform: zwave
+  unique_id: 28-144115188551663617
+sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_7:
+  platform: zwave
+  unique_id: 28-144115188551663633
+sensor.qubino_zmnhdd1_flush_dimmer_power_7:
+  platform: zwave
+  unique_id: 28-72057594512703618
+sensor.qubino_zmnhdd1_flush_dimmer_exporting_7:
+  platform: zwave
+  unique_id: 28-72057594512704000
+sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_13:
+  platform: zwave
+  unique_id: 28-72057594513735713
+sensor.qubino_zmnhdd1_flush_dimmer_power_management_7:
+  platform: zwave
+  unique_id: 28-72057594513735857
+sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_14:
+  platform: zwave
+  unique_id: 28-144115188551663649
+sensor.qubino_zmnhdd1_flush_dimmer_burglar_7:
+  platform: zwave
+  unique_id: 28-144115188551663777
+light.level_8:
+  platform: zwave
+  unique_id: 29-72057594529284097
+switch.switch_11:
+  platform: zwave
+  unique_id: 29-72057594529267712
+binary_sensor.sensor_7:
+  platform: zwave
+  unique_id: 29-72057594529447936
+sensor.unknown_13:
+  platform: zwave
+  unique_id: 29-72057594529480706
+sensor.alarm_type_10:
+  platform: zwave
+  unique_id: 29-72057594530512897
+sensor.alarm_level_10:
+  platform: zwave
+  unique_id: 29-72057594530512913
+sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_8:
+  platform: zwave
+  unique_id: 29-144115188568440833
+sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_8:
+  platform: zwave
+  unique_id: 29-144115188568440849
+sensor.qubino_zmnhdd1_flush_dimmer_power_8:
+  platform: zwave
+  unique_id: 29-72057594529480834
+sensor.qubino_zmnhdd1_flush_dimmer_exporting_8:
+  platform: zwave
+  unique_id: 29-72057594529481216
+sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_15:
+  platform: zwave
+  unique_id: 29-72057594530512929
+sensor.qubino_zmnhdd1_flush_dimmer_power_management_8:
+  platform: zwave
+  unique_id: 29-72057594530513073
+sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_16:
+  platform: zwave
+  unique_id: 29-144115188568440865
+sensor.qubino_zmnhdd1_flush_dimmer_burglar_8:
+  platform: zwave
+  unique_id: 29-144115188568440993

@@ -4,8 +4,10 @@ default_view:
  entities: 
  - zone.home
  - sensor.weather_symbol
- - sensor.fibaro_system_fgsd002_smoke_sensor_temperature
  - sensor.weather_temperature
+ - sensor.fibaro_system_fgsd002_smoke_sensor_temperature
+ - sensor.thermofloor_as_heatit_thermostat_tf_021_temperature
+ - sensor.thermofloor_as_heatit_thermostat_tf_021_temperature_2
  - device_tracker.cc9f7a9f9afb
  - device_tracker.galaxy_s7__maria
  - device_tracker.oneplus_x__vilhelm
@@ -18,8 +20,8 @@ default_view:
  - group.elins_room
  - group.office
  - group.hallway
-# - group.bathroom
-# - group.shower
+ - group.bathroom
+ - group.shower
 # - group.christmas
  - group.vacuum_short_status
 
@@ -53,6 +55,7 @@ bathroom:
  name: Bathroom
  icon: mdi:water
  entities:
+ - climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
  - switch.qubino_zmnhbdx_flush_2_relays_switch
  - switch.qubino_zmnhbdx_flush_2_relays_switch_2
 
@@ -60,6 +63,7 @@ shower:
  name: Shower
  icon: mdi:human-male-female
  entities:
+ - climate.thermofloor_as_heatit_thermostat_tf_021_heating
  - switch.switch_2
 
  
@@ -81,8 +85,8 @@ livingroom:
  - light.ikea_ps_uplight
  - switch.tellduslivingroom_switch
  - light.lifx_led_strip
- - light.level_2
- - light.level_3
+ - light.level_6
+ - light.level_7
 
 vilhelms_room: 
  name: "Vilhelm's room"
@@ -101,7 +105,7 @@ elins_room:
  - light.elins_light_bulb
  - switch.telldusextra_switch
  - light.elins_led_strip
- - light.level 
+ - light.level_8 
 
 office: 
  name: "Office / Guest room"
@@ -141,6 +145,9 @@ weather:
  - sun.sun
  - sensor.weather_symbol
  - sensor.weather_temperature
+ - sensor.fibaro_system_fgsd002_smoke_sensor_temperature
+ - sensor.thermofloor_as_heatit_thermostat_tf_021_temperature
+ - sensor.thermofloor_as_heatit_thermostat_tf_021_temperature_2
  - sensor.weather_cloudiness
  - sensor.weather_fog
  - sensor.weather_precipitation
@@ -150,6 +157,7 @@ weather:
  - sensor.weather_wind_speed
  - history_graph.temperature_graph
  - history_graph.weather_graph
+ - history_graph.floors_graph
 
 system_info_view:
   name: System info

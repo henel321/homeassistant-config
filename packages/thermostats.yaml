@@ -1,0 +1,188 @@
+history_graph:
+  floors_graph:
+    name: Floors Graph
+    entities:
+      - sensor.thermofloor_as_heatit_thermostat_tf_021_temperature 
+      - sensor.thermofloor_as_heatit_thermostat_tf_021_temperature_2
+    hours_to_show: 24
+    refresh: 300
+
+automation:
+  - alias: Increase floor heating in Shower during weekday mornings
+    trigger:
+      - platform: time
+        at: "06:00:00"
+    condition:
+      condition: and 
+      conditions:
+        - condition: time 
+          weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+        - condition: state
+          entity_id: group.parents 
+          state: 'home'
+    action:
+      - service: climate.set_operation_mode
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating 
+        data:
+          operation_mode: Heat
+      - service: climate.set_temperature
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating 
+        data:
+          temperature: 26 
+
+  - alias: Decrease floor heating in Shower after weekday mornings 
+    trigger:
+      - platform: time
+        at: "08:00:00"
+    condition:
+      condition: and
+      conditions:
+        - condition: time
+          weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+    action:
+      - service: climate.set_temperature
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating 
+        data:
+          temperature: 21
+
+  - alias: Increase floor heating in Shower during weekend mornings
+    trigger:
+      - platform: time
+        at: "08:00:00"
+    condition:
+      condition: and
+      conditions:
+        - condition: time
+          weekday:
+          - sat 
+          - sun
+        - condition: state
+          entity_id: group.parents
+          state: 'home'
+    action:
+      - service: climate.set_operation_mode
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating
+        data:
+          operation_mode: Heat
+      - service: climate.set_temperature
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating
+        data:
+          temperature: 28
+
+  - alias: Decrease floor heating in Shower after weekend mornings
+    trigger:
+      - platform: time
+        at: "11:00:00"
+    condition:
+      condition: and
+      conditions:
+        - condition: time
+          weekday:
+          - sat
+          - sun 
+    action:
+      - service: climate.set_temperature
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating
+        data:
+          temperature: 21
+
+
+  - alias: Increase floor heating in Bathroom during weekday mornings
+    trigger:
+      - platform: time
+        at: "06:00:00"
+    condition:
+      condition: and
+      conditions:
+        - condition: time
+          weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+        - condition: state
+          entity_id: group.parents
+          state: 'home'
+    action:
+      - service: climate.set_operation_mode
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
+        data:
+          operation_mode: Heat
+      - service: climate.set_temperature
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
+        data:
+          temperature: 24
+
+  - alias: Decrease floor heating in Bathroom after weekday mornings
+    trigger:
+      - platform: time
+        at: "08:00:00"
+    condition:
+      condition: and
+      conditions:
+        - condition: time
+          weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+    action:
+      - service: climate.set_temperature
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
+        data:
+          temperature: 21
+
+  - alias: Increase floor heating in Bathroom during weekend mornings
+    trigger:
+      - platform: time
+        at: "08:00:00"
+    condition:
+      condition: and
+      conditions:
+        - condition: time
+          weekday:
+          - sat
+          - sun
+        - condition: state
+          entity_id: group.parents
+          state: 'home'
+    action:
+      - service: climate.set_operation_mode
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
+        data:
+          operation_mode: Heat
+      - service: climate.set_temperature
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
+        data:
+          temperature: 26
+
+  - alias: Decrease floor heating in Bathroom after weekend mornings
+    trigger:
+      - platform: time
+        at: "11:00:00"
+    condition:
+      condition: and
+      conditions:
+        - condition: time
+          weekday:
+          - sat
+          - sun
+    action:
+      - service: climate.set_temperature
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
+        data:
+          temperature: 21
+
+

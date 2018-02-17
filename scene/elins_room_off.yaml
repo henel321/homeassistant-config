@@ -6,5 +6,5 @@
       state: off 
    switch.telldusextra_switch:
       state: off
-   light.level:
+   light.level_8:
       state: off

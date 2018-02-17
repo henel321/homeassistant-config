@@ -12,8 +12,8 @@
       state: off
    switch.tellduslivingroom_switch:
       state: off
-   light.level_2:
+   light.level_6:
       state: off
-   light.level_3:
+   light.level_7:
       state: off
 

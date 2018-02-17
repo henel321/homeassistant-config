@@ -12,19 +12,15 @@ sensor.weather_temperature:
   friendly_name: "Outside temperature"
 sensor.fibaro_system_fgsd002_smoke_sensor_temperature:
   friendly_name: "Inside temperature"
-switch.switch_5:
+sensor.thermofloor_as_heatit_thermostat_tf_021_temperature:
+  friendly_name: "Floor - Shower"
+sensor.thermofloor_as_heatit_thermostat_tf_021_temperature_2:
+  friendly_name: "Floor - Bathroom"
+light.level_7:
   friendly_name: "Kitchen Counter LED"
-switch.switch_3:
-  friendly_name: "Hallway Ceiling Light"
-switch.switch_6:
+light.level_6:
   friendly_name: "Livingroom Ceiling Light"
-switch.switch_4:
-  friendly_name: "Elin Ceiling Light"
-light.level_2:
-  friendly_name: "Kitchen Counter LED"
-light.level_3:
-  friendly_name: "Livingroom Ceiling Light"
-light.level:
+light.level_8:
   friendly_name: "Elin Ceiling Light" 
 switch.qubino_zmnhbdx_flush_2_relays_switch:
   friendly_name: "Bathroom Ceiling light"
@@ -32,5 +28,10 @@ switch.qubino_zmnhbdx_flush_2_relays_switch_2:
   friendly_name: "Bathroom Mirror Light"
 switch.switch_2:
   friendly_name: "Shower Ceiling Light"
-
+switch.switch_3: 
+  friendly_name: "Hallway Ceiling Light"
+climate.thermofloor_as_heatit_thermostat_tf_021_heating_2:
+  friendly_name: "Shower Floor Heating"
+climate.thermofloor_as_heatit_thermostat_tf_021_heating:
+  friendly_name: "Bathroom Floor Heating"
  
