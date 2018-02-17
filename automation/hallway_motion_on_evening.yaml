@@ -1,4 +1,4 @@
-alias: 'Turn on Hallway light when movement'
+alias: 'Turn on Hallway light when movement during evenings'
 trigger: 
   platform: state
   entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor 
