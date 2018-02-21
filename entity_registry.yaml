@@ -655,3 +655,6 @@ sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_16:
 sensor.qubino_zmnhdd1_flush_dimmer_burglar_8:
   platform: zwave
   unique_id: 29-144115188568440993
+media_player.plex_web_chrome_2:
+  platform: plex
+  unique_id: rtiyktizyqq0wnh4sh2suibr
