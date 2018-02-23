@@ -15,6 +15,7 @@ default_view:
  - device_tracker.workstationcartman
  - device_tracker.workstationbarnen
  - group.livingroom
+ - group.kitchen
  - group.bedroom
  - group.vilhelms_room
  - group.elins_room
@@ -42,6 +43,7 @@ bedroom:
  - light.marias_light
  - light.henriks_light
  - light.bedroom_led_strip_
+ - light.level_14
 
 hallway:
  name: Hallway
@@ -66,8 +68,6 @@ shower:
  - climate.thermofloor_as_heatit_thermostat_tf_021_heating
  - switch.switch_2
 
- 
-
 # christmas:
 #  name: Christmas 
 #  icon: mdi:christmas
@@ -76,7 +76,7 @@ shower:
 
 livingroom: 
  name: "Living room"
- icon: mdi:food-fork-drink
+ icon: mdi:home-heart
  entities:
  - input_number.brightness_lr
  - input_select.scene_lr
@@ -86,7 +86,13 @@ livingroom:
  - switch.tellduslivingroom_switch
  - light.lifx_led_strip
  - light.level_6
+
+kitchen: 
+ name: "Kitchen"
+ icon: mdi:food-fork-drink
+ entities:
  - light.level_7
+ - light.level_16  
 
 vilhelms_room: 
  name: "Vilhelm's room"
@@ -96,6 +102,7 @@ vilhelms_room:
  - light.vilhelms_light_bulb
  - switch.telldusvilhelm_switch
 # - switch.telldusjulgran_switch
+ - light.level_13
  
 elins_room: 
  name: "Elin's room"
@@ -112,6 +119,7 @@ office:
  icon: mdi:worker
  entities:
  - switch.telldusoffice_switch
+ - light.level_15
 
 mediaplayer: 
  name: "Mediaplayers" 

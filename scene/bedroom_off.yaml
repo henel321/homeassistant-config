@@ -6,3 +6,6 @@
       state: off
    light.bedroom_led_strip_:
       state: off 
+   light.level_14:
+      state: off
+

@@ -22,6 +22,14 @@ light.level_6:
   friendly_name: "Livingroom Ceiling Light"
 light.level_8:
   friendly_name: "Elin Ceiling Light" 
+light.level_13: 
+  friendly_name: "Vilhelm Ceiling Light"
+light.level_14: 
+  friendly_name: "Bedroom Ceiling Light"
+light.level_15: 
+  friendly_name: "Office Ceiling Light"
+light.level_16: 
+  friendly_name: "Kitchen Ceiling LED"
 switch.qubino_zmnhbdx_flush_2_relays_switch:
   friendly_name: "Bathroom Ceiling light"
 switch.qubino_zmnhbdx_flush_2_relays_switch_2:

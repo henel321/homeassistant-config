@@ -2,3 +2,6 @@
   entities:
     switch.telldusoffice_switch:
       state: off 
+    light.level_15:
+       state: off
+

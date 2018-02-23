@@ -16,4 +16,6 @@
       state: off
    light.level_7:
       state: off
+   light.level_16:
+      state: off
 
