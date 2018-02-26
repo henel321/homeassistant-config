@@ -78,6 +78,7 @@ remote:
   - platform: harmony
     name: harmony 
     host: 192.168.100.136 
+    activity: Watch Movies
 
 
 # Weather prediction
