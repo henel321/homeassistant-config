@@ -1003,3 +1003,27 @@ sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_32:
 sensor.qubino_zmnhdd1_flush_dimmer_burglar_16:
   platform: zwave
   unique_id: 37-216172782740586657
+media_player.living_room:
+  platform: cast
+  unique_id: bb175c62-9460-ed32-5694-8c530eb12502
+media_player.office_speaker:
+  platform: cast
+  unique_id: c446e938-3539-928a-1579-363ecaa95155
+media_player.kitchen_home:
+  platform: cast
+  unique_id: 39d26fed-a42a-84aa-98b3-b21608979735
+media_player.home_group:
+  platform: cast
+  unique_id: 246b4c5d-c0af-43a3-a7d0-f4d1b9b8f0e2
+media_player.bedroom_speaker:
+  platform: cast
+  unique_id: 5a0cd334-41bd-4013-c464-970b95ca4846
+media_player.vilhelms_room_speaker:
+  platform: cast
+  unique_id: 70d9cb44-d058-4310-f7c6-f8857c004028
+media_player.elins_room_speaker:
+  platform: cast
+  unique_id: ff6272fe-8aa5-f234-d80e-f8fed4c7bed4
+media_player.sb_radio__office:
+  platform: squeezebox
+  unique_id: 00:04:20:28:ef:b6

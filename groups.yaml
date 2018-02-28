@@ -57,7 +57,7 @@ bathroom:
  name: Bathroom
  icon: mdi:water
  entities:
- - climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
+ - climate.thermofloor_as_heatit_thermostat_tf_021_heating
  - switch.qubino_zmnhbdx_flush_2_relays_switch
  - switch.qubino_zmnhbdx_flush_2_relays_switch_2
 
@@ -65,7 +65,7 @@ shower:
  name: Shower
  icon: mdi:human-male-female
  entities:
- - climate.thermofloor_as_heatit_thermostat_tf_021_heating
+ - climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
  - switch.switch_2
 
 # christmas:
@@ -133,15 +133,18 @@ mediaplayer_google:
  name: "Google Mediaplayers"
  entities:
  - media_player.kitchen_home
+ - media_player.bedroom_speaker
  - media_player.office_speaker
  - media_player.living_room
+ - media_player.vilhelms_room_speaker
+ - media_player.elins_room_speaker
  - media_player.bedroom
 
 mediaplayer_squeezebox:
  name: "Squeezebox Mediaplayers"
  entities: 
- - media_player.sb_boom__bedroom
- - media_player.sb_radio__elins_room
+# - media_player.sb_boom__bedroom
+# - media_player.sb_radio__elins_room
  - media_player.sb_touch__living_room
  - media_player.sb_radio__office
 

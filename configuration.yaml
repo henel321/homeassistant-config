@@ -113,10 +113,11 @@ google_assistant:
   project_id: homeassistant-20171104 
   client_id: !secret ga_client_id 
   access_token: !secret ga_access_token
+  exposed_by_default: false
   exposed_domains:
     - switch
     - light
-    - group
+    - climate
 
 # Zwave configuration
 zwave: 
