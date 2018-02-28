@@ -1,0 +1,71 @@
+homeassistant: 
+
+automation:
+  - alias: "i2 on kitchen counter turn on COOK scene" 
+    trigger: 
+      platform: state
+      entity_id: binary_sensor.sensor_6  
+      to: 'on'
+    action: 
+      service: scene.turn_on
+      entity_id:
+      - scene.k_cook
+
+  - alias: "i2 on kitchen ceilingr turn on EAT scene"
+    trigger:
+      platform: state
+      entity_id: binary_sensor.sensor_11
+      to: 'on'
+    action:
+      service: scene.turn_on
+      entity_id:
+      - scene.k_eat  
+
+
+  - alias: "i2 on livingroom ceiling turn on Normal scene"
+    trigger:
+      platform: state
+      entity_id: binary_sensor.sensor_5
+      to: 'on'
+    action:
+      service: scene.turn_on
+      entity_id:
+      - scene.lr_normal
+
+  - alias: "i2 on bedroom ceiling turn on Normal scene"
+    trigger:
+      platform: state
+      entity_id: binary_sensor.sensor_9
+      to: 'on'
+    action:
+      service: scene.turn_on
+      entity_id:
+      - scene.br_normal
+
+ 
+  - alias: "i2 on Vilhelm ceiling turn on Normal scene"
+    trigger:
+      platform: state
+      entity_id: binary_sensor.sensor_8
+      to: 'on'
+    action:
+      service: scene.turn_on
+      entity_id:
+      - scene.vr_normal 
+
+  - alias: "i2 on Elin ceiling turn on Normal scene"
+    trigger:
+      platform: state
+      entity_id: binary_sensor.sensor_7
+      to: 'on'
+    action:
+      service: scene.turn_on
+      entity_id:
+      - scene.er_normal 
+
+
+
+
+
+
+

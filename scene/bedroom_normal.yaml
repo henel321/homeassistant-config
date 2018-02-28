@@ -15,3 +15,5 @@
       brightness: 80
       transition: 10
       color_temp: 380 
+   light.level_14:
+      state: off

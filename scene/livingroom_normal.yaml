@@ -22,3 +22,7 @@
       transition: 10
    switch.tellduslivingroom_switch:
       state: on
+   light.level_7:
+      state: off
+   light.level_16:
+      state: off

@@ -10,3 +10,5 @@
       color_name: magenta 
    switch.telldusextra_switch:
       state: on
+   light.level_8:
+      state: off

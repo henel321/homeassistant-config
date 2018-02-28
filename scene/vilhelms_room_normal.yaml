@@ -6,3 +6,5 @@
       color_temp: 461
    switch.telldusvilhelm_switch:
       state: on
+   light.level_13:
+      state: off

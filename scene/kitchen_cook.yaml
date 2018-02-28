@@ -1,0 +1,9 @@
+- name: K Cook
+  entities:
+   light.level_7:
+      state: on
+      brightness: 150 
+   light.level_16:
+      state: on
+      brightness: 50
+   
