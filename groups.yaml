@@ -126,11 +126,19 @@ mediaplayer:
  view: yes
  icon: mdi:music
  entities: 
+ - group.mediaplayer_groups 
  - group.mediaplayer_google 
  - group.mediaplayer_squeezebox
 
+mediaplayer_groups:
+ name: "Google Mediaplayer Groups" 
+ icon: mdi:cast-connected
+ entities:
+ - media_player.home_group
+
 mediaplayer_google:
  name: "Google Mediaplayers"
+ icon: mdi:cast
  entities:
  - media_player.kitchen_home
  - media_player.bedroom_speaker
@@ -142,6 +150,7 @@ mediaplayer_google:
 
 mediaplayer_squeezebox:
  name: "Squeezebox Mediaplayers"
+ icon: mdi:library-music
  entities: 
 # - media_player.sb_boom__bedroom
 # - media_player.sb_radio__elins_room

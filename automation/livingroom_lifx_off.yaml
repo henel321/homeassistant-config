@@ -8,8 +8,9 @@ action:
   - service: light.turn_off
     entity_id:
     - light.lifx_led_strip
+    - light.level_6
+    - light.level_7
+    - light.level_16
   - service: switch.turn_off
     entity_id:
     - switch.tellduslivingroom_switch
-  
- 

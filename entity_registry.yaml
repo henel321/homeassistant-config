@@ -127,12 +127,6 @@ sensor.nodonsmartplugmicro_power_management:
 sensor.nodonsmartplugmicro_system:
   platform: zwave
   unique_id: 16-72057594312409281
-media_player.sb_boom__bedroom:
-  platform: squeezebox
-  unique_id: 00:04:20:1e:84:de
-media_player.sb_radio__elins_room:
-  platform: squeezebox
-  unique_id: 00:04:20:2a:f3:58
 media_player.sb_touch__living_room:
   platform: squeezebox
   unique_id: 00:04:20:23:8b:f3
@@ -1026,4 +1020,4 @@ media_player.elins_room_speaker:
   unique_id: ff6272fe-8aa5-f234-d80e-f8fed4c7bed4
 media_player.sb_radio__office:
   platform: squeezebox
-  unique_id: 00:04:20:28:ef:b6
+  unique_id: 00:04:20:2a:f3:58
