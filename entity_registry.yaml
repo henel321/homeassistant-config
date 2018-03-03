@@ -1021,3 +1021,6 @@ media_player.elins_room_speaker:
 media_player.sb_radio__office:
   platform: squeezebox
   unique_id: 00:04:20:2a:f3:58
+media_player.plex_web_chrome_3:
+  platform: plex
+  unique_id: n9c6ycb156x0f6r

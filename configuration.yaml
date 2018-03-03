@@ -124,6 +124,9 @@ zwave:
   usb_path: /dev/ttyACM0
   polling_interval: 60000
 
+media_player: 
+  - platform: plex
+
 # Track wifi users through unifi
 device_tracker:
   - platform: unifi
