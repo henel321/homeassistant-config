@@ -5,8 +5,6 @@ trigger:
   from: 'off'
   to: 'on'
 action:
-  service: light.turn_on
+  service: switch.turn_on
   entity_id:
-    - light.hallway
-  data:
-    brightness: 200 
+    - switch.switch_3

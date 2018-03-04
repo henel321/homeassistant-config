@@ -49,7 +49,7 @@ hallway:
  name: Hallway
  icon: mdi:home-outline
  entities: 
- - light.hallway
+# - light.hallway
  - switch.switch_3
  - camera.hallway
 

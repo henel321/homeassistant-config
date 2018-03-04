@@ -7,6 +7,6 @@ trigger:
   for:
     minutes: 10
 action:
-  service: light.turn_off
-  entity_id: 
-    - light.hallway
+  service: switch.turn_off
+  entity_id:
+    - switch.switch_3

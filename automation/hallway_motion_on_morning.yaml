@@ -9,9 +9,6 @@ condition:
   after: '07:00:00'
   before: '10:00:00' 
 action:
-  service: light.turn_on
+  service: switch.turn_on
   entity_id:
-    - light.hallway
-  data:
-    brightness: 200
-
+    - switch.switch_3
