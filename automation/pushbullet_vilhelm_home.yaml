@@ -4,6 +4,10 @@ trigger:
   entity_id: device_tracker.oneplus_x__vilhelm 
   from: 'not_home'
   to: 'home'
+condition:
+  condition: state
+  entity_id: group.parents        
+  state: 'not_home'
 action:
   service: notify.pushbullet
   data:

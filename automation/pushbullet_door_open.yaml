@@ -4,6 +4,10 @@ trigger:
   entity_id: binary_sensor.neo_coolcam_doorwindow_detector_sensor
   from: 'off'
   to: 'on'
+condition:
+  condition: state
+  entity_id: group.parents 
+  state: 'not_home'
 action:
   service: notify.pushbullet
   data:
