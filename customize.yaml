@@ -42,4 +42,8 @@ climate.thermofloor_as_heatit_thermostat_tf_021_heating_2:
   friendly_name: "Shower Floor Heating"
 climate.thermofloor_as_heatit_thermostat_tf_021_heating:
   friendly_name: "Bathroom Floor Heating"
+light.shower_ceiling_light: 
+  friendly:name: "Shower Ceiling Trådfri Light"
+light.bathroom_light: 
+  friendly_name: "Bathroom Ceiling Trådfri Light"
  
