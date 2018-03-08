@@ -1024,3 +1024,12 @@ media_player.sb_radio__office:
 media_player.plex_web_chrome_3:
   platform: plex
   unique_id: n9c6ycb156x0f6r
+media_player.elins_room:
+  platform: cast
+  unique_id: 6f5eea12-53ee-4860-bc3d-dcd9e00aac90
+media_player.all_google_homes:
+  platform: cast
+  unique_id: d6884502-631d-49dd-b6f3-c7293a585f27
+media_player.plex_web_chrome_4:
+  platform: plex
+  unique_id: p5o6xp1cyk2eivdmq90k3fbf

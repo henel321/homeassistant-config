@@ -23,5 +23,5 @@ Includes:
 On the Improvement list. 
 
 - Move config to packages 
-- Create switches for "cleaning" scenes for all rooms and a few more shortcuts. 
+- Add limitations on notifications for door open when people home. 
 - Re-Add tamper alert for fire alarm once fixed in HA. 
