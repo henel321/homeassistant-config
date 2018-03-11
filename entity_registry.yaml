@@ -1033,3 +1033,6 @@ media_player.all_google_homes:
 media_player.plex_web_chrome_4:
   platform: plex
   unique_id: p5o6xp1cyk2eivdmq90k3fbf
+media_player.one_e1003:
+  platform: plex
+  unique_id: eaa028ab658b3b68-com-plexapp-android
