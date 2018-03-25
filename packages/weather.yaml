@@ -19,4 +19,17 @@ history_graph:
     hours_to_show: 24
     refresh: 300
 
+  netatmo_inside_temp:
+    name: Netatmo Inside Temp
+    entities:
+      - sensor.netatmo_indoor_temperature
+    hours_to_show: 24
+    refresh: 300
+
+  netatmo_outside_temp:
+    name: Netatmo Outside Temp
+    entities:
+      - sensor.netatmo_balcony_temperature
+    hours_to_show: 24
+    refresh: 300
  

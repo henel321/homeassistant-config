@@ -1,1038 +1,1384 @@
 light.lifx_led_strip:
+  name:
   platform: lifx
   unique_id: d0:73:d5:14:a0:b5
 light.elins_led_strip:
+  name:
   platform: lifx
   unique_id: d0:73:d5:26:a3:c0
 switch.telldusvilhelm_switch:
+  name:
   platform: zwave
   unique_id: 3-72057594093060096
 switch.telldusextra_switch:
+  name:
   platform: zwave
   unique_id: 4-72057594109837312
 switch.tellduslivingroom_switch:
+  name:
   platform: zwave
   unique_id: 6-72057594143391744
 binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor:
+  name:
   platform: zwave
   unique_id: 12-72057594244235264
 sensor.neo_coolcam_battery_powered_pir_sensor_luminance:
+  name:
   platform: zwave
   unique_id: 12-72057594244251698
 sensor.neo_coolcam_battery_powered_pir_sensor_alarm_type:
+  name:
   platform: zwave
   unique_id: 12-72057594245300225
 sensor.neo_coolcam_battery_powered_pir_sensor_alarm_level:
+  name:
   platform: zwave
   unique_id: 12-72057594245300241
 sensor.neo_coolcam_battery_powered_pir_sensor_sourcenodeid:
+  name:
   platform: zwave
   unique_id: 12-72057594245300257
 sensor.neo_coolcam_battery_powered_pir_sensor_burglar:
+  name:
   platform: zwave
   unique_id: 12-72057594245300385
 binary_sensor.neo_coolcam_doorwindow_detector_sensor:
+  name:
   platform: zwave
   unique_id: 13-72057594261012480
 sensor.neo_coolcam_doorwindow_detector_alarm_type:
+  name:
   platform: zwave
   unique_id: 13-72057594262077441
 sensor.neo_coolcam_doorwindow_detector_alarm_level:
+  name:
   platform: zwave
   unique_id: 13-72057594262077457
 sensor.neo_coolcam_doorwindow_detector_sourcenodeid:
+  name:
   platform: zwave
   unique_id: 13-72057594262077473
 sensor.neo_coolcam_doorwindow_detector_access_control:
+  name:
   platform: zwave
   unique_id: 13-72057594262077585
 binary_sensor.fibaro_system_fgsd002_smoke_sensor_sensor:
+  name:
   platform: zwave
   unique_id: 14-72057594277789696
 sensor.fibaro_system_fgsd002_smoke_sensor_temperature:
+  name:
   platform: zwave
   unique_id: 14-72057594277806098
 sensor.fibaro_system_fgsd002_smoke_sensor_alarm_type:
+  name:
   platform: zwave
   unique_id: 14-72057594278854657
 sensor.fibaro_system_fgsd002_smoke_sensor_alarm_level:
+  name:
   platform: zwave
   unique_id: 14-72057594278854673
 sensor.fibaro_system_fgsd002_smoke_sensor_sourcenodeid:
+  name:
   platform: zwave
   unique_id: 14-72057594278854689
 sensor.fibaro_system_fgsd002_smoke_sensor_smoke:
+  name:
   platform: zwave
   unique_id: 14-72057594278854721
 sensor.fibaro_system_fgsd002_smoke_sensor_heat:
+  name:
   platform: zwave
   unique_id: 14-72057594278854769
 sensor.fibaro_system_fgsd002_smoke_sensor_burglar:
+  name:
   platform: zwave
   unique_id: 14-72057594278854817
 sensor.fibaro_system_fgsd002_smoke_sensor_power_management:
+  name:
   platform: zwave
   unique_id: 14-72057594278854833
 sensor.fibaro_system_fgsd002_smoke_sensor_system:
+  name:
   platform: zwave
   unique_id: 14-72057594278854849
 sensor.fibaro_system_fgsd002_smoke_sensor_general:
+  name:
   platform: zwave
   unique_id: 14-72057594279559169
 sensor.fibaro_system_fgsd002_smoke_sensor_smoke_2:
+  name:
   platform: zwave
   unique_id: 14-72057594279559185
 sensor.fibaro_system_fgsd002_smoke_sensor_heat_2:
+  name:
   platform: zwave
   unique_id: 14-72057594279559233
 switch.telldusoffice_switch:
+  name: ''
   platform: zwave
   unique_id: 15-72057594294386688
 switch.nodonsmartplugmicro_switch:
+  name:
   platform: zwave
   unique_id: 16-72057594311163904
 sensor.nodonsmartplugmicro_energy:
+  name:
   platform: zwave
   unique_id: 16-72057594311376898
 sensor.nodonsmartplugmicro_previous_reading:
+  name:
   platform: zwave
   unique_id: 16-72057594311376914
 sensor.nodonsmartplugmicro_interval:
+  name:
   platform: zwave
   unique_id: 16-72057594311376931
 sensor.nodonsmartplugmicro_power:
+  name:
   platform: zwave
   unique_id: 16-72057594311377026
 sensor.nodonsmartplugmicro_previous_reading_2:
+  name:
   platform: zwave
   unique_id: 16-72057594311377042
 sensor.nodonsmartplugmicro_interval_2:
+  name:
   platform: zwave
   unique_id: 16-72057594311377059
 sensor.nodonsmartplugmicro_exporting:
+  name:
   platform: zwave
   unique_id: 16-72057594311377408
 sensor.nodonsmartplugmicro_alarm_type:
+  name:
   platform: zwave
   unique_id: 16-72057594312409089
 sensor.nodonsmartplugmicro_alarm_level:
+  name:
   platform: zwave
   unique_id: 16-72057594312409105
 sensor.nodonsmartplugmicro_sourcenodeid:
+  name:
   platform: zwave
   unique_id: 16-72057594312409121
 sensor.nodonsmartplugmicro_power_management:
+  name:
   platform: zwave
   unique_id: 16-72057594312409265
 sensor.nodonsmartplugmicro_system:
+  name:
   platform: zwave
   unique_id: 16-72057594312409281
 media_player.sb_touch__living_room:
+  name:
   platform: squeezebox
   unique_id: 00:04:20:23:8b:f3
 light.bedroom_led_strip_:
+  name:
   platform: lifx
   unique_id: d0:73:d5:27:10:26
 media_player.galaxy_tab_s2_97:
+  name:
   platform: plex
   unique_id: 3efbb45efd229b67-com-plexapp-android
 media_player.plex_web_chrome:
+  name:
   platform: plex
   unique_id: zw97nukdxzll35gve5skxgdt
 media_player.nokia_8:
+  name:
   platform: plex
   unique_id: 3b1ccc29d7c7e536-com-plexapp-android
 media_player.nexus_9_lte:
+  name:
   platform: plex
   unique_id: bff39b70cb342e02-com-plexapp-android
 switch.switch:
+  name:
   platform: zwave
   unique_id: 17-72057594327941120
 sensor.unknown:
+  name:
   platform: zwave
   unique_id: 17-72057594328154114
 switch.qubino_zmnhbdx_flush_2_relays_switch:
+  name:
   platform: zwave
   unique_id: 17-144115188365869056
 sensor.qubino_zmnhbdx_flush_2_relays_unknown:
+  name:
   platform: zwave
   unique_id: 17-144115188366082050
 switch.qubino_zmnhbdx_flush_2_relays_switch_2:
+  name:
   platform: zwave
   unique_id: 17-216172782403796992
 sensor.qubino_zmnhbdx_flush_2_relays_unknown_2:
+  name:
   platform: zwave
   unique_id: 17-216172782404009986
 sensor.qubino_zmnhbdx_flush_2_relays_power:
+  name:
   platform: zwave
   unique_id: 17-72057594328154242
 sensor.qubino_zmnhbdx_flush_2_relays_power_2:
+  name:
   platform: zwave
   unique_id: 17-144115188366082178
 sensor.qubino_zmnhbdx_flush_2_relays_power_3:
+  name:
   platform: zwave
   unique_id: 17-216172782404010114
 switch.switch_2:
+  name:
   platform: zwave
   unique_id: 18-72057594344718336
 binary_sensor.sensor:
+  name:
   platform: zwave
   unique_id: 18-72057594344898560
 sensor.alarm_type:
+  name:
   platform: zwave
   unique_id: 18-72057594345963521
 sensor.alarm_level:
+  name:
   platform: zwave
   unique_id: 18-72057594345963537
 sensor.unknown_2:
+  name:
   platform: zwave
   unique_id: 18-72057594344931330
 binary_sensor.qubino_zmnhadx_flush_1_relay_int3:
+  name:
   platform: zwave
   unique_id: 18-144115188382826496
 sensor.qubino_zmnhadx_flush_1_relay_alarm_type:
+  name:
   platform: zwave
   unique_id: 18-144115188383891457
 sensor.qubino_zmnhadx_flush_1_relay_alarm_level:
+  name:
   platform: zwave
   unique_id: 18-144115188383891473
 sensor.qubino_zmnhadx_flush_1_relay_power:
+  name:
   platform: zwave
   unique_id: 18-72057594344931458
 sensor.qubino_zmnhadx_flush_1_relay_exporting:
+  name:
   platform: zwave
   unique_id: 18-72057594344931840
 sensor.qubino_zmnhadx_flush_1_relay_sourcenodeid:
+  name:
   platform: zwave
   unique_id: 18-72057594345963553
 sensor.qubino_zmnhadx_flush_1_relay_clock:
+  name:
   platform: zwave
   unique_id: 18-72057594345963745
 sensor.qubino_zmnhadx_flush_1_relay_appliance:
+  name:
   platform: zwave
   unique_id: 18-72057594345963761
 sensor.qubino_zmnhadx_flush_1_relay_homehealth:
+  name:
   platform: zwave
   unique_id: 18-72057594345963777
 sensor.qubino_zmnhadx_flush_1_relay_sourcenodeid_2:
+  name:
   platform: zwave
   unique_id: 18-144115188383891489
 sensor.qubino_zmnhadx_flush_1_relay_power_management:
+  name:
   platform: zwave
   unique_id: 18-144115188383891633
 sensor.qubino_zmnhadx_flush_1_relay_clock_2:
+  name:
   platform: zwave
   unique_id: 18-144115188383891681
 sensor.qubino_zmnhadx_flush_1_relay_appliance_2:
+  name:
   platform: zwave
   unique_id: 18-144115188383891697
 sensor.qubino_zmnhadx_flush_1_relay_homehealth_2:
+  name:
   platform: zwave
   unique_id: 18-144115188383891713
 sensor.qubino_zmnhadx_flush_1_relay_previous_reading:
+  name:
   platform: zwave
   unique_id: 18-72057594344931346
 sensor.qubino_zmnhadx_flush_1_relay_interval:
+  name:
   platform: zwave
   unique_id: 18-72057594344931363
 switch.switch_3:
+  name:
   platform: zwave
   unique_id: 19-72057594361495552
 binary_sensor.sensor_2:
+  name:
   platform: zwave
   unique_id: 19-72057594361675776
 sensor.alarm_type_2:
+  name:
   platform: zwave
   unique_id: 19-72057594362740737
 sensor.alarm_level_2:
+  name:
   platform: zwave
   unique_id: 19-72057594362740753
 sensor.unknown_3:
+  name:
   platform: zwave
   unique_id: 19-72057594361708546
 binary_sensor.qubino_zmnhadx_flush_1_relay_int3_2:
+  name:
   platform: zwave
   unique_id: 19-144115188399603712
 sensor.qubino_zmnhadx_flush_1_relay_alarm_type_2:
+  name:
   platform: zwave
   unique_id: 19-144115188400668673
 sensor.qubino_zmnhadx_flush_1_relay_alarm_level_2:
+  name:
   platform: zwave
   unique_id: 19-144115188400668689
 sensor.qubino_zmnhadx_flush_1_relay_power_2:
+  name:
   platform: zwave
   unique_id: 19-72057594361708674
 sensor.qubino_zmnhadx_flush_1_relay_exporting_2:
+  name:
   platform: zwave
   unique_id: 19-72057594361709056
 sensor.qubino_zmnhadx_flush_1_relay_sourcenodeid_3:
+  name:
   platform: zwave
   unique_id: 19-72057594362740769
 sensor.qubino_zmnhadx_flush_1_relay_power_management_2:
+  name:
   platform: zwave
   unique_id: 19-72057594362740913
 sensor.qubino_zmnhadx_flush_1_relay_sourcenodeid_4:
+  name:
   platform: zwave
   unique_id: 19-144115188400668705
 sensor.qubino_zmnhadx_flush_1_relay_power_management_3:
+  name:
   platform: zwave
   unique_id: 19-144115188400668849
 sensor.qubino_zmnhadx_flush_1_relay_previous_reading_2:
+  name:
   platform: zwave
   unique_id: 19-72057594361708562
 sensor.qubino_zmnhadx_flush_1_relay_interval_2:
+  name:
   platform: zwave
   unique_id: 19-72057594361708579
 light.level:
+  name:
   platform: zwave
   unique_id: 20-72057594378289153
 switch.switch_4:
+  name:
   platform: zwave
   unique_id: 20-72057594378272768
 sensor.unknown_4:
+  name:
   platform: zwave
   unique_id: 20-72057594378485762
 sensor.alarm_type_3:
+  name:
   platform: zwave
   unique_id: 20-72057594379517953
 sensor.alarm_level_3:
+  name:
   platform: zwave
   unique_id: 20-72057594379517969
 sensor.qubino_zmnhdd1_flush_dimmer_power:
+  name:
   platform: zwave
   unique_id: 20-72057594378485890
 sensor.qubino_zmnhdd1_flush_dimmer_exporting:
+  name:
   platform: zwave
   unique_id: 20-72057594378486272
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid:
+  name:
   platform: zwave
   unique_id: 20-72057594379517985
 sensor.qubino_zmnhdd1_flush_dimmer_power_management:
+  name:
   platform: zwave
   unique_id: 20-72057594379518129
 light.level_2:
+  name:
   platform: zwave
   unique_id: 21-72057594395066369
 switch.switch_5:
+  name:
   platform: zwave
   unique_id: 21-72057594395049984
 sensor.unknown_5:
+  name:
   platform: zwave
   unique_id: 21-72057594395262978
 sensor.alarm_type_4:
+  name:
   platform: zwave
   unique_id: 21-72057594396295169
 sensor.alarm_level_4:
+  name:
   platform: zwave
   unique_id: 21-72057594396295185
 sensor.qubino_zmnhdd1_flush_dimmer_power_2:
+  name:
   platform: zwave
   unique_id: 21-72057594395263106
 sensor.qubino_zmnhdd1_flush_dimmer_exporting_2:
+  name:
   platform: zwave
   unique_id: 21-72057594395263488
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_2:
+  name:
   platform: zwave
   unique_id: 21-72057594396295201
 sensor.qubino_zmnhdd1_flush_dimmer_power_management_2:
+  name:
   platform: zwave
   unique_id: 21-72057594396295345
 light.level_3:
+  name:
   platform: zwave
   unique_id: 22-72057594411843585
 switch.switch_6:
+  name:
   platform: zwave
   unique_id: 22-72057594411827200
 sensor.unknown_6:
+  name:
   platform: zwave
   unique_id: 22-72057594412040194
 sensor.alarm_type_5:
+  name:
   platform: zwave
   unique_id: 22-72057594413072385
 sensor.alarm_level_5:
+  name:
   platform: zwave
   unique_id: 22-72057594413072401
 sensor.qubino_zmnhdd1_flush_dimmer_power_3:
+  name:
   platform: zwave
   unique_id: 22-72057594412040322
 sensor.qubino_zmnhdd1_flush_dimmer_exporting_3:
+  name:
   platform: zwave
   unique_id: 22-72057594412040704
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_3:
+  name:
   platform: zwave
   unique_id: 22-72057594413072417
 sensor.qubino_zmnhdd1_flush_dimmer_power_management_3:
+  name:
   platform: zwave
   unique_id: 22-72057594413072561
 sensor.unknown_7:
+  name:
   platform: zwave
   unique_id: 23-72057594428817410
 climate.thermofloor_as_heatit_thermostat_tf_021_heating:
+  name:
   platform: zwave
   unique_id: 23-72057594429095954
 climate.thermofloor_as_heatit_thermostat_tf_021_energy_heat:
+  name:
   platform: zwave
   unique_id: 23-72057594429096114
 sensor.thermofloor_as_heatit_thermostat_tf_021_temperature:
+  name:
   platform: zwave
   unique_id: 23-72057594428801042
 sensor.thermofloor_as_heatit_thermostat_tf_021_exporting:
+  name:
   platform: zwave
   unique_id: 23-72057594428817920
 sensor.unknown_8:
+  name:
   platform: zwave
   unique_id: 24-72057594445594626
 climate.thermofloor_as_heatit_thermostat_tf_021_heating_2:
+  name:
   platform: zwave
   unique_id: 24-72057594445873170
 climate.thermofloor_as_heatit_thermostat_tf_021_energy_heat_2:
+  name:
   platform: zwave
   unique_id: 24-72057594445873330
 sensor.thermofloor_as_heatit_thermostat_tf_021_temperature_2:
+  name:
   platform: zwave
   unique_id: 24-72057594445578258
 sensor.thermofloor_as_heatit_thermostat_tf_021_exporting_2:
+  name:
   platform: zwave
   unique_id: 24-72057594445595136
 light.level_4:
+  name:
   platform: zwave
   unique_id: 25-72057594462175233
 switch.switch_7:
+  name:
   platform: zwave
   unique_id: 25-72057594462158848
 binary_sensor.sensor_3:
+  name:
   platform: zwave
   unique_id: 25-72057594462339072
 sensor.unknown_9:
+  name:
   platform: zwave
   unique_id: 25-72057594462371842
 sensor.alarm_type_6:
+  name:
   platform: zwave
   unique_id: 25-72057594463404033
 sensor.alarm_level_6:
+  name:
   platform: zwave
   unique_id: 25-72057594463404049
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_type:
+  name:
   platform: zwave
   unique_id: 25-144115188501331969
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_level:
+  name:
   platform: zwave
   unique_id: 25-144115188501331985
 binary_sensor.qubino_zmnhdd1_flush_dimmer_sensor:
+  name:
   platform: zwave
   unique_id: 25-144115188500267008
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_2:
+  name:
   platform: zwave
   unique_id: 25-216172782539259905
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_2:
+  name:
   platform: zwave
   unique_id: 25-216172782539259921
 sensor.qubino_zmnhdd1_flush_dimmer_power_4:
+  name:
   platform: zwave
   unique_id: 25-72057594462371970
 sensor.qubino_zmnhdd1_flush_dimmer_exporting_4:
+  name:
   platform: zwave
   unique_id: 25-72057594462372352
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_4:
+  name:
   platform: zwave
   unique_id: 25-72057594463404065
 sensor.qubino_zmnhdd1_flush_dimmer_power_management_4:
+  name:
   platform: zwave
   unique_id: 25-72057594463404209
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_5:
+  name:
   platform: zwave
   unique_id: 25-144115188501332001
 sensor.qubino_zmnhdd1_flush_dimmer_burglar:
+  name:
   platform: zwave
   unique_id: 25-144115188501332129
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_6:
+  name:
   platform: zwave
   unique_id: 25-216172782539259937
 sensor.qubino_zmnhdd1_flush_dimmer_burglar_2:
+  name:
   platform: zwave
   unique_id: 25-216172782539260065
 light.level_5:
+  name:
   platform: zwave
   unique_id: 26-72057594478952449
 switch.switch_8:
+  name:
   platform: zwave
   unique_id: 26-72057594478936064
 binary_sensor.sensor_4:
+  name:
   platform: zwave
   unique_id: 26-72057594479116288
 sensor.unknown_10:
+  name:
   platform: zwave
   unique_id: 26-72057594479149058
 sensor.alarm_type_7:
+  name:
   platform: zwave
   unique_id: 26-72057594480181249
 sensor.alarm_level_7:
+  name:
   platform: zwave
   unique_id: 26-72057594480181265
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_3:
+  name:
   platform: zwave
   unique_id: 26-144115188518109185
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_3:
+  name:
   platform: zwave
   unique_id: 26-144115188518109201
 binary_sensor.qubino_zmnhdd1_flush_dimmer_sensor_2:
+  name:
   platform: zwave
   unique_id: 26-144115188517044224
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_4:
+  name:
   platform: zwave
   unique_id: 26-216172782556037121
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_4:
+  name:
   platform: zwave
   unique_id: 26-216172782556037137
 sensor.qubino_zmnhdd1_flush_dimmer_power_5:
+  name:
   platform: zwave
   unique_id: 26-72057594479149186
 sensor.qubino_zmnhdd1_flush_dimmer_exporting_5:
+  name:
   platform: zwave
   unique_id: 26-72057594479149568
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_7:
+  name:
   platform: zwave
   unique_id: 26-72057594480181281
 sensor.qubino_zmnhdd1_flush_dimmer_power_management_5:
+  name:
   platform: zwave
   unique_id: 26-72057594480181425
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_8:
+  name:
   platform: zwave
   unique_id: 26-144115188518109217
 sensor.qubino_zmnhdd1_flush_dimmer_burglar_3:
+  name:
   platform: zwave
   unique_id: 26-144115188518109345
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_9:
+  name:
   platform: zwave
   unique_id: 26-216172782556037153
 sensor.qubino_zmnhdd1_flush_dimmer_burglar_4:
+  name:
   platform: zwave
   unique_id: 26-216172782556037281
 light.level_6:
+  name:
   platform: zwave
   unique_id: 27-72057594495729665
 switch.switch_9:
+  name:
   platform: zwave
   unique_id: 27-72057594495713280
 binary_sensor.sensor_5:
+  name:
   platform: zwave
   unique_id: 27-72057594495893504
 sensor.unknown_11:
+  name:
   platform: zwave
   unique_id: 27-72057594495926274
 sensor.alarm_type_8:
+  name:
   platform: zwave
   unique_id: 27-72057594496958465
 sensor.alarm_level_8:
+  name:
   platform: zwave
   unique_id: 27-72057594496958481
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_5:
+  name:
   platform: zwave
   unique_id: 27-144115188534886401
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_5:
+  name:
   platform: zwave
   unique_id: 27-144115188534886417
 binary_sensor.qubino_zmnhdd1_flush_dimmer_sensor_3:
+  name:
   platform: zwave
   unique_id: 27-144115188533821440
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_6:
+  name:
   platform: zwave
   unique_id: 27-216172782572814337
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_6:
+  name:
   platform: zwave
   unique_id: 27-216172782572814353
 sensor.qubino_zmnhdd1_flush_dimmer_power_6:
+  name:
   platform: zwave
   unique_id: 27-72057594495926402
 sensor.qubino_zmnhdd1_flush_dimmer_exporting_6:
+  name:
   platform: zwave
   unique_id: 27-72057594495926784
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_10:
+  name:
   platform: zwave
   unique_id: 27-72057594496958497
 sensor.qubino_zmnhdd1_flush_dimmer_power_management_6:
+  name:
   platform: zwave
   unique_id: 27-72057594496958641
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_11:
+  name:
   platform: zwave
   unique_id: 27-144115188534886433
 sensor.qubino_zmnhdd1_flush_dimmer_burglar_5:
+  name:
   platform: zwave
   unique_id: 27-144115188534886561
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_12:
+  name:
   platform: zwave
   unique_id: 27-216172782572814369
 sensor.qubino_zmnhdd1_flush_dimmer_burglar_6:
+  name:
   platform: zwave
   unique_id: 27-216172782572814497
 light.level_7:
+  name:
   platform: zwave
   unique_id: 28-72057594512506881
 switch.switch_10:
+  name:
   platform: zwave
   unique_id: 28-72057594512490496
 binary_sensor.sensor_6:
+  name:
   platform: zwave
   unique_id: 28-72057594512670720
 sensor.unknown_12:
+  name:
   platform: zwave
   unique_id: 28-72057594512703490
 sensor.alarm_type_9:
+  name:
   platform: zwave
   unique_id: 28-72057594513735681
 sensor.alarm_level_9:
+  name:
   platform: zwave
   unique_id: 28-72057594513735697
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_7:
+  name:
   platform: zwave
   unique_id: 28-144115188551663617
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_7:
+  name:
   platform: zwave
   unique_id: 28-144115188551663633
 sensor.qubino_zmnhdd1_flush_dimmer_power_7:
+  name:
   platform: zwave
   unique_id: 28-72057594512703618
 sensor.qubino_zmnhdd1_flush_dimmer_exporting_7:
+  name:
   platform: zwave
   unique_id: 28-72057594512704000
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_13:
+  name:
   platform: zwave
   unique_id: 28-72057594513735713
 sensor.qubino_zmnhdd1_flush_dimmer_power_management_7:
+  name:
   platform: zwave
   unique_id: 28-72057594513735857
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_14:
+  name:
   platform: zwave
   unique_id: 28-144115188551663649
 sensor.qubino_zmnhdd1_flush_dimmer_burglar_7:
+  name:
   platform: zwave
   unique_id: 28-144115188551663777
 light.level_8:
+  name:
   platform: zwave
   unique_id: 29-72057594529284097
 switch.switch_11:
+  name:
   platform: zwave
   unique_id: 29-72057594529267712
 binary_sensor.sensor_7:
+  name:
   platform: zwave
   unique_id: 29-72057594529447936
 sensor.unknown_13:
+  name:
   platform: zwave
   unique_id: 29-72057594529480706
 sensor.alarm_type_10:
+  name:
   platform: zwave
   unique_id: 29-72057594530512897
 sensor.alarm_level_10:
+  name:
   platform: zwave
   unique_id: 29-72057594530512913
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_8:
+  name:
   platform: zwave
   unique_id: 29-144115188568440833
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_8:
+  name:
   platform: zwave
   unique_id: 29-144115188568440849
 sensor.qubino_zmnhdd1_flush_dimmer_power_8:
+  name:
   platform: zwave
   unique_id: 29-72057594529480834
 sensor.qubino_zmnhdd1_flush_dimmer_exporting_8:
+  name:
   platform: zwave
   unique_id: 29-72057594529481216
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_15:
+  name:
   platform: zwave
   unique_id: 29-72057594530512929
 sensor.qubino_zmnhdd1_flush_dimmer_power_management_8:
+  name:
   platform: zwave
   unique_id: 29-72057594530513073
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_16:
+  name:
   platform: zwave
   unique_id: 29-144115188568440865
 sensor.qubino_zmnhdd1_flush_dimmer_burglar_8:
+  name:
   platform: zwave
   unique_id: 29-144115188568440993
 media_player.plex_web_chrome_2:
+  name:
   platform: plex
   unique_id: rtiyktizyqq0wnh4sh2suibr
 sensor.qubino2relaysbathroom_previous_reading:
+  name:
   platform: zwave
   unique_id: 17-72057594328154130
 sensor.qubino2relaysbathroom_previous_reading_2:
+  name:
   platform: zwave
   unique_id: 17-144115188366082066
 sensor.qubino2relaysbathroom_previous_reading_3:
+  name:
   platform: zwave
   unique_id: 17-216172782404010002
 light.level_9:
+  name:
   platform: zwave
   unique_id: 30-72057594546061313
 switch.switch_12:
+  name:
   platform: zwave
   unique_id: 30-72057594546044928
 sensor.unknown_14:
+  name:
   platform: zwave
   unique_id: 30-72057594546257922
 sensor.alarm_type_11:
+  name:
   platform: zwave
   unique_id: 30-72057594547290113
 sensor.alarm_level_11:
+  name:
   platform: zwave
   unique_id: 30-72057594547290129
 sensor.qubino_zmnhdd1_flush_dimmer_power_9:
+  name:
   platform: zwave
   unique_id: 30-72057594546258050
 sensor.qubino_zmnhdd1_flush_dimmer_exporting_9:
+  name:
   platform: zwave
   unique_id: 30-72057594546258432
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_17:
+  name:
   platform: zwave
   unique_id: 30-72057594547290145
 sensor.qubino_zmnhdd1_flush_dimmer_power_management_9:
+  name:
   platform: zwave
   unique_id: 30-72057594547290289
 light.level_10:
+  name:
   platform: zwave
   unique_id: 31-72057594562838529
 switch.switch_13:
+  name:
   platform: zwave
   unique_id: 31-72057594562822144
 sensor.unknown_15:
+  name:
   platform: zwave
   unique_id: 31-72057594563035138
 sensor.alarm_type_12:
+  name:
   platform: zwave
   unique_id: 31-72057594564067329
 sensor.alarm_level_12:
+  name:
   platform: zwave
   unique_id: 31-72057594564067345
 sensor.qubino_zmnhdd1_flush_dimmer_power_10:
+  name:
   platform: zwave
   unique_id: 31-72057594563035266
 sensor.qubino_zmnhdd1_flush_dimmer_exporting_10:
+  name:
   platform: zwave
   unique_id: 31-72057594563035648
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_18:
+  name:
   platform: zwave
   unique_id: 31-72057594564067361
 sensor.qubino_zmnhdd1_flush_dimmer_power_management_10:
+  name:
   platform: zwave
   unique_id: 31-72057594564067505
 light.level_11:
+  name:
   platform: zwave
   unique_id: 32-72057594579615745
 switch.switch_14:
+  name:
   platform: zwave
   unique_id: 32-72057594579599360
 sensor.unknown_16:
+  name:
   platform: zwave
   unique_id: 32-72057594579812354
 sensor.alarm_type_13:
+  name:
   platform: zwave
   unique_id: 32-72057594580844545
 sensor.alarm_level_13:
+  name:
   platform: zwave
   unique_id: 32-72057594580844561
 sensor.qubino_zmnhdd1_flush_dimmer_power_11:
+  name:
   platform: zwave
   unique_id: 32-72057594579812482
 sensor.qubino_zmnhdd1_flush_dimmer_exporting_11:
+  name:
   platform: zwave
   unique_id: 32-72057594579812864
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_19:
+  name:
   platform: zwave
   unique_id: 32-72057594580844577
 sensor.qubino_zmnhdd1_flush_dimmer_power_management_11:
+  name:
   platform: zwave
   unique_id: 32-72057594580844721
 light.level_12:
+  name:
   platform: zwave
   unique_id: 33-72057594596392961
 switch.switch_15:
+  name:
   platform: zwave
   unique_id: 33-72057594596376576
 sensor.unknown_17:
+  name:
   platform: zwave
   unique_id: 33-72057594596589570
 sensor.alarm_type_14:
+  name:
   platform: zwave
   unique_id: 33-72057594597621761
 sensor.alarm_level_14:
+  name:
   platform: zwave
   unique_id: 33-72057594597621777
 sensor.qubino_zmnhdd1_flush_dimmer_power_12:
+  name:
   platform: zwave
   unique_id: 33-72057594596589698
 sensor.qubino_zmnhdd1_flush_dimmer_exporting_12:
+  name:
   platform: zwave
   unique_id: 33-72057594596590080
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_20:
+  name:
   platform: zwave
   unique_id: 33-72057594597621793
 sensor.qubino_zmnhdd1_flush_dimmer_power_management_12:
+  name:
   platform: zwave
   unique_id: 33-72057594597621937
 light.level_13:
+  name:
   platform: zwave
   unique_id: 34-72057594613170177
 switch.switch_16:
+  name:
   platform: zwave
   unique_id: 34-72057594613153792
 binary_sensor.sensor_8:
+  name:
   platform: zwave
   unique_id: 34-72057594613334016
 sensor.unknown_18:
+  name:
   platform: zwave
   unique_id: 34-72057594613366786
 sensor.alarm_type_15:
+  name:
   platform: zwave
   unique_id: 34-72057594614398977
 sensor.alarm_level_15:
+  name:
   platform: zwave
   unique_id: 34-72057594614398993
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_9:
+  name:
   platform: zwave
   unique_id: 34-144115188652326913
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_9:
+  name:
   platform: zwave
   unique_id: 34-144115188652326929
 binary_sensor.qubino_zmnhdd1_flush_dimmer_sensor_4:
+  name:
   platform: zwave
   unique_id: 34-144115188651261952
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_10:
+  name:
   platform: zwave
   unique_id: 34-216172782690254849
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_10:
+  name:
   platform: zwave
   unique_id: 34-216172782690254865
 sensor.qubino_zmnhdd1_flush_dimmer_power_13:
+  name:
   platform: zwave
   unique_id: 34-72057594613366914
 sensor.qubino_zmnhdd1_flush_dimmer_exporting_13:
+  name:
   platform: zwave
   unique_id: 34-72057594613367296
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_21:
+  name:
   platform: zwave
   unique_id: 34-72057594614399009
 sensor.qubino_zmnhdd1_flush_dimmer_power_management_13:
+  name:
   platform: zwave
   unique_id: 34-72057594614399153
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_22:
+  name:
   platform: zwave
   unique_id: 34-144115188652326945
 sensor.qubino_zmnhdd1_flush_dimmer_burglar_9:
+  name:
   platform: zwave
   unique_id: 34-144115188652327073
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_23:
+  name:
   platform: zwave
   unique_id: 34-216172782690254881
 sensor.qubino_zmnhdd1_flush_dimmer_burglar_10:
+  name:
   platform: zwave
   unique_id: 34-216172782690255009
 light.level_14:
+  name:
   platform: zwave
   unique_id: 35-72057594629947393
 switch.switch_17:
+  name:
   platform: zwave
   unique_id: 35-72057594629931008
 binary_sensor.sensor_9:
+  name:
   platform: zwave
   unique_id: 35-72057594630111232
 sensor.unknown_19:
+  name:
   platform: zwave
   unique_id: 35-72057594630144002
 sensor.alarm_type_16:
+  name:
   platform: zwave
   unique_id: 35-72057594631176193
 sensor.alarm_level_16:
+  name:
   platform: zwave
   unique_id: 35-72057594631176209
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_11:
+  name:
   platform: zwave
   unique_id: 35-144115188669104129
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_11:
+  name:
   platform: zwave
   unique_id: 35-144115188669104145
 binary_sensor.qubino_zmnhdd1_flush_dimmer_sensor_5:
+  name:
   platform: zwave
   unique_id: 35-144115188668039168
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_12:
+  name:
   platform: zwave
   unique_id: 35-216172782707032065
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_12:
+  name:
   platform: zwave
   unique_id: 35-216172782707032081
 sensor.qubino_zmnhdd1_flush_dimmer_power_14:
+  name:
   platform: zwave
   unique_id: 35-72057594630144130
 sensor.qubino_zmnhdd1_flush_dimmer_exporting_14:
+  name:
   platform: zwave
   unique_id: 35-72057594630144512
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_24:
+  name:
   platform: zwave
   unique_id: 35-72057594631176225
 sensor.qubino_zmnhdd1_flush_dimmer_power_management_14:
+  name:
   platform: zwave
   unique_id: 35-72057594631176369
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_25:
+  name:
   platform: zwave
   unique_id: 35-144115188669104161
 sensor.qubino_zmnhdd1_flush_dimmer_burglar_11:
+  name:
   platform: zwave
   unique_id: 35-144115188669104289
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_26:
+  name:
   platform: zwave
   unique_id: 35-216172782707032097
 sensor.qubino_zmnhdd1_flush_dimmer_burglar_12:
+  name:
   platform: zwave
   unique_id: 35-216172782707032225
 light.level_15:
+  name:
   platform: zwave
   unique_id: 36-72057594646724609
 switch.switch_18:
+  name:
   platform: zwave
   unique_id: 36-72057594646708224
 binary_sensor.sensor_10:
+  name:
   platform: zwave
   unique_id: 36-72057594646888448
 sensor.unknown_20:
+  name:
   platform: zwave
   unique_id: 36-72057594646921218
 sensor.alarm_type_17:
+  name:
   platform: zwave
   unique_id: 36-72057594647953409
 sensor.alarm_level_17:
+  name:
   platform: zwave
   unique_id: 36-72057594647953425
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_13:
+  name:
   platform: zwave
   unique_id: 36-144115188685881345
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_13:
+  name:
   platform: zwave
   unique_id: 36-144115188685881361
 binary_sensor.qubino_zmnhdd1_flush_dimmer_sensor_6:
+  name:
   platform: zwave
   unique_id: 36-144115188684816384
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_14:
+  name:
   platform: zwave
   unique_id: 36-216172782723809281
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_14:
+  name:
   platform: zwave
   unique_id: 36-216172782723809297
 sensor.qubino_zmnhdd1_flush_dimmer_power_15:
+  name:
   platform: zwave
   unique_id: 36-72057594646921346
 sensor.qubino_zmnhdd1_flush_dimmer_exporting_15:
+  name:
   platform: zwave
   unique_id: 36-72057594646921728
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_27:
+  name:
   platform: zwave
   unique_id: 36-72057594647953441
 sensor.qubino_zmnhdd1_flush_dimmer_power_management_15:
+  name:
   platform: zwave
   unique_id: 36-72057594647953585
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_28:
+  name:
   platform: zwave
   unique_id: 36-144115188685881377
 sensor.qubino_zmnhdd1_flush_dimmer_burglar_13:
+  name:
   platform: zwave
   unique_id: 36-144115188685881505
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_29:
+  name:
   platform: zwave
   unique_id: 36-216172782723809313
 sensor.qubino_zmnhdd1_flush_dimmer_burglar_14:
+  name:
   platform: zwave
   unique_id: 36-216172782723809441
 light.level_16:
+  name:
   platform: zwave
   unique_id: 37-72057594663501825
 switch.switch_19:
+  name:
   platform: zwave
   unique_id: 37-72057594663485440
 binary_sensor.sensor_11:
+  name:
   platform: zwave
   unique_id: 37-72057594663665664
 sensor.unknown_21:
+  name:
   platform: zwave
   unique_id: 37-72057594663698434
 sensor.alarm_type_18:
+  name:
   platform: zwave
   unique_id: 37-72057594664730625
 sensor.alarm_level_18:
+  name:
   platform: zwave
   unique_id: 37-72057594664730641
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_15:
+  name:
   platform: zwave
   unique_id: 37-144115188702658561
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_15:
+  name:
   platform: zwave
   unique_id: 37-144115188702658577
 binary_sensor.qubino_zmnhdd1_flush_dimmer_sensor_7:
+  name:
   platform: zwave
   unique_id: 37-144115188701593600
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_type_16:
+  name:
   platform: zwave
   unique_id: 37-216172782740586497
 sensor.qubino_zmnhdd1_flush_dimmer_alarm_level_16:
+  name:
   platform: zwave
   unique_id: 37-216172782740586513
 sensor.qubino_zmnhdd1_flush_dimmer_power_16:
+  name:
   platform: zwave
   unique_id: 37-72057594663698562
 sensor.qubino_zmnhdd1_flush_dimmer_exporting_16:
+  name:
   platform: zwave
   unique_id: 37-72057594663698944
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_30:
+  name:
   platform: zwave
   unique_id: 37-72057594664730657
 sensor.qubino_zmnhdd1_flush_dimmer_power_management_16:
+  name:
   platform: zwave
   unique_id: 37-72057594664730801
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_31:
+  name:
   platform: zwave
   unique_id: 37-144115188702658593
 sensor.qubino_zmnhdd1_flush_dimmer_burglar_15:
+  name:
   platform: zwave
   unique_id: 37-144115188702658721
 sensor.qubino_zmnhdd1_flush_dimmer_sourcenodeid_32:
+  name:
   platform: zwave
   unique_id: 37-216172782740586529
 sensor.qubino_zmnhdd1_flush_dimmer_burglar_16:
+  name:
   platform: zwave
   unique_id: 37-216172782740586657
 media_player.living_room:
+  name:
   platform: cast
   unique_id: bb175c62-9460-ed32-5694-8c530eb12502
 media_player.office_speaker:
+  name:
   platform: cast
   unique_id: c446e938-3539-928a-1579-363ecaa95155
 media_player.kitchen_home:
+  name:
   platform: cast
   unique_id: 39d26fed-a42a-84aa-98b3-b21608979735
 media_player.home_group:
+  name:
   platform: cast
   unique_id: 246b4c5d-c0af-43a3-a7d0-f4d1b9b8f0e2
 media_player.bedroom_speaker:
+  name:
   platform: cast
   unique_id: 5a0cd334-41bd-4013-c464-970b95ca4846
 media_player.vilhelms_room_speaker:
+  name:
   platform: cast
   unique_id: 70d9cb44-d058-4310-f7c6-f8857c004028
 media_player.elins_room_speaker:
+  name:
   platform: cast
   unique_id: ff6272fe-8aa5-f234-d80e-f8fed4c7bed4
 media_player.sb_radio__office:
+  name:
   platform: squeezebox
   unique_id: 00:04:20:2a:f3:58
 media_player.plex_web_chrome_3:
+  name:
   platform: plex
   unique_id: n9c6ycb156x0f6r
 media_player.elins_room:
+  name:
   platform: cast
   unique_id: 6f5eea12-53ee-4860-bc3d-dcd9e00aac90
 media_player.all_google_homes:
+  name:
   platform: cast
   unique_id: d6884502-631d-49dd-b6f3-c7293a585f27
 media_player.plex_web_chrome_4:
+  name:
   platform: plex
   unique_id: p5o6xp1cyk2eivdmq90k3fbf
 media_player.one_e1003:
+  name:
   platform: plex
   unique_id: eaa028ab658b3b68-com-plexapp-android
