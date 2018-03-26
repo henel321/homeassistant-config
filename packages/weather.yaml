@@ -5,7 +5,7 @@ history_graph:
     entities:
       - sensor.weather_temperature
       - sensor.fibaro_system_fgsd002_smoke_sensor_temperature
-    hours_to_show: 24
+    hours_to_show: 72
     refresh: 300 
    
   weather_other: 
@@ -16,14 +16,17 @@ history_graph:
       - sensor.weather_wind_speed
       - sensor.weather_precipitation
       - sensor.weather_cloudiness
-    hours_to_show: 24
+    hours_to_show: 72
     refresh: 300
 
   netatmo_inside_temp:
     name: Netatmo Inside Temp
     entities:
       - sensor.netatmo_indoor_temperature
-    hours_to_show: 24
+      - sensor.netatmo_indoor_humidity
+      - sensor.netatmo_indoor_co2
+      - sensor.netatmo_indoor_pressure
+    hours_to_show: 72
     refresh: 300
 
   netatmo_outside_temp:
