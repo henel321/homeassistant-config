@@ -1382,3 +1382,23 @@ media_player.one_e1003:
   name:
   platform: plex
   unique_id: eaa028ab658b3b68-com-plexapp-android
+media_player.plex_web_chrome_5:
+  name:
+  platform: plex
+  unique_id: ty83qdo5k7jdv9d886eymil0
+climate.danfoss_z_thermostat_heating_1:
+  name:
+  platform: zwave
+  unique_id: 38-72057594680754194
+climate.danfoss_z_thermostat_heating_1_2:
+  name:
+  platform: zwave
+  unique_id: 39-72057594697531410
+climate.danfoss_z_thermostat_heating_1_3:
+  name:
+  platform: zwave
+  unique_id: 40-72057594714308626
+media_player.galaxy_tab_s2_80:
+  name:
+  platform: plex
+  unique_id: 875d1b00e943f6cc-com-plexapp-android

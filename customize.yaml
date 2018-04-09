@@ -46,4 +46,10 @@ light.shower_ceiling_light:
   friendly_name: "Shower Ceiling Trådfri Light"
 light.bathroom_light: 
   friendly_name: "Bathroom Ceiling Trådfri Light"
+climate.danfoss_z_thermostat_heating_1:
+  friendly_name: "Livingroom Thermostat"
+climate.danfoss_z_thermostat_heating_1_2:
+  friendly_name: "Kitchen Thermostat"
+climate.danfoss_z_thermostat_heating_1_3:
+  friendly_name: "Bedroom Thermostat"
  
