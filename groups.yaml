@@ -224,4 +224,8 @@ thermostats:
  - climate.danfoss_z_thermostat_heating_1
  - climate.danfoss_z_thermostat_heating_1_2
  - climate.danfoss_z_thermostat_heating_1_3
+ - climate.danfoss_z_thermostat_heating_1_6
+ - climate.danfoss_z_thermostat_heating_1_7
+ - climate.danfoss_z_thermostat_heating_1_8
+ - climate.danfoss_z_thermostat_heating_1_9
 

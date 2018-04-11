@@ -1402,3 +1402,67 @@ media_player.galaxy_tab_s2_80:
   name:
   platform: plex
   unique_id: 875d1b00e943f6cc-com-plexapp-android
+climate.danfoss_z_thermostat_heating_1_4:
+  name:
+  platform: zwave
+  unique_id: 41-72057594731085842
+climate.danfoss_z_thermostat_heating_1_5:
+  name:
+  platform: zwave
+  unique_id: 42-72057594747863058
+climate.danfoss_z_thermostat_heating_1_6:
+  name:
+  platform: zwave
+  unique_id: 43-72057594764640274
+climate.danfoss_z_thermostat_heating_1_7:
+  name:
+  platform: zwave
+  unique_id: 44-72057594781417490
+climate.danfoss_z_thermostat_heating_1_8:
+  name:
+  platform: zwave
+  unique_id: 45-72057594798194706
+climate.danfoss_z_thermostat_heating_1_9:
+  name:
+  platform: zwave
+  unique_id: 46-72057594814971922
+binary_sensor.sensor_12:
+  name:
+  platform: zwave
+  unique_id: 59-72057595032764416
+sensor.alarm_type_19:
+  name:
+  platform: zwave
+  unique_id: 59-72057595033829377
+sensor.alarm_level_19:
+  name:
+  platform: zwave
+  unique_id: 59-72057595033829393
+sensor.aeotec_dsb45_water_sensor_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 59-72057595033829409
+sensor.aeotec_dsb45_water_sensor_flood:
+  name:
+  platform: zwave
+  unique_id: 59-72057595033829505
+binary_sensor.sensor_13:
+  name:
+  platform: zwave
+  unique_id: 60-72057595049541632
+sensor.alarm_type_20:
+  name:
+  platform: zwave
+  unique_id: 60-72057595050606593
+sensor.alarm_level_20:
+  name:
+  platform: zwave
+  unique_id: 60-72057595050606609
+sensor.aeotec_dsb45_water_sensor_sourcenodeid_2:
+  name:
+  platform: zwave
+  unique_id: 60-72057595050606625
+sensor.aeotec_dsb45_water_sensor_flood_2:
+  name:
+  platform: zwave
+  unique_id: 60-72057595050606721
