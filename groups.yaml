@@ -58,6 +58,7 @@ bathroom:
  name: Bathroom
  icon: mdi:water
  entities:
+ - binary_sensor.sensor_13
  - climate.thermofloor_as_heatit_thermostat_tf_021_heating
  - switch.qubino_zmnhbdx_flush_2_relays_switch
  - switch.qubino_zmnhbdx_flush_2_relays_switch_2
@@ -94,6 +95,7 @@ kitchen:
  name: "Kitchen"
  icon: mdi:food-fork-drink
  entities:
+ - binary_sensor.sensor_12
  - light.level_7
  - light.level_16  
 

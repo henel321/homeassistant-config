@@ -580,6 +580,42 @@ automation:
         entity_id: sensor.ikea_remote_vilhelm
         above: 1
         below: 10
+      - platform: numeric_state
+        entity_id: sensor.zwave_flood_kitchen
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.zwave_flood_bathroom 
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.zwave_thermostat_livingroom 
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.zwave_thermostat_kitchen 
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.zwave_thermostat_bedroom 
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.zwave_thermostat_elinleft 
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.zwave_thermostat_elinright
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.zwave_thermostat_vilhelm
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.zwave_thermostat_office 
+        above: 1
+        below: 10
     action:
       - service: notify.pushbullet
         data_template:
