@@ -11,9 +11,11 @@ Includes:
    - Neo Coolcam door sensor 
    - Telldus and Nodon plugin-switches
    - Heatit Thermostats for Electric flooring 
+   - Aeon Labs Flood sensors 
+   - Danfoss Thermostats for heating
 - Ikea Trådfri through Gateway. (No automations on Ikea software) 
 - Lifx Z led strips 
-- Google Assistant (Home/Home Mini) 
+- Google Assistant (Homes/Home Minis) 
 - Google Chromecasts
 - Logitech Harmony Companion
 - Logitech Squeezeboxes. 
@@ -22,6 +24,5 @@ Includes:
 
 On the Improvement list. 
 
-- Move config to packages 
-- Add limitations on notifications for door open when people home. 
+- Move more config to packages 
 - Re-Add tamper alert for fire alarm once fixed in HA. 
