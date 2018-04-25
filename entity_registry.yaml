@@ -43,7 +43,7 @@ sensor.neo_coolcam_battery_powered_pir_sensor_burglar:
   platform: zwave
   unique_id: 12-72057594245300385
 binary_sensor.neo_coolcam_doorwindow_detector_sensor:
-  name:
+  name: Front Door
   platform: zwave
   unique_id: 13-72057594261012480
 sensor.neo_coolcam_doorwindow_detector_alarm_type:
@@ -1466,3 +1466,31 @@ sensor.aeotec_dsb45_water_sensor_flood_2:
   name:
   platform: zwave
   unique_id: 60-72057595050606721
+sensor.alarm_type_21:
+  name:
+  platform: zwave
+  unique_id: 61-72057595067383809
+sensor.alarm_level_21:
+  name:
+  platform: zwave
+  unique_id: 61-72057595067383825
+binary_sensor.sensor_14:
+  name:
+  platform: zwave
+  unique_id: 61-72057595066318848
+sensor.telldus_tzdw100_magnet_switch_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 61-72057595067383841
+sensor.telldus_tzdw100_magnet_switch_burglar:
+  name:
+  platform: zwave
+  unique_id: 61-72057595067383969
+media_player.xperia_z2_tablet:
+  name:
+  platform: plex
+  unique_id: b766ba2ac58cbe0b-com-plexapp-android
+media_player.chrome:
+  name:
+  platform: plex
+  unique_id: y72sbgyae6ggw7vxnbg3nn9a

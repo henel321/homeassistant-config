@@ -39,6 +39,7 @@ bedroom:
  name: Bedroom
  icon: mdi:hotel
  entities:
+ - binary_sensor.sensor_14
  - input_number.brightness_br
  - input_select.scene_br
  - light.marias_light
@@ -51,6 +52,7 @@ hallway:
  icon: mdi:home-outline
  entities: 
 # - light.hallway
+ - binary_sensor.neo_coolcam_doorwindow_detector_sensor
  - switch.switch_3
  - camera.hallway
 

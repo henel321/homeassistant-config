@@ -26,3 +26,6 @@ On the Improvement list.
 
 - Move more config to packages 
 - Re-Add tamper alert for fire alarm once fixed in HA. 
+- Add movement detection and saving images for camera 
+- Add restrictions on sunrise/sunset for turning lights on/off during Swedish summer 
+- Lower bedroom termostat while balcony door is open to prevent it from activating.

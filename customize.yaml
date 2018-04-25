@@ -64,4 +64,8 @@ binary_sensor.sensor_12:
   friendly_name: "Kitchen Flood Sensor"
 binary_sensor.sensor_13:
   friendly_name: "Bathroom Flood Sensor"
+binary_sensor.neo_coolcam_doorwindow_detector_sensor: 
+  friendly_name: "Front door" 
+binary_sensor.sensor_14:
+  friendly_name: "Balcony door"
  
