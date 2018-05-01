@@ -1,13 +1,25 @@
-alias: "Turn on Living Room lights in the morning at first movement" 
+alias: "Turn on Living Room lights in the morning on weekdays at first movement between 6-7.30 and before sunrise" 
 trigger: 
   platform: state
   entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor 
   from: 'off'
   to: 'on'
 condition:
-  condition: time
-  after: '06:00:00'
-  before: '07:15:00' 
+  condition: and 
+  conditions:  
+    - condition: time
+      after: '06:00:00'
+      before: '07:30:00' 
+    - condition: time 
+      weekday: 
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+    - condition: sun
+      before: sunrise
+      before_offset: '-1:00:00'
 action: 
   service: scene.turn_on
   entity_id:
