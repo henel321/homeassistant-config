@@ -4,9 +4,13 @@ trigger:
   event: sunset
   offset: -02:00:00 
 condition: 
-  condition: numeric_state
-  entity_id: sensor.weather_cloudiness 
-  above: "80" 
+  condition: and
+  conditions: 
+    - condition: numeric_state
+      entity_id: sensor.weather_cloudiness 
+      above: "80" 
+    - condition: time
+      before: '20:00:00'
 action: 
   service: scene.turn_on
   entity_id:
