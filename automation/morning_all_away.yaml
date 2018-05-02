@@ -1,0 +1,20 @@
+alias: "Turn off lights in Kids' room, Living Room and Bedrom after sunrise when all parents have left"
+trigger:
+  platform: state
+  entity_id: group.parents
+  to: away
+condition:
+  condition: time
+  after: '07:30:00'
+  before: '09:00:00'
+action:
+  service: scene.turn_on
+  entity_id:
+  - scene.br_off
+  - scene.lr_off
+  - scene.er_off
+  - scene.vr_off
+  - scene.or_off
+
+ 
+ 

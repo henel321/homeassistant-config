@@ -1494,3 +1494,39 @@ media_player.chrome:
   name:
   platform: plex
   unique_id: y72sbgyae6ggw7vxnbg3nn9a
+light.ikea_ps_uplight:
+  name:
+  platform: tradfri
+  unique_id: light-7e1551520440016f-65543
+light.vilhelms_light_bulb:
+  name:
+  platform: tradfri
+  unique_id: light-7e1551520440016f-65540
+light.bathroom_light:
+  name:
+  platform: tradfri
+  unique_id: light-7e1551520440016f-65551
+light.living_room_2:
+  name:
+  platform: tradfri
+  unique_id: light-7e1551520440016f-65538
+light.marias_light:
+  name:
+  platform: tradfri
+  unique_id: light-7e1551520440016f-65547
+light.living_room_1:
+  name:
+  platform: tradfri
+  unique_id: light-7e1551520440016f-65537
+light.elins_light_bulb:
+  name:
+  platform: tradfri
+  unique_id: light-7e1551520440016f-65542
+light.shower_ceiling_light:
+  name:
+  platform: tradfri
+  unique_id: light-7e1551520440016f-65550
+light.henriks_light:
+  name:
+  platform: tradfri
+  unique_id: light-7e1551520440016f-65546
