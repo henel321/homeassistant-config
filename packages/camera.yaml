@@ -1,0 +1,40 @@
+ffmpeg:
+  ffmpeg_bin: /usr/bin/avconv
+
+camera:
+  - platform: ffmpeg
+    input: rtsp://192.168.100.135/unicast
+    name: Hallway
+
+automation:
+
+  - alias: 'Camera triggered'
+    trigger:
+      platform: state
+      entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor
+      from: 'off'
+      to: 'on'
+    condition:
+      condition: and
+      conditions:
+        - condition: time
+          weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+        - condition: state 
+          entity_id: group.everyone
+          state: 'not_home'
+    action:
+      - delay: '00:00:05'
+      - service: notify.pushbullet
+        data:
+           message: 'Camera triggered at home!'
+           data: 
+             push: 
+               category: camera 
+               entity_id: camera.hallway
+
+

@@ -2,11 +2,12 @@ alias: "Turn off lights in Kids' room, Living Room and Bedrom after sunrise when
 trigger:
   platform: state
   entity_id: group.parents
-  to: away
+  from: 'home'
+  to: 'not home'
 condition:
   condition: time
   after: '07:30:00'
-  before: '09:00:00'
+  before: '10:00:00'
 action:
   service: scene.turn_on
   entity_id:

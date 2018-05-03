@@ -220,6 +220,15 @@ parents:
     - device_tracker.cc9f7a9f9afb
     - device_tracker.galaxy_s7__maria
 
+everyone: 
+  name: "Everyone device tracker group"
+  view: no
+  entities:
+    - device_tracker.cc9f7a9f9afb
+    - device_tracker.galaxy_s7__maria
+    - device_tracker.oneplus_x__vilhelm
+
+
 thermostats:
  view: yes
  name: Thermostats

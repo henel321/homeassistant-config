@@ -1,4 +1,4 @@
-alias: "Turn off lights in Kids' room, Living Room and Bedrom after sunrise"
+alias: "Turn off lights in Kids' room, Living Room and Bedroom after sunrise"
 trigger:
   platform: sun
   event: sunrise
