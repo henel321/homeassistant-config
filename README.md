@@ -27,5 +27,4 @@ On the Improvement list.
 
 - Move more config to packages 
 - Re-Add tamper alert for fire alarm once fixed in HA. 
-- Add movement detection and saving images for camera 
 - Lower bedroom termostat while balcony door is open to prevent it from activating.
