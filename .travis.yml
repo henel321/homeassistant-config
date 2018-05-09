@@ -1,6 +1,11 @@
 language: python
+  addons:
+    apt:
+      update: true
 python:
   - "3.5"
+before_script:
+  - sudo apt-get update -qq
 before_install:
   - mv travis_secrets.yaml secrets.yaml
 install:
