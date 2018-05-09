@@ -13,5 +13,6 @@ notifications:
       - henrik@tillander.org
     on_success: always
     on_failure: always
+  slack: tillander:PgAJbA3KWS8NxGY26AdH7Y97
     
 
