@@ -10,7 +10,7 @@ shell_command:
   take_snapshots: 'rm -f /home/homeassistant/.homeassistant/snapshots/snapshot*.jpg ; sleep 1; ffmpeg -y -i rtsp://camera.tillander.org/unicast -ss 0:0:2 -frames 1  /home/homeassistant/.homeassistant/snapshots/snapshot1.jpg ; sleep 2; ffmpeg -y -i rtsp://camera.tillander.org/unicast -ss 0:0:2 -frames 1  /home/homeassistant/.homeassistant/snapshots/snapshot2.jpg; sleep 2; ffmpeg -y -i rtsp://camera.tillander.org/unicast -ss 0:0:2 -frames 1  /home/homeassistant/.homeassistant/snapshots/snapshot3.jpg'
   copy_snapshots: 'DATE=`date +%Y-%m-%d_%H:%M:%S` ; mkdir /home/homeassistant/.homeassistant/snapshots/$DATE; cp /home/homeassistant/.homeassistant/snapshots/snapshot*.jpg /home/homeassistant/.homeassistant/snapshots/$DATE' 
   sync_snapshots: 'rsync -ave ssh --delete /home/homeassistant/.homeassistant/snapshots mini-gcp:/home/backup' 
-  capture_video: 'rm -f /home/homeassistant/.homeassistant/video/snapshot.avi ; ffmpeg -y -i rtsp://camera.tillander.org/unicast -b 900k -vcodec copy -frames 250 -r 60 -y /home/homeassistant/.homeassistant/video/snapshot.avi' 
+  capture_video: 'rm -f /home/homeassistant/.homeassistant/video/snapshot.avi ; ffmpeg -y -i rtsp://camera.tillander.org/unicast -b 900k -vcodec copy -frames 400 -r 60 -y /home/homeassistant/.homeassistant/video/snapshot.avi' 
   copy_video: 'DATE=`date +%Y-%m-%d_%H:%M:%S` ; mkdir /home/homeassistant/.homeassistant/video/$DATE; cp /home/homeassistant/.homeassistant/video/snapshot.avi /home/homeassistant/.homeassistant/video/$DATE'
   sync_video: 'rsync -ave ssh --delete /home/homeassistant/.homeassistant/video mini-gcp:/home/backup'
  
@@ -33,6 +33,8 @@ automation:
           - wed
           - thu
           - fri
+          - sat 
+          - sun
         - condition: state 
           entity_id: group.everyone
           state: 'not_home'
@@ -43,8 +45,13 @@ automation:
            title: 'Camera Alert'
            message: 'Camera triggered at home!'
            data: 
-             file:
-               - /home/homeassistant/.homeassistant/snapshots/snapshot2.jpg
+             file: /home/homeassistant/.homeassistant/snapshots/snapshot2.jpg
+      - service: notify.slack
+        data:
+           title: 'Camera Alert'
+           message: 'Camera triggered at home!'
+           data:
+             file: /home/homeassistant/.homeassistant/snapshots/snapshot2.jpg
       - service: shell_command.copy_snapshots
       - service: shell_command.sync_snapshots
 
@@ -64,12 +71,46 @@ automation:
           - wed
           - thu
           - fri
+          - sat 
+          - sun
         - condition: state
           entity_id: group.everyone
           state: 'not_home'
     action:
       - service: shell_command.capture_video
+      - service: notify.slack
+        data:
+           title: 'Camera Alert'
+           message: 'Video triggered at home!'
+           data:
+             file: /home/homeassistant/.homeassistant/video/snapshot.avi
       - service: shell_command.copy_video
       - service: shell_command.sync_video
 
+#  - alias: 'Test Camera triggered'
+#    trigger:
+#      platform: state
+#      entity_id: binary_sensor.neo_coolcam_doorwindow_detector_sensor
+#      from: 'off'
+#      to: 'on'
+#    condition:
+#      - condition: time
+#        weekday:
+#        - mon
+#        - tue
+#        - wed
+#        - thu
+#        - fri
+#        - sat 
+#        - sun
+#    action:
+#      - service: shell_command.take_snapshots
+#      - service: notify.pushbullet
+#        data:
+#           title: 'Camera Alert'
+#           message: 'Camera triggered at home!'
+#           data:
+#             file: /home/homeassistant/.homeassistant/snapshots/snapshot2.jpg
+#      - service: shell_command.copy_snapshots
+#      - service: shell_command.sync_snapshots
 

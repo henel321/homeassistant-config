@@ -121,3 +121,8 @@ automation:
         data_template: 
           title: 'New Home Assistant Release Available'
           message: "Home Assistant  {{ states.updater.updater.state }}  is now available."
+      - service: notify.slack
+        data_template:
+          title: 'New Home Assistant Release Available'
+          message: "Home Assistant  {{ states.updater.updater.state }}  is now available."
+
