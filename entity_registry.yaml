@@ -1526,11 +1526,15 @@ light.shower_ceiling_light:
   name:
   platform: tradfri
   unique_id: light-7e1551520440016f-65550
-light.henriks_light:
-  name:
-  platform: tradfri
-  unique_id: light-7e1551520440016f-65546
 media_player.google_homes:
   name:
   platform: cast
   unique_id: 7da91e9b-9a76-4a0b-ad42-3987c8e91d9e
+light.henriks_light:
+  name:
+  platform: tradfri
+  unique_id: light-7e1551520440016f-65554
+light.extra_e14:
+  name:
+  platform: tradfri
+  unique_id: light-7e1551520440016f-65546

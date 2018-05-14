@@ -201,8 +201,7 @@ automation:
            message: 'Städis is done cleaning! {{ states.vacuum.stadis.attributes.cleaned_area }} m2 was cleaned in {{  states.vacuum.stadis.attributes.cleaning_time }} minutes.'
       - service: notify.slack
         data: 
-          message: 'Städis is done cleaning! {{ states.vacuum.stadis.attributes.cleaned_area }} m2 was cleaned in {{  states.vacuum.stadis.attrbutes.cleaning_time }} minutes.'
-          
+           message: 'Städis is done cleaning! {{ states.vacuum.stadis.attributes.cleaned_area }} m2 was cleaned in {{  states.vacuum.stadis.attrbutes.cleaning_time }} minutes.'
           
 
   - alias: 'Vacuum schedyling weekdays when everyone away'
