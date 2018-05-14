@@ -1,4 +1,4 @@
-fmpeg:
+ffmpeg:
   ffmpeg_bin: /usr/bin/avconv
 
 camera:
