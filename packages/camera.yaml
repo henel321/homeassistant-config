@@ -42,16 +42,16 @@ automation:
       - service: shell_command.take_snapshots
       - service: notify.pushbullet
         data:
-           title: 'Camera Alert'
-           message: 'Camera triggered at home!'
-           data: 
-             file: /home/homeassistant/.homeassistant/snapshots/snapshot2.jpg
+          title: 'Camera Alert'
+          message: 'Camera triggered at home!'
+          data: 
+            file: /home/homeassistant/.homeassistant/snapshots/snapshot2.jpg
       - service: notify.slack
         data:
-           title: 'Camera Alert'
-           message: 'Camera triggered at home!'
-           data:
-             file: /home/homeassistant/.homeassistant/snapshots/snapshot2.jpg
+          title: 'Camera Alert'
+          message: 'Camera triggered at home!'
+          data:
+            file: /home/homeassistant/.homeassistant/snapshots/snapshot2.jpg
       - service: shell_command.copy_snapshots
       - service: shell_command.sync_snapshots
 
@@ -80,10 +80,10 @@ automation:
       - service: shell_command.capture_video
       - service: notify.slack
         data:
-           title: 'Camera Alert'
-           message: 'Video triggered at home!'
-           data:
-             file: /home/homeassistant/.homeassistant/video/snapshot.avi
+          title: 'Camera Alert'
+          message: 'Video triggered at home!'
+          data:
+            file: /home/homeassistant/.homeassistant/video/snapshot.avi
       - service: shell_command.copy_video
       - service: shell_command.sync_video
 
