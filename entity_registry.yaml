@@ -1538,3 +1538,127 @@ light.extra_e14:
   name:
   platform: tradfri
   unique_id: light-7e1551520440016f-65546
+zwave.aeotec_zw090_zstick_gen5_eu:
+  name:
+  platform: zwave
+  unique_id: node-1
+zwave.telldusvilhelm:
+  name:
+  platform: zwave
+  unique_id: node-3
+zwave.telldusextra:
+  name:
+  platform: zwave
+  unique_id: node-4
+zwave.tellduslivingroom:
+  name:
+  platform: zwave
+  unique_id: node-6
+zwave.neo_coolcam_battery_powered_pir_sensor:
+  name:
+  platform: zwave
+  unique_id: node-12
+zwave.neo_coolcam_doorwindow_detector:
+  name:
+  platform: zwave
+  unique_id: node-13
+zwave.fibaro_system_fgsd002_smoke_sensor:
+  name:
+  platform: zwave
+  unique_id: node-14
+zwave.telldusoffice:
+  name:
+  platform: zwave
+  unique_id: node-15
+zwave.nodonsmartplugmicro:
+  name:
+  platform: zwave
+  unique_id: node-16
+zwave.qubino2relaysbathroom:
+  name:
+  platform: zwave
+  unique_id: node-17
+zwave.qubinorelayshower:
+  name:
+  platform: zwave
+  unique_id: node-18
+zwave.qubinorelayhallway:
+  name:
+  platform: zwave
+  unique_id: node-19
+zwave.heatitshower:
+  name:
+  platform: zwave
+  unique_id: node-23
+zwave.heatitbathroom:
+  name:
+  platform: zwave
+  unique_id: node-24
+zwave.qubinodimmerlivingroom:
+  name:
+  platform: zwave
+  unique_id: node-27
+zwave.qubinodimmerkitchencounter:
+  name:
+  platform: zwave
+  unique_id: node-28
+zwave.qubinodimmerelin:
+  name:
+  platform: zwave
+  unique_id: node-29
+zwave.qubinodimmervilhelm:
+  name:
+  platform: zwave
+  unique_id: node-34
+zwave.qubinodimmerbedroom:
+  name:
+  platform: zwave
+  unique_id: node-35
+zwave.qubinodimmeroffice:
+  name:
+  platform: zwave
+  unique_id: node-36
+zwave.qubinodimmerkitchenceiling:
+  name:
+  platform: zwave
+  unique_id: node-37
+zwave.danfoss_z_thermostat:
+  name:
+  platform: zwave
+  unique_id: node-38
+zwave.danfoss_z_thermostat_2:
+  name:
+  platform: zwave
+  unique_id: node-39
+zwave.danfoss_z_thermostat_3:
+  name:
+  platform: zwave
+  unique_id: node-40
+zwave.danfoss_z_thermostat_4:
+  name:
+  platform: zwave
+  unique_id: node-43
+zwave.danfoss_z_thermostat_5:
+  name:
+  platform: zwave
+  unique_id: node-44
+zwave.danfoss_z_thermostat_6:
+  name:
+  platform: zwave
+  unique_id: node-45
+zwave.danfoss_z_thermostat_7:
+  name:
+  platform: zwave
+  unique_id: node-46
+zwave.aeotec_dsb45_water_sensor:
+  name:
+  platform: zwave
+  unique_id: node-59
+zwave.aeotec_dsb45_water_sensor_2:
+  name:
+  platform: zwave
+  unique_id: node-60
+zwave.telldus_tzdw100_magnet_switch:
+  name:
+  platform: zwave
+  unique_id: node-61
