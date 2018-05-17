@@ -30,7 +30,7 @@ default_view:
 
 vacuum_status_view:
  view: yes
- icon: mdi:roomba
+ icon: mdi:robot-vacuum
  entities:
  - group.vacuum_status
 
