@@ -653,3 +653,8 @@ automation:
           title: 'Battery low'
           message: >
             '{{ trigger.to_state.name }}'
+      - service: notify.slack
+        data_template:
+          title: 'Battery low'
+          message: >
+            '{{ trigger.to_state.name }}'

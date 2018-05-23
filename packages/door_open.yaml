@@ -1,0 +1,76 @@
+automation:
+  - alias: 'Notify that outer door is open' 
+    trigger:
+      platform: state
+      entity_id: binary_sensor.neo_coolcam_doorwindow_detector_sensor
+      from: 'off'
+      to: 'on'
+    condition:
+      condition: state
+      entity_id: group.parents 
+      state: 'not_home'
+    action:
+      service: notify.slack
+      data:
+        message: 'Outer door has been opened'
+
+  - alias: 'Notify that Maria is home' 
+    trigger: 
+      platform: state 
+      entity_id: device_tracker.galaxy_s7__maria 
+      from: 'not_home'
+      to: 'home'
+    condition:
+      condition: state
+      entity_id: group.parents
+      state: 'not_home'
+    action:
+      service: notify.slack
+      data:
+        message: 'Maria is home'
+
+  - alias: 'Notify that Vilhelm is home' 
+    trigger: 
+      platform: state 
+      entity_id: device_tracker.oneplus_x__vilhelm 
+      from: 'not_home'
+      to: 'home'
+    condition:
+      condition: state
+      entity_id: group.parents        
+      state: 'not_home'
+    action:
+      service: notify.slack
+      data:
+        message: 'Vilhelm is home'
+
+  - alias: 'Notify that Elin is home'  
+    trigger:
+      platform: state
+      entity_id: device_tracker.androidff3e595e35e8a0a1
+      from: 'not_home'
+      to: 'home'
+    condition:
+      condition: state
+      entity_id: group.parents
+      state: 'not_home'
+    action:
+      service: notify.slack
+      data:
+        message: 'Elin is home'
+
+  - alias: 'Notify that Henrik is home'  
+    trigger:
+      platform: state
+      entity_id: device_tracker.cc9f7a9f9afb
+      from: 'not_home'
+      to: 'home'
+    condition:
+      condition: state
+      entity_id: group.parents
+      state: 'not_home'
+    action:
+      service: notify.slack
+      data:
+        message: 'Henrik is home'
+

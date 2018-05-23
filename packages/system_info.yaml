@@ -111,5 +111,10 @@ automation:
           title: 'Device {{ trigger.to_state.name }} is'
           message: >
             '{{ trigger.to_state.state }}'
+      - service: notify.slack
+        data_template:
+          title: 'Device {{ trigger.to_state.name }} is'
+          message: >
+            '{{ trigger.to_state.state }}'
 
 

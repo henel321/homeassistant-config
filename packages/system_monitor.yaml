@@ -111,6 +111,13 @@ automation:
           message: >
             {{trigger.event.data.host_name}} 
             ({{trigger.event.data.entity_id}})
+      - service: notify.slack
+        data_template:
+          title: 'New device tracked'
+          message: >
+            {{trigger.event.data.host_name}}
+            ({{trigger.event.data.entity_id}})
+
 
   - alias: Hass Updater
     trigger:

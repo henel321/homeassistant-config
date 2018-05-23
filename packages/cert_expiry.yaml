@@ -12,8 +12,7 @@ automation:
       entity_id: sensor.ssl_cert_expiry
       below: 14
     action:
-      service: notify.pushbullet
-      data: 
+      service: notify.slack
+      data:
+        title: 'SSL Cert Expiry'
         message: "WARNING! - SSL certificate for homeassistant.tillander.org expiring in 14 days!"
-
-

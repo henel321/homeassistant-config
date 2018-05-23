@@ -18,6 +18,10 @@ automation:
       data:
         title: 'Kitchen Flood Sensor: '
         message: '*** WATER DETECTED ***'
+    - service: notify.slack
+      data:
+        title: 'Kitchen Flood Sensor: '
+        message: '*** WATER DETECTED ***'
 
 - alias: Flooding in Bathroom
   trigger:
@@ -26,6 +30,10 @@ automation:
     to: 'on'
   action:
     - service: notify.pushbullet
+      data:
+        title: 'Bathroom Flood Sensor: '
+        message: '*** WATER DETECTED ***'
+    - service: notify.slack
       data:
         title: 'Bathroom Flood Sensor: '
         message: '*** WATER DETECTED ***'
