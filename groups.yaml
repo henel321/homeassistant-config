@@ -72,7 +72,8 @@ shower:
  entities:
  - climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
  - switch.switch_2
- - light.shower_ceiling_light
+# - light.shower_ceiling_light
+ - light.osram_rgb
 
 # christmas:
 #  name: Christmas 

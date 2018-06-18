@@ -1498,10 +1498,6 @@ light.ikea_ps_uplight:
   name:
   platform: tradfri
   unique_id: light-7e1551520440016f-65543
-light.vilhelms_light_bulb:
-  name:
-  platform: tradfri
-  unique_id: light-7e1551520440016f-65540
 light.bathroom_light:
   name:
   platform: tradfri
@@ -1510,10 +1506,6 @@ light.living_room_2:
   name:
   platform: tradfri
   unique_id: light-7e1551520440016f-65538
-light.marias_light:
-  name:
-  platform: tradfri
-  unique_id: light-7e1551520440016f-65547
 light.living_room_1:
   name:
   platform: tradfri
@@ -1530,10 +1522,6 @@ media_player.google_homes:
   name:
   platform: cast
   unique_id: 7da91e9b-9a76-4a0b-ad42-3987c8e91d9e
-light.henriks_light:
-  name:
-  platform: tradfri
-  unique_id: light-7e1551520440016f-65554
 light.extra_e14:
   name:
   platform: tradfri
@@ -1662,3 +1650,31 @@ zwave.telldus_tzdw100_magnet_switch:
   name:
   platform: zwave
   unique_id: node-61
+sensor.daylight:
+  name:
+  platform: deconz
+  unique_id: 00:21:2e:ff:ff:02:2f:eb-01
+light.osram_rgb:
+  name:
+  platform: deconz
+  unique_id: 7c:b0:3e:aa:00:aa:12:f7-03
+light.vilhelms_light_bulb:
+  name:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:4a:c2:7f-01
+sensor.vilhelms_remote_battery_level:
+  name:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:8d:c6:6d-01-1000
+sensor.bedroom_remote_battery_level:
+  name:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:37:c7:ac-01-1000
+light.henriks_light:
+  name:
+  platform: deconz
+  unique_id: 90:fd:9f:ff:fe:87:86:c9-01
+light.marias_light:
+  name:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:49:b1:dc-01

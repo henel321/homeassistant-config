@@ -68,4 +68,5 @@ binary_sensor.neo_coolcam_doorwindow_detector_sensor:
   friendly_name: "Front door" 
 binary_sensor.sensor_14:
   friendly_name: "Balcony door"
- 
+light.osram_rgb: 
+  friendly_name: "Shower RGB Light" 
