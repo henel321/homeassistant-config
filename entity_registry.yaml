@@ -1494,38 +1494,38 @@ media_player.chrome:
   name:
   platform: plex
   unique_id: y72sbgyae6ggw7vxnbg3nn9a
-light.ikea_ps_uplight:
-  name:
-  platform: tradfri
-  unique_id: light-7e1551520440016f-65543
-light.bathroom_light:
-  name:
-  platform: tradfri
-  unique_id: light-7e1551520440016f-65551
-light.living_room_2:
-  name:
-  platform: tradfri
-  unique_id: light-7e1551520440016f-65538
-light.living_room_1:
-  name:
-  platform: tradfri
-  unique_id: light-7e1551520440016f-65537
-light.elins_light_bulb:
-  name:
-  platform: tradfri
-  unique_id: light-7e1551520440016f-65542
-light.shower_ceiling_light:
-  name:
-  platform: tradfri
-  unique_id: light-7e1551520440016f-65550
+#light.ikea_ps_uplight:
+#  name:
+#  platform: tradfri
+#  unique_id: light-7e1551520440016f-65543
+#light.bathroom_light:
+#  name:
+#  platform: tradfri
+#  unique_id: light-7e1551520440016f-65551
+#light.living_room_2:
+#  name:
+#  platform: tradfri
+#  unique_id: light-7e1551520440016f-65538
+#light.living_room_1:
+#  name:
+#  platform: tradfri
+#  unique_id: light-7e1551520440016f-65537
+#light.elins_light_bulb:
+#  name:
+#  platform: tradfri
+#  unique_id: light-7e1551520440016f-65542
+#light.shower_ceiling_light:
+#  name:
+#  platform: tradfri
+#  unique_id: light-7e1551520440016f-65550
 media_player.google_homes:
   name:
   platform: cast
   unique_id: 7da91e9b-9a76-4a0b-ad42-3987c8e91d9e
-light.extra_e14:
-  name:
-  platform: tradfri
-  unique_id: light-7e1551520440016f-65546
+#light.extra_e14:
+#  name:
+#  platform: tradfri
+#  unique_id: light-7e1551520440016f-65546
 zwave.aeotec_zw090_zstick_gen5_eu:
   name:
   platform: zwave
@@ -1678,3 +1678,31 @@ light.marias_light:
   name:
   platform: deconz
   unique_id: 00:0b:57:ff:fe:49:b1:dc-01
+media_player.galaxy_tab_s3:
+  name:
+  platform: plex
+  unique_id: e97095d124a68574-com-plexapp-android
+sensor.living_room_remote_battery_level:
+  name:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:8e:3e:06-01-1000
+light.living_room_2:
+  name:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:0d:8a:a8-01
+light.elins_light_bulb:
+  name:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:4a:a8:81-01
+light.living_room_1:
+  name:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:4b:b0:7b-01
+light.bathroom_light:
+  name:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:8d:cf:ba-01
+light.ikea_ps_uplight:
+  name:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:87:7a:15-01
