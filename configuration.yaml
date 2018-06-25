@@ -175,9 +175,9 @@ notify:
     api_key: !secret slack_api_key
     default_channel: 'homeassistant'
 
-tradfri: 
-  host: !secret tradfri_host
-  allow_tradfri_groups: false
+# tradfri: 
+#   host: !secret tradfri_host
+#   allow_tradfri_groups: false
 
 light: 
   - platform: lifx
