@@ -42,10 +42,8 @@ climate.thermofloor_as_heatit_thermostat_tf_021_heating_2:
   friendly_name: "Shower Floor Heating"
 climate.thermofloor_as_heatit_thermostat_tf_021_heating:
   friendly_name: "Bathroom Floor Heating"
-light.shower_ceiling_light: 
-  friendly_name: "Shower Ceiling Trådfri Light"
 light.bathroom_light: 
-  friendly_name: "Bathroom Ceiling Trådfri Light"
+  friendly_name: "Bathroom Tuneable Light"
 climate.danfoss_z_thermostat_heating_1:
   friendly_name: "Livingroom Thermostat"
 climate.danfoss_z_thermostat_heating_1_2:

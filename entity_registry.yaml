@@ -1494,38 +1494,10 @@ media_player.chrome:
   name:
   platform: plex
   unique_id: y72sbgyae6ggw7vxnbg3nn9a
-#light.ikea_ps_uplight:
-#  name:
-#  platform: tradfri
-#  unique_id: light-7e1551520440016f-65543
-#light.bathroom_light:
-#  name:
-#  platform: tradfri
-#  unique_id: light-7e1551520440016f-65551
-#light.living_room_2:
-#  name:
-#  platform: tradfri
-#  unique_id: light-7e1551520440016f-65538
-#light.living_room_1:
-#  name:
-#  platform: tradfri
-#  unique_id: light-7e1551520440016f-65537
-#light.elins_light_bulb:
-#  name:
-#  platform: tradfri
-#  unique_id: light-7e1551520440016f-65542
-#light.shower_ceiling_light:
-#  name:
-#  platform: tradfri
-#  unique_id: light-7e1551520440016f-65550
 media_player.google_homes:
   name:
   platform: cast
   unique_id: 7da91e9b-9a76-4a0b-ad42-3987c8e91d9e
-#light.extra_e14:
-#  name:
-#  platform: tradfri
-#  unique_id: light-7e1551520440016f-65546
 zwave.aeotec_zw090_zstick_gen5_eu:
   name:
   platform: zwave
@@ -1706,3 +1678,7 @@ light.ikea_ps_uplight:
   name:
   platform: deconz
   unique_id: 00:0b:57:ff:fe:87:7a:15-01
+sensor.elins_remote_battery_level:
+  name:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:87:6d:ef-01-1000

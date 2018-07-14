@@ -206,7 +206,7 @@ automation:
   - alias: 'Vacuum schedyling weekdays when everyone away'
     trigger: 
       platform: time
-      at: "10:00:00"
+      at: "11:30:00"
     condition:
       condition: and 
       conditions:
@@ -214,6 +214,7 @@ automation:
           weekday:
           - mon
           - tue
+          - wed
           - thu
           - fri
         - condition: state
