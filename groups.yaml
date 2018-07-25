@@ -19,6 +19,7 @@ default_view:
  - group.livingroom
  - group.kitchen
  - group.bedroom
+ - group.balcony
  - group.vilhelms_room
  - group.elins_room
  - group.office
@@ -39,13 +40,20 @@ bedroom:
  name: Bedroom
  icon: mdi:hotel
  entities:
- - binary_sensor.sensor_14
+# - binary_sensor.sensor_14
  - input_number.brightness_br
  - input_select.scene_br
  - light.marias_light
  - light.henriks_light
  - light.bedroom_led_strip_
  - light.level_14
+
+balcony: 
+ name: Balcony
+ icon: mdi:nature-people
+ entities:
+ - binary_sensor.sensor_14
+ - light.osram_outdoor_plug
 
 hallway:
  name: Hallway

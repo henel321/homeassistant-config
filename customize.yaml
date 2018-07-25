@@ -68,3 +68,5 @@ binary_sensor.sensor_14:
   friendly_name: "Balcony door"
 light.osram_rgb: 
   friendly_name: "Shower RGB Light" 
+light.osram_outdoor_plug: 
+  friendly_name: "Balcony outdoor plug"
