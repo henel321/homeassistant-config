@@ -1,125 +1,4 @@
 sensor:
-  - platform: template
-    sensors:   
-      ikea_remote_bedroom:
-        friendly_name: 'Ikea Remote - Bedroom'
-        value_template: "{{ states.sensor.bedroom.attributes.battery_level|default(-1)|int if states.sensor.bedroom is not none }}"
-        unit_of_measurement: '%'
-        icon_template: '{% if states.sensor.bedroom.attributes.battery_level == 100 %}
-                           mdi:battery
-                        {% elif states.sensor.bedroom.attributes.battery_level >= 90 %}
-                           mdi:battery-90
-                        {% elif states.sensor.bedroom.attributes.battery_level >= 80 %}
-                           mdi:battery-80
-                        {% elif states.sensor.bedroom.attributes.battery_level >= 70 %}
-                           mdi:battery-70
-                        {% elif states.sensor.bedroom.attributes.battery_level >= 60 %}
-                           mdi:battery-60
-                        {% elif states.sensor.bedroom.attributes.battery_level >= 50 %}
-                           mdi:battery-50
-                        {% elif states.sensor.bedroom.attributes.battery_level >= 40 %}
-                           mdi:battery-40
-                        {% elif states.sensor.bedroom.attributes.battery_level >= 30 %}
-                           mdi:battery-30
-                        {% elif states.sensor.bedroom.attributes.battery_level >= 20 %}
-                           mdi:battery-20
-                        {% elif states.sensor.bedroom.attributes.battery_level >= 10 %}
-                           mdi:battery-10
-                        {% else %}
-                           mdi:battery-outline
-                        {% endif %}'
-
-  - platform: template
-    sensors:
-      ikea_remote_livingroom:
-        friendly_name: 'Ikea Remote - Living room'
-        value_template: "{{ states.sensor.living_room_remote.attributes.battery_level|default(-1)|int if states.sensor.living_room_remote is not none }}"
-        unit_of_measurement: '%'
-        icon_template: '{% if states.sensor.living_room_remote.attributes.battery_level == 100 %}
-                           mdi:battery
-                        {% elif states.sensor.living_room_remote.attributes.battery_level >= 90 %}
-                           mdi:battery-90
-                        {% elif states.sensor.living_room_remote.attributes.battery_level >= 80 %}
-                           mdi:battery-80
-                        {% elif states.sensor.living_room_remote.attributes.battery_level >= 70 %}
-                           mdi:battery-70
-                        {% elif states.sensor.living_room_remote.attributes.battery_level >= 60 %}
-                           mdi:battery-60
-                        {% elif states.sensor.living_room_remote.attributes.battery_level >= 50 %}
-                           mdi:battery-50
-                        {% elif states.sensor.living_room_remote.attributes.battery_level >= 40 %}
-                           mdi:battery-40
-                        {% elif states.sensor.living_room_remote.attributes.battery_level >= 30 %}
-                           mdi:battery-30
-                        {% elif states.sensor.living_room_remote.attributes.battery_level >= 20 %}
-                           mdi:battery-20
-                        {% elif states.sensor.living_room_remote.attributes.battery_level >= 10 %}
-                           mdi:battery-10
-                        {% else %}
-                           mdi:battery-outline
-                        {% endif %}'
-
-  - platform: template
-    sensors:
-      ikea_remote_elin:
-        friendly_name: 'Ikea Remote - Elin'
-        value_template: "{{ states.sensor.elins_remote.attributes.battery_level|default(-1)|int if states.sensor.elins_remote is not none }}"
-        unit_of_measurement: '%'
-        icon_template: '{% if states.sensor.elins_remote.attributes.battery_level == 100 %}
-                           mdi:battery
-                        {% elif states.sensor.elins_remote.attributes.battery_level >= 90 %}
-                           mdi:battery-90
-                        {% elif states.sensor.elins_remote.attributes.battery_level >= 80 %}
-                           mdi:battery-80
-                        {% elif states.sensor.elins_remote.attributes.battery_level >= 70 %}
-                           mdi:battery-70
-                        {% elif states.sensor.elins_remote.attributes.battery_level >= 60 %}
-                           mdi:battery-60
-                        {% elif states.sensor.elins_remote.attributes.battery_level >= 50 %}
-                           mdi:battery-50
-                        {% elif states.sensor.elins_remote.attributes.battery_level >= 40 %}
-                           mdi:battery-40
-                        {% elif states.sensor.elins_remote.attributes.battery_level >= 30 %}
-                           mdi:battery-30
-                        {% elif states.sensor.elins_remote.attributes.battery_level >= 20 %}
-                           mdi:battery-20
-                        {% elif states.sensor.elins_remote.attributes.battery_level >= 10 %}
-                           mdi:battery-10
-                        {% else %}
-                           mdi:battery-outline
-                        {% endif %}'
-
-
-  - platform: template
-    sensors:
-      ikea_remote_vilhelm:
-        friendly_name: 'Ikea Remote - Vilhelm'
-        value_template: "{{ states.sensor.vilhelms_remote.attributes.battery_level|default(-1)|int if states.sensor.vilhelms_remote is not none }}"
-        unit_of_measurement: '%'
-        icon_template: '{% if states.sensor.vilhelms_remote.attributes.battery_level == 100 %}
-                           mdi:battery
-                        {% elif states.sensor.vilhelms_remote.attributes.battery_level >= 90 %}
-                           mdi:battery-90
-                        {% elif states.sensor.vilhelms_remote.attributes.battery_level >= 80 %}
-                           mdi:battery-80
-                        {% elif states.sensor.vilhelms_remote.attributes.battery_level >= 70 %}
-                           mdi:battery-70
-                        {% elif states.sensor.vilhelms_remote.attributes.battery_level >= 60 %}
-                           mdi:battery-60
-                        {% elif states.sensor.vilhelms_remote.attributes.battery_level >= 50 %}
-                           mdi:battery-50
-                        {% elif states.sensor.vilhelms_remote.attributes.battery_level >= 40 %}
-                           mdi:battery-40
-                        {% elif states.sensor.vilhelms_remote.attributes.battery_level >= 30 %}
-                           mdi:battery-30
-                        {% elif states.sensor.vilhelms_remote.attributes.battery_level >= 20 %}
-                           mdi:battery-20
-                        {% elif states.sensor.vilhelms_remote.attributes.battery_level >= 10 %}
-                           mdi:battery-10
-                        {% else %}
-                           mdi:battery-outline
-                        {% endif %}'
-
 
   - platform: template
     sensors:
@@ -535,10 +414,10 @@ history_graph:
       - sensor.zwave_thermostat_office
       - sensor.zwave_flood_kitchen
       - sensor.zwave_flood_bathroom
-      - sensor.ikea_remote_livingroom
-      - sensor.ikea_remote_bedroom
-      - sensor.ikea_remote_elin
-      - sensor.ikea_remote_vilhelm
+      - sensor.bedroom_remote_battery_level
+      - sensor.living_room_remote_battery_level 
+      - sensor.elins_remote_battery_level 
+      - sensor.vilhelms_remote_battery_level 
     hours_to_show: 168 
     refresh: 300
 
@@ -566,10 +445,10 @@ group:
   tradfri_batteries:
     name: Trådfri Batteries
     entities:
-      - sensor.ikea_remote_livingroom
-      - sensor.ikea_remote_bedroom
-      - sensor.ikea_remote_elin
-      - sensor.ikea_remote_vilhelm
+      - sensor.bedroom_remote_battery_level
+      - sensor.living_room_remote_battery_level
+      - sensor.elins_remote_battery_level
+      - sensor.vilhelms_remote_battery_level
 
   thermostat_batteries:
     name: Thermostat Batteries
@@ -596,19 +475,19 @@ automation:
         above: 1
         below: 10
       - platform: numeric_state
-        entity_id: sensor.ikea_remote_livingroom
+        entity_id: sensor.living_room_remote_battery_level
         above: 1
         below: 10
       - platform: numeric_state
-        entity_id: sensor.ikea_remote_bedroom
+        entity_id: sensor.bedroom_remote_battery_level
         above: 1
         below: 10
       - platform: numeric_state
-        entity_id: sensor.ikea_remote_elin
+        entity_id: sensor.elins_remote_battery_level
         above: 1
         below: 10     
       - platform: numeric_state
-        entity_id: sensor.ikea_remote_vilhelm
+        entity_id: sensor.vilhelms_remote_battery_level
         above: 1
         below: 10
       - platform: numeric_state

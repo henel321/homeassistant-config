@@ -1664,37 +1664,37 @@ sensor.qubino_zmnhdd1_flush_dimmer_burglar_16:
   platform: zwave
   unique_id: 37-216172782740586657
 media_player.living_room:
-  config_entry_id:
+  config_entry_id: b633c821883b4e4f8400ec1a04361d0f
   name:
   platform: cast
   unique_id: bb175c62-9460-ed32-5694-8c530eb12502
 media_player.office_speaker:
-  config_entry_id:
+  config_entry_id: b633c821883b4e4f8400ec1a04361d0f
   name:
   platform: cast
   unique_id: c446e938-3539-928a-1579-363ecaa95155
 media_player.kitchen_home:
-  config_entry_id:
+  config_entry_id: b633c821883b4e4f8400ec1a04361d0f
   name:
   platform: cast
   unique_id: 39d26fed-a42a-84aa-98b3-b21608979735
 media_player.home_group:
-  config_entry_id:
+  config_entry_id: b633c821883b4e4f8400ec1a04361d0f
   name:
   platform: cast
   unique_id: 246b4c5d-c0af-43a3-a7d0-f4d1b9b8f0e2
 media_player.bedroom_speaker:
-  config_entry_id:
+  config_entry_id: b633c821883b4e4f8400ec1a04361d0f
   name:
   platform: cast
   unique_id: 5a0cd334-41bd-4013-c464-970b95ca4846
 media_player.vilhelms_room_speaker:
-  config_entry_id:
+  config_entry_id: b633c821883b4e4f8400ec1a04361d0f
   name:
   platform: cast
   unique_id: 70d9cb44-d058-4310-f7c6-f8857c004028
 media_player.elins_room_speaker:
-  config_entry_id:
+  config_entry_id: b633c821883b4e4f8400ec1a04361d0f
   name:
   platform: cast
   unique_id: ff6272fe-8aa5-f234-d80e-f8fed4c7bed4
@@ -1714,7 +1714,7 @@ media_player.elins_room:
   platform: cast
   unique_id: 6f5eea12-53ee-4860-bc3d-dcd9e00aac90
 media_player.all_google_homes:
-  config_entry_id:
+  config_entry_id: b633c821883b4e4f8400ec1a04361d0f
   name:
   platform: cast
   unique_id: d6884502-631d-49dd-b6f3-c7293a585f27
@@ -2029,37 +2029,37 @@ zwave.telldus_tzdw100_magnet_switch:
   platform: zwave
   unique_id: node-61
 sensor.daylight:
-  config_entry_id:
+  config_entry_id: e7c4361f6baf40b186236156ffa43191
   name:
   platform: deconz
   unique_id: 00:21:2e:ff:ff:02:2f:eb-01
 light.osram_rgb:
-  config_entry_id:
+  config_entry_id: e7c4361f6baf40b186236156ffa43191
   name:
   platform: deconz
   unique_id: 7c:b0:3e:aa:00:aa:12:f7-03
 light.vilhelms_light_bulb:
-  config_entry_id:
+  config_entry_id: e7c4361f6baf40b186236156ffa43191
   name:
   platform: deconz
   unique_id: 00:0b:57:ff:fe:4a:c2:7f-01
 sensor.vilhelms_remote_battery_level:
-  config_entry_id:
+  config_entry_id: e7c4361f6baf40b186236156ffa43191
   name:
   platform: deconz
   unique_id: 00:0b:57:ff:fe:8d:c6:6d-01-1000
 sensor.bedroom_remote_battery_level:
-  config_entry_id:
+  config_entry_id: e7c4361f6baf40b186236156ffa43191
   name:
   platform: deconz
   unique_id: 00:0b:57:ff:fe:37:c7:ac-01-1000
 light.henriks_light:
-  config_entry_id:
+  config_entry_id: e7c4361f6baf40b186236156ffa43191
   name:
   platform: deconz
   unique_id: 90:fd:9f:ff:fe:87:86:c9-01
 light.marias_light:
-  config_entry_id:
+  config_entry_id: e7c4361f6baf40b186236156ffa43191
   name:
   platform: deconz
   unique_id: 00:0b:57:ff:fe:49:b1:dc-01
@@ -2069,37 +2069,37 @@ media_player.galaxy_tab_s3:
   platform: plex
   unique_id: e97095d124a68574-com-plexapp-android
 sensor.living_room_remote_battery_level:
-  config_entry_id:
+  config_entry_id: e7c4361f6baf40b186236156ffa43191
   name:
   platform: deconz
   unique_id: 00:0b:57:ff:fe:8e:3e:06-01-1000
 light.living_room_2:
-  config_entry_id:
+  config_entry_id: e7c4361f6baf40b186236156ffa43191
   name:
   platform: deconz
   unique_id: 00:0b:57:ff:fe:0d:8a:a8-01
 light.elins_light_bulb:
-  config_entry_id:
+  config_entry_id: e7c4361f6baf40b186236156ffa43191
   name:
   platform: deconz
   unique_id: 00:0b:57:ff:fe:4a:a8:81-01
 light.living_room_1:
-  config_entry_id:
+  config_entry_id: e7c4361f6baf40b186236156ffa43191
   name:
   platform: deconz
   unique_id: 00:0b:57:ff:fe:4b:b0:7b-01
 light.bathroom_light:
-  config_entry_id:
+  config_entry_id: e7c4361f6baf40b186236156ffa43191
   name:
   platform: deconz
   unique_id: 00:0b:57:ff:fe:8d:cf:ba-01
 light.ikea_ps_uplight:
-  config_entry_id:
+  config_entry_id: e7c4361f6baf40b186236156ffa43191
   name:
   platform: deconz
   unique_id: 00:0b:57:ff:fe:87:7a:15-01
 sensor.elins_remote_battery_level:
-  config_entry_id:
+  config_entry_id: e7c4361f6baf40b186236156ffa43191
   name:
   platform: deconz
   unique_id: 00:0b:57:ff:fe:87:6d:ef-01-1000
@@ -2113,3 +2113,8 @@ light.osram_outdoor_plug:
   name:
   platform: deconz
   unique_id: 7c:b0:3e:aa:00:ab:21:c5-03
+media_player.chrome_2:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: bucnr89ainbfe8cg02m3mgck

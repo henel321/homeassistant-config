@@ -48,6 +48,9 @@ http:
 
 logger: 
   default: warning
+#  logs: 
+#    pydeconz: debug
+#    homeassistant.components.deconz: debug
 
 # Checks for available updates
 # Note: This component will send some information about your system to

@@ -63,10 +63,10 @@ binary_sensor.sensor_12:
 binary_sensor.sensor_13:
   friendly_name: "Bathroom Flood Sensor"
 binary_sensor.neo_coolcam_doorwindow_detector_sensor: 
-  friendly_name: "Front door" 
+  friendly_name: "Front Door" 
 binary_sensor.sensor_14:
-  friendly_name: "Balcony door"
+  friendly_name: "Balcony Door"
 light.osram_rgb: 
   friendly_name: "Shower RGB Light" 
 light.osram_outdoor_plug: 
-  friendly_name: "Balcony outdoor plug"
+  friendly_name: "Balcony Outdoor Plug"
