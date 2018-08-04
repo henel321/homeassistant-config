@@ -18,8 +18,6 @@ homeassistant:
       icon: mdi:server
     sensor.ike:
       icon: mdi:server
-    sensor.ikea_gateway:
-      icon: mdi:google-keep
     sensor.ip_camera:
       icon: mdi:webcam
     sensor.logitech_harmony:
@@ -47,9 +45,6 @@ sensor:
         ike:
           friendly_name: 'ike - VPN Server VM'
           value_template: "{{ 'Online' if is_state('device_tracker.iketillanderorg', 'home') else 'Offline' }}"
-        ikea_tradfri:
-          friendly_name: 'Ikea Gateway'
-          value_template: "{{ 'Online' if is_state('device_tracker.ikea_tradfri', 'home') else 'Offline' }}"
         logitech_harmony:
           friendly_name: 'Harmony Hub'
           value_template: "{{ 'Online' if is_state('device_tracker.harmonyhub', 'home') else 'Offline' }}"
@@ -81,7 +76,6 @@ group:
     - sensor.ike
     - sensor.gigaset_voip
     - sensor.ip_camera
-    - sensor.ikea_tradfri
     - sensor.logitech_harmony
 
 automation:
@@ -97,7 +91,6 @@ automation:
               - sensor.ike
               - sensor.mini_app
               - sensor.ip_camera
-              - sensor.ikea_tradfri
               - sensor.logitech_harmony
               - sensor.office_switch
               - sensor.livingroom_switch
