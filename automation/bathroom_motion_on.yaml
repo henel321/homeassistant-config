@@ -11,6 +11,6 @@ trigger:
 action:
   service: switch.turn_on
   entity_id:
-    - switch.switch
+    - switch.qubino_zmnhbdx_flush_2_relays_switch
 
 

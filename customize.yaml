@@ -8,6 +8,7 @@ switch.tellduselin_switch:
   friendly_name: "Hallway table light"
 switch.tellduslivingroom_switch:
   friendly_name: "Herstal Tentacle"
+  device_class: light
 sensor.weather_temperature:
   friendly_name: "Outside temperature"
 sensor.fibaro_system_fgsd002_smoke_sensor_temperature:
@@ -60,12 +61,16 @@ climate.danfoss_z_thermostat_heating_1_9:
   friendly_name: "Office Thermostat"
 binary_sensor.sensor_12:
   friendly_name: "Kitchen Flood Sensor"
+  device_class: moisture
 binary_sensor.sensor_13:
   friendly_name: "Bathroom Flood Sensor"
+  device_class: moisture
 binary_sensor.neo_coolcam_doorwindow_detector_sensor: 
   friendly_name: "Front Door" 
+  device_class: opening
 binary_sensor.sensor_14:
   friendly_name: "Balcony Door"
+  device_class: opening
 light.osram_rgb: 
   friendly_name: "Shower RGB Light" 
 light.osram_outdoor_plug: 
