@@ -1,0 +1,12 @@
+alias: 'Toggle office LED strip from Xiaomi Wireless Remote A'
+trigger:
+  platform: event
+  event_type: deconz_event
+  event_data:
+    id: lumisensor_switchaq3
+    event: 1002 
+action:
+  service: switch.toggle
+  entity_id:
+  - switch.telldusoffice_switch
+

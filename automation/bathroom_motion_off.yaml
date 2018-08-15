@@ -1,0 +1,15 @@
+alias: 'Turn off bathroom light after 5 minutes of no movement'
+trigger:
+  platform: state
+  entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor_2
+  to: 'off'
+  for:  '00:05:00' 
+#condition:
+#  condition: time
+#  after: '07:00:00'
+#  before: '10:00:00'
+action:
+  service: switch.turn_off
+  entity_id:
+    - switch.switch
+

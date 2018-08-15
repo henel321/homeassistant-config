@@ -70,3 +70,6 @@ light.osram_rgb:
   friendly_name: "Shower RGB Light" 
 light.osram_outdoor_plug: 
   friendly_name: "Balcony Outdoor Plug"
+
+
+

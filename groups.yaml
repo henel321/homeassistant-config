@@ -106,6 +106,9 @@ kitchen:
  name: "Kitchen"
  icon: mdi:food-fork-drink
  entities:
+ - sensor.temperature_10
+ - sensor.temperature_7
+ - binary_sensor.openclose_16
  - binary_sensor.sensor_12
  - light.level_7
  - light.level_16  
@@ -114,6 +117,7 @@ vilhelms_room:
  name: "Vilhelm's room"
  icon: mdi:account-multiple
  entities:
+ - binary_sensor.openclose_13
  - input_select.scene_vr
  - light.vilhelms_light_bulb
  - switch.telldusvilhelm_switch
@@ -124,6 +128,7 @@ elins_room:
  name: "Elin's room"
  icon: mdi:account-multiple
  entities:
+ - binary_sensor.openclose_15
  - input_select.scene_er
  - light.elins_light_bulb
  - switch.telldusextra_switch
@@ -134,6 +139,7 @@ office:
  name: "Office / Guest room"
  icon: mdi:worker
  entities:
+ - binary_sensor.openclose_14
  - switch.telldusoffice_switch
  - light.level_15
 
