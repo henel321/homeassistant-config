@@ -15,8 +15,10 @@ Includes:
    - Aeon Labs Flood sensors 
    - Danfoss Thermostats for heating
 - Conbee / Deconz 
-   - Ikea Tadfri lights
+   - Ikea Tradfri bulbs 
    - Ikea Tradfri remotes
+   - Osram RBG bulb
+   - Osram Outdoor plug
    - Xiaomi door sensors
    - Xiaomi remotes 
    - Xiaomi temperature probes
@@ -32,4 +34,6 @@ On the Improvement list.
 
 - Move more config to packages 
 - Re-Add tamper alert for fire alarm once fixed in HA. 
-- Lower bedroom termostat while balcony door is open to prevent it from activating.
+- Lower thermostat while windows/balcony doors are open to prevent heat from activating.
+- Fix zigbee battery reporting for new devices 
+-
