@@ -6,7 +6,7 @@ Includes:
 - Zwave 
    - Aeon labs USB stick
    - Qubino Dimmers/Switches
-   - Neo Coolcam PIR
+   - Neo Coolcam PIRs
    - Fibaro smoke sensor
    - Neo Coolcam door sensor 
    - Telldus door sensor
@@ -14,7 +14,12 @@ Includes:
    - Heatit Thermostats for Electric flooring 
    - Aeon Labs Flood sensors 
    - Danfoss Thermostats for heating
-- Ikea Trådfri through Gateway. (No automations on Ikea software) 
+- Conbee / Deconz 
+   - Ikea Tadfri lights
+   - Ikea Tradfri remotes
+   - Xiaomi door sensors
+   - Xiaomi remotes 
+   - Xiaomi temperature probes
 - Lifx Z led strips 
 - Google Assistant (Homes/Home Minis) 
 - Google Chromecasts
