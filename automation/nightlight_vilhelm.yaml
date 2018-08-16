@@ -1,7 +1,7 @@
-alias: "Set Vilhelms lights to night mode at 20:00" 
+alias: "Set Vilhelms lights to night mode at 22:00" 
 trigger: 
   platform: time
-  at: "20:00:00"
+  at: "22:00:00"
 action:
   service: scene.turn_on
   entity_id:

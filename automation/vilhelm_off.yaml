@@ -10,6 +10,5 @@ action:
   service: switch.turn_off
   entity_id:
   - switch.telldusvilhelm_switch
-  - switch.telldusjulgran_switch
 
 
