@@ -4,31 +4,25 @@ sensor:
     sensors:
       zwave_pir_hallway:
         friendly_name: 'PIR - Hallway'
-        value_template: "{{ states.zwave.neo_coolcam_battery_powered_pir_sensor.attributes.battery_level|default(-1)|int if states.zwave.neo_coolcam_battery_powered_pir_sensor is not none }}"
+        value_template: "{{ states.zwave.neo_coolcam_battery_powered_pir_sensor.attributes.battery_level |default(-1)|int if states.zwave.neo_coolcam_battery_powered_pir_sensor is not none }}"
         unit_of_measurement: '%'
-        icon_template: '{% if states.zwave.neo_coolcam_battery_powered_pir_sensor.attributes.battery_level == 100 %}
-                           mdi:battery
-                        {% elif states.zwave.neo_coolcam_battery_powered_pir_sensor.attributes.battery_level >= 90 %}
-                           mdi:battery-90
-                        {% elif states.zwave.neo_coolcam_battery_powered_pir_sensor.attributes.battery_level >= 80 %}
-                           mdi:battery-80
-                        {% elif states.zwave.neo_coolcam_battery_powered_pir_sensor.attributes.battery_level >= 70 %}
-                           mdi:battery-70
-                        {% elif states.zwave.neo_coolcam_battery_powered_pir_sensor.attributes.battery_level >= 60 %}
-                           mdi:battery-60
-                        {% elif states.zwave.neo_coolcam_battery_powered_pir_sensor.attributes.battery_level >= 50 %}
-                           mdi:battery-50
-                        {% elif states.zwave.neo_coolcam_battery_powered_pir_sensor.attributes.battery_level >= 40 %}
-                           mdi:battery-40
-                        {% elif states.zwave.neo_coolcam_battery_powered_pir_sensor.attributes.battery_level >= 30 %}
-                           mdi:battery-30
-                        {% elif states.zwave.neo_coolcam_battery_powered_pir_sensor.attributes.battery_level >= 20 %}
-                           mdi:battery-20
-                        {% elif states.zwave.neo_coolcam_battery_powered_pir_sensor.attributes.battery_level >= 10 %}
-                           mdi:battery-10
-                        {% else %}
-                           mdi:battery-outline
-                        {% endif %}'
+        device_class: battery
+
+  - platform: template
+    sensors:
+      zwave_pir_bathroom:
+        friendly_name: 'PIR - Bathroom'
+        value_template: "{{ states.zwave.neo_coolcam_battery_powered_pir_sensor_2.attributes.battery_level |default(-1)|int if states.zwave.neo_coolcam_battery_powered_pir_sensor_2 is not none }}"
+        unit_of_measurement: '%'
+        device_class: battery
+
+  - platform: template
+    sensors:
+      zwave_pir_shower:
+        friendly_name: 'PIR - Shower'
+        value_template: "{{ states.zwave.neo_coolcam_battery_powered_pir_sensor_3.attributes.battery_level |default(-1)|int if states.zwave.neo_coolcam_battery_powered_pir_sensor_3 is not none }}"
+        unit_of_measurement: '%'
+        device_class: battery
 
 
   - platform: template
@@ -37,30 +31,7 @@ sensor:
         friendly_name: 'Door Sensor - Hallway'
         value_template: "{{ states.zwave.neo_coolcam_doorwindow_detector.attributes.battery_level|default(-1)|int if states.zwave.neo_coolcam_doorwindow_detector is not none }}"
         unit_of_measurement: '%'
-        icon_template: '{% if states.zwave.neo_coolcam_doorwindow_detector.attributes.battery_level == 100 %}
-                           mdi:battery
-                        {% elif states.zwave.neo_coolcam_doorwindow_detector.attributes.battery_level >= 90 %}
-                           mdi:battery-90
-                        {% elif states.zwave.neo_coolcam_doorwindow_detector.attributes.battery_level >= 80 %}
-                           mdi:battery-80
-                        {% elif states.zwave.neo_coolcam_doorwindow_detector.attributes.battery_level >= 70 %}
-                           mdi:battery-70
-                        {% elif states.zwave.neo_coolcam_doorwindow_detector.attributes.battery_level >= 60 %}
-                           mdi:battery-60
-                        {% elif states.zwave.neo_coolcam_doorwindow_detector.attributes.battery_level >= 50 %}
-                           mdi:battery-50
-                        {% elif states.zwave.neo_coolcam_doorwindow_detector.attributes.battery_level >= 40 %}
-                           mdi:battery-40
-                        {% elif states.zwave.neo_coolcam_doorwindow_detector.attributes.battery_level >= 30 %}
-                           mdi:battery-30
-                        {% elif states.zwave.neo_coolcam_doorwindow_detector.attributes.battery_level >= 20 %}
-                           mdi:battery-20
-                        {% elif states.zwave.neo_coolcam_doorwindow_detector.attributes.battery_level >= 10 %}
-                           mdi:battery-10
-                        {% else %}
-                           mdi:battery-outline
-                        {% endif %}'
-
+        device_class: battery
 
   - platform: template
     sensors:
@@ -68,29 +39,7 @@ sensor:
         friendly_name: 'Fire Alarm - Hallway'
         value_template: "{{ states.zwave.fibaro_system_fgsd002_smoke_sensor.attributes.battery_level|default(-1)|int if states.zwave.fibaro_system_fgsd002_smoke_sensor is not none }}"
         unit_of_measurement: '%'
-        icon_template: '{% if states.zwave.fibaro_system_fgsd002_smoke_sensor.attributes.battery_level == 100 %}
-                           mdi:battery
-                        {% elif states.zwave.fibaro_system_fgsd002_smoke_sensor.attributes.battery_level >= 90 %}
-                           mdi:battery-90
-                        {% elif states.zwave.zwave.fibaro_system_fgsd002_smoke_sensor.attributes.battery_level >= 80 %}
-                           mdi:battery-80
-                        {% elif states.zwave.fibaro_system_fgsd002_smoke_sensor.attributes.battery_level >= 70 %}
-                           mdi:battery-70
-                        {% elif states.zwave.fibaro_system_fgsd002_smoke_sensor.attributes.battery_level >= 60 %}
-                           mdi:battery-60
-                        {% elif states.zwave.fibaro_system_fgsd002_smoke_sensor.attributes.battery_level >= 50 %}
-                           mdi:battery-50
-                        {% elif states.zwave.fibaro_system_fgsd002_smoke_sensor.attributes.battery_level >= 40 %}
-                           mdi:battery-40
-                        {% elif states.zwave.fibaro_system_fgsd002_smoke_sensor.attributes.battery_level >= 30 %}
-                           mdi:battery-30
-                        {% elif states.zwave.fibaro_system_fgsd002_smoke_sensor.attributes.battery_level >= 20 %}
-                           mdi:battery-20
-                        {% elif states.zwave.fibaro_system_fgsd002_smoke_sensor.attributes.battery_level >= 10 %}
-                           mdi:battery-10
-                        {% else %}
-                           mdi:battery-outline
-                        {% endif %}'
+        device_class: battery
 
   - platform: template
     sensors:
@@ -98,29 +47,7 @@ sensor:
         friendly_name: 'Thermostat - Livingroom'
         value_template: "{{ states.zwave.danfoss_z_thermostat.attributes.battery_level|default(-1)|int if states.zwave.danfoss_z_thermostat is not none }}"
         unit_of_measurement: '%'
-        icon_template: '{% if states.zwave.danfoss_z_thermostat.attributes.battery_level == 100 %}
-                           mdi:battery
-                        {% elif states.zwave.danfoss_z_thermostat.attributes.battery_level >= 90 %}
-                           mdi:battery-90
-                        {% elif states.zwave.danfoss_z_thermostat.attributes.battery_level >= 80 %}
-                           mdi:battery-80
-                        {% elif states.zwave.danfoss_z_thermostat.attributes.battery_level >= 70 %}
-                           mdi:battery-70
-                        {% elif states.zwave.danfoss_z_thermostat.attributes.battery_level >= 60 %}
-                           mdi:battery-60
-                        {% elif states.zwave.danfoss_z_thermostat.attributes.battery_level >= 50 %}
-                           mdi:battery-50
-                        {% elif states.zwave.danfoss_z_thermostat.attributes.battery_level >= 40 %}
-                           mdi:battery-40
-                        {% elif states.zwave.danfoss_z_thermostat.attributes.battery_level >= 30 %}
-                           mdi:battery-30
-                        {% elif states.zwave.danfoss_z_thermostat.attributes.battery_level >= 20 %}
-                           mdi:battery-20
-                        {% elif states.zwave.danfoss_z_thermostat.attributes.battery_level >= 10 %}
-                           mdi:battery-10
-                        {% else %}
-                           mdi:battery-outline
-                        {% endif %}'
+        device_class: battery
 
   - platform: template
     sensors:
@@ -128,30 +55,7 @@ sensor:
         friendly_name: 'Thermostat - Kitchen'
         value_template: "{{ states.zwave.danfoss_z_thermostat_2.attributes.battery_level|default(-1)|int if states.zwave.danfoss_z_thermostat_2 is not none }}"
         unit_of_measurement: '%'
-        icon_template: '{% if states.zwave.danfoss_z_thermostat_2.attributes.battery_level == 100 %}
-                           mdi:battery
-                        {% elif states.zwave.danfoss_z_thermostat_2.attributes.battery_level >= 90 %}
-                           mdi:battery-90
-                        {% elif states.zwave.danfoss_z_thermostat_2.attributes.battery_level >= 80 %}
-                           mdi:battery-80
-                        {% elif states.zwave.danfoss_z_thermostat_2.attributes.battery_level >= 70 %}
-                           mdi:battery-70
-                        {% elif states.zwave.danfoss_z_thermostat_2.attributes.battery_level >= 60 %}
-                           mdi:battery-60
-                        {% elif states.zwave.danfoss_z_thermostat_2.attributes.battery_level >= 50 %}
-                           mdi:battery-50
-                        {% elif states.zwave.danfoss_z_thermostat_2.attributes.battery_level >= 40 %}
-                           mdi:battery-40
-                        {% elif states.zwave.danfoss_z_thermostat_2.attributes.battery_level >= 30 %}
-                           mdi:battery-30
-                        {% elif states.zwave.danfoss_z_thermostat_2.attributes.battery_level >= 20 %}
-                           mdi:battery-20
-                        {% elif states.zwave.danfoss_z_thermostat_2.attributes.battery_level >= 10 %}
-                           mdi:battery-10
-                        {% else %}
-                           mdi:battery-outline
-                        {% endif %}'
-
+        device_class: battery
 
   - platform: template
     sensors:
@@ -159,29 +63,7 @@ sensor:
         friendly_name: 'Thermostat - Bedroom'
         value_template: "{{ states.zwave.danfoss_z_thermostat_3.attributes.battery_level|default(-1)|int if states.zwave.danfoss_z_thermostat_3 is not none }}"
         unit_of_measurement: '%'
-        icon_template: '{% if states.zwave.danfoss_z_thermostat_3.attributes.battery_level == 100 %}
-                           mdi:battery
-                        {% elif states.zwave.danfoss_z_thermostat_3.attributes.battery_level >= 90 %}
-                           mdi:battery-90
-                        {% elif states.zwave.danfoss_z_thermostat_3.attributes.battery_level >= 80 %}
-                           mdi:battery-80
-                        {% elif states.zwave.danfoss_z_thermostat_3.attributes.battery_level >= 70 %}
-                           mdi:battery-70
-                        {% elif states.zwave.danfoss_z_thermostat_3.attributes.battery_level >= 60 %}
-                           mdi:battery-60
-                        {% elif states.zwave.danfoss_z_thermostat_3.attributes.battery_level >= 50 %}
-                           mdi:battery-50
-                        {% elif states.zwave.danfoss_z_thermostat_3.attributes.battery_level >= 40 %}
-                           mdi:battery-40
-                        {% elif states.zwave.danfoss_z_thermostat_3.attributes.battery_level >= 30 %}
-                           mdi:battery-30
-                        {% elif states.zwave.danfoss_z_thermostat_3.attributes.battery_level >= 20 %}
-                           mdi:battery-20
-                        {% elif states.zwave.danfoss_z_thermostat_3.attributes.battery_level >= 10 %}
-                           mdi:battery-10
-                        {% else %}
-                           mdi:battery-outline
-                        {% endif %}'
+        device_class: battery
 
   - platform: template
     sensors:
@@ -189,30 +71,7 @@ sensor:
         friendly_name: 'Thermostat - Elin Left'
         value_template: "{{ states.zwave.danfoss_z_thermostat_4.attributes.battery_level|default(-1)|int if states.zwave.danfoss_z_thermostat_4 is not none }}"
         unit_of_measurement: '%'
-        icon_template: '{% if states.zwave.danfoss_z_thermostat_4.attributes.battery_level == 100 %}
-                           mdi:battery
-                        {% elif states.zwave.danfoss_z_thermostat_4.attributes.battery_level >= 90 %}
-                           mdi:battery-90
-                        {% elif states.zwave.danfoss_z_thermostat_4.attributes.battery_level >= 80 %}
-                           mdi:battery-80
-                        {% elif states.zwave.danfoss_z_thermostat_4.attributes.battery_level >= 70 %}
-                           mdi:battery-70
-                        {% elif states.zwave.danfoss_z_thermostat_4.attributes.battery_level >= 60 %}
-                           mdi:battery-60
-                        {% elif states.zwave.danfoss_z_thermostat_4.attributes.battery_level >= 50 %}
-                           mdi:battery-50
-                        {% elif states.zwave.danfoss_z_thermostat_4.attributes.battery_level >= 40 %}
-                           mdi:battery-40
-                        {% elif states.zwave.danfoss_z_thermostat_4.attributes.battery_level >= 30 %}
-                           mdi:battery-30
-                        {% elif states.zwave.danfoss_z_thermostat_4.attributes.battery_level >= 20 %}
-                           mdi:battery-20
-                        {% elif states.zwave.danfoss_z_thermostat_4.attributes.battery_level >= 10 %}
-                           mdi:battery-10
-                        {% else %}
-                           mdi:battery-outline
-                        {% endif %}'
-
+        device_class: battery
 
   - platform: template
     sensors:
@@ -220,29 +79,7 @@ sensor:
         friendly_name: 'Thermostat - Elin Right'
         value_template: "{{ states.zwave.danfoss_z_thermostat_5.attributes.battery_level|default(-1)|int if states.zwave.danfoss_z_thermostat_5 is not none }}"
         unit_of_measurement: '%'
-        icon_template: '{% if states.zwave.danfoss_z_thermostat_5.attributes.battery_level == 100 %}
-                           mdi:battery
-                        {% elif states.zwave.danfoss_z_thermostat_5.attributes.battery_level >= 90 %}
-                           mdi:battery-90
-                        {% elif states.zwave.danfoss_z_thermostat_5.attributes.battery_level >= 80 %}
-                           mdi:battery-80
-                        {% elif states.zwave.danfoss_z_thermostat_5.attributes.battery_level >= 70 %}
-                           mdi:battery-70
-                        {% elif states.zwave.danfoss_z_thermostat_5.attributes.battery_level >= 60 %}
-                           mdi:battery-60
-                        {% elif states.zwave.danfoss_z_thermostat_5.attributes.battery_level >= 50 %}
-                           mdi:battery-50
-                        {% elif states.zwave.danfoss_z_thermostat_5.attributes.battery_level >= 40 %}
-                           mdi:battery-40
-                        {% elif states.zwave.danfoss_z_thermostat_5.attributes.battery_level >= 30 %}
-                           mdi:battery-30
-                        {% elif states.zwave.danfoss_z_thermostat_5.attributes.battery_level >= 20 %}
-                           mdi:battery-20
-                        {% elif states.zwave.danfoss_z_thermostat_5.attributes.battery_level >= 10 %}
-                           mdi:battery-10
-                        {% else %}
-                           mdi:battery-outline
-                        {% endif %}'
+        device_class: battery
 
   - platform: template
     sensors:
@@ -250,29 +87,7 @@ sensor:
         friendly_name: 'Thermostat - Vilhelm'
         value_template: "{{ states.zwave.danfoss_z_thermostat_6.attributes.battery_level|default(-1)|int if states.zwave.danfoss_z_thermostat_6 is not none }}"
         unit_of_measurement: '%'
-        icon_template: '{% if states.zwave.danfoss_z_thermostat_6.attributes.battery_level == 100 %}
-                           mdi:battery
-                        {% elif states.zwave.danfoss_z_thermostat_6.attributes.battery_level >= 90 %}
-                           mdi:battery-90
-                        {% elif states.zwave.danfoss_z_thermostat_6.attributes.battery_level >= 80 %}
-                           mdi:battery-80
-                        {% elif states.zwave.danfoss_z_thermostat_6.attributes.battery_level >= 70 %}
-                           mdi:battery-70
-                        {% elif states.zwave.danfoss_z_thermostat_6.attributes.battery_level >= 60 %}
-                           mdi:battery-60
-                        {% elif states.zwave.danfoss_z_thermostat_6.attributes.battery_level >= 50 %}
-                           mdi:battery-50
-                        {% elif states.zwave.danfoss_z_thermostat_6.attributes.battery_level >= 40 %}
-                           mdi:battery-40
-                        {% elif states.zwave.danfoss_z_thermostat_6.attributes.battery_level >= 30 %}
-                           mdi:battery-30
-                        {% elif states.zwave.danfoss_z_thermostat_6.attributes.battery_level >= 20 %}
-                           mdi:battery-20
-                        {% elif states.zwave.danfoss_z_thermostat_6.attributes.battery_level >= 10 %}
-                           mdi:battery-10
-                        {% else %}
-                           mdi:battery-outline
-                        {% endif %}'
+        device_class: battery
 
   - platform: template
     sensors:
@@ -280,30 +95,7 @@ sensor:
         friendly_name: 'Thermostat - Office'
         value_template: "{{ states.zwave.danfoss_z_thermostat_7.attributes.battery_level|default(-1)|int if states.zwave.danfoss_z_thermostat_7 is not none }}"
         unit_of_measurement: '%'
-        icon_template: '{% if states.zwave.danfoss_z_thermostat_7.attributes.battery_level == 100 %}
-                           mdi:battery
-                        {% elif states.zwave.danfoss_z_thermostat_7.attributes.battery_level >= 90 %}
-                           mdi:battery-90
-                        {% elif states.zwave.danfoss_z_thermostat_7.attributes.battery_level >= 80 %}
-                           mdi:battery-80
-                        {% elif states.zwave.danfoss_z_thermostat_7.attributes.battery_level >= 70 %}
-                           mdi:battery-70
-                        {% elif states.zwave.danfoss_z_thermostat_7.attributes.battery_level >= 60 %}
-                           mdi:battery-60
-                        {% elif states.zwave.danfoss_z_thermostat_7.attributes.battery_level >= 50 %}
-                           mdi:battery-50
-                        {% elif states.zwave.danfoss_z_thermostat_7.attributes.battery_level >= 40 %}
-                           mdi:battery-40
-                        {% elif states.zwave.danfoss_z_thermostat_7.attributes.battery_level >= 30 %}
-                           mdi:battery-30
-                        {% elif states.zwave.danfoss_z_thermostat_7.attributes.battery_level >= 20 %}
-                           mdi:battery-20
-                        {% elif states.zwave.danfoss_z_thermostat_7.attributes.battery_level >= 10 %}
-                           mdi:battery-10
-                        {% else %}
-                           mdi:battery-outline
-                        {% endif %}'
-
+        device_class: battery
 
   - platform: template
     sensors:
@@ -311,30 +103,7 @@ sensor:
         friendly_name: 'Flood sensor - Kitchen'
         value_template: "{{ states.zwave.aeotec_dsb45_water_sensor.attributes.battery_level|default(-1)|int if states.zwave.aeotec_dsb45_water_sensor is not none }}"
         unit_of_measurement: '%'
-        icon_template: '{% if states.zwave.aeotec_dsb45_water_sensor.attributes.battery_level == 100 %}
-                           mdi:battery
-                        {% elif states.zwave.aeotec_dsb45_water_sensor.attributes.battery_level >= 90 %}
-                           mdi:battery-90
-                        {% elif states.zwave.aeotec_dsb45_water_sensor.attributes.battery_level >= 80 %}
-                           mdi:battery-80
-                        {% elif states.zwave.aeotec_dsb45_water_sensor.attributes.battery_level >= 70 %}
-                           mdi:battery-70
-                        {% elif states.zwave.aeotec_dsb45_water_sensor.attributes.battery_level >= 60 %}
-                           mdi:battery-60
-                        {% elif states.zwave.aeotec_dsb45_water_sensor.attributes.battery_level >= 50 %}
-                           mdi:battery-50
-                        {% elif states.zwave.aeotec_dsb45_water_sensor.attributes.battery_level >= 40 %}
-                           mdi:battery-40
-                        {% elif states.zwave.aeotec_dsb45_water_sensor.attributes.battery_level >= 30 %}
-                           mdi:battery-30
-                        {% elif states.zwave.aeotec_dsb45_water_sensor.attributes.battery_level >= 20 %}
-                           mdi:battery-20
-                        {% elif states.zwave.aeotec_dsb45_water_sensor.attributes.battery_level >= 10 %}
-                           mdi:battery-10
-                        {% else %}
-                           mdi:battery-outline
-                        {% endif %}'
-
+        device_class: battery
 
   - platform: template
     sensors:
@@ -342,29 +111,7 @@ sensor:
         friendly_name: 'Flood sensor - Bathroom'
         value_template: "{{ states.zwave.aeotec_dsb45_water_sensor_2.attributes.battery_level|default(-1)|int if states.zwave.aeotec_dsb45_water_sensor_2 is not none }}"
         unit_of_measurement: '%'
-        icon_template: '{% if states.zwave.aeotec_dsb45_water_sensor_2.attributes.battery_level == 100 %}
-                           mdi:battery
-                        {% elif states.zwave.aeotec_dsb45_water_sensor_2.attributes.battery_level >= 90 %}
-                           mdi:battery-90
-                        {% elif states.zwave.aeotec_dsb45_water_sensor_2.attributes.battery_level >= 80 %}
-                           mdi:battery-80
-                        {% elif states.zwave.aeotec_dsb45_water_sensor_2.attributes.battery_level >= 70 %}
-                           mdi:battery-70
-                        {% elif states.zwave.aeotec_dsb45_water_sensor_2.attributes.battery_level >= 60 %}
-                           mdi:battery-60
-                        {% elif states.zwave.aeotec_dsb45_water_sensor_2.attributes.battery_level >= 50 %}
-                           mdi:battery-50
-                        {% elif states.zwave.aeotec_dsb45_water_sensor_2.attributes.battery_level >= 40 %}
-                           mdi:battery-40
-                        {% elif states.zwave.aeotec_dsb45_water_sensor_2.attributes.battery_level >= 30 %}
-                           mdi:battery-30
-                        {% elif states.zwave.aeotec_dsb45_water_sensor_2.attributes.battery_level >= 20 %}
-                           mdi:battery-20
-                        {% elif states.zwave.aeotec_dsb45_water_sensor_2.attributes.battery_level >= 10 %}
-                           mdi:battery-10
-                        {% else %}
-                           mdi:battery-outline
-                        {% endif %}'
+        device_class: battery
 
   - platform: template
     sensors:
@@ -372,29 +119,7 @@ sensor:
         friendly_name: 'Door Sensor - Balcony door'
         value_template: "{{ states.zwave.telldus_tzdw100_magnet_switch.attributes.battery_level|default(-1)|int if states.zwave.telldus_tzdw100_magnet_switch is not none }}"
         unit_of_measurement: '%'
-        icon_template: '{% if states.zwave.telldus_tzdw100_magnet_switch.attributes.battery_level == 100 %}
-                           mdi:battery
-                        {% elif states.zwave.telldus_tzdw100_magnet_switch.attributes.battery_level >= 90 %}
-                           mdi:battery-90
-                        {% elif states.zwave.telldus_tzdw100_magnet_switch.attributes.battery_level >= 80 %}
-                           mdi:battery-80
-                        {% elif states.zwave.telldus_tzdw100_magnet_switch.attributes.battery_level >= 70 %}
-                           mdi:battery-70
-                        {% elif states.zwave.telldus_tzdw100_magnet_switch.attributes.battery_level >= 60 %}
-                           mdi:battery-60
-                        {% elif states.zwave.telldus_tzdw100_magnet_switch.attributes.battery_level >= 50 %}
-                           mdi:battery-50
-                        {% elif states.zwave.telldus_tzdw100_magnet_switch.attributes.battery_level >= 40 %}
-                           mdi:battery-40
-                        {% elif states.zwave.telldus_tzdw100_magnet_switch.attributes.battery_level >= 30 %}
-                           mdi:battery-30
-                        {% elif states.zwave.telldus_tzdw100_magnet_switch.attributes.battery_level >= 20 %}
-                           mdi:battery-20
-                        {% elif states.zwave.telldus_tzdw100_magnet_switch.attributes.battery_level >= 10 %}
-                           mdi:battery-10
-                        {% else %}
-                           mdi:battery-outline
-                        {% endif %}'
+        device_class: battery
 
 
 history_graph:
@@ -402,6 +127,8 @@ history_graph:
     name: Battery Status
     entities:
       - sensor.zwave_pir_hallway
+      - sensor.zwave_pir_bathroom
+      - sensor.zwave_pir_shower
       - sensor.zwave_door_hallway
       - sensor.zwave_door_balcony
       - sensor.zwave_fire_alarm
@@ -429,21 +156,23 @@ group:
     entities:
       - group.device_batteries
       - group.thermostat_batteries
-      - group.tradfri_batteries
+      - group.zigbee_batteries
       - history_graph.battery_status
 
   device_batteries:
     name: Zwave Batteries
     entities:
       - sensor.zwave_pir_hallway
+      - sensor.zwave_pir_bathroom
+      - sensor.zwave_pir_shower
       - sensor.zwave_door_hallway
       - sensor.zwave_door_balcony
       - sensor.zwave_fire_alarm
       - sensor.zwave_flood_kitchen
       - sensor.zwave_flood_bathroom
 
-  tradfri_batteries:
-    name: Trådfri Batteries
+  zigbee_batteries:
+    name: ZigBee Batteries
     entities:
       - sensor.bedroom_remote_battery_level
       - sensor.living_room_remote_battery_level
@@ -468,6 +197,14 @@ automation:
     trigger:
       - platform: numeric_state
         entity_id: sensor.zwave_pir_hallway
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.zwave_pir_bathroom
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.zwave_pir_shower
         above: 1
         below: 10
       - platform: numeric_state

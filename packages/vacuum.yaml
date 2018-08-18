@@ -214,7 +214,6 @@ automation:
           weekday:
           - mon
           - tue
-          - wed
           - thu
           - fri
         - condition: state

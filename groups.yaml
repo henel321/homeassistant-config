@@ -53,7 +53,7 @@ balcony:
  icon: mdi:nature-people
  entities:
  - binary_sensor.sensor_14
- - light.osram_outdoor_plug
+ - switch.osram_outdoor_plug
 
 hallway:
  name: Hallway

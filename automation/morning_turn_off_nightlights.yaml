@@ -1,0 +1,12 @@
+alias: "Turn off night lights in Kids' room"
+trigger:
+  platform: time
+  at: "08:30:00"
+action:
+  service: scene.turn_on
+  entity_id:
+  - scene.er_off
+  - scene.vr_off
+
+ 
+ 

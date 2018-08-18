@@ -36,4 +36,4 @@ On the Improvement list.
 - Re-Add tamper alert for fire alarm once fixed in HA. 
 - Lower thermostat while windows/balcony doors are open to prevent heat from activating.
 - Fix zigbee battery reporting for new devices 
--
+

@@ -2248,3 +2248,8 @@ sensor.neo_coolcam_battery_powered_pir_sensor_alarm_level_3:
   name:
   platform: zwave
   unique_id: 63-72057595100938257
+switch.osram_outdoor_plug:
+  config_entry_id: e7c4361f6baf40b186236156ffa43191
+  name:
+  platform: deconz
+  unique_id: 7c:b0:3e:aa:00:ab:21:c5-03

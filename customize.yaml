@@ -73,7 +73,7 @@ binary_sensor.sensor_14:
   device_class: opening
 light.osram_rgb: 
   friendly_name: "Shower RGB Light" 
-light.osram_outdoor_plug: 
+switch.osram_outdoor_plug: 
   friendly_name: "Balcony Outdoor Plug"
 
 
