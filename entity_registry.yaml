@@ -2045,12 +2045,12 @@ light.vilhelms_light_bulb:
   unique_id: 00:0b:57:ff:fe:4a:c2:7f-01
 sensor.vilhelms_remote_battery_level:
   config_entry_id: e7c4361f6baf40b186236156ffa43191
-  name:
+  name: Remote - Vilhelm
   platform: deconz
   unique_id: 00:0b:57:ff:fe:8d:c6:6d-01-1000
 sensor.bedroom_remote_battery_level:
   config_entry_id: e7c4361f6baf40b186236156ffa43191
-  name:
+  name: Remote - Bedroom
   platform: deconz
   unique_id: 00:0b:57:ff:fe:37:c7:ac-01-1000
 light.henriks_light:
@@ -2070,7 +2070,7 @@ media_player.galaxy_tab_s3:
   unique_id: e97095d124a68574-com-plexapp-android
 sensor.living_room_remote_battery_level:
   config_entry_id: e7c4361f6baf40b186236156ffa43191
-  name:
+  name: Remote - Living Room
   platform: deconz
   unique_id: 00:0b:57:ff:fe:8e:3e:06-01-1000
 light.living_room_2:
@@ -2100,7 +2100,7 @@ light.ikea_ps_uplight:
   unique_id: 00:0b:57:ff:fe:87:7a:15-01
 sensor.elins_remote_battery_level:
   config_entry_id: e7c4361f6baf40b186236156ffa43191
-  name:
+  name: Remote - Elin
   platform: deconz
   unique_id: 00:0b:57:ff:fe:87:6d:ef-01-1000
 sensor.power_6:
@@ -2170,12 +2170,12 @@ binary_sensor.openclose_16:
   unique_id: 00:15:8d:00:02:05:b2:ec-01-0006
 sensor.lumisensor_switchaq3_battery_level:
   config_entry_id: e7c4361f6baf40b186236156ffa43191
-  name:
+  name: Remote - Office
   platform: deconz
   unique_id: 00:15:8d:00:01:e6:4f:18-01-0012
 sensor.lumisensor_switchaq3_2_battery_level:
   config_entry_id: e7c4361f6baf40b186236156ffa43191
-  name:
+  name: Remote - Unused
   platform: deconz
   unique_id: 00:15:8d:00:01:e6:4e:07-01-0012
 sensor.neo_coolcam_battery_powered_pir_sensor_luminance_2:
