@@ -291,6 +291,54 @@ automation:
         entity_id: sensor.zwave_thermostat_office 
         above: 1
         below: 10
+      - platform: numeric_state
+        entity_id: sensor.bedroom_remote_battery_level
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.living_room_remote_battery_level
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.elins_remote_battery_level
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.vilhelms_remote_battery_level
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.lumisensor_switchaq3_battery_level
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.lumisensor_switchaq3_2_battery_level
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.zigbee_temp_refrigerator
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.zigbee_temp_freezer
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.zigbee_openclose_vilhelm
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.zigbee_openclose_office
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.zigbee_openclose_elin
+        above: 1
+        below: 10
+      - platform: numeric_state
+        entity_id: sensor.zigbee_openclose_kitchen
+        above: 1
+        below: 10
     action:
       - service: notify.pushbullet
         data_template:
