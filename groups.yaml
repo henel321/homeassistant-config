@@ -198,6 +198,8 @@ weather:
  - sensor.fibaro_system_fgsd002_smoke_sensor_temperature
  - sensor.thermofloor_as_heatit_thermostat_tf_021_temperature
  - sensor.thermofloor_as_heatit_thermostat_tf_021_temperature_2
+ - sensor.temperature_7
+ - sensor.temperature_10 
  - sensor.weather_cloudiness
  - sensor.weather_fog
  - sensor.weather_precipitation
@@ -210,6 +212,7 @@ weather:
  - history_graph.floors_graph
  - history_graph.netatmo_outside_temp
  - history_graph.netatmo_inside_temp
+ - xiaomi_fridge_temp
 
 system_info_view:
   name: System info
