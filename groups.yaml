@@ -212,7 +212,7 @@ weather:
  - history_graph.floors_graph
  - history_graph.netatmo_outside_temp
  - history_graph.netatmo_inside_temp
- - xiaomi_fridge_temp
+ - history_graph.xiaomi_fridge_temp
 
 system_info_view:
   name: System info
