@@ -1709,7 +1709,7 @@ media_player.plex_web_chrome_3:
   platform: plex
   unique_id: n9c6ycb156x0f6r
 media_player.elins_room:
-  config_entry_id:
+  config_entry_id: b633c821883b4e4f8400ec1a04361d0f
   name:
   platform: cast
   unique_id: 6f5eea12-53ee-4860-bc3d-dcd9e00aac90
@@ -2253,3 +2253,13 @@ switch.osram_outdoor_plug:
   name:
   platform: deconz
   unique_id: 7c:b0:3e:aa:00:ab:21:c5-03
+media_player.55pos900212:
+  config_entry_id: b633c821883b4e4f8400ec1a04361d0f
+  name:
+  platform: cast
+  unique_id: 93b4afa8-e17f-0fec-6510-2e06d208af28
+media_player.4k_led_tv_powered_by_android:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: a11148fcc94cc82f-com-plexapp-android

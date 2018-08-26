@@ -2,8 +2,8 @@
   entities:
    light.vilhelms_light_bulb:
       state: on
-      brightness: 1 
-      color_temp: 461
+      brightness: 3 
+      color_temp: 454 
    switch.telldusvilhelm_switch:
       state: off
    light.level_13:

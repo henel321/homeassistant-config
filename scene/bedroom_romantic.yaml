@@ -2,13 +2,13 @@
   entities:
    light.henriks_light:
       state: on
-      brightness: 1
-      color_temp: 461
+      brightness: 2 
+      color_temp: 454 
       transition: 10 
    light.marias_light: 
       state: on
-      brightness: 1 
-      color_temp: 461
+      brightness: 2  
+      color_temp: 454
       transition: 10 
    light.bedroom_led_strip_:
       state: on 

@@ -2,8 +2,8 @@
   entities:
    light.elins_light_bulb:
       state: on
-      brightness: 1 
-      color_temp: 461
+      brightness: 3 
+      color_temp: 454 
    light.elins_led_strip:
       state: off
    switch.telldusextra_switch:

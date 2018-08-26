@@ -162,6 +162,7 @@ mediaplayer_google:
  name: "Google Mediaplayers"
  icon: mdi:cast
  entities:
+ - media_player.55pos900212
  - media_player.kitchen_home
  - media_player.bedroom_speaker
  - media_player.office_speaker
