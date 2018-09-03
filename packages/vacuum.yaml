@@ -84,7 +84,7 @@ sensor:
   - platform: template
     sensors:
       vacuum_status:
-        value_template: '{{  states.vacuum.stadis.attributes.status }}'
+        value_template: '{{ states.vacuum.stadis.state }}'
         friendly_name: 'Vacuum status'
 
   - platform: template
@@ -203,7 +203,7 @@ automation:
         data: 
            message: 'Städis is done cleaning! {{ states.vacuum.stadis.attributes.cleaned_area }} m2 was cleaned in {{  states.vacuum.stadis.attributes.cleaning_time }} minutes.'
 
-  - alias: 'Vacuum schedyling weekdays when everyone away'
+  - alias: 'Vacuum scheduling weekdays when everyone away'
     trigger: 
       platform: time
       at: "11:30:00"
@@ -220,5 +220,5 @@ automation:
           entity_id: group.parents 
           state: 'not_home'
     action: 
-      - service: vacuum.turn_on
+      - service: vacuum.start
         entity_id: vacuum.stadis
