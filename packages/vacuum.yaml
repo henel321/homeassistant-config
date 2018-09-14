@@ -168,7 +168,7 @@ automation:
     trigger:
       platform: state
       entity_id: sensor.vacuum_status 
-      to: 'Cleaning'
+      to: 'cleaning'
     action:
       - service: notify.pushbullet
         data:
@@ -182,7 +182,7 @@ automation:
     trigger:
       platform: state
       entity_id: sensor.vacuum_status
-      to: 'Error'
+      to: 'error'
     action:
       - service: notify.pushbullet
         data:
