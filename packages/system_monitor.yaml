@@ -10,6 +10,8 @@ group:
   system_monitor_card:
     name: System Monitor 
     entities:
+      - sensor.henel321homeassistantconfig_last_build_state
+      - sensor.henel321homeassistantconfig_state
       - alert.disk_use_critical
       - sensor.uptime
       - sensor.last_boot
