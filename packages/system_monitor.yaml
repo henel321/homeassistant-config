@@ -83,6 +83,9 @@ sensor:
   - platform: uptime
     unit_of_measurement: hours
 
+  - platform: travisci 
+    api_key: !secret travis_token 
+
 binary_sensor:
   - platform: template
     sensors:
