@@ -202,6 +202,19 @@ automation:
       - service: notify.slack
         data: 
            message: 'Städis is done cleaning! {{ states.vacuum.stadis.attributes.cleaned_area }} m2 was cleaned in {{  states.vacuum.stadis.attributes.cleaning_time }} minutes.'
+      - delay: 3600
+      - service: VACUUM.XIAOMI_REMOTE_CONTROL_START
+        entity_id: vacuum.stadis
+      - delay: 12
+      - service: VACUUM.XIAOMI_REMOTE_CONTROL_MOVE
+        entity_id: vacuum.stadis
+        data:
+          duration: 1400
+          velocity: 0.29
+          rotation: 0
+      - delay: 5
+      - service: VACUUM.XIAOMI_REMOTE_CONTROL_STOP
+        entity_id: vacuum.stadis
 
   - alias: 'Vacuum scheduling weekdays when everyone away'
     trigger: 
