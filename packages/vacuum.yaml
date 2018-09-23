@@ -239,7 +239,7 @@ automation:
     - service: VACUUM.XIAOMI_REMOTE_CONTROL_MOVE
       entity_id: vacuum.stadis
       data:
-        duration: 2000
+        duration: 1400
         velocity: 0.29
         rotation: 0
     - delay: 5
