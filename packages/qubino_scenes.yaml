@@ -22,15 +22,15 @@ automation:
       - scene.k_eat  
 
 
-  - alias: "i2 on livingroom ceiling turn on Normal scene"
-    trigger:
-      platform: state
-      entity_id: binary_sensor.sensor_5
-      to: 'on'
-    action:
-      service: scene.turn_on
-      entity_id:
-      - scene.lr_normal
+#  - alias: "i2 on livingroom ceiling turn on Normal scene"
+#    trigger:
+#      platform: state
+#      entity_id: binary_sensor.sensor_5
+#      to: 'on'
+#    action:
+#      service: scene.turn_on
+#      entity_id:
+#      - scene.lr_normal
 
   - alias: "i2 on bedroom ceiling turn on Normal scene"
     trigger:
