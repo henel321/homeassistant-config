@@ -2,22 +2,27 @@
   entities:
    light.ikea_ps_uplight:
       state: on
-      brightness: 100  
-      color_temp: 458
+      color_name: darkgoldenrod 
+      brightness: 60 
       transition: 10 
    light.living_room_1:
       state: on
-      brightness: 40
+      brightness: 25 
       color_temp: 458
       transition: 10 
    light.living_room_2:
       state: on
-      brightness: 40 
+      brightness: 25
       color_temp: 458
       transition: 10
+   light.living_room_3:
+      state: on
+      brightness: 25 
+      color_temp: 458
+      transition: 10 
    light.lifx_led_strip:
       state: on 
-      brightness: 90  
+      brightness: 60 
       color_name: cornsilk
       transition: 10
    switch.tellduslivingroom_switch:

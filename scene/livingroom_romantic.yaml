@@ -3,21 +3,26 @@
    light.ikea_ps_uplight:
       state: on
       brightness: 80 
-      color_temp: 458
-      transition: 10
+      color_name: red
+      transition: 5 
    light.living_room_1:
       state: on
-      brightness: 10
+      brightness: 10 
       color_temp: 458
-      transition: 10
+      transition: 5 
    light.living_room_2:
       state: on
       brightness: 10
       color_temp: 458
-      transition: 10
+      transition: 5 
+   light.living_room_3:
+      state: on
+      brightness: 10 
+      color_temp: 458
+      transition: 5 
    light.lifx_led_strip:
       state: on 
-      brightness: 60 
+      brightness: 40 
       color_name: red 
       transition: 10
    switch.tellduslivingroom_switch:

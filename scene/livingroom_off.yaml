@@ -6,6 +6,8 @@
       state: off
    light.living_room_2:
       state: off
+   light.living_room_3:
+      state: off
    light.lifx_led_strip:
       state: off
    switch.tellduslivingroom_switch:

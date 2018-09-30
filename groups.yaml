@@ -97,6 +97,7 @@ livingroom:
  - input_select.scene_lr
  - light.living_room_1 
  - light.living_room_2
+ - light.living_room_3
  - light.ikea_ps_uplight
  - switch.tellduslivingroom_switch
  - light.lifx_led_strip
