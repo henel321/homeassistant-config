@@ -8,7 +8,7 @@
       state: on
       brightness: 255 
       color_temp: 461
-   light.bedroom_led_strip_:
+   light.bedroom_led_strip:
       state: on 
       brightness: 255
       color_temp: 350 

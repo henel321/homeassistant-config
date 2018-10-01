@@ -10,7 +10,7 @@
       brightness: 2  
       color_temp: 454
       transition: 10 
-   light.bedroom_led_strip_:
+   light.bedroom_led_strip:
       state: on 
       brightness: 5 
       transition: 10

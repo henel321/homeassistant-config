@@ -8,7 +8,7 @@ action:
     entity_id:
       - light.henriks_light 
       - light.marias_light
-      - light.bedroom_led_strip_
+      - light.bedroom_led_strip
   data_template:
     brightness: '{{ states( "input_number.brightness_br" )|round( 0 ) }}'
 

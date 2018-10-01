@@ -4,7 +4,7 @@
       state: off
    light.marias_light: 
       state: off
-   light.bedroom_led_strip_:
+   light.bedroom_led_strip:
       state: off 
    light.level_14:
       state: off

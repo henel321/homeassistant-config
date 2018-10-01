@@ -45,7 +45,7 @@ bedroom:
  - input_select.scene_br
  - light.marias_light
  - light.henriks_light
- - light.bedroom_led_strip_
+ - light.bedroom_led_strip
  - light.level_14
 
 balcony: 
