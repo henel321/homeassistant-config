@@ -15,7 +15,8 @@ Includes:
    - Aeon Labs Flood sensors 
    - Danfoss Thermostats for heating
 - Conbee / Deconz 
-   - Ikea Tradfri bulbs 
+   - Ikea Tradfri color temp E14 and E27 bulbs 
+   - Ikea Tradfri RGB E27 bulb
    - Ikea Tradfri remotes
    - Osram RBG bulb
    - Osram Outdoor plug
