@@ -69,7 +69,7 @@ bathroom:
  icon: mdi:water
  entities:
  - binary_sensor.sensor_13
- - climate.thermofloor_as_heatit_thermostat_tf_021_heating
+ - climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
  - switch.qubino_zmnhbdx_flush_2_relays_switch
  - switch.qubino_zmnhbdx_flush_2_relays_switch_2
  - light.bathroom_light
@@ -78,7 +78,7 @@ shower:
  name: Shower
  icon: mdi:human-male-female
  entities:
- - climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
+ - climate.thermofloor_as_heatit_thermostat_tf_021_heating
  - switch.switch_2
 # - light.shower_ceiling_light
  - light.osram_rgb
