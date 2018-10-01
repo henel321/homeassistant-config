@@ -1,13 +1,13 @@
-alias: 'Turn on bathroom light when movement'
+alias: 'Turn on bathroom light when movement during day'
 trigger: 
   platform: state
   entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor_2 
   from: 'off'
   to: 'on'
-#condition:
-#  condition: time
-#  after: '07:00:00'
-#  before: '10:00:00' 
+condition:
+  condition: time
+  after: '07:00:00'
+  before: '23:00:00' 
 action:
   service: switch.turn_on
   entity_id:
