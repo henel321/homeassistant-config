@@ -139,6 +139,7 @@ google_assistant:
 zwave: 
   usb_path: /dev/ttyACM0
   polling_interval: 60000
+  autoheal: false
 
 media_player: 
   - platform: plex
