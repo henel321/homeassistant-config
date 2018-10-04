@@ -1,6 +1,6 @@
-- alias: Zwave heal at 4:00 am
-  trigger:
-    platform: time
-    after: '4:00:00'
-  action:
-    service: zwave.heal_network
+alias: Zwave heal at 4:00 am
+trigger:
+  platform: time
+  after: '4:00:00'
+action:
+  service: zwave.heal_network
