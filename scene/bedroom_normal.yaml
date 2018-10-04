@@ -4,16 +4,16 @@
       state: on
       brightness: 80 
       color_temp: 461
-      transition: 10 
+      transition: 0 
    light.marias_light: 
       state: on
       brightness: 80
       color_temp: 461
-      transition: 10 
+      transition: 0 
    light.bedroom_led_strip:
       state: on 
       brightness: 80
-      transition: 10
+      transition: 0
       color_temp: 380 
    light.level_14:
       state: off

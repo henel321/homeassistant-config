@@ -4,5 +4,6 @@
       state: on
       brightness: 255
       color_temp: 461
+      transition: 0
    switch.telldusvilhelm_switch:
       state: on

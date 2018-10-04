@@ -4,26 +4,26 @@
       state: on
       color_name: darkgoldenrod 
       brightness: 60 
-      transition: 10 
+      transition: 0 
    light.living_room_1:
       state: on
       brightness: 25 
       color_temp: 458
-      transition: 10 
+      transition: 0 
    light.living_room_2:
       state: on
       brightness: 25
       color_temp: 458
-      transition: 10
+      transition: 0
    light.living_room_3:
       state: on
       brightness: 25 
       color_temp: 458
-      transition: 10 
+      transition: 0 
    light.lifx_led_strip:
       state: on 
       brightness: 60 
-      color_name: cornsilk
+      color_name: PaleGoldenRod 
       transition: 10
    switch.tellduslivingroom_switch:
       state: on

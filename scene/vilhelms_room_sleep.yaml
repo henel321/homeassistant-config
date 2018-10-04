@@ -4,6 +4,7 @@
       state: on
       brightness: 3 
       color_temp: 454 
+      transition: 0
    switch.telldusvilhelm_switch:
       state: off
    light.level_13:
