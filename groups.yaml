@@ -12,10 +12,11 @@ default_view:
  - sensor.thermofloor_as_heatit_thermostat_tf_021_temperature_2
  - device_tracker.cc9f7a9f9afb
  - device_tracker.galaxy_s7__maria
- - device_tracker.oneplus_x__vilhelm
+ - device_tracker.galaxy_s7__vilhelm
  - device_tracker.androidff3e595e35e8a0a1
  - device_tracker.workstationcartman
  - device_tracker.workstationbarnen
+ - weather.smhi_home
  - group.livingroom
  - group.kitchen
  - group.bedroom
@@ -34,7 +35,6 @@ vacuum_status_view:
  icon: mdi:robot-vacuum
  entities:
  - group.vacuum_status
-
 
 bedroom: 
  name: Bedroom
@@ -206,6 +206,8 @@ weather:
  - sensor.weather_pressure
  - sensor.weather_wind_direction
  - sensor.weather_wind_speed
+ - weather.smhi_home
+ - weather.smhi_moningssand
  - history_graph.temperature_graph
  - history_graph.weather_graph
  - history_graph.floors_graph
@@ -243,7 +245,7 @@ everyone:
   entities:
     - device_tracker.cc9f7a9f9afb
     - device_tracker.galaxy_s7__maria
-    - device_tracker.oneplus_x__vilhelm
+    - device_tracker.galaxy_s7__vilhelm
 
 
 thermostats:

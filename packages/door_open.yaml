@@ -32,7 +32,7 @@ automation:
   - alias: 'Notify that Vilhelm is home' 
     trigger: 
       platform: state 
-      entity_id: device_tracker.oneplus_x__vilhelm 
+      entity_id: device_tracker.galaxy_s7__vilhelm 
       from: 'not_home'
       to: 'home'
     condition:
