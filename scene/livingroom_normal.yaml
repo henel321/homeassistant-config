@@ -2,22 +2,22 @@
   entities:
    light.ikea_ps_uplight:
       state: on
-      brightness: 180
+      brightness: 190
       color_name: darkgoldenrod 
       transition: 0 
    light.living_room_1:
       state: on
-      brightness: 130
+      brightness: 180
       color_temp: 461
       transition: 0 
    light.living_room_2:
       state: on
-      brightness: 130
+      brightness: 180
       color_temp: 461
       transition: 0 
    light.living_room_3:
       state: on
-      brightness: 130
+      brightness: 180
       color_temp: 461
       transition: 0 
    light.lifx_led_strip:
