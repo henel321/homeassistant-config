@@ -3,10 +3,15 @@ trigger:
   platform: time
   at: "08:45:00"
 condition:
-  condition: time
-  weekday:
-    - sat 
-    - sun
+  condition: and 
+  conditions:
+    - condition: time 
+      weekday:
+      - sat 
+      - sune
+    - condition: state
+      entity_id: group.parents 
+      state: 'home'
 action:
   - service: media_player.volume_set
     data: 
