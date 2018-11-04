@@ -8,7 +8,7 @@ condition:
     - condition: time 
       weekday:
       - sat 
-      - sune
+      - sun
     - condition: state
       entity_id: group.parents 
       state: 'home'
