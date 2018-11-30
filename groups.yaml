@@ -10,7 +10,7 @@ default_view:
  - sensor.fibaro_system_fgsd002_smoke_sensor_temperature
  - sensor.thermofloor_as_heatit_thermostat_tf_021_temperature
  - sensor.thermofloor_as_heatit_thermostat_tf_021_temperature_2
- - device_tracker.cc9f7a9f9afb
+ - device_tracker.galaxy_s9_henrik
  - device_tracker.galaxy_s7__maria
  - device_tracker.galaxy_s7__vilhelm
  - device_tracker.androidff3e595e35e8a0a1
@@ -27,7 +27,7 @@ default_view:
  - group.hallway
  - group.bathroom
  - group.shower
-# - group.christmas
+ - group.christmas
  - group.vacuum_short_status
 
 vacuum_status_view:
@@ -83,11 +83,14 @@ shower:
 # - light.shower_ceiling_light
  - light.osram_rgb
 
-# christmas:
-#  name: Christmas 
-#  icon: mdi:christmas
-#  entities: 
-#  - switch.tellduselin_switch
+christmas:
+ name: Christmas 
+ icon: mdi:christmas
+ entities: 
+ - switch.tellduselin_switch
+ - switch.nodonsmartplugmicro_switch 
+ - light.indoor_plug_1
+ - light.indoor_plug_2
 
 livingroom: 
  name: "Living room"
@@ -236,14 +239,14 @@ parents:
   name: "Parents device tracker group"
   view: no
   entities: 
-    - device_tracker.cc9f7a9f9afb
+    - device_tracker.galaxy_s9_henrik
     - device_tracker.galaxy_s7__maria
 
 everyone: 
   name: "Everyone device tracker group"
   view: no
   entities:
-    - device_tracker.cc9f7a9f9afb
+    - device_tracker.galaxy_s9_henrik
     - device_tracker.galaxy_s7__maria
     - device_tracker.galaxy_s7__vilhelm
 
