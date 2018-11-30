@@ -87,10 +87,10 @@ christmas:
  name: Christmas 
  icon: mdi:christmas
  entities: 
- - switch.tellduselin_switch
+ - switch.tellduslivingroom_switch 
  - switch.nodonsmartplugmicro_switch 
- - light.indoor_plug_1
- - light.indoor_plug_2
+ - switch.indoor_plug_1
+ - switch.indoor_plug_2
 
 livingroom: 
  name: "Living room"
