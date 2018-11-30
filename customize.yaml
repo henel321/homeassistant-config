@@ -7,7 +7,6 @@ switch.telldusextra_switch:
 switch.tellduselin_switch:
   friendly_name: "Hallway table light"
 switch.tellduslivingroom_switch:
-  friendly_name: "Herstal Tentacle"
   device_class: light
 sensor.weather_temperature:
   friendly_name: "Outside temperature"
