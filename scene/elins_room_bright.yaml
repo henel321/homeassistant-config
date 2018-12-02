@@ -11,4 +11,7 @@
       color_temp: 350 
    switch.telldusextra_switch:
       state: on
+   switch.indoor_plug_1:
+      state: on
+
    

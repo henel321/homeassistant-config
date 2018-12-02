@@ -83,14 +83,13 @@ shower:
 # - light.shower_ceiling_light
  - light.osram_rgb
 
-christmas:
- name: Christmas 
- icon: mdi:christmas
- entities: 
- - switch.tellduslivingroom_switch 
- - switch.nodonsmartplugmicro_switch 
- - switch.indoor_plug_1
- - switch.indoor_plug_2
+#christmas:
+# name: Christmas 
+# icon: mdi:christmas
+# entities: 
+# - switch.tellduslivingroom_switch 
+# - switch.indoor_plug_1
+# - switch.indoor_plug_2
 
 livingroom: 
  name: "Living room"
@@ -105,6 +104,7 @@ livingroom:
  - switch.tellduslivingroom_switch
  - light.lifx_led_strip
  - light.level_6
+ - switch.indoor_plug_2
 
 kitchen: 
  name: "Kitchen"
@@ -125,8 +125,8 @@ vilhelms_room:
  - input_select.scene_vr
  - light.vilhelms_light_bulb
  - switch.telldusvilhelm_switch
-# - switch.telldusjulgran_switch
  - light.level_13
+ - switch.tellduslivingroom_switch
  
 elins_room: 
  name: "Elin's room"
@@ -138,6 +138,7 @@ elins_room:
  - switch.telldusextra_switch
  - light.elins_led_strip
  - light.level_8 
+ - switch.indoor_plug_1
 
 office: 
  name: "Office / Guest room"

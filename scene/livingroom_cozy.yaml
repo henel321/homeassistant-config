@@ -25,5 +25,5 @@
       brightness: 60 
       color_name: PaleGoldenRod 
       transition: 10
-   switch.tellduslivingroom_switch:
+   switch.indoor_plug_2:
       state: on

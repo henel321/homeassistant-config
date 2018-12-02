@@ -8,3 +8,5 @@
       state: on
    light.level_13:
       state: off
+   switch.tellduslivingroom_switch: 
+      state: on

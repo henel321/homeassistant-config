@@ -27,3 +27,5 @@
       transition: 0 
    switch.tellduslivingroom_switch:
       state: on
+   switch.indoor_plug_2:
+      state: on

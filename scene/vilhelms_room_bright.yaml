@@ -7,3 +7,5 @@
       transition: 0
    switch.telldusvilhelm_switch:
       state: on
+   switch.tellduslivingroom_switch: 
+      state: on 
