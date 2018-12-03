@@ -29,6 +29,6 @@
       state: on
    light.christmas_church:
       state: on
-      brightness: 180 
+      brightness: 100 
       color_temp: 461
       transition: 0
