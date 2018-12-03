@@ -18,4 +18,5 @@
       state: off
    switch.indoor_plug_2:
       state: off
-
+   light.christmas_church:
+      state: off

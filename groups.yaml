@@ -101,10 +101,10 @@ livingroom:
  - light.living_room_2
  - light.living_room_3
  - light.ikea_ps_uplight
- - switch.tellduslivingroom_switch
  - light.lifx_led_strip
- - light.level_6
+ - light.christmas_church
  - switch.indoor_plug_2
+ - light.level_6
 
 kitchen: 
  name: "Kitchen"

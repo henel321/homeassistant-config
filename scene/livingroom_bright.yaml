@@ -26,3 +26,8 @@
       color_temp: 370
    switch.indoor_plug_2:
       state: on
+   light.christmas_church:
+      state: on
+      brightness: 200
+      color_temp: 370
+      transition: 0
