@@ -11,8 +11,5 @@ action:
     data: 
       brightness: 140 
       color_name: PaleGoldenRod
-  - service: switch.turn_on
-    entity_id: 
-    - switch.tellduslivingroom_switch
   
  

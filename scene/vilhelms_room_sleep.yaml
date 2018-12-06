@@ -9,6 +9,5 @@
       state: off
    light.level_13:
       state: off
-   switch.tellduslivingroom_switch: 
+   switch.tellduslivingroom_switch:      
       state: off
-
