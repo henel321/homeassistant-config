@@ -126,7 +126,6 @@ vilhelms_room:
  - light.vilhelms_light_bulb
  - switch.telldusvilhelm_switch
  - light.level_13
- - switch.tellduslivingroom_switch
  
 elins_room: 
  name: "Elin's room"
