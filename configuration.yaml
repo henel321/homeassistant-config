@@ -132,7 +132,7 @@ google_assistant:
   exposed_domains:
     - switch
     - light
-#    - climate
+    - climate
 
 # Zwave configuration
 zwave: 

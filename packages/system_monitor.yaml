@@ -15,7 +15,6 @@ group:
       - alert.disk_use_critical
       - sensor.uptime
       - sensor.last_boot
-      - sensor.since_last_boot
       - sensor.process_squeezeboxserve
       - sensor.cpu_used
       - sensor.average_load_1m
@@ -76,7 +75,6 @@ sensor:
       - type: memory_use 
       - type: memory_use_percent
       - type: last_boot
-      - type: since_last_boot
       - type: process
         arg: squeezeboxserve
       - type: process 
