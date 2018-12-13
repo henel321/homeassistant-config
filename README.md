@@ -24,7 +24,7 @@ Includes:
    - Xiaomi remotes 
    - Xiaomi temperature probes
 - Lifx Z led strips 
-- Google Assistant (Homes/Home Minis) 
+- Google Assistant (Home Hubs/Homes/Home Minis) 
 - Google Chromecasts
 - Logitech Harmony Companion
 - Logitech Squeezeboxes. 
