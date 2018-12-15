@@ -8,4 +8,7 @@
       state: off 
    light.level_14:
       state: off
+   switch.osram_outdoor_plug:
+      state: off
+
 
