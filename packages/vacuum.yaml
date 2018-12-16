@@ -216,25 +216,25 @@ automation:
       - service: VACUUM.XIAOMI_REMOTE_CONTROL_STOP
         entity_id: vacuum.stadis
 
-  - alias: 'Vacuum scheduling weekdays when everyone away'
-    trigger: 
-      platform: time
-      at: "11:30:00"
-    condition:
-      condition: and 
-      conditions:
-        - condition: time 
-          weekday:
-          - mon
-          - tue
-          - thu
-          - fri
-        - condition: state
-          entity_id: group.parents 
-          state: 'not_home'
-    action: 
-      - service: vacuum.start
-        entity_id: vacuum.stadis
+#  - alias: 'Vacuum scheduling weekdays when everyone away'
+#    trigger: 
+#      platform: time
+#      at: "11:30:00"
+#    condition:
+#      condition: and 
+#      conditions:
+#        - condition: time 
+#          weekday:
+#          - mon
+#          - tue
+#          - thu
+#          - fri
+#        - condition: state
+#          entity_id: group.parents 
+#          state: 'not_home'
+#    action: 
+#      - service: vacuum.start
+#        entity_id: vacuum.stadis
 
   - alias: "i2 on livingroom ceiling put städis in emptying mode"
     trigger:
