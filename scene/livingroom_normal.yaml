@@ -17,7 +17,7 @@
       transition: 0 
    light.living_room_3:
       state: on
-      brightness: 180
+      brightness: 50 
       color_temp: 461
       transition: 0 
    light.lifx_led_strip:
