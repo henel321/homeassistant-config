@@ -2,7 +2,7 @@
   entities:
    light.ikea_ps_uplight:
       state: on
-      brightness: 190
+      brightness: 100
       color_name: darkgoldenrod 
       transition: 0 
    light.living_room_1:

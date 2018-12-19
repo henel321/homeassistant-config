@@ -10,9 +10,10 @@ condition:
     - tue 
     - wed 
     - thu 
-action: 
-  service: light.turn_off
+action:
+  service: scene.turn_on
   entity_id:
-  - group.livingroom
+  - scene.lr_off
+
 
  

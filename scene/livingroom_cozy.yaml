@@ -3,7 +3,7 @@
    light.ikea_ps_uplight:
       state: on
       color_name: darkgoldenrod 
-      brightness: 60 
+      brightness: 25  
       transition: 0 
    light.living_room_1:
       state: on
