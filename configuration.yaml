@@ -33,6 +33,13 @@ recorder:
     domains: 
       - automation
       - updater
+      - group
+      - history_graph
+      - media_player
+    entities:
+      - sensor.date
+      - sensor.time
+      - sensor.date__time
 
 # Enables configuration UI
 config:
