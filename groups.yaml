@@ -166,6 +166,7 @@ mediaplayer_google:
  name: "Google Mediaplayers"
  icon: mdi:cast
  entities:
+ - media_player.stereo
  - media_player.55pos900212
  - media_player.kitchen_home
  - media_player.livingroom_hub

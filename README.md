@@ -25,9 +25,8 @@ Includes:
    - Xiaomi temperature probes
 - Lifx Z led strips 
 - Google Assistant (Home Hubs/Homes/Home Minis) 
-- Google Chromecasts
+- Google Chromecasts (TV Built in, Gen 2 and Audio in Onkyo Receiver) 
 - Logitech Harmony Companion
-- Logitech Squeezeboxes. 
 - Xiaomi Robot Vacuum v1. 
 - Precense detection through Unifi 
 
