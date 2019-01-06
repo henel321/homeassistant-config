@@ -43,7 +43,7 @@ climate.thermofloor_as_heatit_thermostat_tf_021_heating_2:
 climate.thermofloor_as_heatit_thermostat_tf_021_heating:
   friendly_name: "Bathroom Floor Heating"
 light.bathroom_light: 
-  friendly_name: "Bathroom Tuneable Light"
+  friendly_name: "Bathroom RGB Light"
 climate.danfoss_z_thermostat_heating_1:
   friendly_name: "Livingroom Thermostat"
 climate.danfoss_z_thermostat_heating_1_2:
