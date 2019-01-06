@@ -102,8 +102,8 @@ livingroom:
  - light.living_room_3
  - light.ikea_ps_uplight
  - light.lifx_led_strip
- - light.christmas_church
- - switch.indoor_plug_2
+# - light.christmas_church
+# - switch.indoor_plug_2
  - light.level_6
 
 kitchen: 
@@ -137,7 +137,7 @@ elins_room:
  - switch.telldusextra_switch
  - light.elins_led_strip
  - light.level_8 
- - switch.indoor_plug_1
+# - switch.indoor_plug_1
 
 office: 
  name: "Office / Guest room"
@@ -261,7 +261,8 @@ thermostats:
  entities:
  - climate.danfoss_z_thermostat_heating_1
  - climate.danfoss_z_thermostat_heating_1_2
- - climate.danfoss_z_thermostat_heating_1_3
+# - climate.danfoss_z_thermostat_heating_1_3
+ - climate.danfoss_z_thermostat_heating_1_10
  - climate.danfoss_z_thermostat_heating_1_6
  - climate.danfoss_z_thermostat_heating_1_7
  - climate.danfoss_z_thermostat_heating_1_8

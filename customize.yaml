@@ -48,8 +48,8 @@ climate.danfoss_z_thermostat_heating_1:
   friendly_name: "Livingroom Thermostat"
 climate.danfoss_z_thermostat_heating_1_2:
   friendly_name: "Kitchen Thermostat"
-climate.danfoss_z_thermostat_heating_1_3:
-  friendly_name: "Bedroom Thermostat"
+#climate.danfoss_z_thermostat_heating_1_3:
+#  friendly_name: "Bedroom Thermostat"
 climate.danfoss_z_thermostat_heating_1_6:
   friendly_name: "Elin left Thermostat"
 climate.danfoss_z_thermostat_heating_1_7:
@@ -58,6 +58,8 @@ climate.danfoss_z_thermostat_heating_1_8:
   friendly_name: "Vilhelm Thermostat"
 climate.danfoss_z_thermostat_heating_1_9:
   friendly_name: "Office Thermostat"
+climate.danfoss_z_thermostat_heating_1_10:
+  friendly_name: "Bedroom Thermostat"
 binary_sensor.sensor_12:
   friendly_name: "Kitchen Flood Sensor"
   device_class: moisture

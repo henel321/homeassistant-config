@@ -25,10 +25,10 @@
       brightness: 30 
       color_name: royalblue
       transition: 10
-   switch.indoor_plug_2:
-      state: on
-   light.christmas_church:
-      state: on
-      brightness: 20
-      color_temp: 458 
-      transition: 0
+#   switch.indoor_plug_2:
+#      state: on
+#   light.christmas_church:
+#      state: on
+#      brightness: 20
+#      color_temp: 458 
+#      transition: 0

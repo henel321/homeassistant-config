@@ -16,7 +16,7 @@
       state: off
    light.level_16:
       state: off
-   switch.indoor_plug_2:
-      state: off
-   light.christmas_church:
-      state: off
+#   switch.indoor_plug_2:
+#      state: off
+#   light.christmas_church:
+#      state: off

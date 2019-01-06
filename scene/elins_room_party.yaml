@@ -11,6 +11,6 @@
       color_name: magenta 
    switch.telldusextra_switch:
       state: off 
-   switch.indoor_plug_1:
-      state: off
+#   switch.indoor_plug_1:
+#      state: off
 
