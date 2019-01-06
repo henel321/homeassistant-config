@@ -62,6 +62,7 @@ hallway:
 # - light.hallway
  - binary_sensor.neo_coolcam_doorwindow_detector_sensor
  - switch.switch_3
+ - light.hallway_light
  - camera.hallway
 
 bathroom: 
