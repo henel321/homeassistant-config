@@ -3,26 +3,26 @@
    light.ikea_ps_uplight:
       state: on
       color_name: darkgoldenrod 
-      brightness: 50  
+      brightness: 80  
       transition: 0 
    light.living_room_1:
       state: on
-      brightness: 35 
+      brightness: 50
       color_temp: 458
       transition: 0 
    light.living_room_2:
       state: on
-      brightness: 35
+      brightness: 50 
       color_temp: 458
       transition: 0
    light.living_room_3:
       state: on
-      brightness: 35 
+      brightness: 50 
       color_temp: 458
       transition: 0 
    light.lifx_led_strip:
       state: on 
-      brightness: 60 
+      brightness: 70 
       color_name: PaleGoldenRod 
       transition: 10
 #   switch.indoor_plug_2:

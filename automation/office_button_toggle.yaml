@@ -3,7 +3,7 @@ trigger:
   platform: event
   event_type: deconz_event
   event_data:
-    id: lumi.sensor_switch.aq3
+    id: lumisensor_switchaq3
     event: 1002 
 action:
   service: switch.toggle

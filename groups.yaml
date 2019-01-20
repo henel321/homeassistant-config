@@ -267,3 +267,8 @@ thermostats:
  - climate.danfoss_z_thermostat_heating_1_8
  - climate.danfoss_z_thermostat_heating_1_9
 
+brottsplatskartan_view:
+ view: yes
+ icon: mdi:pirate
+ entities:
+ - sensor.brottsplatskartan 

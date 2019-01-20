@@ -199,3 +199,5 @@ vacuum:
     token: !secret xiaomi_token 
     name: "stadis" 
 
+sensor:
+  - platform: brottsplatskartan
