@@ -155,7 +155,6 @@ mediaplayer:
  entities: 
  - group.mediaplayer_groups 
  - group.mediaplayer_google 
- - group.mediaplayer_squeezebox
 
 mediaplayer_groups:
  name: "Google Mediaplayer Groups" 
@@ -172,8 +171,7 @@ mediaplayer_google:
  - media_player.kitchen_home
  - media_player.livingroom_hub
  - media_player.bedroom_hub
-# - media_player.bedroom_speaker
- - media_player.office_speaker
+ - media_player.office_hub
  - media_player.vilhelms_room_speaker
  - media_player.elins_room_speaker
  - media_player.bedroom
