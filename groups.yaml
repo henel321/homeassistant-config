@@ -3,6 +3,8 @@ default_view:
  icon: mdi:home 
  entities: 
  - zone.home
+ - sensor.weather_symbol
+ - sensor.weather_temperature
  - sensor.netatmo_balcony_temperature
  - sensor.netatmo_indoor_temperature
  - sensor.fibaro_system_fgsd002_smoke_sensor_temperature
@@ -262,7 +264,8 @@ thermostats:
  - climate.danfoss_z_thermostat_heating_1_10
  - climate.danfoss_z_thermostat_heating_1_6
  - climate.danfoss_z_thermostat_heating_1_7
- - climate.danfoss_z_thermostat_heating_1_8
+# - climate.danfoss_z_thermostat_heating_1_8
+ - climate.danfoss_z_thermostat_heating_1_11 
  - climate.danfoss_z_thermostat_heating_1_9
 
 brottsplatskartan_view:

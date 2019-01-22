@@ -119,6 +119,7 @@ sensor:
       - humidity
       - fog
       - cloudiness
+  - platform: brottsplatskartan
 
 # Text to speech
 tts:
@@ -199,5 +200,3 @@ vacuum:
     token: !secret xiaomi_token 
     name: "stadis" 
 
-sensor:
-  - platform: brottsplatskartan
