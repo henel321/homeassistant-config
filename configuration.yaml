@@ -119,7 +119,7 @@ sensor:
       - humidity
       - fog
       - cloudiness
-  - platform: brottsplatskartan
+#  - platform: brottsplatskartan
 
 # Text to speech
 tts:

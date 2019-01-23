@@ -176,13 +176,6 @@ mediaplayer_google:
  - media_player.elins_room_speaker
  - media_player.bedroom
 
-#mediaplayer_squeezebox:
-# name: "Squeezebox Mediaplayers"
-# icon: mdi:library-music
-# entities: 
-# - media_player.sb_touch__living_room
-# - media_player.sb_radio__office
-
 weather: 
  name: "Weather"
  view: yes
@@ -252,7 +245,6 @@ everyone:
     - device_tracker.galaxy_s7_maria
     - device_tracker.galaxy_s7_vilhelm
 
-
 thermostats:
  view: yes
  name: Thermostats
@@ -268,8 +260,8 @@ thermostats:
  - climate.danfoss_z_thermostat_heating_1_11 
  - climate.danfoss_z_thermostat_heating_1_9
 
-brottsplatskartan_view:
- view: yes
- icon: mdi:pirate
- entities:
- - sensor.brottsplatskartan 
+#brottsplatskartan_view:
+# view: yes
+# icon: mdi:pirate
+# entities:
+# - sensor.brottsplatskartan 
