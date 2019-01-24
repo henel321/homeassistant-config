@@ -39,7 +39,7 @@ recorder:
     entities:
       - sensor.date
       - sensor.time
-      - sensor.date__time
+      - sensor.date_time
 
 # Enables configuration UI
 config:
