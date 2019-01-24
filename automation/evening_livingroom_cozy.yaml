@@ -6,6 +6,6 @@ action:
   service: scene.turn_on
   entity_id:
   - scene.lr_cozy
-  - scene.br_romantic
+  - scene.br_cozy
 
  
