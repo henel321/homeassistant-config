@@ -12,27 +12,27 @@ group:
     entities:
       - sensor.henel321homeassistantconfig_last_build_state
       - sensor.henel321homeassistantconfig_state
-      - alert.disk_use_critical
-      - sensor.uptime
-      - sensor.last_boot
-      - sensor.process_squeezeboxserve
-      - sensor.cpu_used
-      - sensor.average_load_1m
-      - sensor.average_load_5m
-      - sensor.average_load_15m
-      - sensor.ram_used
-      - sensor.ram_available
-      - sensor.ram_used_2
-      - sensor.disk_used_
-      - sensor.disk_used__2
-      - sensor.disk_used_usr
-      - sensor.disk_used_usr_2
-      - sensor.disk_used_var
-      - sensor.disk_used_var_2
-      - sensor.disk_used_home
-      - sensor.disk_used_home_2
-      - sensor.disk_used_homestorage
-      - sensor.disk_used_homestorage_2
+#      - alert.disk_use_critical
+#      - sensor.uptime
+#      - sensor.last_boot
+#      - sensor.process_squeezeboxserve
+#      - sensor.cpu_used
+#      - sensor.average_load_1m
+#      - sensor.average_load_5m
+#      - sensor.average_load_15m
+#      - sensor.ram_used
+#      - sensor.ram_available
+#      - sensor.ram_used_2
+#      - sensor.disk_used_
+#      - sensor.disk_used__2
+#      - sensor.disk_used_usr
+#      - sensor.disk_used_usr_2
+#      - sensor.disk_used_var
+#      - sensor.disk_used_var_2
+#      - sensor.disk_used_home
+#      - sensor.disk_used_home_2
+#      - sensor.disk_used_homestorage
+#      - sensor.disk_used_homestorage_2
 
 sensor:
   - platform: systemmonitor
