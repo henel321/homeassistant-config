@@ -203,17 +203,17 @@ automation:
         data: 
            message: 'Städis is done cleaning! {{ states.vacuum.stadis.attributes.cleaned_area }} m2 was cleaned in {{  states.vacuum.stadis.attributes.cleaning_time }} minutes.'
       - delay: 3600
-      - service: VACUUM.XIAOMI_REMOTE_CONTROL_START
+      - service: vacuum.xiaomi_remote_control_start
         entity_id: vacuum.stadis
       - delay: 12
-      - service: VACUUM.XIAOMI_REMOTE_CONTROL_MOVE
+      - service: vacuum.xiaomi_remote_control_move
         entity_id: vacuum.stadis
         data:
           duration: 1400
           velocity: 0.29
           rotation: 0
       - delay: 5
-      - service: VACUUM.XIAOMI_REMOTE_CONTROL_STOP
+      - service: vacuum.xiaomi_remote_control_stop
         entity_id: vacuum.stadis
 
   - alias: 'Vacuum scheduling weekdays when everyone away'
@@ -246,15 +246,15 @@ automation:
       entity_id: vacuum.stadis
       state: 'docked'
     action: 
-    - service: VACUUM.XIAOMI_REMOTE_CONTROL_START
+    - service: vacuum.xiaomi_remote_control_start
       entity_id: vacuum.stadis
     - delay: 12
-    - service: VACUUM.XIAOMI_REMOTE_CONTROL_MOVE
+    - service: vacuum.xiaomi_remote_control_move
       entity_id: vacuum.stadis
       data:
         duration: 1400
         velocity: 0.29
         rotation: 0
     - delay: 5
-    - service: VACUUM.XIAOMI_REMOTE_CONTROL_STOP
+    - service: vacuum.xiaomi_remote_control_stop
       entity_id: vacuum.stadis
