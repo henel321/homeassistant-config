@@ -17,7 +17,7 @@ automation:
   - alias: 'Notify that Maria is home' 
     trigger: 
       platform: state 
-      entity_id: device_tracker.galaxy_s7__maria 
+      entity_id: device_tracker.galaxy_s7_maria 
       from: 'not_home'
       to: 'home'
     condition:
@@ -32,7 +32,7 @@ automation:
   - alias: 'Notify that Vilhelm is home' 
     trigger: 
       platform: state 
-      entity_id: device_tracker.galaxy_s7__vilhelm 
+      entity_id: device_tracker.galaxy_s7_vilhelm 
       from: 'not_home'
       to: 'home'
     condition:
