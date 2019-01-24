@@ -15,8 +15,7 @@ group:
       - alert.disk_use_critical
       - sensor.uptime
       - sensor.last_boot
-      - sensor.process_squeezeboxserve
-      - sensor.processor.use
+      - sensor.processor_use
       - sensor.load_1m
       - sensor.load_5m
       - sensor.load_15m
@@ -75,8 +74,6 @@ sensor:
       - type: memory_use 
       - type: memory_use_percent
       - type: last_boot
-      - type: process
-        arg: squeezeboxserve
       - type: process 
         arg: Plex Media Serv
   
