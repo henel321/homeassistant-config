@@ -9,15 +9,15 @@ history_graph:
     refresh: 300
 
 
-sensor:
-  - platform: speedtest
-    monitored_conditions:
-      - ping
-      - download
-      - upload
-    minute: 
-      - 0 
-      - 30
+#sensor:
+#  - platform: speedtest
+#    monitored_conditions:
+#      - ping
+#      - download
+#      - upload
+#    minute: 
+#      - 0 
+#      - 30
 
 group:
   internet_card:

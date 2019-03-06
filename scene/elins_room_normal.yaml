@@ -8,7 +8,7 @@
    light.elins_led_strip:
       state: on 
       brightness: 90 
-      color_name: magenta 
+      color_name: cyan 
    switch.telldusextra_switch:
       state: on
    light.level_8:

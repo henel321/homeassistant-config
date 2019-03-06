@@ -19,7 +19,7 @@ condition:
         - fri
     - condition: sun
       before: sunrise
-#      before_offset: '-1:00:00'
+      before_offset: '-1:00:00'
 action: 
   service: scene.turn_on
   entity_id:
