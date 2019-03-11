@@ -207,3 +207,5 @@ speedtestdotnet:
     - ping
     - download
     - upload
+
+system_health:
