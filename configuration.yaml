@@ -16,6 +16,14 @@ homeassistant:
   whitelist_external_dirs: 
     - !secret ha_snapshot 
     - !secret ha_video
+  auth_providers:
+    - type: legacy_api_password
+      api_password: !secret api_password
+    - type: trusted_networks
+      trusted_networks:
+        - 192.168.100.0/24
+        - 127.0.0.1
+
 
 # Show links to resources in log and frontend
 # introduction:
@@ -45,13 +53,14 @@ recorder:
 config:
 
 http:
-  api_password: !secret api_password
+#  api_password: !secret api_password
   base_url: !secret base_url
   ssl_certificate: !secret ssl_certificate 
   ssl_key: !secret ssl_key 
-  trusted_networks: 
-    - 192.168.100.0/24
-    - 127.0.0.1
+#  trusted_networks: 
+#    - 192.168.100.0/24
+#    - 127.0.0.1
+
 
 logger: 
   default: warning
