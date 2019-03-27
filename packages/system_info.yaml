@@ -51,15 +51,9 @@ sensor:
         ip_camera:
           friendly_name: 'IP Camera'
           value_template: "{{ 'Online' if is_state('device_tracker.34ce00d8b3e4', 'home') else 'Offline' }}"
-        livingroom_switch:
-          friendly_name: 'Livingroom Switch'
-          value_template: "{{ 'Online' if is_state('device_tracker.living_room_switch__admin_ip', 'home') else 'Offline' }}"
         office_switch:
           friendly_name: 'Office Switch'
           value_template: "{{ 'Online' if is_state('device_tracker.office_switch__admin_ip', 'home') else 'Offline' }}"
-        gigaset_voip:
-          friendly_name: 'Gigaset VOIP gateway'
-          value_template: "{{ 'Online' if is_state('device_tracker.siemens_gigaset_voip', 'home') else 'Offline' }}"
 
 
 group:
@@ -70,11 +64,9 @@ group:
     - sensor.ap 
     - sensor.switch
     - sensor.office_switch
-    - sensor.livingroom_switch
     - sensor.mini
     - sensor.mini_app
     - sensor.ike
-    - sensor.gigaset_voip
     - sensor.ip_camera
     - sensor.logitech_harmony
 
@@ -93,8 +85,6 @@ automation:
               - sensor.ip_camera
               - sensor.logitech_harmony
               - sensor.office_switch
-              - sensor.livingroom_switch
-              - sensor.gigaset_voip
            to: 'offline'
            for:
              minutes: 5
