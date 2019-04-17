@@ -33,7 +33,7 @@ automation:
       - service: climate.set_temperature
         entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating 
         data:
-          temperature: 26 
+          temperature: 25 
 
   - alias: Decrease floor heating in Shower after weekday mornings 
     trigger:
@@ -53,7 +53,7 @@ automation:
       - service: climate.set_temperature
         entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating 
         data:
-          temperature: 23
+          temperature: 22
 
   - alias: Increase floor heating in Shower during weekend mornings
     trigger:
@@ -77,7 +77,7 @@ automation:
       - service: climate.set_temperature
         entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating
         data:
-          temperature: 27
+          temperature: 25
 
   - alias: Decrease floor heating in Shower after weekend mornings
     trigger:
@@ -94,7 +94,7 @@ automation:
       - service: climate.set_temperature
         entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating
         data:
-          temperature: 23
+          temperature: 22
 
 
   - alias: Increase floor heating in Bathroom during weekday mornings
@@ -122,7 +122,7 @@ automation:
       - service: climate.set_temperature
         entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
         data:
-          temperature: 26 
+          temperature: 24 
 
   - alias: Decrease floor heating in Bathroom after weekday mornings
     trigger:
@@ -142,7 +142,7 @@ automation:
       - service: climate.set_temperature
         entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
         data:
-          temperature: 23
+          temperature: 22
 
   - alias: Increase floor heating in Bathroom during weekend mornings
     trigger:
@@ -166,7 +166,7 @@ automation:
       - service: climate.set_temperature
         entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
         data:
-          temperature: 25 
+          temperature: 24 
 
   - alias: Decrease floor heating in Bathroom after weekend mornings
     trigger:
@@ -183,6 +183,6 @@ automation:
       - service: climate.set_temperature
         entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
         data:
-          temperature: 23
+          temperature: 22
 
 
