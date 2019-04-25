@@ -1,0 +1,16 @@
+#sensor:      
+#  - platform: pollenniva
+#    scan_interval: 4
+#    sensors:
+#      - city: Stockholm
+#        days_to_track: 3
+#        allergens:
+#          - Björk
+#          - Gråbo
+#          - Gräs
+#          - Ambrosia
+#          - Al
+#          - Alm
+#          - Ek
+#          - Hassel
+#          - Sälg / Vide

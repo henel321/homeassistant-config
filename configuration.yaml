@@ -128,11 +128,11 @@ sensor:
       - humidity
       - fog
       - cloudiness
-#  - platform: brottsplatskartan
 
 # Text to speech
 tts:
-  - platform: google
+  - platform: google_translate
+    service_name: google_say
 
 group: !include groups.yaml
 automation: !include_dir_list automation
