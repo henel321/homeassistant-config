@@ -1,0 +1,21 @@
+- name: BR Normal 
+  entities:
+   light.henriks_light:
+      state: on
+      brightness: 10 
+      color_temp: 461
+      transition: 0 
+   light.marias_light: 
+      state: on
+      brightness: 10 
+      color_temp: 461
+      transition: 0 
+   light.bedroom_led_strip:
+      state: on 
+      brightness: 30 
+      transition: 0
+      color_temp: 380 
+   light.level_14:
+      state: off
+   switch.osram_outdoor_plug:
+      state: on

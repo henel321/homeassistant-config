@@ -10,6 +10,9 @@ condition:
       state: 'Romantic'
     - condition: state
       entity_id: 'input_select.scene_br'
+      state: 'Cozy'
+    - condition: state
+      entity_id: 'input_select.scene_br'
       state: 'Normal'
     - condition: state
       entity_id: 'input_select.scene_br'
@@ -23,6 +26,8 @@ action:
       entity_id: >
         {% if is_state( "input_select.scene_br", "Romantic" ) %}
           scene.br_romantic
+        {% if is_state( "input_select.scene_br", "Cozy" ) %}
+          scene.br_cozy
         {%-elif is_state( "input_select.scene_br", "Normal" ) %}
           scene.br_normal
         {%-elif is_state( "input_select.scene_br", "Bright" ) %}
