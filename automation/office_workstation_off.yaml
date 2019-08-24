@@ -1,7 +1,7 @@
 alias: "Workstation Turned Off and after 2200" 
 trigger: 
   platform: state 
-  entity_id: device_tracker.workstationcartman
+  entity_id: device_tracker.workstation_cartman
   from: 'home'
   to: 'not_home'
 condition:

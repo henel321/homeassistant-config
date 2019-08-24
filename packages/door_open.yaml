@@ -17,7 +17,7 @@ automation:
   - alias: 'Notify that Maria is home' 
     trigger: 
       platform: state 
-      entity_id: device_tracker.galaxy_s7_maria 
+      entity_id: device_tracker.galaxy_s7_maria_2 
       from: 'not_home'
       to: 'home'
     condition:
@@ -32,7 +32,7 @@ automation:
   - alias: 'Notify that Vilhelm is home' 
     trigger: 
       platform: state 
-      entity_id: device_tracker.galaxy_s7_vilhelm 
+      entity_id: device_tracker.galaxy_s7_vilhelm_2 
       from: 'not_home'
       to: 'home'
     condition:
@@ -47,7 +47,7 @@ automation:
   - alias: 'Notify that Elin is home'  
     trigger:
       platform: state
-      entity_id: device_tracker.androidff3e595e35e8a0a1
+      entity_id: device_tracker.moto_g5_elin
       from: 'not_home'
       to: 'home'
     condition:
@@ -62,7 +62,7 @@ automation:
   - alias: 'Notify that Henrik is home'  
     trigger:
       platform: state
-      entity_id: device_tracker.cc9f7a9f9afb
+      entity_id: device_tracker.galaxy_s9_henrik_2
       from: 'not_home'
       to: 'home'
     condition:

@@ -1,7 +1,7 @@
 alias: "Vilhelms computer turned Off and after 20:30" 
 trigger: 
   platform: state 
-  entity_id: device_tracker.workstationbarnen
+  entity_id: device_tracker.workstation_vilhelm
   from: 'home'
   to: 'not_home'
 condition:

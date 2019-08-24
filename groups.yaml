@@ -10,12 +10,12 @@ default_view:
  - sensor.fibaro_system_fgsd002_smoke_sensor_temperature
  - sensor.thermofloor_as_heatit_thermostat_tf_021_temperature
  - sensor.thermofloor_as_heatit_thermostat_tf_021_temperature_2
- - device_tracker.galaxy_s9_henrik
- - device_tracker.galaxy_s7_maria
- - device_tracker.galaxy_s7_vilhelm
- - device_tracker.androidff3e595e35e8a0a1
- - device_tracker.workstationcartman
- - device_tracker.workstationbarnen
+ - device_tracker.galaxy_s9_henrik_2
+ - device_tracker.galaxy_s7_maria_2
+ - device_tracker.galaxy_s7_vilhelm_2
+ - device_tracker.moto_g5_elin
+ - device_tracker.workstation_cartman
+ - device_tracker.workstation_vilhelm
  - weather.smhi_home
  - group.livingroom
  - group.kitchen
@@ -234,16 +234,16 @@ parents:
   name: "Parents device tracker group"
   view: no
   entities: 
-    - device_tracker.galaxy_s9_henrik
-    - device_tracker.galaxy_s7_maria
+    - device_tracker.galaxy_s9_henrik_2
+    - device_tracker.galaxy_s7_maria_2
 
 everyone: 
   name: "Everyone device tracker group"
   view: no
   entities:
-    - device_tracker.galaxy_s9_henrik
-    - device_tracker.galaxy_s7_maria
-    - device_tracker.galaxy_s7_vilhelm
+    - device_tracker.galaxy_s9_henrik_2
+    - device_tracker.galaxy_s7_maria_2
+    - device_tracker.galaxy_s7_vilhelm_2
 
 thermostats:
  view: yes
