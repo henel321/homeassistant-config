@@ -11,7 +11,7 @@ default_view:
  - sensor.thermofloor_as_heatit_thermostat_tf_021_temperature
  - sensor.thermofloor_as_heatit_thermostat_tf_021_temperature_2
  - device_tracker.galaxy_s9_henrik_2
- - device_tracker.galaxy_s7_maria_2
+ - device_tracker.nokia_maria
  - device_tracker.galaxy_s7_vilhelm_2
  - device_tracker.moto_g5_elin
  - device_tracker.workstation_cartman
@@ -235,14 +235,14 @@ parents:
   view: no
   entities: 
     - device_tracker.galaxy_s9_henrik_2
-    - device_tracker.galaxy_s7_maria_2
+    - device_tracker.unifi_cc_9f_7a_9f_9a_fb_default 
 
 everyone: 
   name: "Everyone device tracker group"
   view: no
   entities:
     - device_tracker.galaxy_s9_henrik_2
-    - device_tracker.galaxy_s7_maria_2
+    - device_tracker.nokia_maria
     - device_tracker.galaxy_s7_vilhelm_2
 
 thermostats:
