@@ -235,7 +235,7 @@ parents:
   view: no
   entities: 
     - device_tracker.galaxy_s9_henrik_2
-    - device_tracker.unifi_cc_9f_7a_9f_9a_fb_default 
+    - device_tracker.nokia_maria 
 
 everyone: 
   name: "Everyone device tracker group"
