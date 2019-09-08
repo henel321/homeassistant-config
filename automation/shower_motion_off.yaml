@@ -3,7 +3,7 @@ trigger:
   platform: state
   entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor_3
   to: 'off'
-  for:  '00:05:00' 
+  for:  '00:15:00' 
 #condition:
 #  condition: time
 #  after: '07:00:00'
