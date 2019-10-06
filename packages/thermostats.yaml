@@ -22,9 +22,9 @@ automation:
           - wed
           - thu
           - fri
-        - condition: state
-          entity_id: group.parents 
-          state: 'home'
+#        - condition: state
+#          entity_id: group.parents 
+#          state: 'home'
     action:
       - service: climate.set_operation_mode
         entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating 
@@ -66,9 +66,9 @@ automation:
           weekday:
           - sat 
           - sun
-        - condition: state
-          entity_id: group.parents
-          state: 'home'
+#        - condition: state
+#          entity_id: group.parents
+#          state: 'home'
     action:
       - service: climate.set_operation_mode
         entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating
@@ -111,9 +111,9 @@ automation:
           - wed
           - thu
           - fri
-        - condition: state
-          entity_id: group.parents
-          state: 'home'
+#        - condition: state
+#          entity_id: group.parents
+#          state: 'home'
     action:
       - service: climate.set_operation_mode
         entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
@@ -155,9 +155,9 @@ automation:
           weekday:
           - sat
           - sun
-        - condition: state
-          entity_id: group.parents
-          state: 'home'
+#        - condition: state
+#          entity_id: group.parents
+#          state: 'home'
     action:
       - service: climate.set_operation_mode
         entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating_2

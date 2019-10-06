@@ -20,3 +20,7 @@
 #      state: off
 #   light.christmas_church:
 #      state: off
+   light.floor_light:
+      state: off
+
+

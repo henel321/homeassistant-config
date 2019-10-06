@@ -32,3 +32,9 @@
 #      brightness: 20
 #      color_temp: 458 
 #      transition: 0
+   light.floor_light:
+      state: on
+      color_name: blue
+      brightness: 80
+      transition: 0
+

@@ -31,3 +31,9 @@
       brightness: 200
       color_temp: 370
       transition: 0
+   light.floor_light:
+      state: on
+      brightness: 250
+      color_name: wheat
+      transition: 0
+

@@ -32,3 +32,9 @@
 #      brightness: 100 
 #      color_temp: 461
 #      transition: 0
+   light.floor_light:
+      state: on
+      brightness: 180
+      color_name: darkgoldenrod
+      transition: 0
+
