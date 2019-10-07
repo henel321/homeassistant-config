@@ -34,7 +34,7 @@
 #      transition: 0
    light.floor_light:
       state: on
-      color_temp: 425 
-      brightness: 20
+      color_temp: 440
+      brightness: 10
       transition: 0
 
