@@ -2,7 +2,7 @@
   entities:
    light.ikea_ps_uplight:
       state: on
-      brightness: 80 
+      brightness: 40 
       color_name: red
       transition: 0 
    light.living_room_1:
@@ -34,7 +34,7 @@
 #      transition: 0
    light.floor_light:
       state: on
-      brightness: 80
+      brightness: 20
       color_name: red
       transition: 0
 

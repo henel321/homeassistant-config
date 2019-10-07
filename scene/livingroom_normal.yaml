@@ -3,7 +3,7 @@
    light.ikea_ps_uplight:
       state: on
       brightness: 180
-      color_name: darkgoldenrod 
+      color_temp: 475
       transition: 0 
    light.living_room_1:
       state: on
@@ -35,6 +35,6 @@
    light.floor_light:
       state: on
       brightness: 180
-      color_name: darkgoldenrod
+      color_temp: 425
       transition: 0
 
