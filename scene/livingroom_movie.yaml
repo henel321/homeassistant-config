@@ -23,7 +23,7 @@
    light.lifx_led_strip:
       state: on 
       brightness: 30 
-      color_name: royalblue
+      color_name: dodgerblue
       transition: 10
 #   switch.indoor_plug_2:
 #      state: on
