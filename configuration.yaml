@@ -157,10 +157,6 @@ zwave:
   polling_interval: 60000
   autoheal: false
 
-media_player: 
-  - platform: plex
-
-
 netatmo:
   api_key: !secret netatmo_api
   secret_key: !secret netatmo_secret
@@ -170,20 +166,28 @@ netatmo:
 
 # Track wifi users through unifi
 device_tracker:
-  - platform: unifi
-    host: !secret unifi_host 
-    username: !secret unifi_username 
-    password: !secret unifi_password 
-    verify_ssl: false
-    track_new_devices: no 
-    consider_home: 180
-    interval_seconds: 10
-  
+#  - platform: unifi
+#    host: !secret unifi_host 
+#    username: !secret unifi_username 
+#    password: !secret unifi_password 
+#    verify_ssl: false
+#    track_new_devices: no 
+#    consider_home: 180
+#    interval_seconds: 10
+
   - platform: ping 
     hosts: 
       firewall: 192.168.100.1
       switch: 192.168.100.253
       ap: 192.168.100.250
+
+#unifi:
+#  controllers:
+#    - host: !secret unifi_host
+#      site: !secret unifi_site
+#      ssid_filter:
+#        - !secret unifi_wifi_ssid
+#
      
 
 notify:
