@@ -17,7 +17,7 @@ automation:
   - alias: 'Notify that Maria is home' 
     trigger: 
       platform: state 
-      entity_id: device_tracker.nokia_maria
+      entity_id: device_tracker.galaxy_maria
       from: 'not_home'
       to: 'home'
     condition:

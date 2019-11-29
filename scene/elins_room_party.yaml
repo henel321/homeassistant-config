@@ -5,10 +5,10 @@
       brightness: 30
       color_temp: 461
       transition: 0
-   light.elins_led_strip:
-      state: on 
-      brightness: 200
-      color_name: magenta 
+#   light.elins_led_strip:
+#      state: on 
+#      brightness: 200
+#      color_name: magenta 
    switch.telldusextra_switch:
       state: off 
 #   switch.indoor_plug_1:

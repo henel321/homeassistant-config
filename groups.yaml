@@ -136,7 +136,7 @@ elins_room:
  - input_select.scene_er
  - light.elins_light_bulb
  - switch.telldusextra_switch
- - light.elins_led_strip
+# - light.elins_led_strip
  - light.level_8 
 # - switch.indoor_plug_1
 
@@ -235,14 +235,14 @@ parents:
   view: no
   entities: 
     - device_tracker.galaxy_s9_henrik_2
-    - device_tracker.nokia_maria 
+    - device_tracker.galaxy_maria 
 
 everyone: 
   name: "Everyone device tracker group"
   view: no
   entities:
     - device_tracker.galaxy_s9_henrik_2
-    - device_tracker.nokia_maria
+    - device_tracker.galaxy_maria
     - device_tracker.galaxy_s7_vilhelm_2
 
 thermostats:
