@@ -1,0 +1,32 @@
+alias: Scene Office
+trigger:
+  platform: state
+  entity_id: input_select.scene_or
+condition:
+  condition: or
+  conditions:
+    - condition: state
+      entity_id: 'input_select.scene_or'
+      state: 'Gaming'
+    - condition: state
+      entity_id: 'input_select.scene_or'
+      state: 'Normal'
+    - condition: state
+      entity_id: 'input_select.scene_or'
+      state: 'Off'
+action:
+  - service: scene.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state( "input_select.scene_or", "Normal" ) %}
+          scene.or_normal
+        {%-elif is_state( "input_select.scene_or", "Gaming" ) %}
+          scene.or_gaming
+        {%-elif is_state( "input_select.scene_or", "Off" ) %}
+          scene.or_off
+        {% endif %}
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.scene_or
+      option: "-"
+

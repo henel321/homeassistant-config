@@ -1,4 +1,4 @@
-alias: 'Toggle office LED strip from Xiaomi Wireless Remote A'
+alias: 'Toggle office LED strip from Xiaomi Wireless Remote'
 trigger:
   platform: event
   event_type: deconz_event
@@ -6,7 +6,10 @@ trigger:
     id: lumi_sensor_switch_aq3
     event: 1002 
 action:
-  service: switch.toggle
-  entity_id:
-  - switch.office_table_light 
+  - service: switch.toggle
+    entity_id:
+    - switch.office_table_light 
+  - service: light.toggle
+    entity_id: 
+    - light.office_led_strip
 

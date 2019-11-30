@@ -1,10 +1,10 @@
 - name: OR Normal 
   entities:
-   switch.telldusoffice_switch:
+   switch.office_table_light: 
       state: on
    light.office_led_strip:
       state: on
       brightness: 130
-      color_name: PaleGoldenRod
+      color_temp: 425
       transition: 0
 

@@ -1,0 +1,13 @@
+alias: 'Set Office to cozy  from Shake on Xiaomi Wireless Remote'
+trigger:
+  platform: event
+  event_type: deconz_event
+  event_data:
+    id: lumi_sensor_switch_aq3
+    event: 1007
+action:
+  service: scene.turn_on
+  entity_id:
+  - scene.or_normal
+
+

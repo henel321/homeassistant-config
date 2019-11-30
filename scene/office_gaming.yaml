@@ -1,0 +1,10 @@
+- name: OR Gaming 
+  entities:
+   switch.office_table_light:
+      state: on
+   light.office_led_strip:
+      state: on
+      brightness: 100
+      color_name: purple 
+      transition: 0
+

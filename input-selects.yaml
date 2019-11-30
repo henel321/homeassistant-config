@@ -44,3 +44,14 @@ scene_vr:
     - "Normal"
     - "Sleep"
     - "Bright"
+
+scene_or: 
+  name: Scene
+  icon: mdi:brightness-auto
+  initial: "-"
+  options:
+    - "-"
+    - "Off"
+    - "Normal"
+    - "Gaming"
+

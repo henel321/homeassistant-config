@@ -1,10 +1,10 @@
 - name: OR Off 
   entities:
-    switch.telldusoffice_switch:
-      state: off 
-    light.level_15:
-       state: off
+   switch.office_table_light: 
+      state: off
    light.office_led_strip:
+      state: off
+   light.level_15:
       state: off
 
 
