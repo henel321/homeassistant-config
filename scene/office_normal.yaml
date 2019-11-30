@@ -2,3 +2,9 @@
   entities:
    switch.telldusoffice_switch:
       state: on
+   light.office_led_strip:
+      state: on
+      brightness: 130
+      color_name: PaleGoldenRod
+      transition: 0
+

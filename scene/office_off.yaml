@@ -4,4 +4,7 @@
       state: off 
     light.level_15:
        state: off
+   light.office_led_strip:
+      state: off
+
 

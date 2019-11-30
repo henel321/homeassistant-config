@@ -9,6 +9,6 @@ condition:
 action:
   service: switch.turn_off
   entity_id:
-  - switch.telldusoffice_switch 
-
+  - switch.office_table_light
+    
 

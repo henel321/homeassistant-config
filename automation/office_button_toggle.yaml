@@ -8,5 +8,5 @@ trigger:
 action:
   service: switch.toggle
   entity_id:
-  - switch.telldusoffice_switch
+  - switch.office_table_light 
 

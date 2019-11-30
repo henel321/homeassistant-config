@@ -145,6 +145,7 @@ office:
  icon: mdi:worker
  entities:
  - binary_sensor.openclose_14
+ - light.office_led_strip
  - switch.telldusoffice_switch
  - light.level_15
 
