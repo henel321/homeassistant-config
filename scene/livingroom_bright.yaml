@@ -15,7 +15,7 @@
       brightness: 200
       color_temp: 370 
       transition: 0
-   light.living_room_3:
+   light.window_mood_light:
       state: on
       brightness: 200
       color_temp: 370
@@ -24,13 +24,8 @@
       state: on 
       brightness: 255 
       color_temp: 370
-   switch.indoor_plug_2:
+   switch.indoor_plug_3:
       state: on
-   light.christmas_church:
-      state: on
-      brightness: 200
-      color_temp: 370
-      transition: 0
    light.floor_light:
       state: on
       brightness: 250

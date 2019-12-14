@@ -15,9 +15,9 @@
       brightness: 180
       color_temp: 461
       transition: 0 
-   light.living_room_3:
+   light.window_mood_light:
       state: on
-      brightness: 180 
+      brightness: 80 
       color_temp: 461
       transition: 0 
    light.lifx_led_strip:
@@ -25,13 +25,8 @@
       brightness: 130
       color_name: PaleGoldenRod 
       transition: 0 
-#   switch.indoor_plug_2:
-#      state: on
-#   light.christmas_church:
-#      state: on
-#      brightness: 100 
-#      color_temp: 461
-#      transition: 0
+   switch.indoor_plug_3:
+      state: on
    light.floor_light:
       state: on
       brightness: 180

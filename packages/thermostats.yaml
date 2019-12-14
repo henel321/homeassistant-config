@@ -27,11 +27,11 @@ automation:
           state: 'home'
     action:
       - service: climate.set_hvac_mode
-        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating 
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode 
         data:
           hvac_mode: heat
       - service: climate.set_temperature
-        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating 
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
         data:
           temperature: 26 
 
@@ -51,7 +51,7 @@ automation:
           - fri
     action:
       - service: climate.set_temperature
-        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating 
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
         data:
           temperature: 23
 
@@ -71,11 +71,11 @@ automation:
           state: 'home'
     action:
       - service: climate.set_hvac_mode
-        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
         data:
           hvac_mode: heat
       - service: climate.set_temperature
-        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
         data:
           temperature: 27
 
@@ -92,7 +92,7 @@ automation:
           - sun 
     action:
       - service: climate.set_temperature
-        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
         data:
           temperature: 23
 
@@ -116,11 +116,11 @@ automation:
           state: 'home'
     action:
       - service: climate.set_hvac_mode
-        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
         data:
           hvac_mode: heat
       - service: climate.set_temperature
-        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
         data:
           temperature: 26 
 
@@ -140,7 +140,7 @@ automation:
           - fri
     action:
       - service: climate.set_temperature
-        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
         data:
           temperature: 23
 
@@ -160,11 +160,11 @@ automation:
           state: 'home'
     action:
       - service: climate.set_hvac_mode
-        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
         data:
           hvac_mode: heat
       - service: climate.set_temperature
-        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
         data:
           temperature: 27 
 
@@ -181,7 +181,7 @@ automation:
           - sun
     action:
       - service: climate.set_temperature
-        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_heating_2
+        entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
         data:
           temperature: 23
 

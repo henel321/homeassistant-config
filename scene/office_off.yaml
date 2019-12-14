@@ -1,8 +1,12 @@
 - name: OR Off 
   entities:
-   switch.office_table_light: 
+   light.office_table_light: 
       state: off
    light.office_led_strip:
+      state: off
+   switch.office_screen_light:
+      state: off
+   light.office_painting_spotlight:
       state: off
    light.level_15:
       state: off

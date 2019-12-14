@@ -7,3 +7,6 @@
       transition: 0
    switch.telldusvilhelm_switch:
       state: on
+   switch.indoor_plug_2:
+      state: on
+

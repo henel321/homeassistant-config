@@ -8,3 +8,6 @@
       state: on
    light.level_13:
       state: off
+   switch.indoor_plug_2:
+      state: on
+

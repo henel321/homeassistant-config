@@ -1,10 +1,20 @@
 - name: OR Normal 
   entities:
-   switch.office_table_light: 
-      state: on
-   light.office_led_strip:
+   light.office_table_light: 
       state: on
       brightness: 130
+      color_temp: 425
+      transition: 0
+   light.office_led_strip:
+      state: on
+      brightness: 150
+      color_temp: 425
+      transition: 0
+   switch.office_screen_light:
+      state: on
+   light.office_painting_spotlight:
+      state: on
+      brightness: 125
       color_temp: 425
       transition: 0
 

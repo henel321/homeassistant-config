@@ -7,8 +7,9 @@ condition:
   entity_id: device_tracker.workstation_cartman 
   state: 'not_home'  
 action:
-  service: switch.turn_off
+  service: scene.turn_on
   entity_id:
-  - switch.office_table_light
+  - scene.or_off
+
     
 

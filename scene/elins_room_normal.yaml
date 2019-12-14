@@ -15,3 +15,6 @@
       state: off
 #   switch.indoor_plug_1:
 #      state: on
+   switch.telldusextra_christmas:
+      state: on
+
