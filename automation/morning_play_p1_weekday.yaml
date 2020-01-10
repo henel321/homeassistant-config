@@ -18,10 +18,10 @@ condition:
 action:
   - service: media_player.volume_set
     data: 
-      entity_id: media_player.kitchen_home
+      entity_id: media_player.kitchen_display
       volume_level: 0.3
   - service: media_player.play_media
     data: 
-      entity_id: media_player.kitchen_home
+      entity_id: media_player.kitchen_display
       media_content_id: http://sverigesradio.se/topsy/direkt/132-hi-mp3.mp3 
       media_content_type: audio/mp3
