@@ -13,7 +13,7 @@
       state: on 
 #   switch.indoor_plug_1:
 #      state: off
-   switch.telldusextra_christmas:
-      state: on
+#   switch.telldusextra_christmas:
+#      state: on
 
 
