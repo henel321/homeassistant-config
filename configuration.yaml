@@ -161,10 +161,10 @@ zwave:
   autoheal: false
 
 netatmo:
-  api_key: !secret netatmo_api
-  secret_key: !secret netatmo_secret
-  username: !secret netatmo_username 
-  password: !secret netatmo_password
+  client_id: !secret netatmo_api
+  client_secret: !secret netatmo_secret
+#  username: !secret netatmo_username 
+#  password: !secret netatmo_password
 
 
 # Track wifi users through unifi

@@ -213,7 +213,6 @@ views:
           - alert.disk_use_critical
           - sensor.last_boot
           - sensor.henel321homeassistantconfig_state
-          - sensor.process_squeezeboxserve
           - sensor.uptime
           - sensor.henel321homeassistantconfig_last_build_state
       - type: entities

@@ -2,8 +2,6 @@ homeassistant:
   customize:
     sensor.uptime:
       friendly_name: 'Home Assistant Uptime'
-    sensor.process_squeezeboxserve: 
-      friendly_name: 'Squeezebox Server process status' 
 
 
 group:
@@ -83,13 +81,13 @@ sensor:
   - platform: travisci 
     api_key: !secret travis_token 
 
-binary_sensor:
-  - platform: template
-    sensors:
-      critical_disk_use:
-        value_template: '{{ states.sensor.disk_used_|float > 70 }}'
-        friendly_name: 'Critical Disk Use'
-
+#binary_sensor:
+#  - platform: template
+#    sensors:
+#      critical_disk_use:
+#        value_template: '{{ states.sensor.disk_used_|float > 70 }}'
+#        friendly_name: 'Critical Disk Use'
+#
 alert:
   disk_use_critical:
     name: Mini-app disk usage is criticalp
