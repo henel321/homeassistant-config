@@ -41,7 +41,7 @@ automation:
 - alias: Refrigerator temperature high 
   trigger:
     platform: numeric_state
-    entity_id: sensor.temerature_7 
+    entity_id: sensor.temperature_7 
     above: 12 
   action:
     - service: notify.pushbullet
