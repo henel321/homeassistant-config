@@ -42,7 +42,7 @@ automation:
   trigger:
     platform: numeric_state
     entity_id: sensor.temerature_7 
-    above: '12' 
+    above: 12 
   action:
     - service: notify.pushbullet
       data:
@@ -57,7 +57,7 @@ automation:
   trigger:
     platform: numeric_state
     entity_id: sensor.temperature_10
-    above: '-10'
+    above: -10
   action:
     - service: notify.pushbullet
       data:
