@@ -1,3 +1,5 @@
+        title: 'Bathroom Flood Sensor: '
+        message: '*** WATER DETECTED BY BATHROOM SENSOR ***'
 group: 
   floodsensors:
    view: yes
@@ -37,3 +39,34 @@ automation:
       data:
         title: 'Bathroom Flood Sensor: '
         message: '*** WATER DETECTED BY BATHROOM SENSOR ***'
+
+- alias: Refrigerator temperature high 
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.temerature_7 
+    above: '12' 
+  action:
+    - service: notify.pushbullet
+      data:
+        title: 'Refrigerator Temperature Sensor: '
+        message: '*** REFRIGERATOR TEMPERATURE ABOVE 12 DEG C!!! ***'
+    - service: notify.slack
+      data:
+        title: 'Refrigerator Temperature Sensor: '
+        message: '*** REFRIGERATOR TEMPERATURE ABOVE 12 DEG C!!! ***'
+
+- alias: Freezer temperature high
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.temperature_10
+    above: '-10'
+  action:
+    - service: notify.pushbullet
+      data:
+        title: 'Freezer Temperature Sensor: '
+        message: '*** FREEZER TEMPERATURE ABOVE -10 DEG C!!! ***'
+    - service: notify.slack
+      data:
+        title: 'Freezer Temperature Sensor: '
+        message: '*** FREEZER TEMPERATURE ABOVE -10 DEG C!!! ***'
+
