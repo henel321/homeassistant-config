@@ -1,5 +1,3 @@
-        title: 'Bathroom Flood Sensor: '
-        message: '*** WATER DETECTED BY BATHROOM SENSOR ***'
 group: 
   floodsensors:
    view: yes
