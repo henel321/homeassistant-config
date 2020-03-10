@@ -1,13 +1,13 @@
 language: python
 python:
-  - "3.6"
+  - "3.7"
 before_script:
   - sudo apt-get update -qq
   - sudo apt-get install -y libudev-dev
 before_install:
   - mv travis_secrets.yaml secrets.yaml
 install:
-  - pip3 install homeassistant==0.106.5
+  - pip3 install homeassistant
 script:
   - hass -c . --script check_config
 notifications:
