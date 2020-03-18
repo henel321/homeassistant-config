@@ -1,6 +1,4 @@
 default_view:
- view: yes
- icon: mdi:home 
  entities: 
  - zone.home
  - sensor.weather_symbol
@@ -31,7 +29,6 @@ default_view:
  - group.vacuum_short_status
 
 vacuum_status_view:
- view: yes
  icon: mdi:robot-vacuum
  entities:
  - group.vacuum_status
@@ -83,14 +80,6 @@ shower:
  - switch.switch_2
 # - light.shower_ceiling_light
  - light.osram_rgb
-
-#christmas:
-# name: Christmas 
-# icon: mdi:christmas
-# entities: 
-# - switch.tellduslivingroom_switch 
-# - switch.indoor_plug_1
-# - switch.indoor_plug_2
 
 livingroom: 
  name: "Living room"
@@ -151,7 +140,6 @@ office:
 
 mediaplayer: 
  name: "Mediaplayers" 
- view: yes
  icon: mdi:music
  entities: 
  - group.mediaplayer_groups 
@@ -179,7 +167,6 @@ mediaplayer_google:
 
 weather: 
  name: "Weather"
- view: yes
  icon: mdi:weather-cloudy
  entities: 
  - sun.sun
@@ -217,7 +204,6 @@ weather:
 system_info_view:
   name: System info
   icon: mdi:lan
-  view: yes
   entities:
     - group.device_states
     - group.internet_card
@@ -233,21 +219,18 @@ vacuum_short_status:
 
 parents: 
   name: "Parents device tracker group"
-  view: no
   entities: 
     - device_tracker.galaxy_s9_henrik_2
     - device_tracker.galaxy_maria 
 
 everyone: 
   name: "Everyone device tracker group"
-  view: no
   entities:
     - device_tracker.galaxy_s9_henrik_2
     - device_tracker.galaxy_maria
     - device_tracker.galaxy_s7_vilhelm_2
 
 thermostats:
- view: yes
  name: Thermostats
  icon: mdi:fire
  entities:
@@ -261,8 +244,3 @@ thermostats:
  - climate.danfoss_z_thermostat_heating_1_11 
  - climate.danfoss_z_thermostat_heating_1_9
 
-#brottsplatskartan_view:
-# view: yes
-# icon: mdi:pirate
-# entities:
-# - sensor.brottsplatskartan 
