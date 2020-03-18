@@ -1,12 +1,3 @@
-history_graph:
-  floors_graph:
-    name: Floors Graph
-    entities:
-      - sensor.thermofloor_as_heatit_thermostat_tf_021_temperature 
-      - sensor.thermofloor_as_heatit_thermostat_tf_021_temperature_2
-    hours_to_show: 72 
-    refresh: 300
-
 automation:
   - alias: Increase floor heating in Shower during weekday mornings
     trigger:

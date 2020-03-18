@@ -1,6 +1,5 @@
 group: 
   floodsensors:
-   view: yes
    name: Flood Sensors
    icon: mdi:water
    entities:

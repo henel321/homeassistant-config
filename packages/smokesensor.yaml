@@ -23,32 +23,3 @@ automation:
       message: 'Smoke stopped -- Manually or automatically'
 
 
-#- alias: Smoke Sensor Open
-#  trigger:
-#    platform: state
-#    entity_id: sensor.fibaro_system_fgsd002_smoke_sensor_burglar
-#  condition:
-#      condition: or
-#      conditions:
-#        - condition: state
-#          entity_id: sensor.fibaro_system_fgsd002_smoke_sensor_burglar
-#          state: '3'
-#        - condition: state
-#          entity_id: sensor.fibaro_system_fgsd002_smoke_sensor_burglar
-#          state: '8'
-#  action:
-#    - service: notify.pushbullet
-#      data:
-#        title: 'Fibaro Smoke Sensor: '
-#        message: 'Smoke Sensor Opened!'
-#
-#- alias: Smoke Sensor Closed
-#  trigger:
-#    platform: state
-#    entity_id: sensor.fibaro_system_fgsd002_smoke_sensor_burglar
-#    to: '0' 
-#  action:
-#    - service: notify.pushbullet
-#      data:
-#        title: 'Fibaro Smoke Sensor:'
-#        message: 'Smoke Sensor Closed'
