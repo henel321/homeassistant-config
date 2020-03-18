@@ -24,8 +24,8 @@
       state: on 
       brightness: 255 
       color_temp: 370
-   switch.indoor_plug_3:
-      state: on
+#   switch.indoor_plug_3:
+#      state: on
    light.floor_light:
       state: on
       brightness: 250

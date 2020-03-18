@@ -18,5 +18,5 @@
    light.level_14:
       state: on
       brightness: 5
-   switch.osram_outdoor_plug:
-      state: on
+#   switch.osram_outdoor_plug:
+#      state: on

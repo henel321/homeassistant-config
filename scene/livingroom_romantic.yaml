@@ -25,8 +25,8 @@
       brightness: 40 
       color_name: red 
       transition: 10
-   switch.indoor_plug_3:
-      state: on
+#   switch.indoor_plug_3:
+#      state: on
    light.floor_light:
       state: on
       brightness: 20

@@ -25,8 +25,8 @@
       brightness: 30 
       color_name: dodgerblue
       transition: 10
-   switch.indoor_plug_3:
-      state: on
+#   switch.indoor_plug_3:
+#      state: on
    light.floor_light:
       state: on
       color_name: blue

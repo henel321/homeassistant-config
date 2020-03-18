@@ -16,8 +16,8 @@
       state: off
    light.level_16:
       state: off
-   switch.indoor_plug_3:
-      state: off
+#   switch.indoor_plug_3:
+#      state: off
    light.floor_light:
       state: off
 

@@ -25,8 +25,8 @@
       brightness: 130
       color_name: PaleGoldenRod 
       transition: 0 
-   switch.indoor_plug_3:
-      state: on
+#   switch.indoor_plug_3:
+#      state: on
    light.floor_light:
       state: on
       brightness: 180
