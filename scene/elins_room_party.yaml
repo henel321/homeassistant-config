@@ -4,7 +4,6 @@
       state: on
       brightness: 30
       color_name: magenta 
-      transition: 0
 #   light.elins_led_strip:
 #      state: on 
 #      brightness: 200

@@ -4,32 +4,26 @@
       state: on
       color_name: blue
       brightness: 30 
-      transition: 0 
    light.living_room_1:
       state: on
       brightness: 20 
       color_temp: 458
-      transition: 0 
    light.living_room_2:
       state: on
       brightness: 20 
       color_temp: 458
-      transition: 0 
    light.window_mood_light:
       state: on
       brightness: 20
       color_temp: 458
-      transition: 0 
    light.lifx_led_strip:
       state: on 
       brightness: 30 
       color_name: dodgerblue
-      transition: 10
 #   switch.indoor_plug_3:
 #      state: on
    light.floor_light:
       state: on
       color_name: blue
       brightness: 10 
-      transition: 0
 

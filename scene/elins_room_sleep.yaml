@@ -4,7 +4,6 @@
       state: on
       brightness: 3 
       color_temp: 454 
-      transition: 0
 #   light.elins_led_strip:
 #      state: off
    switch.telldusextra_switch:

@@ -4,7 +4,6 @@
       state: on
       brightness: 255 
       color_temp: 461
-      transition: 0
 #   light.elins_led_strip:
 #      state: on 
 #      brightness: 255
