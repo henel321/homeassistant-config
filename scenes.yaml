@@ -1,0 +1,11 @@
+- id: '1584793439418'
+  name: Test Scene
+  entities:
+    light.balcony_led_strip:
+      effect_list:
+      - colorloop
+      friendly_name: Balcony Led Strip
+      max_mireds: 500
+      min_mireds: 153
+      state: unavailable
+      supported_features: 63
