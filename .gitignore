@@ -7,6 +7,8 @@
 !themes
 !.gitignore
 !.travis.yml
+!automation_migrated
+!scene_migrated
 secrets.yaml
 known_devices.yaml
 privkey.pem

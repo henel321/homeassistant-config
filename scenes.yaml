@@ -12,16 +12,102 @@
 - id: '00001'
   name: BR Bright
   entities:
+    light.bedroom_led_strip:
+      brightness: 255
+      color_temp: 350
+      effect_list:
+      - effect_colorloop
+      - effect_pulse
+      - effect_stop
+      friendly_name: 'Bedroom LED strip '
+      max_mireds: 400
+      min_mireds: 111
+      state: 'on'
+      supported_features: 55
+    light.henriks_light:
+      brightness: 250
+      friendly_name: Henriks Light
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'on'
+      supported_features: 43
+    light.level_14:
+      brightness: 255
+      friendly_name: Bedroom Ceiling Light
+      node_id: 35
+      power_consumption: 0
+      state: 'on'
+      supported_features: 33
+      value_id: '72057594629947393'
+      value_index: 0
+      value_instance: 1
+    light.marias_light:
+      brightness: 250
+      friendly_name: Marias Light
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'on'
+      supported_features: 43
+- id: '00002'
+  name: BR Normal
+  entities:
     light.henriks_light:
       state: on
-      brightness: 250
+      brightness: 10
       color_temp: 461
     light.marias_light:
       state: on
-      brightness: 250
+      brightness: 10
       color_temp: 461
     light.bedroom_led_strip:
       state: on
-      brightness: 255
-      color_temp: 350
+      brightness: 30
+      color_temp: 380
+    light.level_14:
+      state: off
+- id: '00003'
+  name: BR Normal
+  entities:
+    light.henriks_light:
+      state: on
+      brightness: 10
+      color_temp: 461
+    light.marias_light:
+      state: on
+      brightness: 10
+      color_temp: 461
+    light.bedroom_led_strip:
+      state: on
+      brightness: 30
+      color_temp: 380
+    light.level_14:
+      state: off
+- id: '00004'
+  name: BR Off
+  entities:
+    light.henriks_light:
+      state: off
+    light.marias_light:
+      state: off
+    light.bedroom_led_strip:
+      state: off
+    light.level_14:
+      state: off
+- id: '00005'
+  name: BR Romantic
+  entities:
+    light.henriks_light:
+      state: off
+    light.marias_light:
+      state: off
+    light.bedroom_led_strip:
+      state: on
+      brightness: 30
+      color_temp: 380
+    light.level_14:
+      state: off
+
+
 
