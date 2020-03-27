@@ -89,11 +89,6 @@ automation:
            for:
              minutes: 5
     action:
-      - service: notify.pushbullet
-        data_template:
-          title: 'Device {{ trigger.to_state.name }} is'
-          message: >
-            '{{ trigger.to_state.state }}'
       - service: notify.slack
         data_template:
           title: 'Device {{ trigger.to_state.name }} is'

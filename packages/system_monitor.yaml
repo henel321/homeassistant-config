@@ -95,7 +95,7 @@ alert:
     repeat: 60
     skip_first: False
     notifiers:
-      - pushbullet
+      - slack
 
 automation: 
   - alias: Hass New Device Tracked
@@ -103,12 +103,6 @@ automation:
       platform: event
       event_type: device_tracker_new_device
     action:
-      - service: notify.pushbullet
-        data_template:
-          title: 'New device tracked'
-          message: >
-            {{trigger.event.data.host_name}} 
-            ({{trigger.event.data.entity_id}})
       - service: notify.slack
         data_template:
           title: 'New device tracked'
@@ -122,10 +116,6 @@ automation:
       - platform: state
         entity_id: updater.updater
     action:
-      - service: notify.pushbullet
-        data_template: 
-          title: 'New Home Assistant Release Available'
-          message: "Home Assistant  {{ states.updater.updater.state }}  is now available."
       - service: notify.slack
         data_template:
           title: 'New Home Assistant Release Available'

@@ -200,9 +200,9 @@ device_tracker:
      
 
 notify:
-  - name: pushbullet 
-    platform: pushbullet
-    api_key: !secret pb_access_token 
+#  - name: pushbullet 
+#    platform: pushbullet
+#    api_key: !secret pb_access_token 
   - name: slack 
     platform: slack 
     api_key: !secret slack_api_key

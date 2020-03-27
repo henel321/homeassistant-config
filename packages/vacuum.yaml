@@ -170,9 +170,6 @@ automation:
       entity_id: sensor.vacuum_status 
       to: 'cleaning'
     action:
-      - service: notify.pushbullet
-        data:
-           message: 'Städis is cleaning!'
       - service: notify.slack
         data:
            message: 'Städis is cleaning!'
@@ -184,9 +181,6 @@ automation:
       entity_id: sensor.vacuum_status
       to: 'error'
     action:
-      - service: notify.pushbullet
-        data:
-           message: 'Städis is having a problem! Check if he is stuck or locked in somewhere!' 
       - service: notify.slack
         data:
            message: 'Städis is having a problem! Check if he is stuck or locked in somewhere!'
@@ -196,9 +190,6 @@ automation:
       platform: state
       entity_id: sensor.vacuum_cleaning_count 
     action:
-      - service: notify.pushbullet
-        data:
-           message: 'Städis is done cleaning! {{ states.vacuum.stadis.attributes.cleaned_area }} m2 was cleaned in {{  states.vacuum.stadis.attributes.cleaning_time }} minutes.'
       - service: notify.slack
         data: 
            message: 'Städis is done cleaning! {{ states.vacuum.stadis.attributes.cleaned_area }} m2 was cleaned in {{  states.vacuum.stadis.attributes.cleaning_time }} minutes.'

@@ -6,10 +6,11 @@ automation:
     entity_id: sensor.fibaro_system_fgsd002_smoke_sensor_smoke
     to: '255'
   action:
-    - service: notify.pushbullet
+    - service: notify.slack
       data:
         title: 'Fibaro Smoke Sensor: '
         message: '*** SMOKE DETECTED ***'
+
 
 - alias: Smoke Sensor NOSMOKE
   trigger:
@@ -17,9 +18,9 @@ automation:
     entity_id: sensor.fibaro_system_fgsd002_smoke_sensor_smoke
     from: '255'
   action:
-    service: notify.pushbullet
-    data:
-      title: 'Fibaro Smoke Sensor: '
-      message: 'Smoke stopped -- Manually or automatically'
+    - service: notify.slack
+      data:
+        title: 'Fibaro Smoke Sensor: '
+        message: 'Smoke stopped -- Manually or automatically'
 
 

@@ -53,9 +53,20 @@
 - id: '00002'
   name: BR Normal
   entities:
+    light.balcony_led_strip:
+      brightness: 20
+      color_temp: 360
+      effect_list:
+      - colorloop
+      friendly_name: Balcony Led Strip
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'on'
+      supported_features: 63
     light.bedroom_led_strip:
-      brightness: 86
-      color_temp: 337
+      brightness: 44
+      color_temp: 361
       effect_list:
       - effect_colorloop
       - effect_pulse
@@ -74,11 +85,10 @@
       state: 'on'
       supported_features: 43
     light.level_14:
-      brightness: 33
       friendly_name: Bedroom Ceiling Light
       node_id: 35
-      power_consumption: 0.7
-      state: 'on'
+      power_consumption: 1
+      state: 'off'
       supported_features: 33
       value_id: '72057594629947393'
       value_index: 0
@@ -92,36 +102,79 @@
       state: 'on'
       supported_features: 43
 - id: '00003'
-  name: BR Cozy 
+  name: BR Cozy
   entities:
-   light.henriks_light:
-      state: on
+    light.henriks_light:
+      state: true
       brightness: 10
       color_temp: 461
-   light.marias_light:
-      state: on
+    light.marias_light:
+      state: true
       brightness: 10
       color_temp: 461
-   light.bedroom_led_strip:
-      state: on
+    light.bedroom_led_strip:
+      state: true
       brightness: 30
       color_temp: 380
-   light.level_14:
-      state: off
+    light.level_14:
+      state: false
 - id: '00004'
   name: BR Off
   entities:
-    light.henriks_light:
-      state: false
-    light.marias_light:
-      state: false
+    light.balcony_led_strip:
+      effect_list:
+      - colorloop
+      friendly_name: Balcony Led Strip
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'off'
+      supported_features: 63
     light.bedroom_led_strip:
-      state: false
+      effect_list:
+      - effect_colorloop
+      - effect_pulse
+      - effect_stop
+      friendly_name: 'Bedroom LED strip '
+      max_mireds: 400
+      min_mireds: 111
+      state: 'off'
+      supported_features: 55
+    light.henriks_light:
+      friendly_name: Henriks Light
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'off'
+      supported_features: 43
     light.level_14:
-      state: false
+      friendly_name: Bedroom Ceiling Light
+      node_id: 35
+      power_consumption: 1
+      state: 'off'
+      supported_features: 33
+      value_id: '72057594629947393'
+      value_index: 0
+      value_instance: 1
+    light.marias_light:
+      friendly_name: Marias Light
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'off'
+      supported_features: 43
 - id: '00005'
   name: BR Romantic
   entities:
+    light.balcony_led_strip:
+      effect_list:
+      - colorloop
+      friendly_name: Balcony Led Strip
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'off'
+      supported_features: 63
     light.bedroom_led_strip:
       brightness: 118
       effect_list:
@@ -130,18 +183,18 @@
       - effect_stop
       friendly_name: 'Bedroom LED strip '
       hs_color:
-      - 360
+      - 358.599
       - 100
       max_mireds: 400
       min_mireds: 111
       rgb_color:
       - 255
       - 0
-      - 0
+      - 5
       state: 'on'
       supported_features: 55
       xy_color:
-      - 0.701
+      - 0.7
       - 0.299
     light.henriks_light:
       brightness: 19
@@ -154,7 +207,7 @@
     light.level_14:
       friendly_name: Bedroom Ceiling Light
       node_id: 35
-      power_consumption: 0.7
+      power_consumption: 1
       state: 'off'
       supported_features: 33
       value_id: '72057594629947393'
