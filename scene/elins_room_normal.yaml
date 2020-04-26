@@ -4,10 +4,10 @@
       state: on
       brightness: 130
       color_temp: 461
-#   light.elins_led_strip:
-#      state: on 
-#      brightness: 90 
-#      color_name: cyan 
+   light.elins_led_strip:
+      state: on 
+      brightness: 90 
+      color_name: cyan 
    switch.telldusextra_switch:
       state: on
    light.level_8:
