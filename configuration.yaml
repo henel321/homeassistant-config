@@ -23,6 +23,7 @@ homeassistant:
       trusted_networks:
         - 192.168.100.0/24
         - 127.0.0.1
+    - type: homeassistant
 
 # Enable Mobile app 
 mobile_app:
