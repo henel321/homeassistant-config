@@ -10,6 +10,9 @@ homeassistant:
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: !secret time_zone 
+  # URLs 
+  external_url: !secret base_url
+  internal_url: !secret internal_url
   #Customize names 
   customize: !include customize.yaml
   packages: !include_dir_named packages
@@ -57,8 +60,7 @@ config:
 
 http:
 #  api_password: !secret api_password
-  external_url: !secret base_url
-  internal_url: !secret internal_url
+#  base_url: !secret base_url
   ssl_certificate: !secret ssl_certificate 
   ssl_key: !secret ssl_key 
 #  trusted_networks: 
