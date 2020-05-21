@@ -57,7 +57,8 @@ config:
 
 http:
 #  api_password: !secret api_password
-#  base_url: !secret base_url
+  external_url: !secret base_url
+  internal_url: !secret internal_url
   ssl_certificate: !secret ssl_certificate 
   ssl_key: !secret ssl_key 
 #  trusted_networks: 
