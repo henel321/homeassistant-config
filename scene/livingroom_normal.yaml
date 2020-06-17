@@ -3,7 +3,7 @@
    light.ikea_ps_uplight:
       state: on
       brightness: 180
-      color_temp: 475
+      color_temp: 461
    light.living_room_1:
       state: on
       brightness: 180
@@ -25,5 +25,5 @@
    light.floor_light:
       state: on
       brightness: 180
-      color_temp: 425
+      color_temp: 475
 

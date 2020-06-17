@@ -1,0 +1,13 @@
+- id: '1590052765230'
+  alias: Washer done
+  description: ''
+  trigger:
+  - entity_id: sensor.washing_machine_program_progress
+    platform: state
+    to: '100'
+  condition: []
+  action:
+  - data:
+      data:
+      message: Washing mashine is done, please remove wash
+    service: notify.slack

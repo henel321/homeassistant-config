@@ -1,0 +1,20 @@
+automation: 
+  - alias: 'Washer done'
+    trigger:
+      platform: state
+      entity_id: sensor.washing_machine_program_progress 
+      to: '100' 
+    action:
+      - service: notify.slack
+        data:
+           message: 'Washer is done - please unpack me!'
+
+  - alias: 'Dryer done'
+    trigger:
+      platform: state
+      entity_id: sensor.dryer_program_progress
+      to: '100'
+    action:
+      - service: notify.slack
+        data:
+           message: 'Dryer is done - please unpack me!'
