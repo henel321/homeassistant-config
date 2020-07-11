@@ -45,8 +45,7 @@ automation:
           title: 'Camera Alert - Triggered photo'
           message: 'Camera triggered at home!'
           data:
-            file: 
-              path: /home/homeassistant/.homeassistant/snapshots/snapshot2.jpg
+            file: /home/homeassistant/.homeassistant/snapshots/snapshot2.jpg
       - service: shell_command.copy_snapshots
 #      - service: shell_command.sync_snapshots
 
@@ -78,8 +77,7 @@ automation:
           title: 'Camera Alert - Attached Video'
           message: 'Video triggered at home!'
           data:
-            file: 
-              path: /home/homeassistant/.homeassistant/video/snapshot.avi
+            file: /home/homeassistant/.homeassistant/video/snapshot.avi
       - service: shell_command.copy_video
 #      - service: shell_command.sync_video
 
