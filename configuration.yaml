@@ -16,7 +16,7 @@ homeassistant:
   #Customize names 
   customize: !include customize.yaml
   packages: !include_dir_named packages
-  whitelist_external_dirs: 
+  allowlist_external_dirs: 
     - !secret ha_snapshot 
     - !secret ha_video
   auth_providers:

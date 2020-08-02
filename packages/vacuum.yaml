@@ -4,11 +4,11 @@ homeassistant:
       icon: mdi:robot-vacuum
       friendly_name: "Städis - Robot Vacuum"
     sensor.vacuum_side_brush_left: 
-      icon: mdi:timer
+      icon: mdi:timer-outline
     sensor.vacuum_main_brush_left:
-      icon: mdi:timer
+      icon: mdi:timer-outline
     sensor.vacuum_filter_left:
-      icon: mdi:timer
+      icon: mdi:timer-outline
     sensor.vacuum_cleaned_area:
       icon: mdi:map-marker
     sensor.vacuum_total_area:
@@ -24,9 +24,9 @@ homeassistant:
     sensor.vacuum_status:
       icon: mdi:robot-vacuum
     sensor.vacuum_fan_speed:
-      icon: mdi:settings
+      icon: mdi:cog
     sensor.vacuum_do_not_disturb: 
-      icon: mdi:settings
+      icon: mdi:cog
     sensor.vacuum_cleaning_count:
       icon: mdi:pound-box
 
