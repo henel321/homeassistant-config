@@ -5,6 +5,19 @@ camera:
   - platform: ffmpeg
     input: rtsp://192.168.100.135/unicast
     name: Hallway
+  - platform: onvif
+    host: 192.168.100.161
+    port: 8000
+    name: Living Room 
+    username: admin
+    password: !secret reolink 
+  - platform: onvif
+    host: 192.168.101.151
+    port: 8000
+    name: Hallway2 
+    username: admin
+    password: !secret reolink
+  
 
 shell_command: 
   take_snapshots: 'rm -f /home/homeassistant/.homeassistant/snapshots/snapshot*.jpg ; sleep 2; ffmpeg -y -i rtsp://camera.tillander.org/unicast -ss 0:0:2 -frames 1  /home/homeassistant/.homeassistant/snapshots/snapshot1.jpg ; sleep 3; ffmpeg -y -i rtsp://camera.tillander.org/unicast -ss 0:0:2 -frames 1  /home/homeassistant/.homeassistant/snapshots/snapshot2.jpg; sleep 3; ffmpeg -y -i rtsp://camera.tillander.org/unicast -ss 0:0:2 -frames 1  /home/homeassistant/.homeassistant/snapshots/snapshot3.jpg'
@@ -45,7 +58,8 @@ automation:
           title: 'Camera Alert - Triggered photo'
           message: 'Camera triggered at home!'
           data:
-            file: /home/homeassistant/.homeassistant/snapshots/snapshot2.jpg
+            file: 
+              path: /home/homeassistant/.homeassistant/snapshots/snapshot2.jpg
       - service: shell_command.copy_snapshots
 #      - service: shell_command.sync_snapshots
 
@@ -77,7 +91,8 @@ automation:
           title: 'Camera Alert - Attached Video'
           message: 'Video triggered at home!'
           data:
-            file: /home/homeassistant/.homeassistant/video/snapshot.avi
+            file: 
+              path: /home/homeassistant/.homeassistant/video/snapshot.avi
       - service: shell_command.copy_video
 #      - service: shell_command.sync_video
 
