@@ -31,6 +31,9 @@ homeassistant:
 # Enable Mobile app 
 mobile_app:
 
+# Enable streaming 
+stream: 
+
 
 # Show links to resources in log and frontend
 # introduction:
@@ -120,20 +123,20 @@ remote:
 
 
 # Weather prediction
-sensor:
-  - platform: yr
-    name: Weather
-    forecast: 24
-    monitored_conditions:
-      - temperature
-      - symbol
-      - precipitation
-      - windSpeed
-      - pressure
-      - windDirection
-      - humidity
-      - fog
-      - cloudiness
+#sensor:
+#  - platform: yr
+#    name: Weather
+#    forecast: 24
+#    monitored_conditions:
+#      - temperature
+#      - symbol
+#      - precipitation
+#      - windSpeed
+#      - pressure
+#      - windDirection
+#      - humidity
+#      - fog
+#      - cloudiness
 
 # Text to speech
 tts:
