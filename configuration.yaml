@@ -40,7 +40,6 @@ stream:
 
 # Enables the frontend
 frontend:
-  javascript_version: latest
   themes: !include_dir_named themes
 
 recorder: 
