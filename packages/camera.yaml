@@ -5,12 +5,12 @@ camera:
   - platform: ffmpeg
     input: rtsp://192.168.100.135/unicast
     name: Hallway
-  - platform: onvif
-    host: 192.168.100.161
-    port: 8000
-    name: Living Room 
-    username: admin
-    password: !secret reolink 
+#  - platform: onvif
+#    host: 192.168.100.161
+#    port: 8000
+#    name: Living Room 
+#    username: admin
+#    password: !secret reolink 
   - platform: onvif
     host: 192.168.101.150
     port: 8000
