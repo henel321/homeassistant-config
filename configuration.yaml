@@ -144,9 +144,9 @@ tts:
 
 group: !include groups.yaml
 
-automation: !include_dir_list automation
+# automation: !include_dir_list automation
 
-# automation: !include automations.yaml
+automation: !include automations.yaml
 # automation old:  !include_dir_merge_list automation
 
 scene: !include scenes.yaml

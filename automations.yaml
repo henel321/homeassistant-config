@@ -11,3 +11,701 @@
       data:
       message: Washing mashine is done, please remove wash
     service: notify.slack
+- id: '391445821700'
+  alias: Zwave heal at 4:00 am
+  trigger:
+    platform: time
+    at: '4:00:00'
+  action:
+    service: zwave.heal_network
+- id: '823235387706'
+  alias: Bad weather - lights on!
+  trigger:
+    platform: sun
+    event: sunset
+    offset: -02:00:00
+  condition:
+    condition: and
+    conditions:
+    - condition: numeric_state
+      entity_id: sensor.weather_cloudiness
+      above: '80'
+    - condition: time
+      before: '21:30:00'
+  action:
+    service: scene.turn_on
+    entity_id:
+    - scene.br_normal
+    - scene.lr_normal
+    - scene.er_normal
+    - scene.vr_normal
+    - scene.or_normal
+- id: '389593401903'
+  alias: Turn off bathroom mirror light after 10 minutes of no movement
+  trigger:
+    platform: state
+    entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor_2
+    to: 'off'
+    for: 00:15:00
+  action:
+    service: switch.turn_off
+    entity_id:
+    - switch.qubino_zmnhbdx_flush_2_relays_switch_2
+- id: '421090569257'
+  alias: Turn off bathroom light after 5 minutes of no movement
+  trigger:
+    platform: state
+    entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor_2
+    to: 'off'
+    for: 00:15:00
+  action:
+    service: switch.turn_off
+    entity_id:
+    - switch.qubino_zmnhbdx_flush_2_relays_switch
+- id: '304323506250'
+  alias: Turn on bathroom light when movement during day
+  trigger:
+    platform: state
+    entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor_2
+    from: 'off'
+    to: 'on'
+  condition:
+    condition: time
+    after: 07:00:00
+    before: '23:00:00'
+  action:
+    service: switch.turn_on
+    entity_id:
+    - switch.qubino_zmnhbdx_flush_2_relays_switch
+- id: '582925487109'
+  alias: Turn on bathroom light when movement during night
+  trigger:
+    platform: state
+    entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor_2
+    from: 'off'
+    to: 'on'
+  condition:
+    condition: time
+    after: '23:00:00'
+    before: 07:00:00
+  action:
+    service: switch.turn_on
+    entity_id:
+    - switch.qubino_zmnhbdx_flush_2_relays_switch_2
+- id: '898058193301'
+  alias: Turn off LIFX when lights turned off in bedroom.
+  trigger:
+    platform: state
+    entity_id: light.marias_light
+    from: 'on'
+    to: 'off'
+  action:
+    service: light.turn_off
+    entity_id:
+    - light.bedroom_led_strip
+- id: '230339351769'
+  alias: Brightness Bedroom
+  trigger:
+    platform: state
+    entity_id: input_number.brightness_br
+  action:
+    service: light.turn_on
+    data:
+      entity_id:
+      - light.henriks_light
+      - light.marias_light
+      - light.bedroom_led_strip
+    data_template:
+      brightness: '{{ states( "input_number.brightness_br" )|round( 0 ) }}'
+- id: '73053013959'
+  alias: Brightness Living Room
+  trigger:
+    platform: state
+    entity_id: input_number.brightness_lr
+  action:
+    service: light.turn_on
+    data:
+      entity_id:
+      - light.living_room_1
+      - light.living_room_2
+      - light.tv_light
+      - light.ikea_ps_uplight
+      - light.lifx_led_strip
+    data_template:
+      brightness: '{{ states( "input_number.brightness_lr" )|round( 0 ) }}'
+- id: '338197632082'
+  alias: Turn off Elins LIFX when Elins light off.
+  trigger:
+    platform: state
+    entity_id: light.elins_light_bulb
+    from: 'on'
+    to: 'off'
+  action:
+    service: light.turn_off
+    entity_id:
+    - light.elins_led_strip
+- id: '780774748531'
+  alias: Turn off Bedroom lights in the evening
+  trigger:
+    platform: time
+    at: 00:00:00
+  action:
+    service: scene.turn_on
+    entity_id:
+    - scene.br_off
+- id: '672950339775'
+  alias: Turn on cozy light in the Living room and bedroom in the evening
+  trigger:
+    platform: time
+    at: '21:30:00'
+  action:
+    service: scene.turn_on
+    entity_id:
+    - scene.lr_cozy
+    - scene.br_cozy
+- id: '643314742250'
+  alias: Weekend - Turn off Living room lights in the evening
+  trigger:
+    platform: time
+    at: 01:00:00
+  condition:
+    condition: time
+    weekday:
+    - sat
+    - sun
+  action:
+    service: scene.turn_on
+    entity_id:
+    - scene.lr_off
+- id: '562986847328'
+  alias: Turn off Living room lights in the evening
+  trigger:
+    platform: time
+    at: '23:30:00'
+  condition:
+    condition: time
+    weekday:
+    - sun
+    - mon
+    - tue
+    - wed
+    - thu
+  action:
+    service: scene.turn_on
+    entity_id:
+    - scene.lr_off
+- id: '36176491978'
+  alias: Turn off light five mintes after door close.
+  trigger:
+    platform: state
+    entity_id: binary_sensor.neo_coolcam_doorwindow_detector_sensor
+    from: 'on'
+    to: 'off'
+    for:
+      minutes: 10
+  action:
+    service: switch.turn_off
+    entity_id:
+    - switch.switch_3
+- id: '969501358508'
+  alias: Turn on Hallway light when door opens
+  trigger:
+    platform: state
+    entity_id: binary_sensor.neo_coolcam_doorwindow_detector_sensor
+    from: 'off'
+    to: 'on'
+  action:
+    service: switch.turn_on
+    entity_id:
+    - switch.switch_3
+- id: '64032500592'
+  alias: Turn off hallway light
+  trigger:
+    platform: time
+    at: '20:05:00'
+  action:
+    service: switch.turn_off
+    entity_id:
+    - switch.switch_3
+- id: '58085804358'
+  alias: Turn off LIFX when lights turned off in living room.
+  trigger:
+    platform: state
+    entity_id: light.ikea_ps_uplight
+    from: 'on'
+    to: 'off'
+  action:
+  - service: light.turn_off
+    entity_id:
+    - light.lifx_led_strip
+    - light.level_6
+    - light.level_16
+- id: '540286327195'
+  alias: Turn on LIFX when lights turned on in living room.
+  trigger:
+    platform: state
+    entity_id: light.ikea_ps_uplight
+    from: 'off'
+    to: 'on'
+  action:
+  - service: light.turn_on
+    entity_id:
+    - light.lifx_led_strip
+    data:
+      brightness: 140
+      color_name: PaleGoldenRod
+- id: '59997632142'
+  alias: Turn off lights in Kids' room, Living Room and Bedrom after sunrise when
+    all parents have left
+  trigger:
+    platform: state
+    entity_id: group.parents
+    from: home
+    to: not home
+  condition:
+    condition: time
+    after: 07:30:00
+    before: '11:00:00'
+  action:
+    service: scene.turn_on
+    entity_id:
+    - scene.br_off
+    - scene.lr_off
+    - scene.er_off
+    - scene.vr_off
+    - scene.or_off
+- id: '749686839929'
+  alias: Turn off Google Homein Living Room in the morning on weekdays
+  trigger:
+    platform: time
+    at: 08:00:00
+  condition:
+    condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  action:
+  - service: media_player.turn_off
+    data:
+      entity_id: media_player.kitchen_display
+- id: '853122158425'
+  alias: Turn on P1 on Google home in Living Room in the morning on weekdays
+  trigger:
+    platform: time
+    at: 07:00:00
+  condition:
+    condition: and
+    conditions:
+    - condition: time
+      weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+    - condition: state
+      entity_id: group.parents
+      state: home
+  action:
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.kitchen_display
+      volume_level: 0.3
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.kitchen_display
+      media_content_id: http://sverigesradio.se/topsy/direkt/132-hi-mp3.mp3
+      media_content_type: audio/mp3
+- id: '75575340214'
+  alias: Turn off Google Homein Living Room in the morning on weekends
+  trigger:
+    platform: time
+    at: '10:30:00'
+  condition:
+    condition: time
+    weekday:
+    - sat
+    - sun
+  action:
+  - service: media_player.turn_off
+    data:
+      entity_id: media_player.kitchen_display
+- id: '665437218941'
+  alias: Turn on P1 on Google home in Living Room in the morning on weekends
+  trigger:
+    platform: time
+    at: 08:45:00
+  condition:
+    condition: and
+    conditions:
+    - condition: time
+      weekday:
+      - sat
+      - sun
+    - condition: state
+      entity_id: group.parents
+      state: home
+  action:
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.kitchen_display
+      volume_level: 0.3
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.kitchen_display
+      media_content_id: http://sverigesradio.se/topsy/direkt/132-hi-mp3.mp3
+      media_content_type: audio/mp3
+- id: '51924802714'
+  alias: Turn off night lights in Kids' room
+  trigger:
+    platform: time
+    at: 08:30:00
+  action:
+    service: scene.turn_on
+    entity_id:
+    - scene.er_off
+    - scene.vr_off
+- id: '586704802683'
+  alias: Turn on Living Room lights in the morning on weekdays at first movement between
+    6-7.30 and before sunrise
+  trigger:
+    platform: state
+    entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor
+    from: 'off'
+    to: 'on'
+  condition:
+    condition: and
+    conditions:
+    - condition: time
+      after: 06:00:00
+      before: 07:30:00
+    - condition: time
+      weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+    - condition: sun
+      before: sunrise
+      before_offset: '-1:00:00'
+  action:
+    service: scene.turn_on
+    entity_id:
+    - scene.lr_normal
+- id: '607766316251'
+  alias: Set Elins room to night mode at 21:00
+  trigger:
+    platform: time
+    at: '21:00:00'
+  action:
+    service: scene.turn_on
+    entity_id:
+    - scene.er_sleep
+- id: '830843652626'
+  alias: Set Vilhelms lights to night mode at 22:00
+  trigger:
+    platform: time
+    at: '22:00:00'
+  action:
+    service: scene.turn_on
+    entity_id:
+    - scene.vr_sleep
+- id: '248309330066'
+  alias: 22:00 and Workstation Turned Off
+  trigger:
+    platform: time
+    at: '22:00:00'
+  condition:
+    condition: state
+    entity_id: device_tracker.workstation_cartman
+    state: not_home
+  action:
+    service: scene.turn_on
+    entity_id:
+    - scene.or_off
+- id: '908930874870'
+  alias: Workstation Turned Off and after 2200
+  trigger:
+    platform: state
+    entity_id: device_tracker.workstation_cartman
+    from: home
+    to: not_home
+  condition:
+    condition: time
+    after: '22:00:00'
+  action:
+    service: scene.turn_on
+    entity_id:
+    - scene.or_off
+- id: '392847606286'
+  alias: Scene Bedroom
+  trigger:
+    platform: state
+    entity_id: input_select.scene_br
+  condition:
+    condition: or
+    conditions:
+    - condition: state
+      entity_id: input_select.scene_br
+      state: Romantic
+    - condition: state
+      entity_id: input_select.scene_br
+      state: Cozy
+    - condition: state
+      entity_id: input_select.scene_br
+      state: Normal
+    - condition: state
+      entity_id: input_select.scene_br
+      state: Bright
+    - condition: state
+      entity_id: input_select.scene_br
+      state: 'Off'
+  action:
+  - service: scene.turn_on
+    data_template:
+      entity_id: "{% if is_state( \"input_select.scene_br\", \"Romantic\" ) %}\n \
+        \ scene.br_romantic\n{%-elif is_state( \"input_select.scene_br\", \"Cozy\"\
+        \ ) %}\n  scene.br_cozy\n{%-elif is_state( \"input_select.scene_br\", \"Normal\"\
+        \ ) %}\n  scene.br_normal\n{%-elif is_state( \"input_select.scene_br\", \"\
+        Bright\" ) %}\n  scene.br_bright\n{%-elif is_state( \"input_select.scene_br\"\
+        , \"Off\" ) %}\n  scene.br_off\n{% endif %}\n"
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.scene_br
+      option: '-'
+- id: '704129690257'
+  alias: Scene Elins Room
+  trigger:
+    platform: state
+    entity_id: input_select.scene_er
+  condition:
+    condition: or
+    conditions:
+    - condition: state
+      entity_id: input_select.scene_er
+      state: Sleep
+    - condition: state
+      entity_id: input_select.scene_er
+      state: Party
+    - condition: state
+      entity_id: input_select.scene_er
+      state: Normal
+    - condition: state
+      entity_id: input_select.scene_er
+      state: Bright
+    - condition: state
+      entity_id: input_select.scene_er
+      state: 'Off'
+  action:
+  - service: scene.turn_on
+    data_template:
+      entity_id: "{% if is_state( \"input_select.scene_er\", \"Sleep\" ) %}\n  scene.er_sleep\n\
+        {%-elif is_state( \"input_select.scene_er\", \"Party\" ) %}\n  scene.er_party\n\
+        {%-elif is_state( \"input_select.scene_er\", \"Normal\" ) %}\n  scene.er_normal\n\
+        {%-elif is_state( \"input_select.scene_er\", \"Bright\" ) %}\n  scene.er_bright\n\
+        {%-elif is_state( \"input_select.scene_er\", \"Off\" ) %}\n  scene.er_off\n\
+        {% endif %}\n"
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.scene_er
+      option: '-'
+- id: '781874600338'
+  alias: Scene Living Room
+  trigger:
+    platform: state
+    entity_id: input_select.scene_lr
+  condition:
+    condition: or
+    conditions:
+    - condition: state
+      entity_id: input_select.scene_lr
+      state: Romantic
+    - condition: state
+      entity_id: input_select.scene_lr
+      state: Movie
+    - condition: state
+      entity_id: input_select.scene_lr
+      state: Normal
+    - condition: state
+      entity_id: input_select.scene_lr
+      state: Cozy
+    - condition: state
+      entity_id: input_select.scene_lr
+      state: Bright
+    - condition: state
+      entity_id: input_select.scene_lr
+      state: 'Off'
+  action:
+  - service: scene.turn_on
+    data_template:
+      entity_id: "{% if is_state( \"input_select.scene_lr\", \"Romantic\" ) %}\n \
+        \ scene.lr_romantic\n{%-elif is_state( \"input_select.scene_lr\", \"Movie\"\
+        \ ) %}\n  scene.lr_movie\n{%-elif is_state( \"input_select.scene_lr\", \"\
+        Normal\" ) %}\n  scene.lr_normal\n{%-elif is_state( \"input_select.scene_lr\"\
+        , \"Cozy\" ) %}\n  scene.lr_cozy\n{%-elif is_state( \"input_select.scene_lr\"\
+        , \"Bright\" ) %}\n  scene.lr_bright\n{%-elif is_state( \"input_select.scene_lr\"\
+        , \"Off\" ) %}\n  scene.lr_off\n{% endif %}\n"
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.scene_lr
+      option: '-'
+- id: '402355496948'
+  alias: Scene Office
+  trigger:
+    platform: state
+    entity_id: input_select.scene_or
+  condition:
+    condition: or
+    conditions:
+    - condition: state
+      entity_id: input_select.scene_or
+      state: Gaming
+    - condition: state
+      entity_id: input_select.scene_or
+      state: Normal
+    - condition: state
+      entity_id: input_select.scene_or
+      state: 'Off'
+  action:
+  - service: scene.turn_on
+    data_template:
+      entity_id: "{% if is_state( \"input_select.scene_or\", \"Normal\" ) %}\n  scene.or_normal\n\
+        {%-elif is_state( \"input_select.scene_or\", \"Gaming\" ) %}\n  scene.or_gaming\n\
+        {%-elif is_state( \"input_select.scene_or\", \"Off\" ) %}\n  scene.or_off\n\
+        {% endif %}\n"
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.scene_or
+      option: '-'
+- id: '453855809296'
+  alias: Scene Vilehlms Room
+  trigger:
+    platform: state
+    entity_id: input_select.scene_vr
+  condition:
+    condition: or
+    conditions:
+    - condition: state
+      entity_id: input_select.scene_vr
+      state: Normal
+    - condition: state
+      entity_id: input_select.scene_vr
+      state: Sleep
+    - condition: state
+      entity_id: input_select.scene_vr
+      state: Bright
+    - condition: state
+      entity_id: input_select.scene_vr
+      state: 'Off'
+  action:
+  - service: scene.turn_on
+    data_template:
+      entity_id: "{%-if is_state( \"input_select.scene_vr\", \"Normal\" ) %}\n  scene.vr_normal\n\
+        {%-elif is_state( \"input_select.scene_vr\", \"Sleep\" ) %}\n  scene.vr_sleep\n\
+        {%-elif is_state( \"input_select.scene_vr\", \"Bright\" ) %}\n  scene.vr_bright\n\
+        {%-elif is_state( \"input_select.scene_vr\", \"Off\" ) %}\n  scene.vr_off\n\
+        {% endif %}\n"
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.scene_vr
+      option: '-'
+- id: '893512939794'
+  alias: Turn off shower light after 5 minutes of no movement
+  trigger:
+    platform: state
+    entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor_3
+    to: 'off'
+    for: 00:15:00
+  action:
+    service: switch.turn_off
+    entity_id:
+    - switch.switch_2
+- id: '707339438036'
+  alias: Turn on shower light when movement
+  trigger:
+    platform: state
+    entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor_3
+    from: 'off'
+    to: 'on'
+  action:
+    service: switch.turn_on
+    entity_id:
+    - switch.switch_2
+- id: '975447476954'
+  alias: Turn off lights in Kids' room, Living Room and Bedroom after sunrise
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: +01:30:00
+  condition:
+    condition: time
+    after: 07:30:00
+  action:
+    service: scene.turn_on
+    entity_id:
+    - scene.br_off
+    - scene.lr_off
+    - scene.er_off
+    - scene.vr_off
+    - scene.or_off
+- id: '747767838597'
+  alias: Turn on lights at sunset in Kids' room, Living Room and Bedroom
+  trigger:
+    platform: sun
+    event: sunset
+    offset: -01:30:00
+  condition:
+    condition: time
+    before: '21:30:00'
+  action:
+    service: scene.turn_on
+    entity_id:
+    - scene.br_normal
+    - scene.lr_normal
+    - scene.er_normal
+    - scene.vr_normal
+    - scene.or_normal
+- id: '265490686995'
+  alias: 20:30 and Vilhelms Workstation Turned Off
+  trigger:
+    platform: time
+    at: '20:30:00'
+  condition:
+    condition: state
+    entity_id: device_tracker.workstation_vilhelm
+    state: not_home
+  action:
+    service: switch.turn_off
+    entity_id:
+    - switch.telldusvilhelm_switch
+- id: '878881351806'
+  alias: Vilhelms computer turned Off and after 20:30
+  trigger:
+    platform: state
+    entity_id: device_tracker.workstation_vilhelm
+    from: home
+    to: not_home
+  condition:
+    condition: time
+    after: '20:30:00'
+  action:
+    service: switch.turn_off
+    entity_id:
+    - switch.telldusvilhelm_switch
+- id: '1601236356039'
+  alias: Dryer done
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.dryer_program_progress
+    to: '100'
+  condition: []
+  action:
+  - service: notify.slack
+    data:
+      message: Dryer is done, please remove wash
+  mode: single
