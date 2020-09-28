@@ -81,43 +81,27 @@ sensor:
   - platform: travisci 
     api_key: !secret travis_token 
 
-#binary_sensor:
-#  - platform: template
-#    sensors:
-#      critical_disk_use:
-#        value_template: '{{ states.sensor.disk_used_|float > 70 }}'
-#        friendly_name: 'Critical Disk Use'
+#automation: 
+#  - alias: Hass New Device Tracked
+#    trigger:
+#      platform: event
+#      event_type: device_tracker_new_device
+#    action:
+#      - service: notify.slack
+#        data_template:
+#          title: 'New device tracked'
+#          message: >
+#            {{trigger.event.data.host_name}}
+#            ({{trigger.event.data.entity_id}})
 #
-alert:
-  disk_use_critical:
-    name: Mini-app disk usage is criticalp
-    entity_id: binary_sensor.critical_disk_use
-    repeat: 60
-    skip_first: False
-    notifiers:
-      - slack
-
-automation: 
-  - alias: Hass New Device Tracked
-    trigger:
-      platform: event
-      event_type: device_tracker_new_device
-    action:
-      - service: notify.slack
-        data_template:
-          title: 'New device tracked'
-          message: >
-            {{trigger.event.data.host_name}}
-            ({{trigger.event.data.entity_id}})
-
-
-  - alias: Hass Updater
-    trigger:
-      - platform: state
-        entity_id: updater.updater
-    action:
-      - service: notify.slack
-        data_template:
-          title: 'New Home Assistant Release Available'
-          message: "Home Assistant  {{ states.updater.updater.state }}  is now available."
+#
+#  - alias: Hass Updater
+#    trigger:
+#      - platform: state
+#        entity_id: updater.updater
+#    action:
+#      - service: notify.slack
+#        data_template:
+#          title: 'New Home Assistant Release Available'
+#          message: "Home Assistant  {{ states.updater.updater.state }}  is now available."
 

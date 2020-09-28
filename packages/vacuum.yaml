@@ -162,90 +162,90 @@ group:
       - sensor.vacuum_side_brush_left
 
 
-automation: 
-
-  - alias: 'Vacuum Starting'
-    trigger:
-      platform: state
-      entity_id: sensor.vacuum_status 
-      to: 'cleaning'
-    action:
-      - service: notify.slack
-        data:
-           message: 'Städis is cleaning!'
-
-
-  - alias: 'Vacuum Error'
-    trigger:
-      platform: state
-      entity_id: sensor.vacuum_status
-      to: 'error'
-    action:
-      - service: notify.slack
-        data:
-           message: 'Städis is having a problem! Check if he is stuck or locked in somewhere!'
-
-  - alias: 'Vacuum finished'
-    trigger:
-      platform: state
-      entity_id: sensor.vacuum_cleaning_count 
-    action:
-      - service: notify.slack
-        data: 
-           message: 'Städis is done cleaning! {{ states.vacuum.stadis.attributes.cleaned_area }} m2 was cleaned in {{  states.vacuum.stadis.attributes.cleaning_time }} minutes.'
-      - delay: 3600
-      - service: xiaomi_miio.vacuum_remote_control_start
-        entity_id: vacuum.stadis
-      - delay: 12
-      - service: xiaomi_miio.vacuum_remote_control_move
-        entity_id: vacuum.stadis
-        data:
-          duration: 1400
-          velocity: 0.29
-          rotation: 0
-      - delay: 5
-      - service: xiaomi_miio.vacuum_remote_control_stop
-        entity_id: vacuum.stadis
-
-  - alias: 'Vacuum scheduling weekdays when everyone away'
-    trigger: 
-      platform: time
-      at: "10:30:00"
-    condition:
-      condition: and 
-      conditions:
-        - condition: time 
-          weekday:
-          - mon
-          - tue
-          - thu
-          - fri
-        - condition: state
-          entity_id: group.parents 
-          state: 'not_home'
-    action: 
-      - service: vacuum.start
-        entity_id: vacuum.stadis
-
-  - alias: "i2 on livingroom ceiling put städis in emptying mode"
-    trigger:
-      platform: state
-      entity_id: binary_sensor.sensor_5
-      to: 'on'
-    condition:
-    - condition: state
-      entity_id: vacuum.stadis
-      state: 'docked'
-    action: 
-    - service: xiaomi_miio.vacuum_remote_control_start
-      entity_id: vacuum.stadis
-    - delay: 12
-    - service: xiaomi_miio.vacuum_remote_control_move
-      entity_id: vacuum.stadis
-      data:
-        duration: 1400
-        velocity: 0.29
-        rotation: 0
-    - delay: 5
-    - service: xiaomi_miio.vacuum_remote_control_stop
-      entity_id: vacuum.stadis
+#automation: 
+#
+#  - alias: 'Vacuum Starting'
+#    trigger:
+#      platform: state
+#      entity_id: sensor.vacuum_status 
+#      to: 'cleaning'
+#    action:
+#      - service: notify.slack
+#        data:
+#           message: 'Städis is cleaning!'
+#
+#
+#  - alias: 'Vacuum Error'
+#    trigger:
+#      platform: state
+#      entity_id: sensor.vacuum_status
+#      to: 'error'
+#    action:
+#      - service: notify.slack
+#        data:
+#           message: 'Städis is having a problem! Check if he is stuck or locked in somewhere!'
+#
+#  - alias: 'Vacuum finished'
+#    trigger:
+#      platform: state
+#      entity_id: sensor.vacuum_cleaning_count 
+#    action:
+#      - service: notify.slack
+#        data: 
+#           message: 'Städis is done cleaning! {{ states.vacuum.stadis.attributes.cleaned_area }} m2 was cleaned in {{  states.vacuum.stadis.attributes.cleaning_time }} minutes.'
+#      - delay: 3600
+#      - service: xiaomi_miio.vacuum_remote_control_start
+#        entity_id: vacuum.stadis
+#      - delay: 12
+#      - service: xiaomi_miio.vacuum_remote_control_move
+#        entity_id: vacuum.stadis
+#        data:
+#          duration: 1400
+#          velocity: 0.29
+#          rotation: 0
+#      - delay: 5
+#      - service: xiaomi_miio.vacuum_remote_control_stop
+#        entity_id: vacuum.stadis
+#
+#  - alias: 'Vacuum scheduling weekdays when everyone away'
+#    trigger: 
+#      platform: time
+#      at: "10:30:00"
+#    condition:
+#      condition: and 
+#      conditions:
+#        - condition: time 
+#          weekday:
+#          - mon
+#          - tue
+#          - thu
+#          - fri
+#        - condition: state
+#          entity_id: group.parents 
+#          state: 'not_home'
+#    action: 
+#      - service: vacuum.start
+#        entity_id: vacuum.stadis
+#
+#  - alias: "i2 on livingroom ceiling put städis in emptying mode"
+#    trigger:
+#      platform: state
+#      entity_id: binary_sensor.sensor_5
+#      to: 'on'
+#    condition:
+#    - condition: state
+#      entity_id: vacuum.stadis
+#      state: 'docked'
+#    action: 
+#    - service: xiaomi_miio.vacuum_remote_control_start
+#      entity_id: vacuum.stadis
+#    - delay: 12
+#    - service: xiaomi_miio.vacuum_remote_control_move
+#      entity_id: vacuum.stadis
+#      data:
+#        duration: 1400
+#        velocity: 0.29
+#        rotation: 0
+#    - delay: 5
+#    - service: xiaomi_miio.vacuum_remote_control_stop
+#      entity_id: vacuum.stadis

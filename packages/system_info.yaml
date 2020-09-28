@@ -70,29 +70,29 @@ group:
     - sensor.ip_camera
     - sensor.logitech_harmony
 
-automation:
-  - alias: 'Device Status'
-    initial_state: 'on'
-    trigger:
-         - platform: state
-           entity_id:
-              - sensor.firewall
-              - sensor.switch 
-              - sensor.ap
-              - sensor.mini
-              - sensor.ike
-              - sensor.mini_app
-              - sensor.ip_camera
-              - sensor.logitech_harmony
-              - sensor.office_switch
-           to: 'offline'
-           for:
-             minutes: 5
-    action:
-      - service: notify.slack
-        data_template:
-          title: 'Device {{ trigger.to_state.name }} is'
-          message: >
-            '{{ trigger.to_state.state }}'
+#automation:
+#  - alias: 'Device Status'
+#    initial_state: 'on'
+#    trigger:
+#         - platform: state
+#           entity_id:
+#              - sensor.firewall
+#              - sensor.switch 
+#              - sensor.ap
+#              - sensor.mini
+#              - sensor.ike
+#              - sensor.mini_app
+#              - sensor.ip_camera
+#              - sensor.logitech_harmony
+#              - sensor.office_switch
+#           to: 'offline'
+#           for:
+#             minutes: 5
+#    action:
+#      - service: notify.slack
+#        data_template:
+#          title: 'Device {{ trigger.to_state.name }} is'
+#          message: >
+#            '{{ trigger.to_state.state }}'
 
 

@@ -5,14 +5,14 @@ sensor:
     scan_interval: 10800
     command: !secret cert_check 
 
-automation:
-  - alias: 'SSL expiry notification'
-    trigger:
-      platform: numeric_state
-      entity_id: sensor.ssl_cert_expiry
-      below: 14
-    action:
-      service: notify.slack
-      data:
-        title: 'SSL Cert Expiry'
-        message: "WARNING! - SSL certificate for homeassistant.tillander.org expiring in 14 days!"
+#automation:
+#  - alias: 'SSL expiry notification'
+#    trigger:
+#      platform: numeric_state
+#      entity_id: sensor.ssl_cert_expiry
+#      below: 14
+#    action:
+#      service: notify.slack
+#      data:
+#        title: 'SSL Cert Expiry'
+#        message: "WARNING! - SSL certificate for homeassistant.tillander.org expiring in 14 days!"

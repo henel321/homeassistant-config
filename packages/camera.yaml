@@ -28,72 +28,70 @@ shell_command:
   sync_video: 'rsync -ave ssh --delete /home/homeassistant/.homeassistant/video mini-gcp:/home/backup'
  
 
-automation:
-
-  - alias: 'Camera triggered'
-    trigger:
-      platform: state
-      entity_id: binary_sensor.neo_coolcam_doorwindow_detector_sensor
-      from: 'off'
-      to: 'on'
-    condition:
-      condition: and
-      conditions:
-        - condition: time
-          weekday:
-          - mon
-          - tue
-          - wed
-          - thu
-          - fri
-          - sat 
-          - sun
-        - condition: state 
-          entity_id: group.everyone
-          state: 'not_home'
-    action:
-      - service: shell_command.take_snapshots
-      - service: notify.slack
-        data:
-          title: 'Camera Alert - Triggered photo'
-          message: 'Camera triggered at home!'
-          data:
-            file: 
-              path: /home/homeassistant/.homeassistant/snapshots/snapshot2.jpg
-      - service: shell_command.copy_snapshots
+# automation:
+# 
+#   - alias: 'Camera triggered'
+#     trigger:
+#       platform: state
+#       entity_id: binary_sensor.neo_coolcam_doorwindow_detector_sensor
+#       from: 'off'
+#       to: 'on'
+#     condition:
+#       condition: and
+#       conditions:
+#         - condition: time
+#           weekday:
+#           - mon
+#           - tue
+#           - wed
+#           - thu
+#           - fri
+#           - sat 
+#           - sun
+#         - condition: state 
+#           entity_id: group.everyone
+#           state: 'not_home'
+#     action:
+#       - service: shell_command.take_snapshots
+#       - service: notify.slack
+#         data:
+#           title: 'Camera Alert - Triggered photo'
+#           message: 'Camera triggered at home!'
+#           data:
+#             file: 
+#               path: /home/homeassistant/.homeassistant/snapshots/snapshot2.jpg
+#       - service: shell_command.copy_snapshots
 #      - service: shell_command.sync_snapshots
-
-  - alias: 'Video triggered'
-    trigger:
-      platform: state
-      entity_id: binary_sensor.neo_coolcam_doorwindow_detector_sensor
-      from: 'off'
-      to: 'on'
-    condition:
-      condition: and
-      conditions:
-        - condition: time
-          weekday:
-          - mon
-          - tue
-          - wed
-          - thu
-          - fri
-          - sat 
-          - sun
-        - condition: state
-          entity_id: group.everyone
-          state: 'not_home'
-    action:
-      - service: shell_command.capture_video
-      - service: notify.slack
-        data:
-          title: 'Camera Alert - Attached Video'
-          message: 'Video triggered at home!'
-          data:
-            file: 
-              path: /home/homeassistant/.homeassistant/video/snapshot.avi
-      - service: shell_command.copy_video
+# 
+#  - alias: 'Video triggered'
+#     trigger:
+#      platform: state
+#      entity_id: binary_sensor.neo_coolcam_doorwindow_detector_sensor
+#      from: 'off'
+#      to: 'on'
+#    condition:
+#      condition: and
+#      conditions:
+#        - condition: time
+#          weekday:
+#          - mon
+#          - tue
+#          - wed
+#          - thu
+#          - fri
+#          - sat 
+#          - sun
+#        - condition: state
+#          entity_id: group.everyone
+#          state: 'not_home'
+#    action:
+#      - service: shell_command.capture_video
+#      - service: notify.slack
+#        data:
+#          title: 'Camera Alert - Attached Video'
+#          message: 'Video triggered at home!'
+#          data:
+#            file: 
+#              path: /home/homeassistant/.homeassistant/video/snapshot.avi
+#      - service: shell_command.copy_video
 #      - service: shell_command.sync_video
-
-
