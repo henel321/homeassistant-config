@@ -19,6 +19,7 @@ homeassistant:
   allowlist_external_dirs: 
     - !secret ha_snapshot 
     - !secret ha_video
+    - /home/homeassistant/.homeassistant/data 
   auth_providers:
     - type: legacy_api_password
       api_password: !secret api_password

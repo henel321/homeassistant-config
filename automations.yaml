@@ -556,10 +556,10 @@
 - id: '402355496948'
   alias: Scene Office
   trigger:
-    platform: state
+  - platform: state
     entity_id: input_select.scene_or
   condition:
-    condition: or
+  - condition: or
     conditions:
     - condition: state
       entity_id: input_select.scene_or
@@ -570,17 +570,22 @@
     - condition: state
       entity_id: input_select.scene_or
       state: 'Off'
+    - condition: state
+      entity_id: input_select.scene_or
+      state: Bright
   action:
   - service: scene.turn_on
     data_template:
       entity_id: "{% if is_state( \"input_select.scene_or\", \"Normal\" ) %}\n  scene.or_normal\n\
         {%-elif is_state( \"input_select.scene_or\", \"Gaming\" ) %}\n  scene.or_gaming\n\
-        {%-elif is_state( \"input_select.scene_or\", \"Off\" ) %}\n  scene.or_off\n\
+        {%-elif is_state( \"input_select.scene_or\", \"Bright\" ) %}\n  scene.or_bright\
+        \    \n{%-elif is_state( \"input_select.scene_or\", \"Off\" ) %}\n  scene.or_off\n\
         {% endif %}\n"
   - service: input_select.select_option
     data:
       entity_id: input_select.scene_or
       option: '-'
+  mode: single
 - id: '453855809296'
   alias: Scene Vilehlms Room
   trigger:
@@ -812,17 +817,18 @@
   alias: Notify that Elin is home
   trigger:
   - platform: state
-    entity_id: device_tracker.moto_g5_elin
+    entity_id: device_tracker.moto_g9_elin
     from: not_home
     to: home
   condition:
-    condition: state
+  - condition: state
     entity_id: group.parents
     state: not_home
   action:
-    service: notify.slack
+  - service: notify.slack
     data:
       message: Elin is home
+  mode: single
 - id: '695877241625'
   alias: Notify that Henrik is home
   description: Notification that Galaxy S9 is home
@@ -847,11 +853,10 @@
     entity_id: binary_sensor.sensor_12
     to: 'on'
   action:
-    - service: notify.slack
-      data:
-        title: 'Kitchen Flood Sensor: '
-        message: '*** WATER DETECTED BY KITCHEN SENSOR ***'
-
+  - service: notify.slack
+    data:
+      title: 'Kitchen Flood Sensor: '
+      message: '*** WATER DETECTED BY KITCHEN SENSOR ***'
 - id: '971720982759'
   alias: Flooding in Bathroom
   trigger:
@@ -859,11 +864,10 @@
     entity_id: binary_sensor.sensor_13
     to: 'on'
   action:
-    - service: notify.slack
-      data:
-        title: 'Bathroom Flood Sensor: '
-        message: '*** WATER DETECTED BY BATHROOM SENSOR ***'
-
+  - service: notify.slack
+    data:
+      title: 'Bathroom Flood Sensor: '
+      message: '*** WATER DETECTED BY BATHROOM SENSOR ***'
 - id: '60961994646'
   alias: Refrigerator temperature high
   trigger:
@@ -871,11 +875,10 @@
     entity_id: sensor.temperature_7
     above: 12
   action:
-    - service: notify.slack
-      data:
-        title: 'Refrigerator Temperature Sensor: '
-        message: '*** REFRIGERATOR TEMPERATURE ABOVE 12 DEG C!!! ***'
-
+  - service: notify.slack
+    data:
+      title: 'Refrigerator Temperature Sensor: '
+      message: '*** REFRIGERATOR TEMPERATURE ABOVE 12 DEG C!!! ***'
 - id: '234450552674'
   alias: Freezer temperature high
   trigger:
@@ -883,11 +886,10 @@
     entity_id: sensor.temperature_10
     above: -10
   action:
-    - service: notify.slack
-      data:
-        title: 'Freezer Temperature Sensor: '
-        message: '*** FREEZER TEMPERATURE ABOVE -10 DEG C!!! ***'
-
+  - service: notify.slack
+    data:
+      title: 'Freezer Temperature Sensor: '
+      message: '*** FREEZER TEMPERATURE ABOVE -10 DEG C!!! ***'
 - id: '717990556324'
   alias: Smoke Sensor SMOKE
   trigger:
@@ -895,11 +897,10 @@
     entity_id: sensor.fibaro_system_fgsd002_smoke_sensor_smoke
     to: '255'
   action:
-    - service: notify.slack
-      data:
-        title: 'Fibaro Smoke Sensor: '
-        message: '*** SMOKE DETECTED ***'
-
+  - service: notify.slack
+    data:
+      title: 'Fibaro Smoke Sensor: '
+      message: '*** SMOKE DETECTED ***'
 - id: '173766649856'
   alias: Smoke Sensor NOSMOKE
   trigger:
@@ -907,288 +908,274 @@
     entity_id: sensor.fibaro_system_fgsd002_smoke_sensor_smoke
     from: '255'
   action:
-    - service: notify.slack
-      data:
-        title: 'Fibaro Smoke Sensor: '
-        message: 'Smoke stopped -- Manually or automatically'
-
+  - service: notify.slack
+    data:
+      title: 'Fibaro Smoke Sensor: '
+      message: Smoke stopped -- Manually or automatically
 - id: '924734657553'
   alias: Hass New Device Tracked
   trigger:
     platform: event
     event_type: device_tracker_new_device
   action:
-    - service: notify.slack
-      data_template:
-        title: 'New device tracked'
-        message: >
-          {{trigger.event.data.host_name}}
-          ({{trigger.event.data.entity_id}})
+  - service: notify.slack
+    data_template:
+      title: New device tracked
+      message: '{{trigger.event.data.host_name}} ({{trigger.event.data.entity_id}})
 
+        '
 - id: '445845527151'
   alias: Hass Updater
   trigger:
-    - platform: state
-      entity_id: updater.updater
+  - platform: state
+    entity_id: updater.updater
   action:
-    - service: notify.slack
-      data_template:
-        title: 'New Home Assistant Release Available'
-        message: "Home Assistant  {{ states.updater.updater.state }}  is now available."
-
+  - service: notify.slack
+    data_template:
+      title: New Home Assistant Release Available
+      message: Home Assistant  {{ states.updater.updater.state }}  is now available.
 - id: '782399395611'
   alias: Increase floor heating in Shower during weekday mornings
   trigger:
-    - platform: time
-      at: "04:30:00"
+  - platform: time
+    at: 04:30:00
   condition:
     condition: and
     conditions:
-      - condition: time
-        weekday:
-        - mon
-        - tue
-        - wed
-        - thu
-        - fri
-      - condition: state
-        entity_id: group.parents
-        state: 'home'
+    - condition: time
+      weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+    - condition: state
+      entity_id: group.parents
+      state: home
   action:
-    - service: climate.set_hvac_mode
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
-      data:
-        hvac_mode: heat
-    - service: climate.set_temperature
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
-      data:
-        temperature: 26
-
+  - service: climate.set_hvac_mode
+    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
+    data:
+      hvac_mode: heat
+  - service: climate.set_temperature
+    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
+    data:
+      temperature: 26
 - id: '875063269880'
   alias: Decrease floor heating in Shower after weekday mornings
   trigger:
-    - platform: time
-      at: "08:00:00"
+  - platform: time
+    at: 08:00:00
   condition:
     condition: and
     conditions:
-      - condition: time
-        weekday:
-        - mon
-        - tue
-        - wed
-        - thu
-        - fri
+    - condition: time
+      weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
   action:
-    - service: climate.set_temperature
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
-      data:
-        temperature: 23
-
+  - service: climate.set_temperature
+    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
+    data:
+      temperature: 23
 - id: '978978252061'
   alias: Increase floor heating in Shower during weekend mornings
   trigger:
-    - platform: time
-      at: "08:00:00"
+  - platform: time
+    at: 08:00:00
   condition:
     condition: and
     conditions:
-      - condition: time
-        weekday:
-        - sat
-        - sun
-      - condition: state
-        entity_id: group.parents
-        state: 'home'
+    - condition: time
+      weekday:
+      - sat
+      - sun
+    - condition: state
+      entity_id: group.parents
+      state: home
   action:
-    - service: climate.set_hvac_mode
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
-      data:
-        hvac_mode: heat
-    - service: climate.set_temperature
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
-      data:
-        temperature: 27
-
+  - service: climate.set_hvac_mode
+    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
+    data:
+      hvac_mode: heat
+  - service: climate.set_temperature
+    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
+    data:
+      temperature: 27
 - id: '411888423708'
   alias: Decrease floor heating in Shower after weekend mornings
   trigger:
-    - platform: time
-      at: "12:00:00"
+  - platform: time
+    at: '12:00:00'
   condition:
     condition: and
     conditions:
-      - condition: time
-        weekday:
-        - sat
-        - sun
+    - condition: time
+      weekday:
+      - sat
+      - sun
   action:
-    - service: climate.set_temperature
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
-      data:
-        temperature: 23
-
+  - service: climate.set_temperature
+    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
+    data:
+      temperature: 23
 - id: '643424355323'
   alias: Increase floor heating in Bathroom during weekday mornings
   trigger:
-    - platform: time
-      at: "04:00:00"
+  - platform: time
+    at: 04:00:00
   condition:
     condition: and
     conditions:
-      - condition: time
-        weekday:
-        - mon
-        - tue
-        - wed
-        - thu
-        - fri
-      - condition: state
-        entity_id: group.parents
-        state: 'home'
+    - condition: time
+      weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+    - condition: state
+      entity_id: group.parents
+      state: home
   action:
-    - service: climate.set_hvac_mode
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
-      data:
-        hvac_mode: heat
-    - service: climate.set_temperature
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
-      data:
-        temperature: 26
-
+  - service: climate.set_hvac_mode
+    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
+    data:
+      hvac_mode: heat
+  - service: climate.set_temperature
+    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
+    data:
+      temperature: 26
 - id: '104258603414'
   alias: Decrease floor heating in Bathroom after weekday mornings
   trigger:
-    - platform: time
-      at: "08:00:00"
+  - platform: time
+    at: 08:00:00
   condition:
     condition: and
     conditions:
-      - condition: time
-        weekday:
-        - mon
-        - tue
-        - wed
-        - thu
-        - fri
+    - condition: time
+      weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
   action:
-    - service: climate.set_temperature
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
-      data:
-        temperature: 23
-
+  - service: climate.set_temperature
+    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
+    data:
+      temperature: 23
 - id: '665441502482'
   alias: Increase floor heating in Bathroom during weekend mornings
   trigger:
-    - platform: time
-      at: "07:00:00"
+  - platform: time
+    at: 07:00:00
   condition:
     condition: and
     conditions:
-      - condition: time
-        weekday:
-        - sat
-        - sun
-      - condition: state
-        entity_id: group.parents
-        state: 'home'
+    - condition: time
+      weekday:
+      - sat
+      - sun
+    - condition: state
+      entity_id: group.parents
+      state: home
   action:
-    - service: climate.set_hvac_mode
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
-      data:
-        hvac_mode: heat
-    - service: climate.set_temperature
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
-      data:
-        temperature: 27
-
+  - service: climate.set_hvac_mode
+    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
+    data:
+      hvac_mode: heat
+  - service: climate.set_temperature
+    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
+    data:
+      temperature: 27
 - id: '906708440334'
   alias: Decrease floor heating in Bathroom after weekend mornings
   trigger:
-    - platform: time
-      at: "11:00:00"
+  - platform: time
+    at: '11:00:00'
   condition:
     condition: and
     conditions:
-      - condition: time
-        weekday:
-        - sat
-        - sun
+    - condition: time
+      weekday:
+      - sat
+      - sun
   action:
-    - service: climate.set_temperature
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
-      data:
-        temperature: 23
-
+  - service: climate.set_temperature
+    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
+    data:
+      temperature: 23
 - id: '276114421416'
-  alias: 'Vacuum Starting'
+  alias: Vacuum Starting
   trigger:
     platform: state
     entity_id: sensor.vacuum_status
-    to: 'cleaning'
+    to: cleaning
   action:
-    - service: notify.slack
-      data:
-         message: 'Städis is cleaning!'
-
+  - service: notify.slack
+    data:
+      message: Städis is cleaning!
 - id: '228703547667'
-  alias: 'Vacuum Error'
+  alias: Vacuum Error
   trigger:
     platform: state
     entity_id: sensor.vacuum_status
-    to: 'error'
+    to: error
   action:
-    - service: notify.slack
-      data:
-         message: 'Städis is having a problem! Check if he is stuck or locked in somewhere!'
-
+  - service: notify.slack
+    data:
+      message: Städis is having a problem! Check if he is stuck or locked in somewhere!
 - id: '580756970851'
-  alias: 'Vacuum finished'
+  alias: Vacuum finished
   trigger:
     platform: state
     entity_id: sensor.vacuum_cleaning_count
   action:
-    - service: notify.slack
-      data:
-         message: 'Städis is done cleaning! {{ states.vacuum.stadis.attributes.cleaned_area }} m2 was cleaned in {{  states.vacuum.stadis.attributes.cleaning_time }} minutes.'
-    - delay: 3600
-    - service: xiaomi_miio.vacuum_remote_control_start
-      entity_id: vacuum.stadis
-    - delay: 12
-    - service: xiaomi_miio.vacuum_remote_control_move
-      entity_id: vacuum.stadis
-      data:
-        duration: 1400
-        velocity: 0.29
-        rotation: 0
-    - delay: 5
-    - service: xiaomi_miio.vacuum_remote_control_stop
-      entity_id: vacuum.stadis
-
-
+  - service: notify.slack
+    data:
+      message: Städis is done cleaning! {{ states.vacuum.stadis.attributes.cleaned_area
+        }} m2 was cleaned in {{  states.vacuum.stadis.attributes.cleaning_time }}
+        minutes.
+  - delay: 3600
+  - service: xiaomi_miio.vacuum_remote_control_start
+    entity_id: vacuum.stadis
+  - delay: 12
+  - service: xiaomi_miio.vacuum_remote_control_move
+    entity_id: vacuum.stadis
+    data:
+      duration: 1400
+      velocity: 0.29
+      rotation: 0
+  - delay: 5
+  - service: xiaomi_miio.vacuum_remote_control_stop
+    entity_id: vacuum.stadis
 - id: '228989091780'
-  alias: 'Vacuum scheduling weekdays when everyone away'
+  alias: Vacuum scheduling weekdays when everyone away
   trigger:
     platform: time
-    at: "10:30:00"
+    at: '10:30:00'
   condition:
     condition: and
     conditions:
-      - condition: time
-        weekday:
-        - mon
-        - tue
-        - thu
-        - fri
-      - condition: state
-        entity_id: group.parents
-        state: 'not_home'
+    - condition: time
+      weekday:
+      - mon
+      - tue
+      - thu
+      - fri
+    - condition: state
+      entity_id: group.parents
+      state: not_home
   action:
-    - service: vacuum.start
-      entity_id: vacuum.stadis
-
+  - service: vacuum.start
+    entity_id: vacuum.stadis
 - id: '638223194736'
-  alias: "i2 on livingroom ceiling put städis in emptying mode"
+  alias: i2 on livingroom ceiling put städis in emptying mode
   trigger:
     platform: state
     entity_id: binary_sensor.sensor_5
@@ -1196,7 +1183,7 @@
   condition:
   - condition: state
     entity_id: vacuum.stadis
-    state: 'docked'
+    state: docked
   action:
   - service: xiaomi_miio.vacuum_remote_control_start
     entity_id: vacuum.stadis
@@ -1210,4 +1197,26 @@
   - delay: 5
   - service: xiaomi_miio.vacuum_remote_control_stop
     entity_id: vacuum.stadis
-
+- id: '1601840263362'
+  alias: Camera triggered - RLC520
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.neo_coolcam_doorwindow_detector_sensor
+    from: 'off'
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: group.everyone
+    state: not_home
+  action:
+  - service: shell_command.camera_take_snapshot
+    data: {}
+  - service: notify.slack
+    data:
+      title: Camera Triggered
+      message: Camera triggered at home!
+      data:
+        file:
+          path: /home/homeassistant/.homeassistant/data/camera_snapshots/snap1.jpg
+  mode: single

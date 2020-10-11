@@ -26,6 +26,11 @@ shell_command:
   capture_video: 'rm -f /home/homeassistant/.homeassistant/video/snapshot.avi ; ffmpeg -y -i rtsp://camera.tillander.org/unicast -b 900k -vcodec copy -frames 400 -r 60 -y /home/homeassistant/.homeassistant/video/snapshot.avi' 
   copy_video: 'DATE=`date +%Y-%m-%d_%H:%M:%S` ; mkdir /home/homeassistant/.homeassistant/video/$DATE; cp /home/homeassistant/.homeassistant/video/snapshot.avi /home/homeassistant/.homeassistant/video/$DATE'
   sync_video: 'rsync -ave ssh --delete /home/homeassistant/.homeassistant/video mini-gcp:/home/backup'
+  camera_take_snapshot: '/usr/bin/wget "http://192.168.101.150/cgi-bin/api.cgi?cmd=Snap&channel=0&rs=wuuPhkmUCeI9WG7C&user=foobar&password=foobar" -O /home/homeassistant/.homeassistant/data/camera_snapshots/snap1.jpg'
+  camera_take_snapshot2: '/usr/bin/wget "http://192.168.101.150/cgi-bin/api.cgi?cmd=Snap&channel=0&rs=wuuPhkmUCeI9WG7C&user=foobar&password=foobar" -O /home/homeassistant/.homeassistant/data/camera_snapshots/snap2.jpg'
+  camera_take_snapshot3: '/usr/bin/wget "http://192.168.101.150/cgi-bin/api.cgi?cmd=Snap&channel=0&rs=wuuPhkmUCeI9WG7C&user=foobar&password=foobar" -O /home/homeassistant/.homeassistant/data/camera_snapshots/snap3.jpg'
+  camera_capture_video: 'ffmpeg -y -i "rtsp://foobar:foobar@192.168.101.150:554//h264Preview_01_main"  -frames 400 {{filename}}' 
+
  
 
 # automation:

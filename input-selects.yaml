@@ -53,5 +53,6 @@ scene_or:
     - "-"
     - "Off"
     - "Normal"
+    - "Bright"
     - "Gaming"
 

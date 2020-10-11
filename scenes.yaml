@@ -224,364 +224,367 @@
 - id: '00006'
   name: ER Bright
   entities:
-   light.elins_light_bulb:
-      state: on
-      brightness: 255 
-      color_temp: 461
-   light.elins_led_strip:
-      state: on 
+    light.elins_light_bulb:
+      state: true
       brightness: 255
-      color_temp: 350 
-   switch.telldusextra_switch:
-      state: on
-
-- id: '00007'   
-  name: ER Normal 
+      color_temp: 461
+    light.elins_led_strip:
+      state: true
+      brightness: 255
+      color_temp: 350
+    switch.telldusextra_switch:
+      state: true
+- id: '00007'
+  name: ER Normal
   entities:
-   light.elins_light_bulb:
-      state: on
+    light.elins_light_bulb:
+      state: true
       brightness: 130
       color_temp: 461
-   light.elins_led_strip:
-      state: on 
-      brightness: 90 
-      color_name: cyan 
-   switch.telldusextra_switch:
-      state: on
-   light.level_8:
-      state: off
-
-- id: '00008'
-  name: ER Off 
+    light.elins_led_strip:
+      state: true
+      brightness: 90
+      color_name: cyan
+    switch.telldusextra_switch:
+      state: true
+    light.level_8:
+      state: false
+- id: 00008
+  name: ER Off
   entities:
-   light.elins_light_bulb:
-      state: off
-   light.elins_led_strip:
-      state: off 
-   switch.telldusextra_switch:
-      state: off
-   light.level_8:
-      state: off
-
-
-- id: '00009'
-  name: ER Party 
+    light.elins_light_bulb:
+      state: false
+    light.elins_led_strip:
+      state: false
+    switch.telldusextra_switch:
+      state: false
+    light.level_8:
+      state: false
+- id: 00009
+  name: ER Party
   entities:
-   light.elins_light_bulb:
-      state: on
+    light.elins_light_bulb:
+      state: true
       brightness: 30
-      color_name: magenta 
-   light.elins_led_strip:
-      state: on 
+      color_name: magenta
+    light.elins_led_strip:
+      state: true
       brightness: 200
-      color_name: magenta 
-   switch.telldusextra_switch:
-      state: on 
-
+      color_name: magenta
+    switch.telldusextra_switch:
+      state: true
 - id: '00010'
   name: ER Sleep
   entities:
-   light.elins_light_bulb:
-      state: on
-      brightness: 3 
-      color_temp: 454 
-   light.elins_led_strip:
-      state: off
-   switch.telldusextra_switch:
-      state: off 
-
+    light.elins_light_bulb:
+      state: true
+      brightness: 3
+      color_temp: 454
+    light.elins_led_strip:
+      state: false
+    switch.telldusextra_switch:
+      state: false
 - id: '00011'
   name: K Cook
   entities:
-   light.level_7:
-      state: on
-      brightness: 150 
-   light.level_16:
-      state: on
+    light.level_7:
+      state: true
+      brightness: 150
+    light.level_16:
+      state: true
       brightness: 50
-   
 - id: '00012'
-  name: K Eat 
+  name: K Eat
   entities:
-   light.level_7:
-      state: on
+    light.level_7:
+      state: true
       brightness: 50
-   light.level_16:
-      state: on
-      brightness: 150 
-   
-- id: '00013' 
-  name: LR Bright 
+    light.level_16:
+      state: true
+      brightness: 150
+- id: '00013'
+  name: LR Bright
   entities:
-   light.ikea_ps_uplight:
-      state: on
+    light.ikea_ps_uplight:
+      state: true
       brightness: 250
       color_name: wheat
-   light.living_room_1:
-      state: on
-      brightness: 200
-      color_temp: 370 
-   light.living_room_2:
-      state: on
-      brightness: 200
-      color_temp: 370 
-   light.window_mood_light:
-      state: on
+    light.living_room_1:
+      state: true
       brightness: 200
       color_temp: 370
-   light.lifx_led_strip:
-      state: on 
-      brightness: 255 
+    light.living_room_2:
+      state: true
+      brightness: 200
       color_temp: 370
-   light.floor_light:
-      state: on
+    light.window_mood_light:
+      state: true
+      brightness: 200
+      color_temp: 370
+    light.lifx_led_strip:
+      state: true
+      brightness: 255
+      color_temp: 370
+    light.floor_light:
+      state: true
       brightness: 250
       color_name: wheat
-
 - id: '00014'
-  name: LR Cozy 
+  name: LR Cozy
   entities:
-   light.ikea_ps_uplight:
-      state: on
+    light.ikea_ps_uplight:
+      state: true
       color_temp: 475
-      brightness: 80  
-   light.living_room_1:
-      state: on
+      brightness: 80
+    light.living_room_1:
+      state: true
       brightness: 50
       color_temp: 458
-   light.living_room_2:
-      state: on
-      brightness: 50 
+    light.living_room_2:
+      state: true
+      brightness: 50
       color_temp: 458
-   light.window_mood_light:
-      state: on
-      brightness: 30 
+    light.window_mood_light:
+      state: true
+      brightness: 30
       color_temp: 458
-   light.lifx_led_strip:
-      state: on 
-      brightness: 70 
-      color_name: PaleGoldenRod 
-#   switch.indoor_plug_3:
-#      state: on
-   light.floor_light:
-      state: on
+    light.lifx_led_strip:
+      state: true
+      brightness: 70
+      color_name: PaleGoldenRod
+    light.floor_light:
+      state: true
       color_temp: 440
       brightness: 10
-
 - id: '00015'
-  name: LR Movie 
+  name: LR Movie
   entities:
-   light.ikea_ps_uplight:
-      state: on
+    light.ikea_ps_uplight:
+      state: true
       color_name: blue
-      brightness: 30 
-   light.living_room_1:
-      state: on
-      brightness: 20 
-      color_temp: 458
-   light.living_room_2:
-      state: on
-      brightness: 20 
-      color_temp: 458
-   light.window_mood_light:
-      state: on
+      brightness: 30
+    light.living_room_1:
+      state: true
       brightness: 20
       color_temp: 458
-   light.lifx_led_strip:
-      state: on 
-      brightness: 30 
+    light.living_room_2:
+      state: true
+      brightness: 20
+      color_temp: 458
+    light.window_mood_light:
+      state: true
+      brightness: 20
+      color_temp: 458
+    light.lifx_led_strip:
+      state: true
+      brightness: 30
       color_name: dodgerblue
-#   switch.indoor_plug_3:
-#      state: on
-   light.floor_light:
-      state: on
+    light.floor_light:
+      state: true
       color_name: blue
-      brightness: 10 
-
+      brightness: 10
 - id: '00016'
-  name: LR Normal 
+  name: LR Normal
   entities:
-   light.ikea_ps_uplight:
-      state: on
+    light.ikea_ps_uplight:
+      state: true
       brightness: 180
       color_temp: 461
-   light.living_room_1:
-      state: on
+    light.living_room_1:
+      state: true
       brightness: 180
       color_temp: 461
-   light.living_room_2:
-      state: on
+    light.living_room_2:
+      state: true
       brightness: 180
       color_temp: 461
-   light.window_mood_light:
-      state: on
-      brightness: 80 
+    light.window_mood_light:
+      state: true
+      brightness: 80
       color_temp: 461
-   light.lifx_led_strip:
-      state: on 
+    light.lifx_led_strip:
+      state: true
       brightness: 130
-      color_name: PaleGoldenRod 
-#   switch.indoor_plug_3:
-#      state: on
-   light.floor_light:
-      state: on
+      color_name: PaleGoldenRod
+    light.floor_light:
+      state: true
       brightness: 180
       color_temp: 475
-
 - id: '00017'
   name: LR Off
   entities:
-   light.ikea_ps_uplight:
-      state: off
-   light.living_room_1:
-      state: off
-   light.living_room_2:
-      state: off
-   light.window_mood_light:
-      state: off
-   light.lifx_led_strip:
-      state: off
-   light.level_6:
-      state: off
-   light.level_7:
-      state: off
-   light.level_16:
-      state: off
-#   switch.indoor_plug_3:
-#      state: off
-   light.floor_light:
-      state: off
-
-
-- id: '00018'
+    light.ikea_ps_uplight:
+      state: false
+    light.living_room_1:
+      state: false
+    light.living_room_2:
+      state: false
+    light.window_mood_light:
+      state: false
+    light.lifx_led_strip:
+      state: false
+    light.level_6:
+      state: false
+    light.level_7:
+      state: false
+    light.level_16:
+      state: false
+    light.floor_light:
+      state: false
+- id: 00018
   name: LR Romantic
   entities:
-   light.ikea_ps_uplight:
-      state: on
-      brightness: 40 
+    light.ikea_ps_uplight:
+      state: true
+      brightness: 40
       color_name: red
-   light.living_room_1:
-      state: on
-      brightness: 10 
-      color_temp: 458
-   light.living_room_2:
-      state: on
+    light.living_room_1:
+      state: true
       brightness: 10
       color_temp: 458
-   light.window_mood_light:
-      state: on
-      brightness: 10 
+    light.living_room_2:
+      state: true
+      brightness: 10
       color_temp: 458
-   light.lifx_led_strip:
-      state: on 
-      brightness: 40 
-      color_name: red 
-#   switch.indoor_plug_3:
-#      state: on
-   light.floor_light:
-      state: on
+    light.window_mood_light:
+      state: true
+      brightness: 10
+      color_temp: 458
+    light.lifx_led_strip:
+      state: true
+      brightness: 40
+      color_name: red
+    light.floor_light:
+      state: true
       brightness: 20
       color_name: red
-
-- id: '00019'
-  name: OR Gaming 
+- id: 00019
+  name: OR Gaming
   entities:
-   light.office_table_light:
-      state: on
-      brightness: 10 
-      color_temp: 425 
-   light.office_led_strip:
-      state: on
-      brightness: 200
-      color_name: magenta 
-   switch.office_screen_light:
-      state: on
-   light.office_painting_spotlight:
-      state: on
-      brightness: 10 
+    light.office_table_light:
+      state: true
+      brightness: 10
       color_temp: 425
-
+    light.office_led_strip:
+      state: true
+      brightness: 200
+      color_name: magenta
+    switch.office_screen_light:
+      state: true
+    light.office_painting_spotlight:
+      state: true
+      brightness: 10
+      color_temp: 425
 - id: '00020'
-  name: OR Normal 
+  name: OR Normal
   entities:
-   light.office_table_light: 
-      state: on
+    light.office_table_light:
+      state: true
       brightness: 130
       color_temp: 425
-   light.office_led_strip:
-      state: on
+    light.office_led_strip:
+      state: true
       brightness: 150
       color_temp: 425
-   switch.office_screen_light:
-      state: on
-   light.office_painting_spotlight:
-      state: on
+    switch.office_screen_light:
+      state: true
+    light.office_painting_spotlight:
+      state: true
       brightness: 125
       color_temp: 425
-
 - id: '00021'
-  name: OR Off 
+  name: OR Off
   entities:
-   light.office_table_light: 
-      state: off
-   light.office_led_strip:
-      state: off
-   switch.office_screen_light:
-      state: off
-   light.office_painting_spotlight:
-      state: off
-   light.level_15:
-      state: off
-
+    light.office_table_light:
+      state: false
+    light.office_led_strip:
+      state: false
+    switch.office_screen_light:
+      state: false
+    light.office_painting_spotlight:
+      state: false
+    light.level_15:
+      state: false
 - id: '00022'
   name: VR Bright
   entities:
-   light.vilhelms_light_bulb:
-      state: on
+    light.vilhelms_light_bulb:
+      state: true
       brightness: 255
       color_temp: 461
-   switch.telldusvilhelm_switch:
-      state: on
-   switch.indoor_plug_2:
-      state: on
-
+    switch.telldusvilhelm_switch:
+      state: true
+    switch.indoor_plug_2:
+      state: true
 - id: '00023'
-  name: VR Normal 
+  name: VR Normal
   entities:
-   light.vilhelms_light_bulb:
-      state: on
+    light.vilhelms_light_bulb:
+      state: true
       brightness: 130
       color_temp: 461
-   switch.telldusvilhelm_switch:
-      state: on
-   light.level_13:
-      state: off
-   switch.indoor_plug_2:
-      state: on
-
+    switch.telldusvilhelm_switch:
+      state: true
+    light.level_13:
+      state: false
+    switch.indoor_plug_2:
+      state: true
 - id: '00024'
-  name: VR Off 
+  name: VR Off
   entities:
-   light.vilhelms_light_bulb:
-      state: off
-   switch.telldusvilhelm_switch:
-      state: off
-   light.level_13:
-      state: off
-   switch.indoor_plug_2:
-      state: off
-
+    light.vilhelms_light_bulb:
+      state: false
+    switch.telldusvilhelm_switch:
+      state: false
+    light.level_13:
+      state: false
+    switch.indoor_plug_2:
+      state: false
 - id: '00025'
   name: VR Sleep
   entities:
-   light.vilhelms_light_bulb:
-      state: on
-      brightness: 3 
-      color_temp: 454 
-   switch.telldusvilhelm_switch:
-      state: off
-   light.level_13:
-      state: off
-   switch.indoor_plug_2:
-      state: off
-
+    light.vilhelms_light_bulb:
+      state: true
+      brightness: 3
+      color_temp: 454
+    switch.telldusvilhelm_switch:
+      state: false
+    light.level_13:
+      state: false
+    switch.indoor_plug_2:
+      state: false
+- id: '1601823164379'
+  name: OR Bright
+  entities:
+    switch.office_screen_light:
+      friendly_name: Office Screen Light
+      state: 'on'
+    light.office_led_strip:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      brightness: 254
+      color_temp: 373
+      is_deconz_group: false
+      friendly_name: Office Led Strip
+      supported_features: 63
+      state: 'on'
+    light.office_painting_spotlight:
+      min_mireds: 250
+      max_mireds: 454
+      brightness: 254
+      color_temp: 363
+      is_deconz_group: false
+      friendly_name: Office Painting Spotlight
+      supported_features: 43
+      state: 'on'
+    light.office_table_light:
+      min_mireds: 250
+      max_mireds: 454
+      brightness: 254
+      color_temp: 371
+      is_deconz_group: false
+      friendly_name: Office Table Light
+      supported_features: 43
+      state: 'on'
