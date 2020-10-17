@@ -1220,3 +1220,28 @@
         file:
           path: /home/homeassistant/.homeassistant/data/camera_snapshots/snap1.jpg
   mode: single
+- id: '1602913964941'
+  alias: Morning lights on
+  description: ''
+  trigger:
+  - type: turned_on
+    platform: device
+    device_id: 8aaf77f501264fbaa3b0ed8a48bfaa1c
+    entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor
+    domain: binary_sensor
+  condition:
+  - condition: time
+    after: 06:00
+    before: 07:30
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  - condition: sun
+    before: sunrise
+    before_offset: '-1:00:00'
+  action:
+  - scene: scene.lr_normal
+  mode: single
