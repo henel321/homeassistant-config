@@ -13,156 +13,227 @@
   name: BR Bright
   entities:
     light.bedroom_led_strip:
-      brightness: 255
-      color_temp: 350
+      min_mireds: 111
+      max_mireds: 400
       effect_list:
       - effect_colorloop
       - effect_pulse
       - effect_stop
+      brightness: 255
+      color_temp: 350
       friendly_name: 'Bedroom LED strip '
-      max_mireds: 400
-      min_mireds: 111
-      state: 'on'
       supported_features: 55
-    light.henriks_light:
-      brightness: 250
-      friendly_name: Henriks Light
-      is_deconz_group: false
-      max_mireds: 500
-      min_mireds: 153
       state: 'on'
+    light.henriks_light:
+      min_mireds: 250
+      max_mireds: 454
+      brightness: 250
+      color_temp: 451
+      is_deconz_group: false
+      friendly_name: Henriks Light
       supported_features: 43
+      state: 'on'
     light.level_14:
       brightness: 255
-      friendly_name: Bedroom Ceiling Light
       node_id: 35
-      power_consumption: 0
-      state: 'on'
-      supported_features: 33
-      value_id: '72057594629947393'
       value_index: 0
       value_instance: 1
-    light.marias_light:
-      brightness: 250
-      friendly_name: Marias Light
-      is_deconz_group: false
-      max_mireds: 500
-      min_mireds: 153
+      value_id: '72057594629947393'
+      power_consumption: 0
+      friendly_name: Bedroom Ceiling Light
+      supported_features: 33
       state: 'on'
+    light.marias_light:
+      min_mireds: 250
+      max_mireds: 454
+      brightness: 250
+      color_temp: 451
+      is_deconz_group: false
+      friendly_name: Marias Light
       supported_features: 43
+      state: 'on'
+    light.color_temperature_light_32:
+      min_mireds: 140
+      max_mireds: 650
+      brightness: 254
+      color_temp: 416
+      is_deconz_group: false
+      friendly_name: Bedroom Desk Light
+      supported_features: 43
+      state: 'on'
 - id: '00002'
   name: BR Normal
   entities:
     light.balcony_led_strip:
-      brightness: 20
-      color_temp: 360
+      min_mireds: 140
+      max_mireds: 650
       effect_list:
       - colorloop
-      friendly_name: Balcony Led Strip
+      brightness: 125
+      hs_color:
+      - 352.913
+      - 99.608
+      rgb_color:
+      - 255
+      - 0
+      - 31
+      xy_color:
+      - 0.691
+      - 0.295
       is_deconz_group: false
-      max_mireds: 500
-      min_mireds: 153
-      state: 'on'
+      friendly_name: Balcony Led Strip
       supported_features: 63
+      state: 'on'
     light.bedroom_led_strip:
-      brightness: 44
-      color_temp: 361
+      min_mireds: 111
+      max_mireds: 400
       effect_list:
       - effect_colorloop
       - effect_pulse
       - effect_stop
+      brightness: 94
+      color_temp: 363
       friendly_name: 'Bedroom LED strip '
-      max_mireds: 400
-      min_mireds: 111
-      state: 'on'
       supported_features: 55
-    light.henriks_light:
-      brightness: 10
-      friendly_name: Henriks Light
-      is_deconz_group: false
-      max_mireds: 500
-      min_mireds: 153
       state: 'on'
+    light.henriks_light:
+      min_mireds: 250
+      max_mireds: 454
+      brightness: 10
+      color_temp: 451
+      is_deconz_group: false
+      friendly_name: Henriks Light
       supported_features: 43
+      state: 'on'
     light.level_14:
-      friendly_name: Bedroom Ceiling Light
+      brightness: 8
       node_id: 35
-      power_consumption: 1
-      state: 'off'
-      supported_features: 33
-      value_id: '72057594629947393'
       value_index: 0
       value_instance: 1
-    light.marias_light:
-      brightness: 10
-      friendly_name: Marias Light
-      is_deconz_group: false
-      max_mireds: 500
-      min_mireds: 153
+      value_id: '72057594629947393'
+      power_consumption: 0
+      friendly_name: Bedroom Ceiling Light
+      supported_features: 33
       state: 'on'
+    light.marias_light:
+      min_mireds: 250
+      max_mireds: 454
+      brightness: 10
+      color_temp: 451
+      is_deconz_group: false
+      friendly_name: Marias Light
       supported_features: 43
+      state: 'on'
+    light.color_temperature_light_32:
+      min_mireds: 140
+      max_mireds: 650
+      brightness: 205
+      color_temp: 572
+      is_deconz_group: false
+      friendly_name: Bedroom Desk Light
+      supported_features: 43
+      state: 'on'
 - id: '00003'
   name: BR Cozy
   entities:
     light.henriks_light:
-      state: true
+      min_mireds: 250
+      max_mireds: 454
       brightness: 10
-      color_temp: 461
+      color_temp: 454
+      is_deconz_group: false
+      friendly_name: Henriks Light
+      supported_features: 43
+      state: 'on'
     light.marias_light:
-      state: true
+      min_mireds: 250
+      max_mireds: 454
       brightness: 10
-      color_temp: 461
+      color_temp: 454
+      is_deconz_group: false
+      friendly_name: Marias Light
+      supported_features: 43
+      state: 'on'
     light.bedroom_led_strip:
-      state: true
+      min_mireds: 111
+      max_mireds: 400
+      effect_list:
+      - effect_colorloop
+      - effect_pulse
+      - effect_stop
       brightness: 30
       color_temp: 380
+      friendly_name: 'Bedroom LED strip '
+      supported_features: 55
+      state: 'on'
     light.level_14:
-      state: false
+      node_id: 35
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594629947393'
+      power_consumption: 0
+      friendly_name: Bedroom Ceiling Light
+      supported_features: 33
+      state: 'off'
+    light.color_temperature_light_32:
+      min_mireds: 140
+      max_mireds: 650
+      is_deconz_group: false
+      friendly_name: Bedroom Desk Light
+      supported_features: 43
+      state: 'off'
 - id: '00004'
   name: BR Off
   entities:
     light.balcony_led_strip:
+      min_mireds: 140
+      max_mireds: 650
       effect_list:
       - colorloop
-      friendly_name: Balcony Led Strip
       is_deconz_group: false
-      max_mireds: 500
-      min_mireds: 153
-      state: 'off'
+      friendly_name: Balcony Led Strip
       supported_features: 63
+      state: 'off'
     light.bedroom_led_strip:
+      min_mireds: 111
+      max_mireds: 400
       effect_list:
       - effect_colorloop
       - effect_pulse
       - effect_stop
       friendly_name: 'Bedroom LED strip '
-      max_mireds: 400
-      min_mireds: 111
-      state: 'off'
       supported_features: 55
+      state: 'off'
     light.henriks_light:
-      friendly_name: Henriks Light
+      min_mireds: 250
+      max_mireds: 454
       is_deconz_group: false
-      max_mireds: 500
-      min_mireds: 153
-      state: 'off'
+      friendly_name: Henriks Light
       supported_features: 43
-    light.level_14:
-      friendly_name: Bedroom Ceiling Light
-      node_id: 35
-      power_consumption: 1
       state: 'off'
-      supported_features: 33
-      value_id: '72057594629947393'
+    light.level_14:
+      node_id: 35
       value_index: 0
       value_instance: 1
-    light.marias_light:
-      friendly_name: Marias Light
-      is_deconz_group: false
-      max_mireds: 500
-      min_mireds: 153
+      value_id: '72057594629947393'
+      power_consumption: 0
+      friendly_name: Bedroom Ceiling Light
+      supported_features: 33
       state: 'off'
+    light.marias_light:
+      min_mireds: 250
+      max_mireds: 454
+      is_deconz_group: false
+      friendly_name: Marias Light
       supported_features: 43
+      state: 'off'
+    light.color_temperature_light_32:
+      min_mireds: 140
+      max_mireds: 650
+      is_deconz_group: false
+      friendly_name: Bedroom Desk Light
+      supported_features: 43
+      state: 'off'
 - id: '00005'
   name: BR Romantic
   entities:
@@ -238,52 +309,236 @@
   name: ER Normal
   entities:
     light.elins_light_bulb:
-      state: true
-      brightness: 130
-      color_temp: 461
+      effect_list:
+      - colorloop
+      brightness: 158
+      hs_color:
+      - 29.497
+      - 70.196
+      rgb_color:
+      - 255
+      - 163
+      - 76
+      xy_color:
+      - 0.538
+      - 0.391
+      is_deconz_group: false
+      friendly_name: Elins Light Bulb
+      supported_features: 61
+      state: 'on'
     light.elins_led_strip:
-      state: true
-      brightness: 90
-      color_name: cyan
+      min_mireds: 111
+      max_mireds: 400
+      effect_list:
+      - effect_colorloop
+      - effect_pulse
+      - effect_stop
+      brightness: 92
+      color_temp: 392
+      friendly_name: Elins LED strip
+      supported_features: 55
+      state: 'on'
     switch.telldusextra_switch:
-      state: true
+      node_id: 4
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594109837312'
+      friendly_name: Elin Bed light
+      state: 'on'
     light.level_8:
-      state: false
+      node_id: 29
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594529284097'
+      power_consumption: 0
+      friendly_name: Elin Ceiling Light
+      supported_features: 33
+      state: 'off'
+    switch.indoor_plug_1:
+      friendly_name: 'Elin Christmas Light '
+      state: 'on'
+    light.color_light_31:
+      effect_list:
+      - colorloop
+      brightness: 171
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      is_deconz_group: false
+      friendly_name: Elins Christmas Star
+      supported_features: 61
+      state: 'on'
 - id: 00008
   name: ER Off
   entities:
     light.elins_light_bulb:
-      state: false
+      effect_list:
+      - colorloop
+      is_deconz_group: false
+      friendly_name: Elins Light Bulb
+      supported_features: 61
+      state: 'off'
     light.elins_led_strip:
-      state: false
+      min_mireds: 111
+      max_mireds: 400
+      effect_list:
+      - effect_colorloop
+      - effect_pulse
+      - effect_stop
+      friendly_name: Elins LED strip
+      supported_features: 55
+      state: 'off'
     switch.telldusextra_switch:
-      state: false
+      node_id: 4
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594109837312'
+      friendly_name: Elin Bed light
+      state: 'off'
     light.level_8:
-      state: false
+      node_id: 29
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594529284097'
+      power_consumption: 0
+      friendly_name: Elin Ceiling Light
+      supported_features: 33
+      state: 'off'
+    light.color_light_31:
+      effect_list:
+      - colorloop
+      is_deconz_group: false
+      friendly_name: Elins Christmas Star
+      supported_features: 61
+      state: 'off'
+    switch.indoor_plug_1:
+      friendly_name: 'Elin Christmas Light '
+      state: 'off'
 - id: 00009
   name: ER Party
   entities:
     light.elins_light_bulb:
-      state: true
+      effect_list:
+      - colorloop
       brightness: 30
-      color_name: magenta
+      hs_color:
+      - 299.754
+      - 95.686
+      rgb_color:
+      - 253
+      - 11
+      - 255
+      xy_color:
+      - 0.383
+      - 0.154
+      is_deconz_group: false
+      friendly_name: Elins Light Bulb
+      supported_features: 61
+      state: 'on'
     light.elins_led_strip:
-      state: true
+      min_mireds: 111
+      max_mireds: 400
+      effect_list:
+      - effect_colorloop
+      - effect_pulse
+      - effect_stop
       brightness: 200
-      color_name: magenta
+      hs_color:
+      - 299.536
+      - 100
+      rgb_color:
+      - 253
+      - 0
+      - 255
+      xy_color:
+      - 0.383
+      - 0.153
+      friendly_name: Elins LED strip
+      supported_features: 55
+      state: 'on'
     switch.telldusextra_switch:
-      state: true
+      node_id: 4
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594109837312'
+      friendly_name: Elin Bed light
+      state: 'on'
+    light.color_light_31:
+      effect_list:
+      - colorloop
+      brightness: 176
+      hs_color:
+      - 299.754
+      - 95.686
+      rgb_color:
+      - 253
+      - 11
+      - 255
+      xy_color:
+      - 0.383
+      - 0.154
+      is_deconz_group: false
+      friendly_name: Elins Christmas Star
+      supported_features: 61
+      state: 'on'
+    switch.indoor_plug_1:
+      friendly_name: 'Elin Christmas Light '
+      state: 'on'
 - id: '00010'
   name: ER Sleep
   entities:
     light.elins_light_bulb:
-      state: true
+      effect_list:
+      - colorloop
       brightness: 3
-      color_temp: 454
+      hs_color:
+      - 29.497
+      - 70.196
+      rgb_color:
+      - 255
+      - 163
+      - 76
+      xy_color:
+      - 0.538
+      - 0.391
+      is_deconz_group: false
+      friendly_name: Elins Light Bulb
+      supported_features: 61
+      state: 'on'
     light.elins_led_strip:
-      state: false
+      min_mireds: 111
+      max_mireds: 400
+      effect_list:
+      - effect_colorloop
+      - effect_pulse
+      - effect_stop
+      friendly_name: Elins LED strip
+      supported_features: 55
+      state: 'off'
     switch.telldusextra_switch:
-      state: false
+      node_id: 4
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594109837312'
+      friendly_name: Elin Bed light
+      state: 'off'
+    switch.indoor_plug_1:
+      friendly_name: 'Elin Christmas Light '
+      state: 'off'
+    light.color_light_31:
+      effect_list:
+      - colorloop
+      is_deconz_group: false
+      friendly_name: Elins Christmas Star
+      supported_features: 61
+      state: 'off'
 - id: '00011'
   name: K Cook
   entities:
@@ -333,29 +588,83 @@
   name: LR Cozy
   entities:
     light.ikea_ps_uplight:
-      state: true
-      color_temp: 475
-      brightness: 80
+      effect_list:
+      - colorloop
+      brightness: 150
+      hs_color:
+      - 30.207
+      - 56.863
+      rgb_color:
+      - 255
+      - 182
+      - 109
+      xy_color:
+      - 0.491
+      - 0.39
+      is_deconz_group: false
+      friendly_name: Ikea PS Uplight
+      supported_features: 61
+      state: 'on'
     light.living_room_1:
-      state: true
+      min_mireds: 250
+      max_mireds: 454
       brightness: 50
-      color_temp: 458
+      color_temp: 454
+      is_deconz_group: false
+      friendly_name: Living Room 1
+      supported_features: 43
+      state: 'on'
     light.living_room_2:
-      state: true
+      min_mireds: 250
+      max_mireds: 454
       brightness: 50
-      color_temp: 458
+      color_temp: 454
+      is_deconz_group: false
+      friendly_name: Living Room 2
+      supported_features: 43
+      state: 'on'
     light.window_mood_light:
-      state: true
-      brightness: 30
-      color_temp: 458
+      brightness: 48
+      is_deconz_group: false
+      friendly_name: Window Mood Light
+      supported_features: 41
+      state: 'on'
     light.lifx_led_strip:
-      state: true
-      brightness: 70
-      color_name: PaleGoldenRod
+      min_mireds: 111
+      max_mireds: 400
+      effect_list:
+      - effect_colorloop
+      - effect_pulse
+      - effect_stop
+      brightness: 98
+      color_temp: 355
+      friendly_name: Livingroom LED Strip
+      supported_features: 55
+      state: 'on'
     light.floor_light:
-      state: true
-      color_temp: 440
-      brightness: 10
+      effect_list:
+      - colorloop
+      brightness: 29
+      hs_color:
+      - 30.207
+      - 56.863
+      rgb_color:
+      - 255
+      - 182
+      - 109
+      xy_color:
+      - 0.491
+      - 0.39
+      is_deconz_group: false
+      friendly_name: Floor Light
+      supported_features: 61
+      state: 'on'
+    switch.indoor_plug_2:
+      friendly_name: Christmas Tree
+      state: unavailable
+    switch.indoor_plug_3:
+      friendly_name: Kitchen Christmas light
+      state: 'on'
 - id: '00015'
   name: LR Movie
   entities:
@@ -387,124 +696,404 @@
   name: LR Normal
   entities:
     light.ikea_ps_uplight:
-      state: true
-      brightness: 180
-      color_temp: 461
+      effect_list:
+      - colorloop
+      brightness: 153
+      hs_color:
+      - 30.867
+      - 67.843
+      rgb_color:
+      - 255
+      - 171
+      - 82
+      xy_color:
+      - 0.524
+      - 0.396
+      is_deconz_group: false
+      friendly_name: Ikea PS Uplight
+      supported_features: 61
+      state: 'on'
     light.living_room_1:
-      state: true
-      brightness: 180
-      color_temp: 461
+      min_mireds: 250
+      max_mireds: 454
+      brightness: 194
+      color_temp: 454
+      is_deconz_group: false
+      friendly_name: Living Room 1
+      supported_features: 43
+      state: 'on'
     light.living_room_2:
-      state: true
+      min_mireds: 250
+      max_mireds: 454
       brightness: 180
-      color_temp: 461
+      color_temp: 454
+      is_deconz_group: false
+      friendly_name: Living Room 2
+      supported_features: 43
+      state: 'on'
     light.window_mood_light:
-      state: true
-      brightness: 80
-      color_temp: 461
+      brightness: 53
+      is_deconz_group: false
+      friendly_name: Window Mood Light
+      supported_features: 41
+      state: 'on'
     light.lifx_led_strip:
-      state: true
-      brightness: 130
-      color_name: PaleGoldenRod
+      min_mireds: 111
+      max_mireds: 400
+      effect_list:
+      - effect_colorloop
+      - effect_pulse
+      - effect_stop
+      brightness: 153
+      color_temp: 327
+      friendly_name: Livingroom LED Strip
+      supported_features: 55
+      state: 'on'
     light.floor_light:
-      state: true
-      brightness: 180
-      color_temp: 475
+      effect_list:
+      - colorloop
+      brightness: 171
+      hs_color:
+      - 33.75
+      - 69.02
+      rgb_color:
+      - 255
+      - 177
+      - 78
+      xy_color:
+      - 0.52
+      - 0.406
+      is_deconz_group: false
+      friendly_name: Floor Light
+      supported_features: 61
+      state: 'on'
+    switch.indoor_plug_2:
+      friendly_name: Christmas Tree
+      state: unavailable
+    switch.indoor_plug_3:
+      friendly_name: Kitchen Christmas light
+      state: 'on'
 - id: '00017'
   name: LR Off
   entities:
     light.ikea_ps_uplight:
-      state: false
+      effect_list:
+      - colorloop
+      is_deconz_group: false
+      friendly_name: Ikea PS Uplight
+      supported_features: 61
+      state: 'off'
     light.living_room_1:
-      state: false
+      min_mireds: 250
+      max_mireds: 454
+      is_deconz_group: false
+      friendly_name: Living Room 1
+      supported_features: 43
+      state: 'off'
     light.living_room_2:
-      state: false
+      min_mireds: 250
+      max_mireds: 454
+      is_deconz_group: false
+      friendly_name: Living Room 2
+      supported_features: 43
+      state: 'off'
     light.window_mood_light:
-      state: false
+      is_deconz_group: false
+      friendly_name: Window Mood Light
+      supported_features: 41
+      state: 'off'
     light.lifx_led_strip:
-      state: false
+      min_mireds: 111
+      max_mireds: 400
+      effect_list:
+      - effect_colorloop
+      - effect_pulse
+      - effect_stop
+      friendly_name: Livingroom LED Strip
+      supported_features: 55
+      state: 'off'
     light.level_6:
-      state: false
+      node_id: 27
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594495729665'
+      power_consumption: 0
+      friendly_name: Livingroom Ceiling Light
+      supported_features: 33
+      state: 'off'
     light.level_7:
-      state: false
+      node_id: 28
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594512506881'
+      power_consumption: 0
+      friendly_name: Kitchen Counter LED
+      supported_features: 33
+      state: 'off'
     light.level_16:
-      state: false
+      node_id: 37
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594663501825'
+      power_consumption: 0
+      friendly_name: Kitchen Ceiling LED
+      supported_features: 33
+      state: 'off'
     light.floor_light:
-      state: false
+      effect_list:
+      - colorloop
+      is_deconz_group: false
+      friendly_name: Floor Light
+      supported_features: 61
+      state: 'off'
+    switch.indoor_plug_3:
+      friendly_name: Kitchen Christmas light
+      state: 'off'
+    switch.indoor_plug_2:
+      friendly_name: Christmas Tree
+      state: unavailable
 - id: 00018
   name: LR Romantic
   entities:
     light.ikea_ps_uplight:
-      state: true
+      effect_list:
+      - colorloop
       brightness: 40
-      color_name: red
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      is_deconz_group: false
+      friendly_name: Ikea PS Uplight
+      supported_features: 61
+      state: 'on'
     light.living_room_1:
-      state: true
+      min_mireds: 250
+      max_mireds: 454
       brightness: 10
-      color_temp: 458
+      color_temp: 454
+      is_deconz_group: false
+      friendly_name: Living Room 1
+      supported_features: 43
+      state: 'on'
     light.living_room_2:
-      state: true
+      min_mireds: 250
+      max_mireds: 454
       brightness: 10
-      color_temp: 458
+      color_temp: 454
+      is_deconz_group: false
+      friendly_name: Living Room 2
+      supported_features: 43
+      state: 'on'
     light.window_mood_light:
-      state: true
       brightness: 10
-      color_temp: 458
+      is_deconz_group: false
+      friendly_name: Window Mood Light
+      supported_features: 41
+      state: 'on'
     light.lifx_led_strip:
-      state: true
-      brightness: 40
-      color_name: red
+      min_mireds: 111
+      max_mireds: 400
+      effect_list:
+      - effect_colorloop
+      - effect_pulse
+      - effect_stop
+      brightness: 140
+      hs_color:
+      - 54.702
+      - 28.571
+      rgb_color:
+      - 255
+      - 248
+      - 182
+      xy_color:
+      - 0.377
+      - 0.398
+      friendly_name: Livingroom LED Strip
+      supported_features: 55
+      state: 'on'
     light.floor_light:
-      state: true
+      effect_list:
+      - colorloop
       brightness: 20
-      color_name: red
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      is_deconz_group: false
+      friendly_name: Floor Light
+      supported_features: 61
+      state: 'on'
+    switch.indoor_plug_3:
+      friendly_name: Kitchen Christmas light
+      state: 'on'
+    switch.indoor_plug_2:
+      friendly_name: Christmas Tree
+      state: unavailable
 - id: 00019
   name: OR Gaming
   entities:
     light.office_table_light:
-      state: true
-      brightness: 10
+      min_mireds: 250
+      max_mireds: 454
+      brightness: 120
       color_temp: 425
+      is_deconz_group: false
+      friendly_name: Office Table Light
+      supported_features: 43
+      state: 'on'
     light.office_led_strip:
-      state: true
-      brightness: 200
-      color_name: magenta
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      brightness: 254
+      hs_color:
+      - 299.51
+      - 96.078
+      rgb_color:
+      - 252
+      - 10
+      - 255
+      xy_color:
+      - 0.381
+      - 0.154
+      is_deconz_group: false
+      friendly_name: Office Led Strip
+      supported_features: 63
+      state: 'on'
     switch.office_screen_light:
-      state: true
+      friendly_name: Office Screen Light
+      state: 'on'
     light.office_painting_spotlight:
-      state: true
-      brightness: 10
-      color_temp: 425
+      effect_list:
+      - colorloop
+      brightness: 254
+      hs_color:
+      - 285
+      - 98.824
+      rgb_color:
+      - 191
+      - 2
+      - 255
+      xy_color:
+      - 0.301
+      - 0.116
+      is_deconz_group: false
+      friendly_name: Office Painting Spotlight
+      supported_features: 61
+      state: 'on'
+    light.office_mood_light:
+      brightness: 76
+      is_deconz_group: false
+      friendly_name: Office Mood light
+      supported_features: 41
+      state: 'on'
 - id: '00020'
   name: OR Normal
   entities:
     light.office_table_light:
-      state: true
-      brightness: 130
-      color_temp: 425
+      min_mireds: 250
+      max_mireds: 454
+      brightness: 254
+      color_temp: 435
+      is_deconz_group: false
+      friendly_name: Office Table Light
+      supported_features: 43
+      state: 'on'
     light.office_led_strip:
-      state: true
-      brightness: 150
-      color_temp: 425
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      brightness: 254
+      color_temp: 552
+      is_deconz_group: false
+      friendly_name: Office Led Strip
+      supported_features: 63
+      state: 'on'
     switch.office_screen_light:
-      state: true
+      friendly_name: Office Screen Light
+      state: 'on'
     light.office_painting_spotlight:
-      state: true
-      brightness: 125
-      color_temp: 425
+      effect_list:
+      - colorloop
+      brightness: 171
+      hs_color:
+      - 30.207
+      - 56.863
+      rgb_color:
+      - 255
+      - 182
+      - 109
+      xy_color:
+      - 0.491
+      - 0.39
+      is_deconz_group: false
+      friendly_name: Office Painting Spotlight
+      supported_features: 61
+      state: 'on'
+    light.office_mood_light:
+      brightness: 37
+      is_deconz_group: false
+      friendly_name: Office Mood light
+      supported_features: 41
+      state: 'on'
 - id: '00021'
   name: OR Off
   entities:
     light.office_table_light:
-      state: false
+      min_mireds: 250
+      max_mireds: 454
+      is_deconz_group: false
+      friendly_name: Office Table Light
+      supported_features: 43
+      state: 'off'
     light.office_led_strip:
-      state: false
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      is_deconz_group: false
+      friendly_name: Office Led Strip
+      supported_features: 63
+      state: 'off'
     switch.office_screen_light:
-      state: false
+      friendly_name: Office Screen Light
+      state: 'off'
     light.office_painting_spotlight:
-      state: false
+      min_mireds: 250
+      max_mireds: 454
+      is_deconz_group: false
+      friendly_name: Office Painting Spotlight
+      supported_features: 43
+      state: 'off'
     light.level_15:
-      state: false
+      node_id: 36
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594646724609'
+      power_consumption: 16
+      friendly_name: Office Ceiling Light
+      supported_features: 33
+      state: 'off'
+    light.office_mood_light:
+      is_deconz_group: false
+      friendly_name: Office Mood light
+      supported_features: 41
+      state: 'off'
 - id: '00022'
   name: VR Bright
   entities:
@@ -520,15 +1109,43 @@
   name: VR Normal
   entities:
     light.vilhelms_light_bulb:
-      state: true
-      brightness: 130
-      color_temp: 461
+      effect_list:
+      - colorloop
+      brightness: 140
+      hs_color:
+      - 30.207
+      - 56.863
+      rgb_color:
+      - 255
+      - 182
+      - 109
+      xy_color:
+      - 0.491
+      - 0.39
+      is_deconz_group: false
+      friendly_name: Vilhelms Light Bulb
+      supported_features: 61
+      state: 'on'
     switch.telldusvilhelm_switch:
-      state: true
+      node_id: 3
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594093060096'
+      friendly_name: Vilhelms LED strip
+      state: 'on'
     light.level_13:
-      state: false
+      brightness: 3
+      node_id: 34
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594613170177'
+      power_consumption: 19.9
+      friendly_name: Vilhelm Ceiling Light
+      supported_features: 33
+      state: 'on'
     switch.indoor_plug_2:
-      state: true
+      friendly_name: Vilhelm's Christmas Star
+      state: unavailable
 - id: '00024'
   name: VR Off
   entities:
@@ -587,4 +1204,83 @@
       is_deconz_group: false
       friendly_name: Office Table Light
       supported_features: 43
+      state: 'on'
+    zwave.qubino_goap_zmnhdd1_flush_dimmer_3:
+      node_id: 36
+      node_name: Qubino (Goap) ZMNHDD1 Flush Dimmer
+      manufacturer_name: Qubino (Goap)
+      product_name: ZMNHDD1 Flush Dimmer
+      query_stage: Complete
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: true
+      capabilities:
+      - beaming
+      - listening
+      - zwave_plus
+      - routing
+      neighbors:
+      - 1
+      - 3
+      - 12
+      - 14
+      - 17
+      - 18
+      - 19
+      - 23
+      - 27
+      - 28
+      - 34
+      - 35
+      - 37
+      - 38
+      - 39
+      - 40
+      - 45
+      - 46
+      - 59
+      - 63
+      - 64
+      - 65
+      sentCnt: 42
+      sentFailed: 0
+      retries: 0
+      receivedCnt: 37
+      receivedDups: 2
+      receivedUnsolicited: 5
+      sentTS: '2020-10-29 19:36:35:000 '
+      receivedTS: '2020-10-29 19:36:37:743 '
+      lastRequestRTT: 73
+      averageRequestRTT: 90
+      lastResponseRTT: 146
+      averageResponseRTT: 260
+      application_version: '3.05'
+      friendly_name: Qubino Office Ceiling Light
+      state: ready
+    switch.qubino_goap_zmnhdd1_flush_dimmer_switch_6:
+      node_id: 36
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594646708224'
+      power_consumption: 16
+      friendly_name: Qubino Office Ceiling Light Switch
+      state: 'off'
+    light.level_15:
+      brightness: 255
+      node_id: 36
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594646724609'
+      power_consumption: 16
+      friendly_name: Office Ceiling Light
+      supported_features: 33
+      state: 'on'
+    light.office_mood_light:
+      brightness: 172
+      is_deconz_group: false
+      friendly_name: Office Mood light
+      supported_features: 41
       state: 'on'

@@ -156,13 +156,12 @@
 - id: '672950339775'
   alias: Turn on cozy light in the Living room and bedroom in the evening
   trigger:
-    platform: time
+  - platform: time
     at: '21:30:00'
   action:
-    service: scene.turn_on
-    entity_id:
-    - scene.lr_cozy
-    - scene.br_cozy
+  - scene: scene.br_normal_2
+  - scene: scene.lr_cozy
+  mode: single
 - id: '643314742250'
   alias: Weekend - Turn off Living room lights in the evening
   trigger:
@@ -275,12 +274,12 @@
     - scene.vr_off
     - scene.or_off
 - id: '749686839929'
-  alias: Turn off Google Homein Living Room in the morning on weekdays
+  alias: Turn off Google Home in Living Room in the morning on weekdays
   trigger:
-    platform: time
-    at: 08:00:00
+  - platform: time
+    at: 08:30:00
   condition:
-    condition: time
+  - condition: time
     weekday:
     - mon
     - tue
@@ -291,6 +290,7 @@
   - service: media_player.turn_off
     data:
       entity_id: media_player.kitchen_display
+  mode: single
 - id: '853122158425'
   alias: Turn on P1 on Google home in Living Room in the morning on weekdays
   trigger:
@@ -397,23 +397,37 @@
     entity_id:
     - scene.lr_normal
 - id: '607766316251'
-  alias: Set Elins room to night mode at 21:00
+  alias: Set Elins room to night mode at 20:30 on weekdays
   trigger:
-    platform: time
-    at: '21:00:00'
+  - platform: time
+    at: '20:30:00'
+  condition:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - sun
   action:
-    service: scene.turn_on
-    entity_id:
-    - scene.er_sleep
+  - scene: scene.er_sleep
+  mode: single
 - id: '830843652626'
-  alias: Set Vilhelms lights to night mode at 22:00
+  alias: Set Vilhelms lights to night mode at 21:00 on weekdays
   trigger:
-    platform: time
-    at: '22:00:00'
+  - platform: time
+    at: '21:00:00'
+  condition:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - sun
   action:
-    service: scene.turn_on
-    entity_id:
-    - scene.vr_sleep
+  - scene: scene.vr_sleep
+  mode: single
 - id: '248309330066'
   alias: 22:00 and Workstation Turned Off
   trigger:
@@ -743,19 +757,26 @@
     from: 'off'
     to: 'on'
   condition:
-    condition: state
+  - condition: state
     entity_id: group.everyone
     state: not_home
   action:
-  - service: shell_command.capture_video
+  - service: camera.record
+    data:
+      filename: /home/homeassistant/.homeassistant/video/video.mp4
+      duration: 20
+    entity_id: camera.hallway2_profile000_mainstream
+  - wait_template: ''
+    timeout: '30'
+    continue_on_timeout: true
   - service: notify.slack
     data:
       title: Camera Alert - Attached Video
       message: Video triggered at home!
       data:
         file:
-          path: /home/homeassistant/.homeassistant/video/snapshot.avi
-  - service: shell_command.copy_video
+          path: /home/homeassistant/.homeassistant/video/video.mp4
+  mode: single
 - id: '443971384802'
   alias: SSL expiry notification
   trigger:
@@ -1113,54 +1134,61 @@
 - id: '276114421416'
   alias: Vacuum Starting
   trigger:
-    platform: state
+  - platform: state
     entity_id: sensor.vacuum_status
     to: cleaning
   action:
   - service: notify.slack
     data:
-      message: Städis is cleaning!
+      message: Pucky is cleaning!
+  mode: single
 - id: '228703547667'
   alias: Vacuum Error
   trigger:
-    platform: state
+  - platform: state
     entity_id: sensor.vacuum_status
     to: error
   action:
   - service: notify.slack
     data:
-      message: Städis is having a problem! Check if he is stuck or locked in somewhere!
+      message: Pucky is having a problem! Check if he is stuck or locked in somewhere!
+  mode: single
 - id: '580756970851'
   alias: Vacuum finished
   trigger:
-    platform: state
+  - platform: state
     entity_id: sensor.vacuum_cleaning_count
+  condition:
+  - condition: time
+    after: 09:00
+    before: '20:00'
   action:
   - service: notify.slack
     data:
-      message: Städis is done cleaning! {{ states.vacuum.stadis.attributes.cleaned_area
+      message: Pucky is done cleaning! {{ states.vacuum.stadis.attributes.cleaned_area
         }} m2 was cleaned in {{  states.vacuum.stadis.attributes.cleaning_time }}
         minutes.
-  - delay: 3600
+  - delay: '3600'
   - service: xiaomi_miio.vacuum_remote_control_start
-    entity_id: vacuum.stadis
-  - delay: 12
+    entity_id: vacuum.pucky
+  - delay: '12'
   - service: xiaomi_miio.vacuum_remote_control_move
-    entity_id: vacuum.stadis
+    entity_id: vacuum.pucky
     data:
       duration: 1400
       velocity: 0.29
       rotation: 0
-  - delay: 5
+  - delay: '5'
   - service: xiaomi_miio.vacuum_remote_control_stop
-    entity_id: vacuum.stadis
+    entity_id: vacuum.pucky
+  mode: single
 - id: '228989091780'
   alias: Vacuum scheduling weekdays when everyone away
   trigger:
-    platform: time
+  - platform: time
     at: '10:30:00'
   condition:
-    condition: and
+  - condition: and
     conditions:
     - condition: time
       weekday:
@@ -1173,7 +1201,8 @@
       state: not_home
   action:
   - service: vacuum.start
-    entity_id: vacuum.stadis
+    entity_id: vacuum.pucky
+  mode: single
 - id: '638223194736'
   alias: i2 on livingroom ceiling put städis in emptying mode
   trigger:
@@ -1241,7 +1270,34 @@
     - fri
   - condition: sun
     before: sunrise
-    before_offset: '-1:00:00'
   action:
   - scene: scene.lr_normal
+  mode: single
+- id: '1607163832633'
+  alias: Set Elins room to night mode at 20:30 on weekends
+  description: ''
+  trigger:
+  - platform: time
+    at: '22:00:00'
+  condition:
+  - condition: time
+    weekday:
+    - fri
+    - sat
+  action:
+  - scene: scene.er_sleep
+  mode: single
+- id: '1607163963599'
+  alias: Set Vilhelms lights to night mode at 22:30 on weekends
+  description: ''
+  trigger:
+  - platform: time
+    at: '22:30:00'
+  condition:
+  - condition: time
+    weekday:
+    - fri
+    - sat
+  action:
+  - scene: scene.vr_sleep
   mode: single

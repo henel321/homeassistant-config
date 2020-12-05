@@ -164,7 +164,7 @@ google_assistant:
   exposed_domains:
     - switch
     - light
-    - climate
+    - vacuum
 
 # Zwave configuration
 zwave: 
@@ -224,9 +224,9 @@ notify:
 
 vacuum:
   - platform: xiaomi_miio
-    host: 192.168.100.151
+    host: 192.168.100.165
     token: !secret xiaomi_token 
-    name: "stadis" 
+    name: "pucky" 
 
 speedtestdotnet:
   scan_interval:

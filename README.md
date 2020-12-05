@@ -11,28 +11,46 @@ Includes:
    - Neo Coolcam door sensor 
    - Telldus door sensor
    - Telldus and Nodon plugin-switches
-   - Heatit Thermostats for Electric flooring 
+   - Heatit Thermostats for electric floor heating
    - Aeon Labs Flood sensors 
    - Danfoss Thermostats for heating
+
 - Conbee / Deconz 
-   - Ikea Tradfri color temp E14 and E27 bulbs 
-   - Ikea Tradfri RGB E27 bulb
-   - Ikea Tradfri remotes
-   - Osram RBG bulb
+   - Ikea Trådfri color temp E14/E27 bulbs 
+   - Ikea Trådfri RGB E14/E27 bulbs
+   - Ikea Trådfri remotes
+   - Ikea Trådfri 10W driver
+   - Ikea Trådfri remotes/switches
+   - Innr Adapter Plug SP1202
+   - Osram Indoor plug
    - Osram Outdoor plug
+   - Osram Led Strip 
+   - Osram Outdoor Led Strip
    - Xiaomi door sensors
    - Xiaomi remotes 
    - Xiaomi temperature probes
-- Lifx Z led strips 
-- Google Assistant (Home Hubs/Homes/Home Minis) 
-- Google Chromecasts (TV Built in, Gen 2 and Audio in Onkyo Receiver) 
-- Logitech Harmony Companion
-- Xiaomi Robot Vacuum v1. 
-- Precense detection through Unifi 
 
-On the Improvement list. 
+- Wifi
+   - Lifx Z led strips 
 
-- Move more config to packages 
-- Re-Add tamper alert for fire alarm once fixed in HA. 
-- Lower thermostat while windows/balcony doors are open to prevent heat from activating.
+- Precense detection 
+   - Unifi Controller
+
+- Voice control
+   - Google Assistant (Home Hub Max/Home Hubs/Home)
+
+- Media 
+   - Google Chromecasts (TV Built in, Gen 2 and Audio in Onkyo Receiver)
+   - Logitech Harmony Companion
+
+- Appliances
+   - Roborock S5 Max
+   - Bosch Washer/Dryer with HomeConnect
+
+- Cameras 
+   - Reolink RLC-520
+
+- Weather Station 
+   - Netatmo
+
 
