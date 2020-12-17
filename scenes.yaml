@@ -69,17 +69,17 @@
       max_mireds: 650
       effect_list:
       - colorloop
-      brightness: 125
+      brightness: 163
       hs_color:
-      - 352.913
-      - 99.608
+      - 350.824
+      - 100
       rgb_color:
       - 255
       - 0
-      - 31
+      - 38
       xy_color:
-      - 0.691
-      - 0.295
+      - 0.687
+      - 0.293
       is_deconz_group: false
       friendly_name: Balcony Led Strip
       supported_features: 63
@@ -99,7 +99,7 @@
     light.henriks_light:
       min_mireds: 250
       max_mireds: 454
-      brightness: 10
+      brightness: 138
       color_temp: 451
       is_deconz_group: false
       friendly_name: Henriks Light
@@ -111,14 +111,14 @@
       value_index: 0
       value_instance: 1
       value_id: '72057594629947393'
-      power_consumption: 0
+      power_consumption: 0.4
       friendly_name: Bedroom Ceiling Light
       supported_features: 33
       state: 'on'
     light.marias_light:
       min_mireds: 250
       max_mireds: 454
-      brightness: 10
+      brightness: 71
       color_temp: 451
       is_deconz_group: false
       friendly_name: Marias Light
@@ -127,11 +127,14 @@
     light.color_temperature_light_32:
       min_mireds: 140
       max_mireds: 650
-      brightness: 205
+      brightness: 224
       color_temp: 572
       is_deconz_group: false
       friendly_name: Bedroom Desk Light
       supported_features: 43
+      state: 'on'
+    switch.osram_outdoor_plug:
+      friendly_name: Balcony Outdoor Plug
       state: 'on'
 - id: '00003'
   name: BR Cozy
@@ -216,7 +219,7 @@
       value_index: 0
       value_instance: 1
       value_id: '72057594629947393'
-      power_consumption: 0
+      power_consumption: 0.4
       friendly_name: Bedroom Ceiling Light
       supported_features: 33
       state: 'off'
@@ -234,64 +237,72 @@
       friendly_name: Bedroom Desk Light
       supported_features: 43
       state: 'off'
+    switch.osram_outdoor_plug:
+      friendly_name: Balcony Outdoor Plug
+      state: 'off'
 - id: '00005'
   name: BR Romantic
   entities:
     light.balcony_led_strip:
+      min_mireds: 140
+      max_mireds: 650
       effect_list:
       - colorloop
-      friendly_name: Balcony Led Strip
       is_deconz_group: false
-      max_mireds: 500
-      min_mireds: 153
-      state: 'off'
+      friendly_name: Balcony Led Strip
       supported_features: 63
+      state: 'off'
     light.bedroom_led_strip:
-      brightness: 118
+      min_mireds: 111
+      max_mireds: 400
       effect_list:
       - effect_colorloop
       - effect_pulse
       - effect_stop
-      friendly_name: 'Bedroom LED strip '
+      brightness: 118
       hs_color:
-      - 358.599
+      - 357.193
       - 100
-      max_mireds: 400
-      min_mireds: 111
       rgb_color:
       - 255
       - 0
-      - 5
-      state: 'on'
-      supported_features: 55
+      - 11
       xy_color:
-      - 0.7
-      - 0.299
-    light.henriks_light:
-      brightness: 19
-      friendly_name: Henriks Light
-      is_deconz_group: false
-      max_mireds: 500
-      min_mireds: 153
+      - 0.698
+      - 0.298
+      friendly_name: 'Bedroom LED strip '
+      supported_features: 55
       state: 'on'
+    light.henriks_light:
+      min_mireds: 250
+      max_mireds: 454
+      brightness: 19
+      color_temp: 451
+      is_deconz_group: false
+      friendly_name: Henriks Light
       supported_features: 43
+      state: 'on'
     light.level_14:
-      friendly_name: Bedroom Ceiling Light
       node_id: 35
-      power_consumption: 1
-      state: 'off'
-      supported_features: 33
-      value_id: '72057594629947393'
       value_index: 0
       value_instance: 1
+      value_id: '72057594629947393'
+      power_consumption: 0.4
+      friendly_name: Bedroom Ceiling Light
+      supported_features: 33
+      state: 'off'
     light.marias_light:
+      min_mireds: 250
+      max_mireds: 454
       brightness: 10
-      friendly_name: Marias Light
+      color_temp: 451
       is_deconz_group: false
-      max_mireds: 500
-      min_mireds: 153
-      state: 'on'
+      friendly_name: Marias Light
       supported_features: 43
+      state: 'on'
+    switch.osram_outdoor_plug:
+      friendly_name: Balcony Outdoor Plug
+      state: 'off'
 - id: '00006'
   name: ER Bright
   entities:
@@ -311,17 +322,17 @@
     light.elins_light_bulb:
       effect_list:
       - colorloop
-      brightness: 158
+      brightness: 189
       hs_color:
-      - 29.497
-      - 70.196
+      - 29.326
+      - 69.804
       rgb_color:
       - 255
-      - 163
+      - 164
       - 76
       xy_color:
-      - 0.538
-      - 0.391
+      - 0.537
+      - 0.392
       is_deconz_group: false
       friendly_name: Elins Light Bulb
       supported_features: 61
@@ -333,7 +344,7 @@
       - effect_colorloop
       - effect_pulse
       - effect_stop
-      brightness: 92
+      brightness: 115
       color_temp: 392
       friendly_name: Elins LED strip
       supported_features: 55
@@ -360,7 +371,7 @@
     light.color_light_31:
       effect_list:
       - colorloop
-      brightness: 171
+      brightness: 217
       hs_color:
       - 0
       - 100
@@ -698,17 +709,17 @@
     light.ikea_ps_uplight:
       effect_list:
       - colorloop
-      brightness: 153
+      brightness: 204
       hs_color:
-      - 30.867
-      - 67.843
+      - 30.175
+      - 67.059
       rgb_color:
       - 255
-      - 171
-      - 82
+      - 169
+      - 83
       xy_color:
-      - 0.524
-      - 0.396
+      - 0.526
+      - 0.393
       is_deconz_group: false
       friendly_name: Ikea PS Uplight
       supported_features: 61
@@ -725,7 +736,7 @@
     light.living_room_2:
       min_mireds: 250
       max_mireds: 454
-      brightness: 180
+      brightness: 196
       color_temp: 454
       is_deconz_group: false
       friendly_name: Living Room 2
@@ -752,24 +763,24 @@
     light.floor_light:
       effect_list:
       - colorloop
-      brightness: 171
+      brightness: 194
       hs_color:
-      - 33.75
+      - 33.409
       - 69.02
       rgb_color:
       - 255
-      - 177
+      - 176
       - 78
       xy_color:
-      - 0.52
-      - 0.406
+      - 0.521
+      - 0.405
       is_deconz_group: false
       friendly_name: Floor Light
       supported_features: 61
       state: 'on'
     switch.indoor_plug_2:
       friendly_name: Christmas Tree
-      state: unavailable
+      state: 'on'
     switch.indoor_plug_3:
       friendly_name: Kitchen Christmas light
       state: 'on'
@@ -1030,7 +1041,7 @@
     light.office_painting_spotlight:
       effect_list:
       - colorloop
-      brightness: 171
+      brightness: 237
       hs_color:
       - 30.207
       - 56.863
@@ -1046,7 +1057,7 @@
       supported_features: 61
       state: 'on'
     light.office_mood_light:
-      brightness: 37
+      brightness: 74
       is_deconz_group: false
       friendly_name: Office Mood light
       supported_features: 41
@@ -1098,20 +1109,27 @@
   name: VR Bright
   entities:
     light.vilhelms_light_bulb:
-      state: true
-      brightness: 255
-      color_temp: 461
+      effect_list:
+      - colorloop
+      brightness: 254
+      is_deconz_group: false
+      friendly_name: Vilhelms Light Bulb
+      supported_features: 61
+      state: 'on'
     switch.telldusvilhelm_switch:
-      state: true
-    switch.indoor_plug_2:
-      state: true
+      node_id: 3
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594093060096'
+      friendly_name: Vilhelms LED strip
+      state: 'on'
 - id: '00023'
   name: VR Normal
   entities:
     light.vilhelms_light_bulb:
       effect_list:
       - colorloop
-      brightness: 140
+      brightness: 171
       hs_color:
       - 30.207
       - 56.863
@@ -1134,42 +1152,68 @@
       friendly_name: Vilhelms LED strip
       state: 'on'
     light.level_13:
-      brightness: 3
+      brightness: 26
       node_id: 34
       value_index: 0
       value_instance: 1
       value_id: '72057594613170177'
-      power_consumption: 19.9
+      power_consumption: 19
       friendly_name: Vilhelm Ceiling Light
       supported_features: 33
       state: 'on'
-    switch.indoor_plug_2:
-      friendly_name: Vilhelm's Christmas Star
-      state: unavailable
 - id: '00024'
   name: VR Off
   entities:
     light.vilhelms_light_bulb:
-      state: false
+      effect_list:
+      - colorloop
+      is_deconz_group: false
+      friendly_name: Vilhelms Light Bulb
+      supported_features: 61
+      state: 'off'
     switch.telldusvilhelm_switch:
-      state: false
+      node_id: 3
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594093060096'
+      friendly_name: Vilhelms LED strip
+      state: 'off'
     light.level_13:
-      state: false
-    switch.indoor_plug_2:
-      state: false
+      node_id: 34
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594613170177'
+      power_consumption: 19
+      friendly_name: Vilhelm Ceiling Light
+      supported_features: 33
+      state: 'off'
 - id: '00025'
   name: VR Sleep
   entities:
     light.vilhelms_light_bulb:
-      state: true
+      effect_list:
+      - colorloop
       brightness: 3
-      color_temp: 454
+      is_deconz_group: false
+      friendly_name: Vilhelms Light Bulb
+      supported_features: 61
+      state: 'on'
     switch.telldusvilhelm_switch:
-      state: false
+      node_id: 3
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594093060096'
+      friendly_name: Vilhelms LED strip
+      state: 'off'
     light.level_13:
-      state: false
-    switch.indoor_plug_2:
-      state: false
+      node_id: 34
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594613170177'
+      power_consumption: 19
+      friendly_name: Vilhelm Ceiling Light
+      supported_features: 33
+      state: 'off'
 - id: '1601823164379'
   name: OR Bright
   entities:

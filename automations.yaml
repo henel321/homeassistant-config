@@ -1160,22 +1160,21 @@
     entity_id: sensor.vacuum_cleaning_count
   condition:
   - condition: time
-    after: 09:00
-    before: '20:00'
+    after: '10:00'
+    before: '18:00'
   action:
   - service: notify.slack
     data:
-      message: Pucky is done cleaning! {{ states.vacuum.stadis.attributes.cleaned_area
-        }} m2 was cleaned in {{  states.vacuum.stadis.attributes.cleaning_time }}
-        minutes.
+      message: Pucky is done cleaning! {{ states.vacuum.pucky.attributes.cleaned_area
+        }} m2 was cleaned in {{  states.vacuum.pucky.attributes.cleaning_time }} minutes.
   - delay: '3600'
   - service: xiaomi_miio.vacuum_remote_control_start
     entity_id: vacuum.pucky
-  - delay: '12'
+  - delay: '15'
   - service: xiaomi_miio.vacuum_remote_control_move
     entity_id: vacuum.pucky
     data:
-      duration: 1400
+      duration: 1200
       velocity: 0.29
       rotation: 0
   - delay: '5'
