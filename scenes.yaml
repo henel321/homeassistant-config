@@ -862,7 +862,7 @@
       state: 'off'
     switch.indoor_plug_2:
       friendly_name: Christmas Tree
-      state: unavailable
+      state: 'off'
 - id: 00018
   name: LR Romantic
   entities:
