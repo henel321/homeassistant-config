@@ -21,25 +21,27 @@
 - id: '823235387706'
   alias: Bad weather - lights on!
   trigger:
-    platform: sun
+  - platform: sun
     event: sunset
-    offset: -02:00:00
+    offset: -02:30:00
   condition:
-    condition: and
+  - condition: and
     conditions:
     - condition: numeric_state
-      entity_id: sensor.weather_cloudiness
+      entity_id: weather.smhi_home
       above: '80'
+      attribute: cloudiness
     - condition: time
       before: '21:30:00'
   action:
-    service: scene.turn_on
+  - service: scene.turn_on
     entity_id:
     - scene.br_normal
     - scene.lr_normal
     - scene.er_normal
     - scene.vr_normal
     - scene.or_normal
+  mode: single
 - id: '389593401903'
   alias: Turn off bathroom mirror light after 10 minutes of no movement
   trigger:
@@ -758,7 +760,7 @@
     to: 'on'
   condition:
   - condition: state
-    entity_id: group.everyone
+    entity_id: group.parents
     state: not_home
   action:
   - service: camera.record
@@ -767,8 +769,8 @@
       duration: 20
     entity_id: camera.hallway2_profile000_mainstream
   - wait_template: ''
-    timeout: '30'
     continue_on_timeout: true
+    timeout: '40'
   - service: notify.slack
     data:
       title: Camera Alert - Attached Video
@@ -823,17 +825,18 @@
   alias: Notify that Vilhelm is home
   trigger:
   - platform: state
-    entity_id: device_tracker.galaxy_s7_vilhelm_2
+    entity_id: device_tracker.mobile_vilhelm
     from: not_home
     to: home
   condition:
-    condition: state
+  - condition: state
     entity_id: group.parents
     state: not_home
   action:
-    service: notify.slack
+  - service: notify.slack
     data:
       message: Vilhelm is home
+  mode: single
 - id: '913457918983'
   alias: Notify that Elin is home
   trigger:
@@ -1174,7 +1177,7 @@
   - service: xiaomi_miio.vacuum_remote_control_move
     entity_id: vacuum.pucky
     data:
-      duration: 1200
+      duration: 900
       velocity: 0.29
       rotation: 0
   - delay: '5'

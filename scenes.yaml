@@ -69,17 +69,8 @@
       max_mireds: 650
       effect_list:
       - colorloop
-      brightness: 163
-      hs_color:
-      - 350.824
-      - 100
-      rgb_color:
-      - 255
-      - 0
-      - 38
-      xy_color:
-      - 0.687
-      - 0.293
+      brightness: 143
+      color_temp: 427
       is_deconz_group: false
       friendly_name: Balcony Led Strip
       supported_features: 63
@@ -111,7 +102,7 @@
       value_index: 0
       value_instance: 1
       value_id: '72057594629947393'
-      power_consumption: 0.4
+      power_consumption: 0
       friendly_name: Bedroom Ceiling Light
       supported_features: 33
       state: 'on'
@@ -132,9 +123,6 @@
       is_deconz_group: false
       friendly_name: Bedroom Desk Light
       supported_features: 43
-      state: 'on'
-    switch.osram_outdoor_plug:
-      friendly_name: Balcony Outdoor Plug
       state: 'on'
 - id: '00003'
   name: BR Cozy
@@ -287,7 +275,7 @@
       value_index: 0
       value_instance: 1
       value_id: '72057594629947393'
-      power_consumption: 0.4
+      power_consumption: 0
       friendly_name: Bedroom Ceiling Light
       supported_features: 33
       state: 'off'
@@ -300,9 +288,6 @@
       friendly_name: Marias Light
       supported_features: 43
       state: 'on'
-    switch.osram_outdoor_plug:
-      friendly_name: Balcony Outdoor Plug
-      state: 'off'
 - id: '00006'
   name: ER Bright
   entities:
@@ -635,7 +620,7 @@
       supported_features: 43
       state: 'on'
     light.window_mood_light:
-      brightness: 48
+      brightness: 3
       is_deconz_group: false
       friendly_name: Window Mood Light
       supported_features: 41
@@ -655,24 +640,24 @@
     light.floor_light:
       effect_list:
       - colorloop
-      brightness: 29
+      brightness: 10
       hs_color:
-      - 30.207
-      - 56.863
+      - 29.834
+      - 70.98
       rgb_color:
       - 255
-      - 182
-      - 109
+      - 163
+      - 74
       xy_color:
-      - 0.491
-      - 0.39
+      - 0.539
+      - 0.392
       is_deconz_group: false
       friendly_name: Floor Light
       supported_features: 61
       state: 'on'
     switch.indoor_plug_2:
       friendly_name: Christmas Tree
-      state: unavailable
+      state: 'on'
     switch.indoor_plug_3:
       friendly_name: Kitchen Christmas light
       state: 'on'

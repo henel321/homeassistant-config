@@ -228,7 +228,9 @@ everyone:
   entities:
     - device_tracker.galaxy_s9_henrik_2
     - device_tracker.galaxy_maria
-    - device_tracker.galaxy_s7_vilhelm_2
+    - device_tracker.mobile_vilhelm
+    - device_tracker.moto_g9_elin
+
 
 thermostats:
  name: Thermostats
