@@ -42,58 +42,61 @@
     - scene.vr_normal
     - scene.or_normal
   mode: single
-- id: '389593401903'
-  alias: Turn off bathroom mirror light after 10 minutes of no movement
-  trigger:
-    platform: state
-    entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor_2
-    to: 'off'
-    for: 00:15:00
-  action:
-    service: switch.turn_off
-    entity_id:
-    - switch.qubino_zmnhbdx_flush_2_relays_switch_2
 - id: '421090569257'
-  alias: Turn off bathroom light after 5 minutes of no movement
+  alias: Turn off bathroom light after 15 minutes of no movement
   trigger:
-    platform: state
-    entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor_2
+  - platform: state
     to: 'off'
     for: 00:15:00
+    entity_id: binary_sensor.shenzhen_neo_electronics_co_ltd_battery_powered_pir_sensor_sensor
   action:
-    service: switch.turn_off
-    entity_id:
-    - switch.qubino_zmnhbdx_flush_2_relays_switch
+  - type: turn_off
+    device_id: 480b5cc0dc9e45ac81e2518c439d9d3c
+    entity_id: switch.qubino_zmnhbdx_flush_2_relays_switch
+    domain: switch
+  - type: turn_off
+    device_id: 24c82c52557d4ab3b6d7619ed3225c18
+    entity_id: switch.qubino_zmnhbdx_flush_2_relays_switch_2
+    domain: switch
+  mode: single
 - id: '304323506250'
   alias: Turn on bathroom light when movement during day
   trigger:
-    platform: state
-    entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor_2
+  - platform: state
     from: 'off'
     to: 'on'
+    entity_id: binary_sensor.shenzhen_neo_electronics_co_ltd_battery_powered_pir_sensor_sensor
   condition:
-    condition: time
+  - condition: time
     after: 07:00:00
     before: '23:00:00'
   action:
-    service: switch.turn_on
-    entity_id:
-    - switch.qubino_zmnhbdx_flush_2_relays_switch
+  - type: turn_on
+    device_id: 480b5cc0dc9e45ac81e2518c439d9d3c
+    entity_id: switch.qubino_zmnhbdx_flush_2_relays_switch
+    domain: switch
+  - type: turn_on
+    device_id: 24c82c52557d4ab3b6d7619ed3225c18
+    entity_id: switch.qubino_zmnhbdx_flush_2_relays_switch_2
+    domain: switch
+  mode: single
 - id: '582925487109'
   alias: Turn on bathroom light when movement during night
   trigger:
-    platform: state
-    entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor_2
+  - platform: state
     from: 'off'
     to: 'on'
+    entity_id: binary_sensor.shenzhen_neo_electronics_co_ltd_battery_powered_pir_sensor_sensor
   condition:
-    condition: time
+  - condition: time
     after: '23:00:00'
     before: 07:00:00
   action:
-    service: switch.turn_on
-    entity_id:
-    - switch.qubino_zmnhbdx_flush_2_relays_switch_2
+  - type: turn_on
+    device_id: 24c82c52557d4ab3b6d7619ed3225c18
+    entity_id: switch.qubino_zmnhbdx_flush_2_relays_switch_2
+    domain: switch
+  mode: single
 - id: '898058193301'
   alias: Turn off LIFX when lights turned off in bedroom.
   trigger:
@@ -637,25 +640,28 @@
 - id: '893512939794'
   alias: Turn off shower light after 5 minutes of no movement
   trigger:
-    platform: state
-    entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor_3
+  - platform: state
     to: 'off'
     for: 00:15:00
+    from: 'on'
+    entity_id: binary_sensor.pir_shower
   action:
-    service: switch.turn_off
-    entity_id:
-    - switch.switch_2
+  - service: switch.turn_off
+    data: {}
+    entity_id: switch.shower_ceiling_light
+  mode: single
 - id: '707339438036'
   alias: Turn on shower light when movement
   trigger:
-    platform: state
-    entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor_3
+  - platform: state
     from: 'off'
     to: 'on'
+    entity_id: binary_sensor.pir_shower
   action:
-    service: switch.turn_on
-    entity_id:
-    - switch.switch_2
+  - service: switch.turn_on
+    data: {}
+    entity_id: switch.shower_ceiling_light
+  mode: single
 - id: '975447476954'
   alias: Turn off lights in Kids' room, Living Room and Bedroom after sunrise
   trigger:
@@ -1050,9 +1056,9 @@
   alias: Increase floor heating in Bathroom during weekday mornings
   trigger:
   - platform: time
-    at: 04:00:00
+    at: 04:02:00
   condition:
-    condition: and
+  - condition: and
     conditions:
     - condition: time
       weekday:
@@ -1073,6 +1079,7 @@
     entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
     data:
       temperature: 26
+  mode: single
 - id: '104258603414'
   alias: Decrease floor heating in Bathroom after weekday mornings
   trigger:
@@ -1258,7 +1265,7 @@
   - type: turned_on
     platform: device
     device_id: 8aaf77f501264fbaa3b0ed8a48bfaa1c
-    entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor
+    entity_id: binary_sensor.shenzhen_neo_electronics_co_ltd_battery_powered_pir_sensor_sensor_2
     domain: binary_sensor
   condition:
   - condition: time

@@ -247,24 +247,24 @@
       - effect_colorloop
       - effect_pulse
       - effect_stop
-      brightness: 118
+      brightness: 15
       hs_color:
-      - 357.193
+      - 299.997
       - 100
       rgb_color:
-      - 255
+      - 254
       - 0
-      - 11
+      - 255
       xy_color:
-      - 0.698
-      - 0.298
+      - 0.384
+      - 0.154
       friendly_name: 'Bedroom LED strip '
       supported_features: 55
       state: 'on'
     light.henriks_light:
       min_mireds: 250
       max_mireds: 454
-      brightness: 19
+      brightness: 3
       color_temp: 451
       is_deconz_group: false
       friendly_name: Henriks Light
@@ -275,19 +275,26 @@
       value_index: 0
       value_instance: 1
       value_id: '72057594629947393'
-      power_consumption: 0
+      power_consumption: 0.4
       friendly_name: Bedroom Ceiling Light
       supported_features: 33
       state: 'off'
     light.marias_light:
       min_mireds: 250
       max_mireds: 454
-      brightness: 10
+      brightness: 3
       color_temp: 451
       is_deconz_group: false
       friendly_name: Marias Light
       supported_features: 43
       state: 'on'
+    light.color_temperature_light_32:
+      min_mireds: 140
+      max_mireds: 650
+      is_deconz_group: false
+      friendly_name: Bedroom Desk Light
+      supported_features: 43
+      state: 'off'
 - id: '00006'
   name: ER Bright
   entities:
@@ -1004,7 +1011,7 @@
       min_mireds: 250
       max_mireds: 454
       brightness: 254
-      color_temp: 435
+      color_temp: 388
       is_deconz_group: false
       friendly_name: Office Table Light
       supported_features: 43
@@ -1015,7 +1022,7 @@
       effect_list:
       - colorloop
       brightness: 254
-      color_temp: 552
+      color_temp: 420
       is_deconz_group: false
       friendly_name: Office Led Strip
       supported_features: 63
@@ -1026,7 +1033,7 @@
     light.office_painting_spotlight:
       effect_list:
       - colorloop
-      brightness: 237
+      brightness: 254
       hs_color:
       - 30.207
       - 56.863
@@ -1042,7 +1049,7 @@
       supported_features: 61
       state: 'on'
     light.office_mood_light:
-      brightness: 74
+      brightness: 87
       is_deconz_group: false
       friendly_name: Office Mood light
       supported_features: 41
