@@ -11,6 +11,7 @@
       data:
       message: Washing mashine is done, please remove wash
     service: notify.slack
+  mode: single
 - id: '391445821700'
   alias: Zwave heal at 4:00 am
   trigger:
@@ -773,7 +774,7 @@
     data:
       filename: /home/homeassistant/.homeassistant/video/video.mp4
       duration: 20
-    entity_id: camera.hallway2_profile000_mainstream
+    entity_id: camera.hallway2_profile000_mainstream_2
   - wait_template: ''
     continue_on_timeout: true
     timeout: '40'

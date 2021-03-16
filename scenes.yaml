@@ -595,15 +595,15 @@
       - colorloop
       brightness: 150
       hs_color:
-      - 30.207
-      - 56.863
+      - 29.834
+      - 70.98
       rgb_color:
       - 255
-      - 182
-      - 109
+      - 163
+      - 74
       xy_color:
-      - 0.491
-      - 0.39
+      - 0.539
+      - 0.392
       is_deconz_group: false
       friendly_name: Ikea PS Uplight
       supported_features: 61
@@ -611,7 +611,7 @@
     light.living_room_1:
       min_mireds: 250
       max_mireds: 454
-      brightness: 50
+      brightness: 79
       color_temp: 454
       is_deconz_group: false
       friendly_name: Living Room 1
@@ -620,14 +620,14 @@
     light.living_room_2:
       min_mireds: 250
       max_mireds: 454
-      brightness: 50
+      brightness: 89
       color_temp: 454
       is_deconz_group: false
       friendly_name: Living Room 2
       supported_features: 43
       state: 'on'
     light.window_mood_light:
-      brightness: 3
+      brightness: 87
       is_deconz_group: false
       friendly_name: Window Mood Light
       supported_features: 41
@@ -647,63 +647,114 @@
     light.floor_light:
       effect_list:
       - colorloop
-      brightness: 10
+      brightness: 102
       hs_color:
-      - 29.834
-      - 70.98
+      - 29.497
+      - 70.196
       rgb_color:
       - 255
       - 163
-      - 74
+      - 76
       xy_color:
-      - 0.539
-      - 0.392
+      - 0.538
+      - 0.391
       is_deconz_group: false
       friendly_name: Floor Light
       supported_features: 61
-      state: 'on'
-    switch.indoor_plug_2:
-      friendly_name: Christmas Tree
-      state: 'on'
-    switch.indoor_plug_3:
-      friendly_name: Kitchen Christmas light
       state: 'on'
 - id: '00015'
   name: LR Movie
   entities:
     light.ikea_ps_uplight:
-      state: true
-      color_name: blue
+      effect_list:
+      - colorloop
       brightness: 30
+      hs_color:
+      - 255
+      - 83.137
+      rgb_color:
+      - 96
+      - 43
+      - 255
+      xy_color:
+      - 0.183
+      - 0.073
+      is_deconz_group: false
+      friendly_name: Ikea PS Uplight
+      supported_features: 61
+      state: 'on'
     light.living_room_1:
-      state: true
+      min_mireds: 250
+      max_mireds: 454
       brightness: 20
-      color_temp: 458
+      color_temp: 454
+      is_deconz_group: false
+      friendly_name: Living Room 1
+      supported_features: 43
+      state: 'on'
     light.living_room_2:
-      state: true
+      min_mireds: 250
+      max_mireds: 454
       brightness: 20
-      color_temp: 458
+      color_temp: 454
+      is_deconz_group: false
+      friendly_name: Living Room 2
+      supported_features: 43
+      state: 'on'
     light.window_mood_light:
-      state: true
       brightness: 20
-      color_temp: 458
+      is_deconz_group: false
+      friendly_name: Window Mood Light
+      supported_features: 41
+      state: 'on'
     light.lifx_led_strip:
-      state: true
+      min_mireds: 111
+      max_mireds: 400
+      effect_list:
+      - effect_colorloop
+      - effect_pulse
+      - effect_stop
       brightness: 30
-      color_name: dodgerblue
+      hs_color:
+      - 209.595
+      - 88.234
+      rgb_color:
+      - 30
+      - 144
+      - 255
+      xy_color:
+      - 0.147
+      - 0.163
+      friendly_name: Livingroom LED Strip
+      supported_features: 55
+      state: 'on'
     light.floor_light:
-      state: true
-      color_name: blue
+      effect_list:
+      - colorloop
       brightness: 10
+      hs_color:
+      - 270.824
+      - 100
+      rgb_color:
+      - 131
+      - 0
+      - 255
+      xy_color:
+      - 0.222
+      - 0.079
+      is_deconz_group: false
+      friendly_name: Floor Light
+      supported_features: 61
+      state: 'on'
 - id: '00016'
   name: LR Normal
   entities:
     light.ikea_ps_uplight:
       effect_list:
       - colorloop
-      brightness: 204
+      brightness: 235
       hs_color:
-      - 30.175
+      - 29.825
       - 67.059
       rgb_color:
       - 255
@@ -735,7 +786,7 @@
       supported_features: 43
       state: 'on'
     light.window_mood_light:
-      brightness: 53
+      brightness: 117
       is_deconz_group: false
       friendly_name: Window Mood Light
       supported_features: 41
@@ -747,15 +798,15 @@
       - effect_colorloop
       - effect_pulse
       - effect_stop
-      brightness: 153
-      color_temp: 327
+      brightness: 212
+      color_temp: 344
       friendly_name: Livingroom LED Strip
       supported_features: 55
       state: 'on'
     light.floor_light:
       effect_list:
       - colorloop
-      brightness: 194
+      brightness: 212
       hs_color:
       - 33.409
       - 69.02
@@ -769,12 +820,6 @@
       is_deconz_group: false
       friendly_name: Floor Light
       supported_features: 61
-      state: 'on'
-    switch.indoor_plug_2:
-      friendly_name: Christmas Tree
-      state: 'on'
-    switch.indoor_plug_3:
-      friendly_name: Kitchen Christmas light
       state: 'on'
 - id: '00017'
   name: LR Off
@@ -848,12 +893,6 @@
       is_deconz_group: false
       friendly_name: Floor Light
       supported_features: 61
-      state: 'off'
-    switch.indoor_plug_3:
-      friendly_name: Kitchen Christmas light
-      state: 'off'
-    switch.indoor_plug_2:
-      friendly_name: Christmas Tree
       state: 'off'
 - id: 00018
   name: LR Romantic
