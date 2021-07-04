@@ -299,35 +299,25 @@
   name: ER Bright
   entities:
     light.elins_light_bulb:
-      state: true
-      brightness: 255
-      color_temp: 461
-    light.elins_led_strip:
-      state: true
-      brightness: 255
-      color_temp: 350
-    switch.telldusextra_switch:
-      state: true
-- id: '00007'
-  name: ER Normal
-  entities:
-    light.elins_light_bulb:
       effect_list:
       - colorloop
-      brightness: 189
+      brightness: 254
       hs_color:
-      - 29.326
-      - 69.804
+      - 30
+      - 69.02
       rgb_color:
       - 255
-      - 164
-      - 76
+      - 166
+      - 78
       xy_color:
-      - 0.537
-      - 0.392
+      - 0.533
+      - 0.393
       is_deconz_group: false
       friendly_name: Elins Light Bulb
       supported_features: 61
+      state: 'on'
+    switch.indoor_plug_2:
+      friendly_name: Elins Bed light
       state: 'on'
     light.elins_led_strip:
       min_mireds: 111
@@ -336,47 +326,82 @@
       - effect_colorloop
       - effect_pulse
       - effect_stop
-      brightness: 115
-      color_temp: 392
+      brightness: 255
+      hs_color:
+      - 29.999
+      - 71.427
+      rgb_color:
+      - 255
+      - 163
+      - 72
+      xy_color:
+      - 0.54
+      - 0.393
       friendly_name: Elins LED strip
       supported_features: 55
       state: 'on'
-    switch.telldusextra_switch:
-      node_id: 4
-      value_index: 0
-      value_instance: 1
-      value_id: '72057594109837312'
-      friendly_name: Elin Bed light
+- id: '00007'
+  name: ER Normal
+  entities:
+    light.elins_light_bulb:
+      effect_list:
+      - colorloop
+      brightness: 207
+      hs_color:
+      - 29.497
+      - 70.196
+      rgb_color:
+      - 255
+      - 163
+      - 76
+      xy_color:
+      - 0.538
+      - 0.391
+      is_deconz_group: false
+      friendly_name: Elins Light Bulb
+      supported_features: 61
       state: 'on'
     light.level_8:
       node_id: 29
       value_index: 0
       value_instance: 1
       value_id: '72057594529284097'
-      power_consumption: 0
+      power_consumption: 0.3
       friendly_name: Elin Ceiling Light
       supported_features: 33
       state: 'off'
     switch.indoor_plug_1:
       friendly_name: 'Elin Christmas Light '
-      state: 'on'
+      state: unavailable
     light.color_light_31:
       effect_list:
       - colorloop
-      brightness: 217
-      hs_color:
-      - 0
-      - 100
-      rgb_color:
-      - 255
-      - 0
-      - 0
-      xy_color:
-      - 0.701
-      - 0.299
-      is_deconz_group: false
       friendly_name: Elins Christmas Star
       supported_features: 61
+      state: unavailable
+    switch.indoor_plug_2:
+      friendly_name: Elins Bed light
+      state: 'on'
+    light.elins_led_strip:
+      min_mireds: 111
+      max_mireds: 400
+      effect_list:
+      - effect_colorloop
+      - effect_pulse
+      - effect_stop
+      brightness: 117
+      hs_color:
+      - 43.589
+      - 57.142
+      rgb_color:
+      - 255
+      - 215
+      - 109
+      xy_color:
+      - 0.457
+      - 0.428
+      friendly_name: Elins LED strip
+      supported_features: 55
       state: 'on'
 - id: 00008
   name: ER Off
@@ -388,6 +413,27 @@
       friendly_name: Elins Light Bulb
       supported_features: 61
       state: 'off'
+    light.level_8:
+      node_id: 29
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594529284097'
+      power_consumption: 6.6
+      friendly_name: Elin Ceiling Light
+      supported_features: 33
+      state: 'off'
+    light.color_light_31:
+      effect_list:
+      - colorloop
+      friendly_name: Elins Christmas Star
+      supported_features: 61
+      state: unavailable
+    switch.indoor_plug_1:
+      friendly_name: 'Elin Christmas Light '
+      state: unavailable
+    switch.indoor_plug_2:
+      friendly_name: Elins Bed light
+      state: 'off'
     light.elins_led_strip:
       min_mireds: 111
       max_mireds: 400
@@ -398,32 +444,6 @@
       friendly_name: Elins LED strip
       supported_features: 55
       state: 'off'
-    switch.telldusextra_switch:
-      node_id: 4
-      value_index: 0
-      value_instance: 1
-      value_id: '72057594109837312'
-      friendly_name: Elin Bed light
-      state: 'off'
-    light.level_8:
-      node_id: 29
-      value_index: 0
-      value_instance: 1
-      value_id: '72057594529284097'
-      power_consumption: 0
-      friendly_name: Elin Ceiling Light
-      supported_features: 33
-      state: 'off'
-    light.color_light_31:
-      effect_list:
-      - colorloop
-      is_deconz_group: false
-      friendly_name: Elins Christmas Star
-      supported_features: 61
-      state: 'off'
-    switch.indoor_plug_1:
-      friendly_name: 'Elin Christmas Light '
-      state: 'off'
 - id: 00009
   name: ER Party
   entities:
@@ -432,14 +452,14 @@
       - colorloop
       brightness: 30
       hs_color:
-      - 299.754
-      - 95.686
+      - 299.51
+      - 96.078
       rgb_color:
-      - 253
-      - 11
+      - 252
+      - 10
       - 255
       xy_color:
-      - 0.383
+      - 0.381
       - 0.154
       is_deconz_group: false
       friendly_name: Elins Light Bulb
@@ -466,33 +486,17 @@
       friendly_name: Elins LED strip
       supported_features: 55
       state: 'on'
-    switch.telldusextra_switch:
-      node_id: 4
-      value_index: 0
-      value_instance: 1
-      value_id: '72057594109837312'
-      friendly_name: Elin Bed light
-      state: 'on'
     light.color_light_31:
       effect_list:
       - colorloop
-      brightness: 176
-      hs_color:
-      - 299.754
-      - 95.686
-      rgb_color:
-      - 253
-      - 11
-      - 255
-      xy_color:
-      - 0.383
-      - 0.154
-      is_deconz_group: false
       friendly_name: Elins Christmas Star
       supported_features: 61
-      state: 'on'
+      state: unavailable
     switch.indoor_plug_1:
       friendly_name: 'Elin Christmas Light '
+      state: unavailable
+    switch.indoor_plug_2:
+      friendly_name: Elins Bed light
       state: 'on'
 - id: '00010'
   name: ER Sleep
@@ -502,15 +506,15 @@
       - colorloop
       brightness: 3
       hs_color:
-      - 29.497
-      - 70.196
+      - 29.326
+      - 69.804
       rgb_color:
       - 255
-      - 163
+      - 164
       - 76
       xy_color:
-      - 0.538
-      - 0.391
+      - 0.537
+      - 0.392
       is_deconz_group: false
       friendly_name: Elins Light Bulb
       supported_features: 61
@@ -531,16 +535,18 @@
       value_instance: 1
       value_id: '72057594109837312'
       friendly_name: Elin Bed light
-      state: 'off'
+      state: 'on'
     switch.indoor_plug_1:
       friendly_name: 'Elin Christmas Light '
-      state: 'off'
+      state: unavailable
     light.color_light_31:
       effect_list:
       - colorloop
-      is_deconz_group: false
       friendly_name: Elins Christmas Star
       supported_features: 61
+      state: unavailable
+    switch.indoor_plug_2:
+      friendly_name: Elins LED strip
       state: 'off'
 - id: '00011'
   name: K Cook

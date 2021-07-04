@@ -101,14 +101,15 @@
 - id: '898058193301'
   alias: Turn off LIFX when lights turned off in bedroom.
   trigger:
-    platform: state
-    entity_id: light.marias_light
+  - platform: state
+    entity_id: light.henriks_light
     from: 'on'
     to: 'off'
   action:
-    service: light.turn_off
+  - service: light.turn_off
     entity_id:
     - light.bedroom_led_strip
+  mode: single
 - id: '230339351769'
   alias: Brightness Bedroom
   trigger:
@@ -235,21 +236,22 @@
 - id: '58085804358'
   alias: Turn off LIFX when lights turned off in living room.
   trigger:
-    platform: state
-    entity_id: light.ikea_ps_uplight
+  - platform: state
     from: 'on'
     to: 'off'
+    entity_id: light.floor_light
   action:
   - service: light.turn_off
     entity_id:
     - light.lifx_led_strip
     - light.level_6
     - light.level_16
+  mode: single
 - id: '540286327195'
   alias: Turn on LIFX when lights turned on in living room.
   trigger:
-    platform: state
-    entity_id: light.ikea_ps_uplight
+  - platform: state
+    entity_id: light.floor_light
     from: 'off'
     to: 'on'
   action:
@@ -259,6 +261,7 @@
     data:
       brightness: 140
       color_name: PaleGoldenRod
+  mode: single
 - id: '59997632142'
   alias: Turn off lights in Kids' room, Living Room and Bedrom after sunrise when
     all parents have left
@@ -971,7 +974,7 @@
   - platform: time
     at: 04:30:00
   condition:
-    condition: and
+  - condition: and
     conditions:
     - condition: time
       weekday:
@@ -989,16 +992,18 @@
     data:
       hvac_mode: heat
   - service: climate.set_temperature
-    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
     data:
-      temperature: 26
+      temperature: 25
+    target:
+      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
+  mode: single
 - id: '875063269880'
   alias: Decrease floor heating in Shower after weekday mornings
   trigger:
   - platform: time
     at: 08:00:00
   condition:
-    condition: and
+  - condition: and
     conditions:
     - condition: time
       weekday:
@@ -1009,16 +1014,18 @@
       - fri
   action:
   - service: climate.set_temperature
-    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
     data:
-      temperature: 23
+      temperature: 20
+    target:
+      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
+  mode: single
 - id: '978978252061'
   alias: Increase floor heating in Shower during weekend mornings
   trigger:
   - platform: time
     at: 08:00:00
   condition:
-    condition: and
+  - condition: and
     conditions:
     - condition: time
       weekday:
@@ -1033,16 +1040,18 @@
     data:
       hvac_mode: heat
   - service: climate.set_temperature
-    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
     data:
-      temperature: 27
+      temperature: 25
+    target:
+      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
+  mode: single
 - id: '411888423708'
   alias: Decrease floor heating in Shower after weekend mornings
   trigger:
   - platform: time
     at: '12:00:00'
   condition:
-    condition: and
+  - condition: and
     conditions:
     - condition: time
       weekday:
@@ -1050,9 +1059,11 @@
       - sun
   action:
   - service: climate.set_temperature
-    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
     data:
-      temperature: 23
+      temperature: 20
+    target:
+      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
+  mode: single
 - id: '643424355323'
   alias: Increase floor heating in Bathroom during weekday mornings
   trigger:
@@ -1077,9 +1088,10 @@
     data:
       hvac_mode: heat
   - service: climate.set_temperature
-    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
     data:
-      temperature: 26
+      temperature: 25
+    target:
+      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
   mode: single
 - id: '104258603414'
   alias: Decrease floor heating in Bathroom after weekday mornings
@@ -1087,7 +1099,7 @@
   - platform: time
     at: 08:00:00
   condition:
-    condition: and
+  - condition: and
     conditions:
     - condition: time
       weekday:
@@ -1098,16 +1110,18 @@
       - fri
   action:
   - service: climate.set_temperature
-    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
     data:
-      temperature: 23
+      temperature: 20
+    target:
+      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
+  mode: single
 - id: '665441502482'
   alias: Increase floor heating in Bathroom during weekend mornings
   trigger:
   - platform: time
     at: 07:00:00
   condition:
-    condition: and
+  - condition: and
     conditions:
     - condition: time
       weekday:
@@ -1122,16 +1136,18 @@
     data:
       hvac_mode: heat
   - service: climate.set_temperature
-    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
     data:
-      temperature: 27
+      temperature: 25
+    target:
+      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
+  mode: single
 - id: '906708440334'
   alias: Decrease floor heating in Bathroom after weekend mornings
   trigger:
   - platform: time
     at: '11:00:00'
   condition:
-    condition: and
+  - condition: and
     conditions:
     - condition: time
       weekday:
@@ -1139,9 +1155,11 @@
       - sun
   action:
   - service: climate.set_temperature
-    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
     data:
-      temperature: 23
+      temperature: 20
+    target:
+      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
+  mode: single
 - id: '276114421416'
   alias: Vacuum Starting
   trigger:
@@ -1280,6 +1298,7 @@
     - fri
   - condition: sun
     before: sunrise
+    before_offset: '-1'
   action:
   - scene: scene.lr_normal
   mode: single
