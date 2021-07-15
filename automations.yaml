@@ -406,10 +406,10 @@
     entity_id:
     - scene.lr_normal
 - id: '607766316251'
-  alias: Set Elins room to night mode at 20:30 on weekdays
+  alias: Set Elins room to night mode at 21:30 on weekdays
   trigger:
   - platform: time
-    at: '20:30:00'
+    at: '21:30:00'
   condition:
   - condition: time
     weekday:
@@ -686,20 +686,21 @@
 - id: '747767838597'
   alias: Turn on lights at sunset in Kids' room, Living Room and Bedroom
   trigger:
-    platform: sun
+  - platform: sun
     event: sunset
     offset: -01:30:00
   condition:
-    condition: time
-    before: '21:30:00'
+  - condition: time
+    before: '21:29:00'
   action:
-    service: scene.turn_on
+  - service: scene.turn_on
     entity_id:
     - scene.br_normal
     - scene.lr_normal
     - scene.er_normal
     - scene.vr_normal
     - scene.or_normal
+  mode: single
 - id: '265490686995'
   alias: 20:30 and Vilhelms Workstation Turned Off
   trigger:
@@ -1303,7 +1304,7 @@
   - scene: scene.lr_normal
   mode: single
 - id: '1607163832633'
-  alias: Set Elins room to night mode at 20:30 on weekends
+  alias: Set Elins room to night mode at 22:00 on weekends
   description: ''
   trigger:
   - platform: time
