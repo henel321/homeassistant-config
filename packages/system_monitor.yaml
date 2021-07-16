@@ -76,7 +76,6 @@ sensor:
         arg: Plex Media Serv
   
   - platform: uptime
-    unit_of_measurement: hours
 
   - platform: travisci 
     api_key: !secret travis_token 

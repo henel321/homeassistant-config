@@ -115,11 +115,11 @@ logbook:
 # Track the sun
 sun:
 
-remote:
-  - platform: harmony
-    name: harmony 
-    host: 192.168.100.136 
-    activity: Watch Movies
+# remote:
+#   - platform: harmony
+#     name: harmony 
+#     host: 192.168.100.136 
+#     activity: Watch Movies
 
 
 # Weather prediction
@@ -222,19 +222,19 @@ notify:
 # - platform: lifx
 
 
-vacuum:
-  - platform: xiaomi_miio
-    host: 192.168.100.165
-    token: !secret xiaomi_token 
-    name: "pucky" 
+# vacuum:
+#   - platform: xiaomi_miio
+#     host: 192.168.100.165
+#     token: !secret xiaomi_token 
+#     name: "pucky" 
 
-speedtestdotnet:
-  scan_interval:
-    minutes: 30
-  monitored_conditions:
-    - ping
-    - download
-    - upload
+# speedtestdotnet:
+#   scan_interval:
+#     minutes: 30
+#   monitored_conditions:
+#     - ping
+#     - download
+#     - upload
 
 system_health:
 
