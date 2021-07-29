@@ -599,44 +599,83 @@
     light.ikea_ps_uplight:
       effect_list:
       - colorloop
+      supported_color_modes:
+      - hs
+      - xy
+      color_mode: xy
       brightness: 150
       hs_color:
-      - 29.834
-      - 70.98
+      - 29.497
+      - 70.196
       rgb_color:
       - 255
-      - 163
-      - 74
+      - 164
+      - 76
       xy_color:
       - 0.539
       - 0.392
       is_deconz_group: false
       friendly_name: Ikea PS Uplight
-      supported_features: 61
+      supported_features: 44
       state: 'on'
     light.living_room_1:
-      min_mireds: 250
-      max_mireds: 454
-      brightness: 79
-      color_temp: 454
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: xy
+      brightness: 38
+      hs_color:
+      - 29.834
+      - 70.98
+      rgb_color:
+      - 255
+      - 164
+      - 74
+      xy_color:
+      - 0.54
+      - 0.393
       is_deconz_group: false
       friendly_name: Living Room 1
-      supported_features: 43
+      supported_features: 44
       state: 'on'
     light.living_room_2:
-      min_mireds: 250
-      max_mireds: 454
-      brightness: 89
-      color_temp: 454
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: xy
+      brightness: 48
+      hs_color:
+      - 29.834
+      - 70.98
+      rgb_color:
+      - 255
+      - 164
+      - 74
+      xy_color:
+      - 0.54
+      - 0.393
       is_deconz_group: false
       friendly_name: Living Room 2
-      supported_features: 43
+      supported_features: 44
       state: 'on'
     light.window_mood_light:
-      brightness: 87
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 56
       is_deconz_group: false
       friendly_name: Window Mood Light
-      supported_features: 41
+      supported_features: 40
       state: 'on'
     light.lifx_led_strip:
       min_mireds: 111
@@ -645,28 +684,36 @@
       - effect_colorloop
       - effect_pulse
       - effect_stop
-      brightness: 98
-      color_temp: 355
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: color_temp
+      brightness: 128
+      color_temp: 392
       friendly_name: Livingroom LED Strip
       supported_features: 55
       state: 'on'
     light.floor_light:
       effect_list:
       - colorloop
-      brightness: 102
+      supported_color_modes:
+      - hs
+      - xy
+      color_mode: xy
+      brightness: 51
       hs_color:
-      - 29.497
-      - 70.196
+      - 29.326
+      - 69.804
       rgb_color:
       - 255
-      - 163
-      - 76
+      - 164
+      - 77
       xy_color:
       - 0.538
       - 0.391
       is_deconz_group: false
       friendly_name: Floor Light
-      supported_features: 61
+      supported_features: 44
       state: 'on'
 - id: '00015'
   name: LR Movie
@@ -674,44 +721,83 @@
     light.ikea_ps_uplight:
       effect_list:
       - colorloop
+      supported_color_modes:
+      - hs
+      - xy
+      color_mode: xy
       brightness: 30
       hs_color:
-      - 255
-      - 83.137
+      - 254.634
+      - 80.392
       rgb_color:
-      - 96
-      - 43
+      - 100
+      - 50
       - 255
       xy_color:
       - 0.183
       - 0.073
       is_deconz_group: false
       friendly_name: Ikea PS Uplight
-      supported_features: 61
+      supported_features: 44
       state: 'on'
     light.living_room_1:
-      min_mireds: 250
-      max_mireds: 454
-      brightness: 20
-      color_temp: 454
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: xy
+      brightness: 51
+      hs_color:
+      - 270.824
+      - 100
+      rgb_color:
+      - 131
+      - 0
+      - 255
+      xy_color:
+      - 0.217
+      - 0.077
       is_deconz_group: false
       friendly_name: Living Room 1
-      supported_features: 43
+      supported_features: 44
       state: 'on'
     light.living_room_2:
-      min_mireds: 250
-      max_mireds: 454
-      brightness: 20
-      color_temp: 454
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: xy
+      brightness: 46
+      hs_color:
+      - 270.824
+      - 100
+      rgb_color:
+      - 131
+      - 0
+      - 255
+      xy_color:
+      - 0.217
+      - 0.077
       is_deconz_group: false
       friendly_name: Living Room 2
-      supported_features: 43
+      supported_features: 44
       state: 'on'
     light.window_mood_light:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
       brightness: 20
       is_deconz_group: false
       friendly_name: Window Mood Light
-      supported_features: 41
+      supported_features: 40
       state: 'on'
     light.lifx_led_strip:
       min_mireds: 111
@@ -720,6 +806,10 @@
       - effect_colorloop
       - effect_pulse
       - effect_stop
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
       brightness: 30
       hs_color:
       - 209.595
@@ -737,12 +827,16 @@
     light.floor_light:
       effect_list:
       - colorloop
+      supported_color_modes:
+      - hs
+      - xy
+      color_mode: xy
       brightness: 10
       hs_color:
-      - 270.824
+      - 271.765
       - 100
       rgb_color:
-      - 131
+      - 135
       - 0
       - 255
       xy_color:
@@ -750,7 +844,7 @@
       - 0.079
       is_deconz_group: false
       friendly_name: Floor Light
-      supported_features: 61
+      supported_features: 44
       state: 'on'
 - id: '00016'
   name: LR Normal
@@ -758,44 +852,65 @@
     light.ikea_ps_uplight:
       effect_list:
       - colorloop
+      supported_color_modes:
+      - hs
+      - xy
+      color_mode: xy
       brightness: 235
       hs_color:
-      - 29.825
-      - 67.059
+      - 29.722
+      - 84.706
       rgb_color:
       - 255
-      - 169
-      - 83
+      - 146
+      - 39
       xy_color:
-      - 0.526
-      - 0.393
+      - 0.581
+      - 0.388
       is_deconz_group: false
       friendly_name: Ikea PS Uplight
-      supported_features: 61
+      supported_features: 44
       state: 'on'
     light.living_room_1:
-      min_mireds: 250
-      max_mireds: 454
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
       brightness: 194
       color_temp: 454
       is_deconz_group: false
       friendly_name: Living Room 1
-      supported_features: 43
+      supported_features: 44
       state: 'on'
     light.living_room_2:
-      min_mireds: 250
-      max_mireds: 454
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
       brightness: 196
       color_temp: 454
       is_deconz_group: false
       friendly_name: Living Room 2
-      supported_features: 43
+      supported_features: 44
       state: 'on'
     light.window_mood_light:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
       brightness: 117
       is_deconz_group: false
       friendly_name: Window Mood Light
-      supported_features: 41
+      supported_features: 40
       state: 'on'
     light.lifx_led_strip:
       min_mireds: 111
@@ -804,28 +919,36 @@
       - effect_colorloop
       - effect_pulse
       - effect_stop
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: color_temp
       brightness: 212
-      color_temp: 344
+      color_temp: 371
       friendly_name: Livingroom LED Strip
       supported_features: 55
       state: 'on'
     light.floor_light:
       effect_list:
       - colorloop
+      supported_color_modes:
+      - hs
+      - xy
+      color_mode: xy
       brightness: 212
       hs_color:
-      - 33.409
-      - 69.02
+      - 29.834
+      - 70.98
       rgb_color:
       - 255
-      - 176
-      - 78
+      - 164
+      - 74
       xy_color:
-      - 0.521
-      - 0.405
+      - 0.54
+      - 0.393
       is_deconz_group: false
       friendly_name: Floor Light
-      supported_features: 61
+      supported_features: 44
       state: 'on'
 - id: '00017'
   name: LR Off
@@ -906,6 +1029,10 @@
     light.ikea_ps_uplight:
       effect_list:
       - colorloop
+      supported_color_modes:
+      - hs
+      - xy
+      color_mode: xy
       brightness: 40
       hs_color:
       - 0
@@ -919,31 +1046,66 @@
       - 0.299
       is_deconz_group: false
       friendly_name: Ikea PS Uplight
-      supported_features: 61
+      supported_features: 44
       state: 'on'
     light.living_room_1:
-      min_mireds: 250
-      max_mireds: 454
-      brightness: 10
-      color_temp: 454
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: xy
+      brightness: 33
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
       is_deconz_group: false
       friendly_name: Living Room 1
-      supported_features: 43
+      supported_features: 44
       state: 'on'
     light.living_room_2:
-      min_mireds: 250
-      max_mireds: 454
-      brightness: 10
-      color_temp: 454
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: xy
+      brightness: 51
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
       is_deconz_group: false
       friendly_name: Living Room 2
-      supported_features: 43
+      supported_features: 44
       state: 'on'
     light.window_mood_light:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
       brightness: 10
       is_deconz_group: false
       friendly_name: Window Mood Light
-      supported_features: 41
+      supported_features: 40
       state: 'on'
     light.lifx_led_strip:
       min_mireds: 111
@@ -952,23 +1114,31 @@
       - effect_colorloop
       - effect_pulse
       - effect_stop
-      brightness: 140
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 110
       hs_color:
-      - 54.702
-      - 28.571
+      - 344.998
+      - 100
       rgb_color:
       - 255
-      - 248
-      - 182
+      - 0
+      - 63
       xy_color:
-      - 0.377
-      - 0.398
+      - 0.667
+      - 0.284
       friendly_name: Livingroom LED Strip
       supported_features: 55
       state: 'on'
     light.floor_light:
       effect_list:
       - colorloop
+      supported_color_modes:
+      - hs
+      - xy
+      color_mode: xy
       brightness: 20
       hs_color:
       - 0
@@ -982,14 +1152,8 @@
       - 0.299
       is_deconz_group: false
       friendly_name: Floor Light
-      supported_features: 61
+      supported_features: 44
       state: 'on'
-    switch.indoor_plug_3:
-      friendly_name: Kitchen Christmas light
-      state: 'on'
-    switch.indoor_plug_2:
-      friendly_name: Christmas Tree
-      state: unavailable
 - id: 00019
   name: OR Gaming
   entities:
