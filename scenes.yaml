@@ -69,11 +69,16 @@
       max_mireds: 650
       effect_list:
       - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
       brightness: 143
       color_temp: 427
       is_deconz_group: false
       friendly_name: Balcony Led Strip
-      supported_features: 63
+      supported_features: 44
       state: 'on'
     light.bedroom_led_strip:
       min_mireds: 111
@@ -82,21 +87,35 @@
       - effect_colorloop
       - effect_pulse
       - effect_stop
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: color_temp
       brightness: 94
       color_temp: 363
       friendly_name: 'Bedroom LED strip '
       supported_features: 55
       state: 'on'
     light.henriks_light:
-      min_mireds: 250
-      max_mireds: 454
-      brightness: 138
-      color_temp: 451
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 122
+      color_temp: 454
       is_deconz_group: false
       friendly_name: Henriks Light
-      supported_features: 43
+      supported_features: 44
       state: 'on'
     light.level_14:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
       brightness: 8
       node_id: 35
       value_index: 0
@@ -107,43 +126,67 @@
       supported_features: 33
       state: 'on'
     light.marias_light:
-      min_mireds: 250
-      max_mireds: 454
-      brightness: 71
-      color_temp: 451
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 117
+      color_temp: 454
       is_deconz_group: false
       friendly_name: Marias Light
-      supported_features: 43
+      supported_features: 44
       state: 'on'
     light.color_temperature_light_32:
       min_mireds: 140
       max_mireds: 650
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
       brightness: 224
-      color_temp: 572
+      color_temp: 454
       is_deconz_group: false
       friendly_name: Bedroom Desk Light
-      supported_features: 43
+      supported_features: 40
       state: 'on'
 - id: '00003'
   name: BR Cozy
   entities:
     light.henriks_light:
-      min_mireds: 250
-      max_mireds: 454
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
       brightness: 10
       color_temp: 454
       is_deconz_group: false
       friendly_name: Henriks Light
-      supported_features: 43
+      supported_features: 44
       state: 'on'
     light.marias_light:
-      min_mireds: 250
-      max_mireds: 454
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
       brightness: 10
-      color_temp: 454
+      color_temp: 650
       is_deconz_group: false
       friendly_name: Marias Light
-      supported_features: 43
+      supported_features: 44
       state: 'on'
     light.bedroom_led_strip:
       min_mireds: 111
@@ -152,12 +195,18 @@
       - effect_colorloop
       - effect_pulse
       - effect_stop
-      brightness: 30
-      color_temp: 380
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: color_temp
+      brightness: 13
+      color_temp: 400
       friendly_name: 'Bedroom LED strip '
       supported_features: 55
       state: 'on'
     light.level_14:
+      supported_color_modes:
+      - brightness
       node_id: 35
       value_index: 0
       value_instance: 1
@@ -169,9 +218,11 @@
     light.color_temperature_light_32:
       min_mireds: 140
       max_mireds: 650
+      supported_color_modes:
+      - color_temp
       is_deconz_group: false
       friendly_name: Bedroom Desk Light
-      supported_features: 43
+      supported_features: 40
       state: 'off'
 - id: '00004'
   name: BR Off
@@ -236,10 +287,26 @@
       max_mireds: 650
       effect_list:
       - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: xy
+      brightness: 23
+      hs_color:
+      - 299.754
+      - 95.686
+      rgb_color:
+      - 254
+      - 11
+      - 255
+      xy_color:
+      - 0.385
+      - 0.155
       is_deconz_group: false
       friendly_name: Balcony Led Strip
-      supported_features: 63
-      state: 'off'
+      supported_features: 44
+      state: 'on'
     light.bedroom_led_strip:
       min_mireds: 111
       max_mireds: 400
@@ -247,6 +314,10 @@
       - effect_colorloop
       - effect_pulse
       - effect_stop
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
       brightness: 15
       hs_color:
       - 299.997
@@ -262,38 +333,74 @@
       supported_features: 55
       state: 'on'
     light.henriks_light:
-      min_mireds: 250
-      max_mireds: 454
-      brightness: 3
-      color_temp: 451
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: xy
+      brightness: 10
+      hs_color:
+      - 285
+      - 98.824
+      rgb_color:
+      - 192
+      - 3
+      - 255
+      xy_color:
+      - 0.301
+      - 0.116
       is_deconz_group: false
       friendly_name: Henriks Light
-      supported_features: 43
+      supported_features: 44
       state: 'on'
     light.level_14:
+      supported_color_modes:
+      - brightness
       node_id: 35
       value_index: 0
       value_instance: 1
       value_id: '72057594629947393'
-      power_consumption: 0.4
+      power_consumption: 0
       friendly_name: Bedroom Ceiling Light
       supported_features: 33
       state: 'off'
     light.marias_light:
-      min_mireds: 250
-      max_mireds: 454
-      brightness: 3
-      color_temp: 451
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: xy
+      brightness: 13
+      hs_color:
+      - 285
+      - 98.824
+      rgb_color:
+      - 192
+      - 3
+      - 255
+      xy_color:
+      - 0.301
+      - 0.116
       is_deconz_group: false
       friendly_name: Marias Light
-      supported_features: 43
+      supported_features: 44
       state: 'on'
     light.color_temperature_light_32:
       min_mireds: 140
       max_mireds: 650
+      supported_color_modes:
+      - color_temp
       is_deconz_group: false
       friendly_name: Bedroom Desk Light
-      supported_features: 43
+      supported_features: 40
       state: 'off'
 - id: '00006'
   name: ER Bright
@@ -346,27 +453,33 @@
     light.elins_light_bulb:
       effect_list:
       - colorloop
-      brightness: 207
+      supported_color_modes:
+      - hs
+      - xy
+      color_mode: xy
+      brightness: 130
       hs_color:
-      - 29.497
-      - 70.196
+      - 30.207
+      - 56.863
       rgb_color:
       - 255
-      - 163
-      - 76
+      - 183
+      - 110
       xy_color:
-      - 0.538
-      - 0.391
+      - 0.491
+      - 0.39
       is_deconz_group: false
       friendly_name: Elins Light Bulb
-      supported_features: 61
+      supported_features: 44
       state: 'on'
     light.level_8:
+      supported_color_modes:
+      - brightness
       node_id: 29
       value_index: 0
       value_instance: 1
       value_id: '72057594529284097'
-      power_consumption: 0.3
+      power_consumption: 0
       friendly_name: Elin Ceiling Light
       supported_features: 33
       state: 'off'
@@ -376,32 +489,66 @@
     light.color_light_31:
       effect_list:
       - colorloop
+      supported_color_modes:
+      - hs
+      - xy
       friendly_name: Elins Christmas Star
-      supported_features: 61
+      supported_features: 44
       state: unavailable
     switch.indoor_plug_2:
       friendly_name: Elins Bed light
       state: 'on'
     light.elins_led_strip:
       min_mireds: 111
-      max_mireds: 400
+      max_mireds: 666
       effect_list:
       - effect_colorloop
       - effect_pulse
       - effect_stop
-      brightness: 117
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: color_temp
+      brightness: 99
+      color_temp: 361
       hs_color:
-      - 43.589
-      - 57.142
+      - 28.248
+      - 63.531
       rgb_color:
       - 255
-      - 215
-      - 109
+      - 169
+      - 92
       xy_color:
-      - 0.457
-      - 0.428
+      - 0.519
+      - 0.387
       friendly_name: Elins LED strip
       supported_features: 55
+      state: 'on'
+    light.extended_color_light_33:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 209
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      is_deconz_group: false
+      friendly_name: Elins Hue Go
+      supported_features: 44
       state: 'on'
 - id: 00008
   name: ER Off
@@ -409,24 +556,32 @@
     light.elins_light_bulb:
       effect_list:
       - colorloop
+      supported_color_modes:
+      - hs
+      - xy
       is_deconz_group: false
       friendly_name: Elins Light Bulb
-      supported_features: 61
+      supported_features: 44
       state: 'off'
     light.level_8:
+      supported_color_modes:
+      - brightness
       node_id: 29
       value_index: 0
       value_instance: 1
       value_id: '72057594529284097'
-      power_consumption: 6.6
+      power_consumption: 0
       friendly_name: Elin Ceiling Light
       supported_features: 33
       state: 'off'
     light.color_light_31:
       effect_list:
       - colorloop
+      supported_color_modes:
+      - hs
+      - xy
       friendly_name: Elins Christmas Star
-      supported_features: 61
+      supported_features: 44
       state: unavailable
     switch.indoor_plug_1:
       friendly_name: 'Elin Christmas Light '
@@ -441,8 +596,24 @@
       - effect_colorloop
       - effect_pulse
       - effect_stop
+      supported_color_modes:
+      - color_temp
+      - hs
       friendly_name: Elins LED strip
       supported_features: 55
+      state: 'off'
+    light.extended_color_light_33:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      is_deconz_group: false
+      friendly_name: Elins Hue Go
+      supported_features: 44
       state: 'off'
 - id: 00009
   name: ER Party
@@ -504,20 +675,24 @@
     light.elins_light_bulb:
       effect_list:
       - colorloop
+      supported_color_modes:
+      - hs
+      - xy
+      color_mode: xy
       brightness: 3
       hs_color:
-      - 29.326
+      - 29.663
       - 69.804
       rgb_color:
       - 255
-      - 164
-      - 76
+      - 165
+      - 77
       xy_color:
       - 0.537
       - 0.392
       is_deconz_group: false
       friendly_name: Elins Light Bulb
-      supported_features: 61
+      supported_features: 44
       state: 'on'
     light.elins_led_strip:
       min_mireds: 111
@@ -526,6 +701,9 @@
       - effect_colorloop
       - effect_pulse
       - effect_stop
+      supported_color_modes:
+      - color_temp
+      - hs
       friendly_name: Elins LED strip
       supported_features: 55
       state: 'off'
@@ -542,11 +720,27 @@
     light.color_light_31:
       effect_list:
       - colorloop
+      supported_color_modes:
+      - hs
+      - xy
       friendly_name: Elins Christmas Star
-      supported_features: 61
+      supported_features: 44
       state: unavailable
     switch.indoor_plug_2:
-      friendly_name: Elins LED strip
+      friendly_name: Elins Bed light
+      state: 'off'
+    light.extended_color_light_33:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      is_deconz_group: false
+      friendly_name: Elins Hue Go
+      supported_features: 44
       state: 'off'
 - id: '00011'
   name: K Cook
@@ -570,29 +764,152 @@
   name: LR Bright
   entities:
     light.ikea_ps_uplight:
-      state: true
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - hs
+      - xy
+      color_mode: xy
       brightness: 250
-      color_name: wheat
+      hs_color:
+      - 39.13
+      - 27.059
+      rgb_color:
+      - 255
+      - 231
+      - 186
+      xy_color:
+      - 0.385
+      - 0.374
+      is_deconz_group: false
+      friendly_name: Ikea PS Uplight
+      supported_features: 44
+      state: 'on'
     light.living_room_1:
-      state: true
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
       brightness: 200
       color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      is_deconz_group: false
+      friendly_name: Living Room 1
+      supported_features: 44
+      state: 'on'
     light.living_room_2:
-      state: true
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
       brightness: 200
       color_temp: 370
-    light.window_mood_light:
-      state: true
-      brightness: 200
-      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      is_deconz_group: false
+      friendly_name: Living Room 2
+      supported_features: 44
+      state: 'on'
     light.lifx_led_strip:
-      state: true
-      brightness: 255
-      color_temp: 370
+      min_mireds: 111
+      max_mireds: 400
+      effect_list:
+      - effect_colorloop
+      - effect_pulse
+      - effect_stop
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 140
+      hs_color:
+      - 54.702
+      - 28.571
+      rgb_color:
+      - 255
+      - 248
+      - 182
+      xy_color:
+      - 0.377
+      - 0.398
+      friendly_name: Livingroom LED Strip
+      supported_features: 55
+      state: 'on'
     light.floor_light:
-      state: true
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - hs
+      - xy
+      color_mode: xy
       brightness: 250
-      color_name: wheat
+      hs_color:
+      - 39.13
+      - 27.059
+      rgb_color:
+      - 255
+      - 231
+      - 186
+      xy_color:
+      - 0.385
+      - 0.374
+      is_deconz_group: false
+      friendly_name: Floor Light
+      supported_features: 44
+      state: 'on'
+    light.herstal_tentacle:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 254
+      color_temp: 264
+      hs_color:
+      - 26.933
+      - 38.871
+      rgb_color:
+      - 255
+      - 200
+      - 155
+      xy_color:
+      - 0.434
+      - 0.369
+      is_deconz_group: false
+      friendly_name: Herstal Tentacle
+      supported_features: 44
+      state: 'on'
 - id: '00014'
   name: LR Cozy
   entities:
@@ -605,15 +922,15 @@
       color_mode: xy
       brightness: 150
       hs_color:
-      - 29.497
-      - 70.196
+      - 29.722
+      - 84.706
       rgb_color:
       - 255
-      - 164
-      - 76
+      - 146
+      - 39
       xy_color:
-      - 0.539
-      - 0.392
+      - 0.581
+      - 0.388
       is_deconz_group: false
       friendly_name: Ikea PS Uplight
       supported_features: 44
@@ -628,17 +945,17 @@
       - hs
       - xy
       color_mode: xy
-      brightness: 38
+      brightness: 23
       hs_color:
-      - 29.834
-      - 70.98
+      - 32
+      - 76.471
       rgb_color:
       - 255
       - 164
-      - 74
+      - 60
       xy_color:
-      - 0.54
-      - 0.393
+      - 0.548
+      - 0.4
       is_deconz_group: false
       friendly_name: Living Room 1
       supported_features: 44
@@ -653,29 +970,20 @@
       - hs
       - xy
       color_mode: xy
-      brightness: 48
+      brightness: 23
       hs_color:
-      - 29.834
-      - 70.98
+      - 30
+      - 74.51
       rgb_color:
       - 255
-      - 164
-      - 74
+      - 160
+      - 65
       xy_color:
-      - 0.54
+      - 0.551
       - 0.393
       is_deconz_group: false
       friendly_name: Living Room 2
       supported_features: 44
-      state: 'on'
-    light.window_mood_light:
-      supported_color_modes:
-      - brightness
-      color_mode: brightness
-      brightness: 56
-      is_deconz_group: false
-      friendly_name: Window Mood Light
-      supported_features: 40
       state: 'on'
     light.lifx_led_strip:
       min_mireds: 111
@@ -688,8 +996,18 @@
       - color_temp
       - hs
       color_mode: color_temp
-      brightness: 128
-      color_temp: 392
+      brightness: 97
+      color_temp: 377
+      hs_color:
+      - 28.502
+      - 67.279
+      rgb_color:
+      - 255
+      - 164
+      - 83
+      xy_color:
+      - 0.532
+      - 0.387
       friendly_name: Livingroom LED Strip
       supported_features: 55
       state: 'on'
@@ -702,17 +1020,42 @@
       color_mode: xy
       brightness: 51
       hs_color:
-      - 29.326
-      - 69.804
+      - 30.462
+      - 76.471
       rgb_color:
       - 255
-      - 164
-      - 77
+      - 159
+      - 60
       xy_color:
-      - 0.538
-      - 0.391
+      - 0.554
+      - 0.395
       is_deconz_group: false
       friendly_name: Floor Light
+      supported_features: 44
+      state: 'on'
+    light.herstal_tentacle:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: xy
+      brightness: 56
+      hs_color:
+      - 30.155
+      - 75.686
+      rgb_color:
+      - 255
+      - 159
+      - 62
+      xy_color:
+      - 0.554
+      - 0.393
+      is_deconz_group: false
+      friendly_name: Herstal Tentacle
       supported_features: 44
       state: 'on'
 - id: '00015'
@@ -790,15 +1133,6 @@
       friendly_name: Living Room 2
       supported_features: 44
       state: 'on'
-    light.window_mood_light:
-      supported_color_modes:
-      - brightness
-      color_mode: brightness
-      brightness: 20
-      is_deconz_group: false
-      friendly_name: Window Mood Light
-      supported_features: 40
-      state: 'on'
     light.lifx_led_strip:
       min_mireds: 111
       max_mireds: 400
@@ -810,17 +1144,17 @@
       - color_temp
       - hs
       color_mode: hs
-      brightness: 30
+      brightness: 140
       hs_color:
-      - 209.595
-      - 88.234
+      - 54.702
+      - 28.571
       rgb_color:
-      - 30
-      - 144
       - 255
+      - 248
+      - 182
       xy_color:
-      - 0.147
-      - 0.163
+      - 0.377
+      - 0.398
       friendly_name: Livingroom LED Strip
       supported_features: 55
       state: 'on'
@@ -846,6 +1180,31 @@
       friendly_name: Floor Light
       supported_features: 44
       state: 'on'
+    light.herstal_tentacle:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: xy
+      brightness: 38
+      hs_color:
+      - 269.663
+      - 69.804
+      rgb_color:
+      - 165
+      - 77
+      - 255
+      xy_color:
+      - 0.259
+      - 0.122
+      is_deconz_group: false
+      friendly_name: Herstal Tentacle
+      supported_features: 44
+      state: 'on'
 - id: '00016'
   name: LR Normal
   entities:
@@ -856,17 +1215,17 @@
       - hs
       - xy
       color_mode: xy
-      brightness: 235
+      brightness: 227
       hs_color:
-      - 29.722
-      - 84.706
+      - 30.207
+      - 56.863
       rgb_color:
       - 255
-      - 146
-      - 39
+      - 183
+      - 110
       xy_color:
-      - 0.581
-      - 0.388
+      - 0.491
+      - 0.39
       is_deconz_group: false
       friendly_name: Ikea PS Uplight
       supported_features: 44
@@ -883,6 +1242,16 @@
       color_mode: color_temp
       brightness: 194
       color_temp: 454
+      hs_color:
+      - 29.79
+      - 84.553
+      rgb_color:
+      - 255
+      - 146
+      - 39
+      xy_color:
+      - 0.579
+      - 0.388
       is_deconz_group: false
       friendly_name: Living Room 1
       supported_features: 44
@@ -899,18 +1268,19 @@
       color_mode: color_temp
       brightness: 196
       color_temp: 454
+      hs_color:
+      - 29.79
+      - 84.553
+      rgb_color:
+      - 255
+      - 146
+      - 39
+      xy_color:
+      - 0.579
+      - 0.388
       is_deconz_group: false
       friendly_name: Living Room 2
       supported_features: 44
-      state: 'on'
-    light.window_mood_light:
-      supported_color_modes:
-      - brightness
-      color_mode: brightness
-      brightness: 117
-      is_deconz_group: false
-      friendly_name: Window Mood Light
-      supported_features: 40
       state: 'on'
     light.lifx_led_strip:
       min_mireds: 111
@@ -923,8 +1293,18 @@
       - color_temp
       - hs
       color_mode: color_temp
-      brightness: 212
-      color_temp: 371
+      brightness: 250
+      color_temp: 338
+      hs_color:
+      - 27.896
+      - 58.048
+      rgb_color:
+      - 255
+      - 175
+      - 106
+      xy_color:
+      - 0.501
+      - 0.384
       friendly_name: Livingroom LED Strip
       supported_features: 55
       state: 'on'
@@ -935,19 +1315,45 @@
       - hs
       - xy
       color_mode: xy
-      brightness: 212
+      brightness: 199
       hs_color:
-      - 29.834
-      - 70.98
+      - 33.077
+      - 61.176
       rgb_color:
       - 255
-      - 164
-      - 74
+      - 185
+      - 99
       xy_color:
-      - 0.54
-      - 0.393
+      - 0.497
+      - 0.402
       is_deconz_group: false
       friendly_name: Floor Light
+      supported_features: 44
+      state: 'on'
+    light.herstal_tentacle:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 191
+      color_temp: 454
+      hs_color:
+      - 29.79
+      - 84.553
+      rgb_color:
+      - 255
+      - 146
+      - 39
+      xy_color:
+      - 0.579
+      - 0.388
+      is_deconz_group: false
+      friendly_name: Herstal Tentacle
       supported_features: 44
       state: 'on'
 - id: '00017'
@@ -956,28 +1362,38 @@
     light.ikea_ps_uplight:
       effect_list:
       - colorloop
+      supported_color_modes:
+      - hs
+      - xy
       is_deconz_group: false
       friendly_name: Ikea PS Uplight
-      supported_features: 61
+      supported_features: 44
       state: 'off'
     light.living_room_1:
-      min_mireds: 250
-      max_mireds: 454
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
       is_deconz_group: false
       friendly_name: Living Room 1
-      supported_features: 43
+      supported_features: 44
       state: 'off'
     light.living_room_2:
-      min_mireds: 250
-      max_mireds: 454
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
       is_deconz_group: false
       friendly_name: Living Room 2
-      supported_features: 43
-      state: 'off'
-    light.window_mood_light:
-      is_deconz_group: false
-      friendly_name: Window Mood Light
-      supported_features: 41
+      supported_features: 44
       state: 'off'
     light.lifx_led_strip:
       min_mireds: 111
@@ -986,10 +1402,15 @@
       - effect_colorloop
       - effect_pulse
       - effect_stop
+      supported_color_modes:
+      - color_temp
+      - hs
       friendly_name: Livingroom LED Strip
       supported_features: 55
       state: 'off'
     light.level_6:
+      supported_color_modes:
+      - brightness
       node_id: 27
       value_index: 0
       value_instance: 1
@@ -999,6 +1420,8 @@
       supported_features: 33
       state: 'off'
     light.level_7:
+      supported_color_modes:
+      - brightness
       node_id: 28
       value_index: 0
       value_instance: 1
@@ -1008,6 +1431,8 @@
       supported_features: 33
       state: 'off'
     light.level_16:
+      supported_color_modes:
+      - brightness
       node_id: 37
       value_index: 0
       value_instance: 1
@@ -1019,9 +1444,25 @@
     light.floor_light:
       effect_list:
       - colorloop
+      supported_color_modes:
+      - hs
+      - xy
       is_deconz_group: false
       friendly_name: Floor Light
-      supported_features: 61
+      supported_features: 44
+      state: 'off'
+    light.herstal_tentacle:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      is_deconz_group: false
+      friendly_name: Herstal Tentacle
+      supported_features: 44
       state: 'off'
 - id: 00018
   name: LR Romantic
@@ -1098,15 +1539,6 @@
       friendly_name: Living Room 2
       supported_features: 44
       state: 'on'
-    light.window_mood_light:
-      supported_color_modes:
-      - brightness
-      color_mode: brightness
-      brightness: 10
-      is_deconz_group: false
-      friendly_name: Window Mood Light
-      supported_features: 40
-      state: 'on'
     light.lifx_led_strip:
       min_mireds: 111
       max_mireds: 400
@@ -1154,37 +1586,83 @@
       friendly_name: Floor Light
       supported_features: 44
       state: 'on'
+    light.herstal_tentacle:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: xy
+      brightness: 82
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      is_deconz_group: false
+      friendly_name: Herstal Tentacle
+      supported_features: 44
+      state: 'on'
 - id: 00019
   name: OR Gaming
   entities:
     light.office_table_light:
-      min_mireds: 250
-      max_mireds: 454
-      brightness: 120
-      color_temp: 425
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: xy
+      brightness: 143
+      hs_color:
+      - 269.663
+      - 69.804
+      rgb_color:
+      - 165
+      - 77
+      - 255
+      xy_color:
+      - 0.259
+      - 0.122
       is_deconz_group: false
       friendly_name: Office Table Light
-      supported_features: 43
+      supported_features: 44
       state: 'on'
     light.office_led_strip:
       min_mireds: 140
       max_mireds: 650
       effect_list:
       - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: xy
       brightness: 254
       hs_color:
-      - 299.51
-      - 96.078
+      - 299.754
+      - 95.686
       rgb_color:
-      - 252
-      - 10
+      - 254
+      - 11
       - 255
       xy_color:
-      - 0.381
-      - 0.154
+      - 0.385
+      - 0.155
       is_deconz_group: false
       friendly_name: Office Led Strip
-      supported_features: 63
+      supported_features: 44
       state: 'on'
     switch.office_screen_light:
       friendly_name: Office Screen Light
@@ -1192,26 +1670,33 @@
     light.office_painting_spotlight:
       effect_list:
       - colorloop
+      supported_color_modes:
+      - hs
+      - xy
+      color_mode: xy
       brightness: 254
       hs_color:
       - 285
       - 98.824
       rgb_color:
-      - 191
-      - 2
+      - 192
+      - 3
       - 255
       xy_color:
       - 0.301
       - 0.116
       is_deconz_group: false
       friendly_name: Office Painting Spotlight
-      supported_features: 61
+      supported_features: 44
       state: 'on'
     light.office_mood_light:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
       brightness: 76
       is_deconz_group: false
       friendly_name: Office Mood light
-      supported_features: 41
+      supported_features: 40
       state: 'on'
 - id: '00020'
   name: OR Normal
@@ -1267,44 +1752,68 @@
   name: OR Off
   entities:
     light.office_table_light:
-      min_mireds: 250
-      max_mireds: 454
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
       is_deconz_group: false
       friendly_name: Office Table Light
-      supported_features: 43
+      supported_features: 44
       state: 'off'
     light.office_led_strip:
       min_mireds: 140
       max_mireds: 650
       effect_list:
       - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
       is_deconz_group: false
       friendly_name: Office Led Strip
-      supported_features: 63
+      supported_features: 44
       state: 'off'
     switch.office_screen_light:
       friendly_name: Office Screen Light
       state: 'off'
     light.office_painting_spotlight:
-      min_mireds: 250
-      max_mireds: 454
-      is_deconz_group: false
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - hs
+      - xy
       friendly_name: Office Painting Spotlight
-      supported_features: 43
-      state: 'off'
+      supported_features: 44
+      state: unavailable
     light.level_15:
+      supported_color_modes:
+      - brightness
       node_id: 36
       value_index: 0
       value_instance: 1
       value_id: '72057594646724609'
-      power_consumption: 16
+      power_consumption: 16.4
       friendly_name: Office Ceiling Light
       supported_features: 33
       state: 'off'
     light.office_mood_light:
+      supported_color_modes:
+      - brightness
       is_deconz_group: false
       friendly_name: Office Mood light
-      supported_features: 41
+      supported_features: 40
+      state: 'off'
+    light.elgato_key_light_air:
+      min_mireds: 143
+      max_mireds: 344
+      supported_color_modes:
+      - color_temp
+      friendly_name: Elgato Key Light Air
+      supported_features: 0
       state: 'off'
 - id: '00022'
   name: VR Bright
@@ -1528,4 +2037,334 @@
       is_deconz_group: false
       friendly_name: Office Mood light
       supported_features: 41
+      state: 'on'
+- id: '1633330611844'
+  name: OR Dayconf
+  entities:
+    light.office_table_light:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 254
+      color_temp: 388
+      hs_color:
+      - 28.679
+      - 69.803
+      rgb_color:
+      - 255
+      - 162
+      - 77
+      xy_color:
+      - 0.538
+      - 0.389
+      is_deconz_group: false
+      friendly_name: Office Table Light
+      supported_features: 44
+      state: 'on'
+    light.office_led_strip:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 254
+      color_temp: 420
+      hs_color:
+      - 29.21
+      - 77.052
+      rgb_color:
+      - 255
+      - 154
+      - 58
+      xy_color:
+      - 0.56
+      - 0.39
+      is_deconz_group: false
+      friendly_name: Office Led Strip
+      supported_features: 44
+      state: 'on'
+    switch.office_screen_light:
+      friendly_name: Office Screen Light
+      state: 'on'
+    light.office_painting_spotlight:
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - hs
+      - xy
+      color_mode: xy
+      brightness: 254
+      hs_color:
+      - 30.207
+      - 56.863
+      rgb_color:
+      - 255
+      - 183
+      - 110
+      xy_color:
+      - 0.491
+      - 0.39
+      is_deconz_group: false
+      friendly_name: Office Painting Spotlight
+      supported_features: 44
+      state: 'on'
+    light.office_mood_light:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 87
+      is_deconz_group: false
+      friendly_name: Office Mood light
+      supported_features: 40
+      state: 'on'
+    light.elgato_key_light_air:
+      min_mireds: 143
+      max_mireds: 344
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 20
+      color_temp: 281
+      hs_color:
+      - 27.117
+      - 43.528
+      rgb_color:
+      - 255
+      - 194
+      - 144
+      xy_color:
+      - 0.449
+      - 0.373
+      friendly_name: Elgato Key Light Air
+      supported_features: 0
+      state: 'on'
+- id: '1633330660735'
+  name: OR Nightconf
+  entities:
+    light.office_table_light:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 254
+      color_temp: 388
+      hs_color:
+      - 28.679
+      - 69.803
+      rgb_color:
+      - 255
+      - 162
+      - 77
+      xy_color:
+      - 0.538
+      - 0.389
+      is_deconz_group: false
+      friendly_name: Office Table Light
+      supported_features: 44
+      state: 'on'
+    light.office_led_strip:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 254
+      color_temp: 420
+      hs_color:
+      - 29.21
+      - 77.052
+      rgb_color:
+      - 255
+      - 154
+      - 58
+      xy_color:
+      - 0.56
+      - 0.39
+      is_deconz_group: false
+      friendly_name: Office Led Strip
+      supported_features: 44
+      state: 'on'
+    switch.office_screen_light:
+      friendly_name: Office Screen Light
+      state: 'on'
+    light.office_painting_spotlight:
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - hs
+      - xy
+      color_mode: xy
+      brightness: 254
+      hs_color:
+      - 30.207
+      - 56.863
+      rgb_color:
+      - 255
+      - 183
+      - 110
+      xy_color:
+      - 0.491
+      - 0.39
+      is_deconz_group: false
+      friendly_name: Office Painting Spotlight
+      supported_features: 44
+      state: 'on'
+    light.office_mood_light:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 87
+      is_deconz_group: false
+      friendly_name: Office Mood light
+      supported_features: 40
+      state: 'on'
+    light.elgato_key_light_air:
+      min_mireds: 143
+      max_mireds: 344
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 13
+      color_temp: 281
+      hs_color:
+      - 27.117
+      - 43.528
+      rgb_color:
+      - 255
+      - 194
+      - 144
+      xy_color:
+      - 0.449
+      - 0.373
+      friendly_name: Elgato Key Light Air
+      supported_features: 0
+      state: 'on'
+- id: '1633330710831'
+  name: OR Sunconf
+  entities:
+    light.office_table_light:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 254
+      color_temp: 388
+      hs_color:
+      - 28.679
+      - 69.803
+      rgb_color:
+      - 255
+      - 162
+      - 77
+      xy_color:
+      - 0.538
+      - 0.389
+      is_deconz_group: false
+      friendly_name: Office Table Light
+      supported_features: 44
+      state: 'on'
+    light.office_led_strip:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 254
+      color_temp: 420
+      hs_color:
+      - 29.21
+      - 77.052
+      rgb_color:
+      - 255
+      - 154
+      - 58
+      xy_color:
+      - 0.56
+      - 0.39
+      is_deconz_group: false
+      friendly_name: Office Led Strip
+      supported_features: 44
+      state: 'on'
+    switch.office_screen_light:
+      friendly_name: Office Screen Light
+      state: 'on'
+    light.office_painting_spotlight:
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - hs
+      - xy
+      color_mode: xy
+      brightness: 254
+      hs_color:
+      - 30.207
+      - 56.863
+      rgb_color:
+      - 255
+      - 183
+      - 110
+      xy_color:
+      - 0.491
+      - 0.39
+      is_deconz_group: false
+      friendly_name: Office Painting Spotlight
+      supported_features: 44
+      state: 'on'
+    light.office_mood_light:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 87
+      is_deconz_group: false
+      friendly_name: Office Mood light
+      supported_features: 40
+      state: 'on'
+    light.elgato_key_light_air:
+      min_mireds: 143
+      max_mireds: 344
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 38
+      color_temp: 281
+      hs_color:
+      - 27.117
+      - 43.528
+      rgb_color:
+      - 255
+      - 194
+      - 144
+      xy_color:
+      - 0.449
+      - 0.373
+      friendly_name: Elgato Key Light Air
+      supported_features: 0
       state: 'on'

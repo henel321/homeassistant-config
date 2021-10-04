@@ -406,10 +406,10 @@
     entity_id:
     - scene.lr_normal
 - id: '607766316251'
-  alias: Set Elins room to night mode at 21:30 on weekdays
+  alias: Set Elins room to night mode at 21:00 on weekdays
   trigger:
   - platform: time
-    at: '21:30:00'
+    at: '21:00:00'
   condition:
   - condition: time
     weekday:
@@ -467,10 +467,10 @@
 - id: '392847606286'
   alias: Scene Bedroom
   trigger:
-    platform: state
+  - platform: state
     entity_id: input_select.scene_br
   condition:
-    condition: or
+  - condition: or
     conditions:
     - condition: state
       entity_id: input_select.scene_br
@@ -500,6 +500,7 @@
     data:
       entity_id: input_select.scene_br
       option: '-'
+  mode: single
 - id: '704129690257'
   alias: Scene Elins Room
   trigger:
@@ -594,8 +595,18 @@
       entity_id: input_select.scene_or
       state: 'Off'
     - condition: state
-      entity_id: input_select.scene_or
       state: Bright
+      entity_id: input_select.scene_or
+      attribute: icon
+    - condition: state
+      entity_id: input_select.scene_or
+      state: Dayconf
+    - condition: state
+      entity_id: input_select.scene_or
+      state: Sunconf
+    - condition: state
+      entity_id: input_select.scene_or
+      state: Nightconf
   action:
   - service: scene.turn_on
     data_template:
@@ -603,6 +614,9 @@
         {%-elif is_state( \"input_select.scene_or\", \"Gaming\" ) %}\n  scene.or_gaming\n\
         {%-elif is_state( \"input_select.scene_or\", \"Bright\" ) %}\n  scene.or_bright\
         \    \n{%-elif is_state( \"input_select.scene_or\", \"Off\" ) %}\n  scene.or_off\n\
+        {%-elif is_state( \"input_select.scene_or\", \"Dayconf\" ) %}\n  scene.or_dayconf\n\
+        {%-elif is_state( \"input_select.scene_or\", \"Sunconf\" ) %}\n  scene.or_sunconf\n\
+        {%-elif is_state( \"input_select.scene_or\", \"Nightconf\" ) %}\n  scene.or_nightconf\n\
         {% endif %}\n"
   - service: input_select.select_option
     data:
@@ -612,10 +626,10 @@
 - id: '453855809296'
   alias: Scene Vilehlms Room
   trigger:
-    platform: state
+  - platform: state
     entity_id: input_select.scene_vr
   condition:
-    condition: or
+  - condition: or
     conditions:
     - condition: state
       entity_id: input_select.scene_vr
@@ -629,6 +643,15 @@
     - condition: state
       entity_id: input_select.scene_vr
       state: 'Off'
+    - condition: state
+      entity_id: input_select.scene_vr
+      state: Day Conf
+    - condition: state
+      entity_id: input_select.scene_vr
+      state: Sun Conf
+    - condition: state
+      entity_id: input_select.scene_vr
+      state: Night Conf
   action:
   - service: scene.turn_on
     data_template:
@@ -636,11 +659,15 @@
         {%-elif is_state( \"input_select.scene_vr\", \"Sleep\" ) %}\n  scene.vr_sleep\n\
         {%-elif is_state( \"input_select.scene_vr\", \"Bright\" ) %}\n  scene.vr_bright\n\
         {%-elif is_state( \"input_select.scene_vr\", \"Off\" ) %}\n  scene.vr_off\n\
+        {%-elif is_state( \"input_select.scene_vr\", \"Day Conf\" ) %}\n  scene.vr_day_conf\n\
+        {%-elif is_state( \"input_select.scene_vr\", \"Sun Conf\" ) %}\n  scene.vr_sun_conf\n\
+        {%-elif is_state( \"input_select.scene_vr\", \"Night Conf\" ) %}\n  scene.vr_night_conf\n\
         {% endif %}\n"
   - service: input_select.select_option
     data:
       entity_id: input_select.scene_vr
       option: '-'
+  mode: single
 - id: '893512939794'
   alias: Turn off shower light after 5 minutes of no movement
   trigger:
@@ -994,7 +1021,7 @@
       hvac_mode: heat
   - service: climate.set_temperature
     data:
-      temperature: 25
+      temperature: 27
     target:
       entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
   mode: single
@@ -1042,7 +1069,7 @@
       hvac_mode: heat
   - service: climate.set_temperature
     data:
-      temperature: 25
+      temperature: 27
     target:
       entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
   mode: single
@@ -1090,7 +1117,7 @@
       hvac_mode: heat
   - service: climate.set_temperature
     data:
-      temperature: 25
+      temperature: 27
     target:
       entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
   mode: single
@@ -1138,7 +1165,7 @@
       hvac_mode: heat
   - service: climate.set_temperature
     data:
-      temperature: 25
+      temperature: 27
     target:
       entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
   mode: single

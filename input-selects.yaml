@@ -55,4 +55,7 @@ scene_or:
     - "Normal"
     - "Bright"
     - "Gaming"
+    - "Dayconf"
+    - "Sunconf" 
+    - "Nightconf"
 
