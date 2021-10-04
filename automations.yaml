@@ -614,9 +614,9 @@
         {%-elif is_state( \"input_select.scene_or\", \"Gaming\" ) %}\n  scene.or_gaming\n\
         {%-elif is_state( \"input_select.scene_or\", \"Bright\" ) %}\n  scene.or_bright\
         \    \n{%-elif is_state( \"input_select.scene_or\", \"Off\" ) %}\n  scene.or_off\n\
-        {%-elif is_state( \"input_select.scene_or\", \"Dayconf\" ) %}\n  scene.or_dayconf\n\
-        {%-elif is_state( \"input_select.scene_or\", \"Sunconf\" ) %}\n  scene.or_sunconf\n\
-        {%-elif is_state( \"input_select.scene_or\", \"Nightconf\" ) %}\n  scene.or_nightconf\n\
+        {%-elif is_state( \"input_select.scene_or\", \"Dayconf\" ) %}\n  scene.or_day_conf\n\
+        {%-elif is_state( \"input_select.scene_or\", \"Sunconf\" ) %}\n  scene.or_sun_conf\n\
+        {%-elif is_state( \"input_select.scene_or\", \"Nightconf\" ) %}\n  scene.or_night_conf\n\
         {% endif %}\n"
   - service: input_select.select_option
     data:
