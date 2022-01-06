@@ -196,45 +196,15 @@ device_tracker:
       switch: 192.168.100.253
       ap: 192.168.100.250
 
-#unifi:
-#  controllers:
-#    - host: !secret unifi_host
-#      site: !secret unifi_site
-#      ssid_filter:
-#        - !secret unifi_wifi_ssid
-#
-     
-
 notify:
-#  - name: pushbullet 
-#    platform: pushbullet
-#    api_key: !secret pb_access_token 
   - name: slack 
     platform: slack 
     api_key: !secret slack_api_key
     default_channel: 'homeassistant'
 
-# tradfri: 
-#   host: !secret tradfri_host
-#   allow_tradfri_groups: false
-
 #light: 
 # - platform: lifx
 
-
-# vacuum:
-#   - platform: xiaomi_miio
-#     host: 192.168.100.165
-#     token: !secret xiaomi_token 
-#     name: "pucky" 
-
-# speedtestdotnet:
-#   scan_interval:
-#     minutes: 30
-#   monitored_conditions:
-#     - ping
-#     - download
-#     - upload
 
 system_health:
 
@@ -245,4 +215,9 @@ spotify:
 home_connect:
   client_id: !secret hc_id
   client_secret: !secret hc_secret 
+
+qvr_pro: 
+  host: !secret qvr_host 
+  username: !secret qvr_username 
+  password: !secret qvr_password 
 

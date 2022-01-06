@@ -718,15 +718,38 @@
     offset: -01:30:00
   condition:
   - condition: time
-    before: '21:29:00'
+    before: '21:29'
   action:
-  - service: scene.turn_on
-    entity_id:
-    - scene.br_normal
-    - scene.lr_normal
-    - scene.er_normal
-    - scene.vr_normal
-    - scene.or_normal
+  - scene: scene.br_normal
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  - scene: scene.lr_normal
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  - scene: scene.er_normal
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  - scene: scene.vr_normal
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  - scene: scene.or_normal
   mode: single
 - id: '265490686995'
   alias: 20:30 and Vilhelms Workstation Turned Off
@@ -1217,8 +1240,8 @@
     entity_id: sensor.vacuum_cleaning_count
   condition:
   - condition: time
-    after: '10:00'
-    before: '18:00'
+    after: 09:00:00
+    before: '21:00:00'
   action:
   - service: notify.slack
     data:
@@ -1242,7 +1265,7 @@
   alias: Vacuum scheduling weekdays when everyone away
   trigger:
   - platform: time
-    at: '10:30:00'
+    at: 00:00:00
   condition:
   - condition: and
     conditions:
@@ -1357,4 +1380,23 @@
     - sat
   action:
   - scene: scene.vr_sleep
+  mode: single
+- id: '1638109509388'
+  alias: 'Vacuum - move out for emptying '
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: xiaomi_miio.vacuum_remote_control_start
+    entity_id: vacuum.pucky
+  - delay: '15'
+  - service: xiaomi_miio.vacuum_remote_control_move
+    entity_id: vacuum.pucky
+    data:
+      duration: 900
+      velocity: 0.29
+      rotation: 0
+  - delay: '5'
+  - service: xiaomi_miio.vacuum_remote_control_stop
+    entity_id: vacuum.pucky
   mode: single

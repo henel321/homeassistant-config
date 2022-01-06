@@ -77,9 +77,6 @@ sensor:
   
   - platform: uptime
 
-  - platform: travisci 
-    api_key: !secret travis_token 
-
 #automation: 
 #  - alias: Hass New Device Tracked
 #    trigger:
