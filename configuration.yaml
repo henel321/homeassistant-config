@@ -32,6 +32,17 @@ homeassistant:
 # Enable Mobile app 
 mobile_app:
 
+# Enable Helpers
+input_button:
+input_boolean:
+input_text:
+input_datetime:
+counter:
+timer:
+
+# Enable Energy
+energy:
+
 # Enable streaming 
 stream: 
 
@@ -123,7 +134,7 @@ sun:
 
 
 # Weather prediction
-#sensor:
+# sensor:
 #  - platform: yr
 #    name: Weather
 #    forecast: 24
@@ -137,6 +148,7 @@ sun:
 #      - humidity
 #      - fog
 #      - cloudiness
+
 
 # Text to speech
 tts:
@@ -152,6 +164,8 @@ automation: !include automations.yaml
 
 scene: !include scenes.yaml
 scene old: !include_dir_merge_list scene
+
+sensor: !include sensors.yaml
 
 # Controls
 input_select: !include input-selects.yaml

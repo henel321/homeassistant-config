@@ -696,20 +696,19 @@
 - id: '975447476954'
   alias: Turn off lights in Kids' room, Living Room and Bedroom after sunrise
   trigger:
-    platform: sun
+  - platform: sun
     event: sunrise
     offset: +01:30:00
   condition:
-    condition: time
-    after: 07:30:00
+  - condition: time
+    after: 07:30
   action:
-    service: scene.turn_on
+  - service: scene.turn_on
     entity_id:
     - scene.br_off
     - scene.lr_off
     - scene.er_off
     - scene.vr_off
-    - scene.or_off
 - id: '747767838597'
   alias: Turn on lights at sunset in Kids' room, Living Room and Bedroom
   trigger:
@@ -1385,6 +1384,29 @@
   alias: 'Vacuum - move out for emptying '
   description: ''
   trigger: []
+  condition: []
+  action:
+  - service: xiaomi_miio.vacuum_remote_control_start
+    entity_id: vacuum.pucky
+  - delay: '15'
+  - service: xiaomi_miio.vacuum_remote_control_move
+    entity_id: vacuum.pucky
+    data:
+      duration: 900
+      velocity: 0.29
+      rotation: 0
+  - delay: '5'
+  - service: xiaomi_miio.vacuum_remote_control_stop
+    entity_id: vacuum.pucky
+  mode: single
+- id: '1641628982556'
+  alias: 'Vacuum - button push move out for emptying '
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.qubino_goap_zmnhdd1_flush_dimmer_sensor_6
+    from: 'off'
+    to: 'on'
   condition: []
   action:
   - service: xiaomi_miio.vacuum_remote_control_start

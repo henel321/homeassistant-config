@@ -73,19 +73,18 @@
       - color_temp
       - hs
       - xy
-      color_mode: color_temp
-      brightness: 143
-      color_temp: 427
+      color_mode: xy
+      brightness: 101
       hs_color:
-      - 29.328
-      - 78.609
+      - 299.754
+      - 95.686
       rgb_color:
+      - 254
+      - 11
       - 255
-      - 152
-      - 54
       xy_color:
-      - 0.564
-      - 0.389
+      - 0.385
+      - 0.155
       is_deconz_group: false
       friendly_name: Balcony Led Strip
       supported_features: 44
@@ -151,7 +150,7 @@
       value_index: 0
       value_instance: 1
       value_id: '72057594629947393'
-      power_consumption: 0
+      power_consumption: 0.4
       friendly_name: Bedroom Ceiling Light
       supported_features: 33
       state: 'on'
@@ -209,26 +208,13 @@
       supported_color_modes:
       - hs
       - xy
-      color_mode: xy
-      brightness: 135
-      hs_color:
-      - 29.722
-      - 84.706
-      rgb_color:
-      - 255
-      - 146
-      - 39
-      xy_color:
-      - 0.581
-      - 0.388
-      is_deconz_group: false
       friendly_name: Christmas Church
       supported_features: 44
-      state: 'on'
+      state: unavailable
     switch.osram_outdoor_plug:
       icon: mdi:snowman
       friendly_name: Balcony Outdoor Plug
-      state: 'on'
+      state: unavailable
 - id: '00003'
   name: BR Cozy
   entities:
