@@ -2036,6 +2036,32 @@
     switch.vilhelms_led_strip:
       friendly_name: Vilhelms Led Strip
       state: 'on'
+    light.extended_color_light_38:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 254
+      color_temp: 273
+      hs_color:
+      - 27.026
+      - 41.343
+      rgb_color:
+      - 255
+      - 197
+      - 149
+      xy_color:
+      - 0.442
+      - 0.371
+      is_deconz_group: false
+      friendly_name: Vilhelms Bed Light Strip
+      supported_features: 44
+      state: 'on'
 - id: '00023'
   name: VR Normal
   entities:
@@ -2070,12 +2096,83 @@
       value_index: 0
       value_instance: 1
       value_id: '72057594613170177'
-      power_consumption: 6.5
+      power_consumption: 0
       friendly_name: Vilhelm Ceiling Light
-      supported_features: 33
+      supported_features: 32
       state: 'on'
     switch.vilhelms_led_strip:
       friendly_name: Vilhelms Led Strip
+      state: 'on'
+    light.shapes_6a87:
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Beatdrop
+      - Blaze
+      - Cocoa Beach
+      - Cotton Candy
+      - Date Night
+      - E
+      - Ee
+      - He
+      - Hip Hop
+      - Hot Sauce
+      - Jungle
+      - Lightscape
+      - Morning Sky
+      - Northern Lights
+      - Pop Rocks
+      - Prism
+      - Starlight
+      - Sundown
+      - Waterfall
+      - moonlight
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 56
+      hs_color:
+      - 0
+      - 0
+      rgb_color:
+      - 255
+      - 255
+      - 255
+      xy_color:
+      - 0.323
+      - 0.329
+      color_temp: 250
+      effect: Northern Lights
+      icon: mdi:triangle-outline
+      friendly_name: Light Machine
+      supported_features: 55
+      state: 'on'
+    light.extended_color_light_38:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 148
+      color_temp: 499
+      hs_color:
+      - 30.583
+      - 94.331
+      rgb_color:
+      - 255
+      - 137
+      - 14
+      xy_color:
+      - 0.598
+      - 0.383
+      is_deconz_group: false
+      friendly_name: Vilhelms Bed Light Strip
+      supported_features: 44
       state: 'on'
 - id: '00024'
   name: VR Off
@@ -2097,12 +2194,56 @@
       value_index: 0
       value_instance: 1
       value_id: '72057594613170177'
-      power_consumption: 6.5
+      power_consumption: 0
       friendly_name: Vilhelm Ceiling Light
-      supported_features: 33
+      supported_features: 32
       state: 'off'
     switch.vilhelms_led_strip:
       friendly_name: Vilhelms Led Strip
+      state: 'off'
+    light.shapes_6a87:
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Beatdrop
+      - Blaze
+      - Cocoa Beach
+      - Cotton Candy
+      - Date Night
+      - E
+      - Ee
+      - He
+      - Hip Hop
+      - Hot Sauce
+      - Jungle
+      - Lightscape
+      - Morning Sky
+      - Northern Lights
+      - Pop Rocks
+      - Prism
+      - Starlight
+      - Sundown
+      - Waterfall
+      - moonlight
+      supported_color_modes:
+      - color_temp
+      - hs
+      icon: mdi:triangle-outline
+      friendly_name: Light Machine
+      supported_features: 55
+      state: 'off'
+    light.extended_color_light_38:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      is_deconz_group: false
+      friendly_name: Vilhelms Bed Light Strip
+      supported_features: 44
       state: 'off'
 - id: '00025'
   name: VR Sleep
@@ -2136,13 +2277,70 @@
       value_index: 0
       value_instance: 1
       value_id: '72057594613170177'
-      power_consumption: 6.5
+      power_consumption: 0
       friendly_name: Vilhelm Ceiling Light
-      supported_features: 33
+      supported_features: 32
       state: 'off'
     switch.vilhelms_led_strip:
       friendly_name: Vilhelms Led Strip
       state: 'off'
+    light.shapes_6a87:
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Beatdrop
+      - Blaze
+      - Cocoa Beach
+      - Cotton Candy
+      - Date Night
+      - E
+      - Ee
+      - He
+      - Hip Hop
+      - Hot Sauce
+      - Jungle
+      - Lightscape
+      - Morning Sky
+      - Northern Lights
+      - Pop Rocks
+      - Prism
+      - Starlight
+      - Sundown
+      - Waterfall
+      - moonlight
+      supported_color_modes:
+      - color_temp
+      - hs
+      icon: mdi:triangle-outline
+      friendly_name: Light Machine
+      supported_features: 55
+      state: 'off'
+    light.extended_color_light_38:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 26
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      is_deconz_group: false
+      friendly_name: Vilhelms Bed Light Strip
+      supported_features: 44
+      state: 'on'
 - id: '1601823164379'
   name: OR Bright
   entities:

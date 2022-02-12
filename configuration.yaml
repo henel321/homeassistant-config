@@ -41,7 +41,7 @@ counter:
 timer:
 
 # Enable Energy
-energy:
+# energy:
 
 # Enable streaming 
 stream: 
