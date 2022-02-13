@@ -2062,6 +2062,125 @@
       friendly_name: Vilhelms Bed Light Strip
       supported_features: 44
       state: 'on'
+    light.shapes_6a87:
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Beatdrop
+      - Blaze
+      - Cocoa Beach
+      - Cotton Candy
+      - Date Night
+      - E
+      - Ee
+      - He
+      - Hip Hop
+      - Hot Sauce
+      - Jungle
+      - Lightscape
+      - Morning Sky
+      - Northern Lights
+      - Pop Rocks
+      - Prism
+      - Starlight
+      - Sundown
+      - Waterfall
+      - moonlight
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 254
+      hs_color:
+      - 30
+      - 57
+      rgb_color:
+      - 255
+      - 182
+      - 109
+      xy_color:
+      - 0.491
+      - 0.39
+      color_temp: 250
+      icon: mdi:triangle-outline
+      friendly_name: Light Machine
+      supported_features: 55
+      state: 'on'
+    zwave.qubino_goap_zmnhdd1_flush_dimmer_4:
+      node_id: 34
+      node_name: Qubino (Goap) ZMNHDD1 Flush Dimmer
+      manufacturer_name: Qubino (Goap)
+      product_name: ZMNHDD1 Flush Dimmer
+      query_stage: Complete
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: true
+      capabilities:
+      - zwave_plus
+      - routing
+      - beaming
+      - listening
+      neighbors:
+      - 1
+      - 3
+      - 12
+      - 17
+      - 18
+      - 23
+      - 24
+      - 28
+      - 35
+      - 36
+      - 37
+      - 38
+      - 40
+      - 43
+      - 45
+      - 46
+      - 59
+      - 60
+      - 63
+      - 64
+      - 65
+      sentCnt: 86
+      sentFailed: 0
+      retries: 0
+      receivedCnt: 81
+      receivedDups: 3
+      receivedUnsolicited: 22
+      sentTS: '2022-02-13 19:13:45:592 '
+      receivedTS: '2022-02-13 19:13:48:282 '
+      lastRequestRTT: 80
+      averageRequestRTT: 58
+      lastResponseRTT: 130
+      averageResponseRTT: 115
+      application_version: '3.05'
+      friendly_name: Qubino (Goap) ZMNHDD1 Flush Dimmer
+      state: ready
+    switch.qubino_goap_zmnhdd1_flush_dimmer_switch_4:
+      node_id: 34
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594613153792'
+      power_consumption: 6.1
+      friendly_name: Qubino (Goap) ZMNHDD1 Flush Dimmer Switch
+      state: 'off'
+    light.level_13:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 183
+      node_id: 34
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594613170177'
+      power_consumption: 6.1
+      friendly_name: Vilhelm Ceiling Light
+      supported_features: 32
+      state: 'on'
 - id: '00023'
   name: VR Normal
   entities:
@@ -2072,17 +2191,17 @@
       - hs
       - xy
       color_mode: xy
-      brightness: 171
+      brightness: 102
       hs_color:
-      - 30.207
-      - 56.863
+      - 29.834
+      - 70.98
       rgb_color:
       - 255
-      - 183
-      - 110
+      - 164
+      - 74
       xy_color:
-      - 0.491
-      - 0.39
+      - 0.54
+      - 0.393
       is_deconz_group: false
       friendly_name: Vilhelms Light Bulb
       supported_features: 44
@@ -2090,16 +2209,14 @@
     light.level_13:
       supported_color_modes:
       - brightness
-      color_mode: brightness
-      brightness: 26
       node_id: 34
       value_index: 0
       value_instance: 1
       value_id: '72057594613170177'
-      power_consumption: 0
+      power_consumption: 5.9
       friendly_name: Vilhelm Ceiling Light
       supported_features: 32
-      state: 'on'
+      state: 'off'
     switch.vilhelms_led_strip:
       friendly_name: Vilhelms Led Strip
       state: 'on'
@@ -2131,7 +2248,7 @@
       - color_temp
       - hs
       color_mode: hs
-      brightness: 56
+      brightness: 127
       hs_color:
       - 0
       - 0
@@ -2143,7 +2260,7 @@
       - 0.323
       - 0.329
       color_temp: 250
-      effect: Northern Lights
+      effect: Starlight
       icon: mdi:triangle-outline
       friendly_name: Light Machine
       supported_features: 55
@@ -2158,7 +2275,7 @@
       - hs
       - xy
       color_mode: color_temp
-      brightness: 148
+      brightness: 222
       color_temp: 499
       hs_color:
       - 30.583
@@ -2255,17 +2372,17 @@
       - hs
       - xy
       color_mode: xy
-      brightness: 3
+      brightness: 15
       hs_color:
-      - 30.207
-      - 56.863
+      - 29.834
+      - 70.98
       rgb_color:
       - 255
-      - 183
-      - 110
+      - 164
+      - 74
       xy_color:
-      - 0.491
-      - 0.39
+      - 0.54
+      - 0.393
       is_deconz_group: false
       friendly_name: Vilhelms Light Bulb
       supported_features: 44
@@ -2277,7 +2394,7 @@
       value_index: 0
       value_instance: 1
       value_id: '72057594613170177'
-      power_consumption: 0
+      power_consumption: 5.9
       friendly_name: Vilhelm Ceiling Light
       supported_features: 32
       state: 'off'
@@ -2325,18 +2442,18 @@
       - hs
       - xy
       color_mode: color_temp
-      brightness: 26
-      color_temp: 500
+      brightness: 56
+      color_temp: 560
       hs_color:
-      - 30.601
-      - 94.547
+      - 29.543
+      - 100
       rgb_color:
       - 255
-      - 136
-      - 13
+      - 125
+      - 0
       xy_color:
-      - 0.599
-      - 0.382
+      - 0.615
+      - 0.372
       is_deconz_group: false
       friendly_name: Vilhelms Bed Light Strip
       supported_features: 44
