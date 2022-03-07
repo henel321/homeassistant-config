@@ -14,26 +14,61 @@
   entities:
     light.bedroom_led_strip:
       min_mireds: 111
-      max_mireds: 400
+      max_mireds: 666
       effect_list:
       - effect_colorloop
       - effect_pulse
       - effect_stop
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: color_temp
       brightness: 255
       color_temp: 350
+      hs_color:
+      - 28.077
+      - 60.925
+      rgb_color:
+      - 255
+      - 172
+      - 99
+      xy_color:
+      - 0.51
+      - 0.386
+      icon: mdi:led-strip-variant
       friendly_name: 'Bedroom LED strip '
       supported_features: 55
       state: 'on'
     light.henriks_light:
-      min_mireds: 250
-      max_mireds: 454
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
       brightness: 250
       color_temp: 451
+      hs_color:
+      - 29.737
+      - 83.879
+      rgb_color:
+      - 255
+      - 147
+      - 41
+      xy_color:
+      - 0.577
+      - 0.388
       is_deconz_group: false
       friendly_name: Henriks Light
-      supported_features: 43
+      supported_features: 44
       state: 'on'
     light.level_14:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
       brightness: 255
       node_id: 35
       value_index: 0
@@ -41,25 +76,82 @@
       value_id: '72057594629947393'
       power_consumption: 0
       friendly_name: Bedroom Ceiling Light
-      supported_features: 33
+      supported_features: 32
       state: 'on'
     light.marias_light:
-      min_mireds: 250
-      max_mireds: 454
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
       brightness: 250
       color_temp: 451
+      hs_color:
+      - 29.737
+      - 83.879
+      rgb_color:
+      - 255
+      - 147
+      - 41
+      xy_color:
+      - 0.577
+      - 0.388
       is_deconz_group: false
       friendly_name: Marias Light
-      supported_features: 43
+      supported_features: 44
       state: 'on'
     light.color_temperature_light_32:
       min_mireds: 140
       max_mireds: 650
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
       brightness: 254
       color_temp: 416
+      hs_color:
+      - 29.142
+      - 76.154
+      rgb_color:
+      - 255
+      - 155
+      - 60
+      xy_color:
+      - 0.557
+      - 0.39
       is_deconz_group: false
       friendly_name: Bedroom Desk Light
-      supported_features: 43
+      supported_features: 40
+      state: 'on'
+    light.extended_color_light_21:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 65
+      color_temp: 442
+      hs_color:
+      - 29.582
+      - 81.907
+      rgb_color:
+      - 255
+      - 149
+      - 46
+      xy_color:
+      - 0.572
+      - 0.389
+      is_deconz_group: false
+      icon: mdi:led-strip-variant
+      friendly_name: Bed LED Strip
+      supported_features: 44
       state: 'on'
 - id: '00002'
   name: BR Normal
@@ -86,6 +178,7 @@
       - 0.385
       - 0.155
       is_deconz_group: false
+      icon: mdi:led-strip-variant
       friendly_name: Balcony Led Strip
       supported_features: 44
       state: 'on'
@@ -100,18 +193,19 @@
       - color_temp
       - hs
       color_mode: color_temp
-      brightness: 94
-      color_temp: 363
+      brightness: 130
+      color_temp: 400
       hs_color:
-      - 28.281
-      - 64.025
+      - 28.874
+      - 72.522
       rgb_color:
       - 255
-      - 168
-      - 91
+      - 159
+      - 70
       xy_color:
-      - 0.521
-      - 0.387
+      - 0.546
+      - 0.389
+      icon: mdi:led-strip-variant
       friendly_name: 'Bedroom LED strip '
       supported_features: 55
       state: 'on'
@@ -150,9 +244,10 @@
       value_index: 0
       value_instance: 1
       value_id: '72057594629947393'
-      power_consumption: 0.4
+      power_consumption: 0
+      icon: mdi:ceiling-light
       friendly_name: Bedroom Ceiling Light
-      supported_features: 33
+      supported_features: 32
       state: 'on'
     light.marias_light:
       min_mireds: 140
@@ -186,7 +281,7 @@
       supported_color_modes:
       - color_temp
       color_mode: color_temp
-      brightness: 224
+      brightness: 194
       color_temp: 454
       hs_color:
       - 29.79
@@ -215,6 +310,33 @@
       icon: mdi:snowman
       friendly_name: Balcony Outdoor Plug
       state: unavailable
+    light.extended_color_light_21:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 20
+      color_temp: 452
+      hs_color:
+      - 29.754
+      - 84.103
+      rgb_color:
+      - 255
+      - 146
+      - 40
+      xy_color:
+      - 0.579
+      - 0.387
+      is_deconz_group: false
+      icon: mdi:led-strip-variant
+      friendly_name: Bed LED Strip
+      supported_features: 44
+      state: 'on'
 - id: '00003'
   name: BR Cozy
   entities:
@@ -293,6 +415,7 @@
       xy_color:
       - 0.546
       - 0.389
+      icon: mdi:led-strip-variant
       friendly_name: 'Bedroom LED strip '
       supported_features: 55
       state: 'on'
@@ -303,9 +426,9 @@
       value_index: 0
       value_instance: 1
       value_id: '72057594629947393'
-      power_consumption: 0.5
+      power_consumption: 0
       friendly_name: Bedroom Ceiling Light
-      supported_features: 33
+      supported_features: 32
       state: 'off'
     light.color_temperature_light_32:
       min_mireds: 140
@@ -322,20 +445,34 @@
       supported_color_modes:
       - hs
       - xy
-      color_mode: xy
-      brightness: 28
+      friendly_name: Christmas Church
+      supported_features: 44
+      state: unavailable
+    light.extended_color_light_21:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 15
+      color_temp: 476
       hs_color:
-      - 29.834
-      - 70.98
+      - 30.176
+      - 89.37
       rgb_color:
       - 255
-      - 164
-      - 74
+      - 141
+      - 27
       xy_color:
-      - 0.54
-      - 0.393
+      - 0.589
+      - 0.385
       is_deconz_group: false
-      friendly_name: Christmas Church
+      icon: mdi:led-strip-variant
+      friendly_name: Bed LED Strip
       supported_features: 44
       state: 'on'
 - id: '00004'
@@ -351,6 +488,7 @@
       - hs
       - xy
       is_deconz_group: false
+      icon: mdi:led-strip-variant
       friendly_name: Balcony Led Strip
       supported_features: 44
       state: 'off'
@@ -364,6 +502,7 @@
       supported_color_modes:
       - color_temp
       - hs
+      icon: mdi:led-strip-variant
       friendly_name: 'Bedroom LED strip '
       supported_features: 55
       state: 'off'
@@ -387,9 +526,9 @@
       value_index: 0
       value_instance: 1
       value_id: '72057594629947393'
-      power_consumption: 0.5
+      power_consumption: 0
       friendly_name: Bedroom Ceiling Light
-      supported_features: 33
+      supported_features: 32
       state: 'off'
     light.marias_light:
       min_mireds: 140
@@ -414,17 +553,30 @@
       supported_features: 40
       state: 'off'
     switch.osram_outdoor_plug:
-      friendly_name: Balcony Outdoor Plug
       icon: mdi:snowman
-      state: 'off'
+      friendly_name: Balcony Outdoor Plug
+      state: unavailable
     light.color_light_31:
       effect_list:
       - colorloop
       supported_color_modes:
       - hs
       - xy
-      is_deconz_group: false
       friendly_name: Christmas Church
+      supported_features: 44
+      state: unavailable
+    light.extended_color_light_21:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      is_deconz_group: false
+      icon: mdi:led-strip-variant
+      friendly_name: Bed LED Strip
       supported_features: 44
       state: 'off'
 - id: '00005'
@@ -452,6 +604,7 @@
       - 0.385
       - 0.155
       is_deconz_group: false
+      icon: mdi:led-strip-variant
       friendly_name: Balcony Led Strip
       supported_features: 44
       state: 'on'
@@ -477,6 +630,7 @@
       xy_color:
       - 0.383
       - 0.153
+      icon: mdi:led-strip-variant
       friendly_name: 'Bedroom LED strip '
       supported_features: 55
       state: 'on'
@@ -512,9 +666,9 @@
       value_index: 0
       value_instance: 1
       value_id: '72057594629947393'
-      power_consumption: 0.5
+      power_consumption: 0
       friendly_name: Bedroom Ceiling Light
-      supported_features: 33
+      supported_features: 32
       state: 'off'
     light.marias_light:
       min_mireds: 140
@@ -556,20 +710,33 @@
       supported_color_modes:
       - hs
       - xy
+      friendly_name: Christmas Church
+      supported_features: 44
+      state: unavailable
+    light.extended_color_light_21:
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
       color_mode: xy
-      brightness: 82
+      brightness: 53
       hs_color:
-      - 269.663
-      - 69.804
+      - 299.754
+      - 95.686
       rgb_color:
-      - 165
-      - 77
+      - 254
+      - 11
       - 255
       xy_color:
-      - 0.259
-      - 0.122
+      - 0.385
+      - 0.155
       is_deconz_group: false
-      friendly_name: Christmas Church
+      icon: mdi:led-strip-variant
+      friendly_name: Bed LED Strip
       supported_features: 44
       state: 'on'
 - id: '00006'
@@ -1894,24 +2061,56 @@
   name: OR Normal
   entities:
     light.office_table_light:
-      min_mireds: 250
-      max_mireds: 454
+      min_mireds: 140
+      max_mireds: 650
+      effect_list:
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
       brightness: 254
       color_temp: 388
+      hs_color:
+      - 28.679
+      - 69.803
+      rgb_color:
+      - 255
+      - 162
+      - 77
+      xy_color:
+      - 0.538
+      - 0.389
       is_deconz_group: false
       friendly_name: Office Table Light
-      supported_features: 43
+      supported_features: 44
       state: 'on'
     light.office_led_strip:
       min_mireds: 140
       max_mireds: 650
       effect_list:
       - colorloop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
       brightness: 254
       color_temp: 420
+      hs_color:
+      - 29.21
+      - 77.052
+      rgb_color:
+      - 255
+      - 154
+      - 58
+      xy_color:
+      - 0.56
+      - 0.39
       is_deconz_group: false
       friendly_name: Office Led Strip
-      supported_features: 63
+      supported_features: 44
       state: 'on'
     switch.office_screen_light:
       friendly_name: Office Screen Light
@@ -1919,27 +2118,39 @@
     light.office_painting_spotlight:
       effect_list:
       - colorloop
+      supported_color_modes:
+      - hs
+      - xy
+      color_mode: xy
       brightness: 254
       hs_color:
       - 30.207
       - 56.863
       rgb_color:
       - 255
-      - 182
-      - 109
+      - 183
+      - 110
       xy_color:
       - 0.491
       - 0.39
       is_deconz_group: false
       friendly_name: Office Painting Spotlight
-      supported_features: 61
+      supported_features: 44
       state: 'on'
     light.office_mood_light:
-      brightness: 87
-      is_deconz_group: false
+      supported_color_modes:
+      - brightness
       friendly_name: Office Mood light
-      supported_features: 41
-      state: 'on'
+      supported_features: 40
+      state: unavailable
+    light.elgato_key_light_air:
+      min_mireds: 143
+      max_mireds: 344
+      supported_color_modes:
+      - color_temp
+      friendly_name: Elgato Key Light Air
+      supported_features: 0
+      state: 'off'
 - id: '00021'
   name: OR Off
   entities:
