@@ -12,13 +12,6 @@
       message: Washing mashine is done, please remove wash
     service: notify.slack
   mode: single
-- id: '391445821700'
-  alias: Zwave heal at 4:00 am
-  trigger:
-    platform: time
-    at: '4:00:00'
-  action:
-    service: zwave.heal_network
 - id: '823235387706'
   alias: Bad weather - lights on!
   trigger:
@@ -48,17 +41,19 @@
   trigger:
   - platform: state
     to: 'off'
-    for: 00:15:00
-    entity_id: binary_sensor.shenzhen_neo_electronics_co_ltd_battery_powered_pir_sensor_sensor
+    for:
+      hours: 0
+      minutes: 15
+      seconds: 0
+    entity_id: binary_sensor.bathroom_pir_home_security_motion_detection_3
   action:
-  - type: turn_off
-    device_id: 480b5cc0dc9e45ac81e2518c439d9d3c
-    entity_id: switch.qubino_zmnhbdx_flush_2_relays_switch
-    domain: switch
-  - type: turn_off
-    device_id: 24c82c52557d4ab3b6d7619ed3225c18
-    entity_id: switch.qubino_zmnhbdx_flush_2_relays_switch_2
-    domain: switch
+  - service: switch.turn_off
+    data: {}
+    target:
+      entity_id:
+      - switch.bathroom_light
+      - switch.bathroom_light_2
+      - switch.bathroom_light_2_2
   mode: single
 - id: '304323506250'
   alias: Turn on bathroom light when movement during day
@@ -66,20 +61,18 @@
   - platform: state
     from: 'off'
     to: 'on'
-    entity_id: binary_sensor.shenzhen_neo_electronics_co_ltd_battery_powered_pir_sensor_sensor
+    entity_id: binary_sensor.bathroom_pir_home_security_motion_detection_3
   condition:
   - condition: time
     after: 07:00:00
     before: '23:00:00'
   action:
-  - type: turn_on
-    device_id: 480b5cc0dc9e45ac81e2518c439d9d3c
-    entity_id: switch.qubino_zmnhbdx_flush_2_relays_switch
-    domain: switch
-  - type: turn_on
-    device_id: 24c82c52557d4ab3b6d7619ed3225c18
-    entity_id: switch.qubino_zmnhbdx_flush_2_relays_switch_2
-    domain: switch
+  - service: switch.turn_on
+    data: {}
+    target:
+      entity_id:
+      - switch.bathroom_light_2
+      - switch.bathroom_light_2_2
   mode: single
 - id: '582925487109'
   alias: Turn on bathroom light when movement during night
@@ -87,16 +80,16 @@
   - platform: state
     from: 'off'
     to: 'on'
-    entity_id: binary_sensor.shenzhen_neo_electronics_co_ltd_battery_powered_pir_sensor_sensor
+    entity_id: binary_sensor.bathroom_pir_home_security_motion_detection_3
   condition:
   - condition: time
     after: '23:00:00'
     before: 07:00:00
   action:
-  - type: turn_on
-    device_id: 24c82c52557d4ab3b6d7619ed3225c18
-    entity_id: switch.qubino_zmnhbdx_flush_2_relays_switch_2
-    domain: switch
+  - service: switch.turn_on
+    data: {}
+    target:
+      entity_id: switch.bathroom_light_2_2
   mode: single
 - id: '898058193301'
   alias: Turn off LIFX when lights turned off in bedroom.
@@ -203,27 +196,29 @@
 - id: '36176491978'
   alias: Turn off light five mintes after door close.
   trigger:
-    platform: state
-    entity_id: binary_sensor.neo_coolcam_doorwindow_detector_sensor
+  - platform: state
+    entity_id: binary_sensor.hallway_door_sensor_access_control_window_door_is_open
     from: 'on'
     to: 'off'
     for:
       minutes: 10
   action:
-    service: switch.turn_off
+  - service: switch.turn_off
     entity_id:
     - switch.switch_3
 - id: '969501358508'
   alias: Turn on Hallway light when door opens
   trigger:
-    platform: state
-    entity_id: binary_sensor.neo_coolcam_doorwindow_detector_sensor
+  - platform: state
+    entity_id: binary_sensor.hallway_door_sensor_access_control_window_door_is_open
     from: 'off'
     to: 'on'
+  condition: []
   action:
-    service: switch.turn_on
-    entity_id:
-    - switch.switch_3
+  - service: switch.turn_on
+    data: {}
+    target:
+      entity_id: switch.hallway_light_2
 - id: '64032500592'
   alias: Turn off hallway light
   trigger:
@@ -673,13 +668,17 @@
   trigger:
   - platform: state
     to: 'off'
-    for: 00:15:00
+    for:
+      hours: 0
+      minutes: 15
+      seconds: 0
     from: 'on'
-    entity_id: binary_sensor.pir_shower
+    entity_id: binary_sensor.shower_pir_home_security_motion_detection_2
   action:
   - service: switch.turn_off
     data: {}
-    entity_id: switch.shower_ceiling_light
+    target:
+      device_id: 819e568c8cba5205a1fef60fdc960574
   mode: single
 - id: '707339438036'
   alias: Turn on shower light when movement
@@ -687,11 +686,12 @@
   - platform: state
     from: 'off'
     to: 'on'
-    entity_id: binary_sensor.pir_shower
+    entity_id: binary_sensor.shower_pir_home_security_motion_detection_2
   action:
   - service: switch.turn_on
     data: {}
-    entity_id: switch.shower_ceiling_light
+    target:
+      device_id: 819e568c8cba5205a1fef60fdc960574
   mode: single
 - id: '975447476954'
   alias: Turn off lights in Kids' room, Living Room and Bedroom after sunrise
@@ -750,19 +750,6 @@
       milliseconds: 0
   - scene: scene.or_normal
   mode: single
-- id: '265490686995'
-  alias: 20:30 and Vilhelms Workstation Turned Off
-  trigger:
-    platform: time
-    at: '20:30:00'
-  condition:
-    condition: state
-    entity_id: device_tracker.workstation_vilhelm
-    state: not_home
-  action:
-    service: switch.turn_off
-    entity_id:
-    - switch.telldusvilhelm_switch
 - id: '878881351806'
   alias: Vilhelms computer turned Off and after 20:30
   trigger:
@@ -815,7 +802,7 @@
   alias: Video triggered
   trigger:
   - platform: state
-    entity_id: binary_sensor.neo_coolcam_doorwindow_detector_sensor
+    entity_id: binary_sensor.hallway_door_sensor_access_control_window_door_is_open
     from: 'off'
     to: 'on'
   condition:
@@ -855,15 +842,15 @@
   alias: Notify that outer door is open
   trigger:
   - platform: state
-    entity_id: binary_sensor.neo_coolcam_doorwindow_detector_sensor
+    entity_id: binary_sensor.hallway_door_sensor_access_control_window_door_is_open
     from: 'off'
     to: 'on'
   condition:
-    condition: state
+  - condition: state
     entity_id: group.parents
     state: not_home
   action:
-    service: notify.slack
+  - service: notify.slack
     data:
       message: Outer door has been opened
 - id: '960128774762'
@@ -933,8 +920,8 @@
 - id: '691084758186'
   alias: Flooding in Kitchen
   trigger:
-    platform: state
-    entity_id: binary_sensor.sensor_12
+  - platform: state
+    entity_id: binary_sensor.kitchen_flood_sensor_any
     to: 'on'
   action:
   - service: notify.slack
@@ -944,8 +931,8 @@
 - id: '971720982759'
   alias: Flooding in Bathroom
   trigger:
-    platform: state
-    entity_id: binary_sensor.sensor_13
+  - platform: state
+    entity_id: binary_sensor.bathroom_flood_sensor_any
     to: 'on'
   action:
   - service: notify.slack
@@ -977,8 +964,8 @@
 - id: '717990556324'
   alias: Smoke Sensor SMOKE
   trigger:
-    platform: state
-    entity_id: sensor.fibaro_system_fgsd002_smoke_sensor_smoke
+  - platform: state
+    entity_id: binary_sensor.smoke_detector_smoke_alarm_smoke_detected
     to: '255'
   action:
   - service: notify.slack
@@ -988,8 +975,8 @@
 - id: '173766649856'
   alias: Smoke Sensor NOSMOKE
   trigger:
-    platform: state
-    entity_id: sensor.fibaro_system_fgsd002_smoke_sensor_smoke
+  - platform: state
+    entity_id: binary_sensor.smoke_detector_smoke_alarm_smoke_detected
     from: '255'
   action:
   - service: notify.slack
@@ -1038,14 +1025,15 @@
       state: home
   action:
   - service: climate.set_hvac_mode
-    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
     data:
       hvac_mode: heat
+    target:
+      entity_id: climate.shower_floor
   - service: climate.set_temperature
     data:
       temperature: 27
     target:
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
+      entity_id: climate.shower_floor
   mode: single
 - id: '875063269880'
   alias: Decrease floor heating in Shower after weekday mornings
@@ -1067,7 +1055,7 @@
     data:
       temperature: 20
     target:
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
+      entity_id: climate.shower_floor
   mode: single
 - id: '978978252061'
   alias: Increase floor heating in Shower during weekend mornings
@@ -1086,14 +1074,15 @@
       state: home
   action:
   - service: climate.set_hvac_mode
-    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
     data:
       hvac_mode: heat
+    target:
+      entity_id: climate.shower_floor
   - service: climate.set_temperature
     data:
       temperature: 27
     target:
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
+      entity_id: climate.shower_floor
   mode: single
 - id: '411888423708'
   alias: Decrease floor heating in Shower after weekend mornings
@@ -1112,7 +1101,7 @@
     data:
       temperature: 20
     target:
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode
+      entity_id: climate.shower_floor
   mode: single
 - id: '643424355323'
   alias: Increase floor heating in Bathroom during weekday mornings
@@ -1134,14 +1123,15 @@
       state: home
   action:
   - service: climate.set_hvac_mode
-    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
     data:
       hvac_mode: heat
+    target:
+      entity_id: climate.bathroom_floor_2
   - service: climate.set_temperature
     data:
       temperature: 27
     target:
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
+      entity_id: climate.bathroom_floor_2
   mode: single
 - id: '104258603414'
   alias: Decrease floor heating in Bathroom after weekday mornings
@@ -1163,7 +1153,7 @@
     data:
       temperature: 20
     target:
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
+      entity_id: climate.bathroom_floor_2
   mode: single
 - id: '665441502482'
   alias: Increase floor heating in Bathroom during weekend mornings
@@ -1182,14 +1172,15 @@
       state: home
   action:
   - service: climate.set_hvac_mode
-    entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
     data:
       hvac_mode: heat
+    target:
+      entity_id: climate.bathroom_floor_2
   - service: climate.set_temperature
     data:
       temperature: 27
     target:
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
+      entity_id: climate.bathroom_floor_2
   mode: single
 - id: '906708440334'
   alias: Decrease floor heating in Bathroom after weekend mornings
@@ -1208,7 +1199,7 @@
     data:
       temperature: 20
     target:
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_021_mode_2
+      entity_id: climate.bathroom_floor_2
   mode: single
 - id: '276114421416'
   alias: Vacuum Starting
@@ -1264,7 +1255,7 @@
   alias: Vacuum scheduling weekdays when everyone away
   trigger:
   - platform: time
-    at: 00:00:00
+    at: '10:30:00'
   condition:
   - condition: and
     conditions:
@@ -1281,29 +1272,6 @@
   - service: vacuum.start
     entity_id: vacuum.pucky
   mode: single
-- id: '638223194736'
-  alias: i2 on livingroom ceiling put städis in emptying mode
-  trigger:
-    platform: state
-    entity_id: binary_sensor.sensor_5
-    to: 'on'
-  condition:
-  - condition: state
-    entity_id: vacuum.stadis
-    state: docked
-  action:
-  - service: xiaomi_miio.vacuum_remote_control_start
-    entity_id: vacuum.stadis
-  - delay: 12
-  - service: xiaomi_miio.vacuum_remote_control_move
-    entity_id: vacuum.stadis
-    data:
-      duration: 1400
-      velocity: 0.29
-      rotation: 0
-  - delay: 5
-  - service: xiaomi_miio.vacuum_remote_control_stop
-    entity_id: vacuum.stadis
 - id: '1601840263362'
   alias: Camera triggered - RLC520
   description: ''
@@ -1331,11 +1299,9 @@
   alias: Morning lights on
   description: ''
   trigger:
-  - type: turned_on
-    platform: device
-    device_id: 8aaf77f501264fbaa3b0ed8a48bfaa1c
-    entity_id: binary_sensor.shenzhen_neo_electronics_co_ltd_battery_powered_pir_sensor_sensor_2
-    domain: binary_sensor
+  - platform: state
+    entity_id: binary_sensor.hallway_pir_home_security_motion_detection
+    to: Detected
   condition:
   - condition: time
     after: 06:00
@@ -1404,9 +1370,9 @@
   description: ''
   trigger:
   - platform: state
-    entity_id: binary_sensor.qubino_goap_zmnhdd1_flush_dimmer_sensor_6
     from: 'off'
     to: 'on'
+    entity_id: binary_sensor.living_room_light_any_3
   condition: []
   action:
   - service: xiaomi_miio.vacuum_remote_control_start

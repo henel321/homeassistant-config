@@ -181,10 +181,10 @@ google_assistant:
     - vacuum
 
 # Zwave configuration
-zwave: 
-  usb_path: /dev/ttyACM0
-  polling_interval: 60000
-  autoheal: false
+# zwave: 
+#  usb_path: /dev/ttyACM0
+#  polling_interval: 60000
+#  autoheal: false
 
 netatmo:
   client_id: !secret netatmo_api
