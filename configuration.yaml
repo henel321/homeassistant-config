@@ -55,7 +55,7 @@ frontend:
   themes: !include_dir_named themes
 
 recorder: 
-  purge_keep_days: 14
+  purge_keep_days: 60 
   db_url: !secret db_url
   exclude: 
     domains: 
@@ -93,7 +93,7 @@ logger:
 # the developers to assist with development of Home Assistant.
 # For more information, please see:
 # https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
-updater:
+# updater:
   # Optional, allows Home Assistant developers to focus on popular components.
   # include_used_components: true
 
@@ -186,9 +186,9 @@ google_assistant:
 #  polling_interval: 60000
 #  autoheal: false
 
-netatmo:
-  client_id: !secret netatmo_api
-  client_secret: !secret netatmo_secret
+#netatmo:
+#  client_id: !secret netatmo_api
+#  client_secret: !secret netatmo_secret
 #  username: !secret netatmo_username 
 #  password: !secret netatmo_password
 
@@ -210,11 +210,11 @@ device_tracker:
       switch: 192.168.100.253
       ap: 192.168.100.250
 
-notify:
-  - name: slack 
-    platform: slack 
-    api_key: !secret slack_api_key
-    default_channel: 'homeassistant'
+#notify:
+#  - name: slack 
+#    platform: slack 
+#    api_key: !secret slack_api_key
+#    default_channel: 'homeassistant'
 
 #light: 
 # - platform: lifx
@@ -222,16 +222,17 @@ notify:
 
 system_health:
 
-spotify: 
-  client_id: !secret spotify_id
-  client_secret: !secret spotify_secret
+#spotify: 
+#  client_id: !secret spotify_id
+#  client_secret: !secret spotify_secret
 
-home_connect:
-  client_id: !secret hc_id
-  client_secret: !secret hc_secret 
+#home_connect:
+#  client_id: !secret hc_id
+#  client_secret: !secret hc_secret 
 
 qvr_pro: 
   host: !secret qvr_host 
   username: !secret qvr_username 
   password: !secret qvr_password 
+  port: 8080
 

@@ -219,15 +219,6 @@
     data: {}
     target:
       entity_id: switch.hallway_light_2
-- id: '64032500592'
-  alias: Turn off hallway light
-  trigger:
-    platform: time
-    at: '20:05:00'
-  action:
-    service: switch.turn_off
-    entity_id:
-    - switch.switch_3
 - id: '58085804358'
   alias: Turn off LIFX when lights turned off in living room.
   trigger:
@@ -999,7 +990,7 @@
   alias: Hass Updater
   trigger:
   - platform: state
-    entity_id: updater.updater
+    entity_id: binary_sensor.home_assistant_website_update_available
   action:
   - service: notify.slack
     data_template:
@@ -1387,4 +1378,24 @@
   - delay: '5'
   - service: xiaomi_miio.vacuum_remote_control_stop
     entity_id: vacuum.pucky
+  mode: single
+- id: '1655736798174'
+  alias: Turn off Hallway light when door closed 10 minutes
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - binary_sensor.hallway_door_sensor_access_control_window_door_is_open
+    from: 'on'
+    to: 'off'
+    for:
+      hours: 0
+      minutes: 10
+      seconds: 0
+  condition: []
+  action:
+  - service: switch.turn_off
+    data: {}
+    target:
+      entity_id: switch.hallway_light_2
   mode: single

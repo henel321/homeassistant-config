@@ -66,9 +66,6 @@ sensor:
         arg: /home/storage
       - type: memory_free
       - type: processor_use
-      - type: load_1m
-      - type: load_5m
-      - type: load_15m
       - type: memory_use 
       - type: memory_use_percent
       - type: last_boot

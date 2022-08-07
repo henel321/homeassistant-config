@@ -205,7 +205,7 @@
       - 0.389
       icon: mdi:led-strip-variant
       friendly_name: 'Bedroom LED strip '
-      supported_features: 55
+      supported_features: 36
       state: 'on'
     light.henriks_light:
       min_mireds: 140
@@ -232,20 +232,6 @@
       is_deconz_group: false
       friendly_name: Henriks Light
       supported_features: 44
-      state: 'on'
-    light.level_14:
-      supported_color_modes:
-      - brightness
-      color_mode: brightness
-      brightness: 8
-      node_id: 35
-      value_index: 0
-      value_instance: 1
-      value_id: '72057594629947393'
-      power_consumption: 0
-      icon: mdi:ceiling-light
-      friendly_name: Bedroom Ceiling Light
-      supported_features: 32
       state: 'on'
     light.marias_light:
       min_mireds: 140
@@ -295,19 +281,6 @@
       friendly_name: Bedroom Desk Light
       supported_features: 40
       state: 'on'
-    light.color_light_31:
-      effect_list:
-      - colorloop
-      supported_color_modes:
-      - hs
-      - xy
-      friendly_name: Christmas Church
-      supported_features: 44
-      state: unavailable
-    switch.osram_outdoor_plug:
-      icon: mdi:snowman
-      friendly_name: Balcony Outdoor Plug
-      state: unavailable
     light.extended_color_light_21:
       min_mireds: 140
       max_mireds: 650
@@ -335,6 +308,19 @@
       friendly_name: Bed LED Strip
       supported_features: 44
       state: 'on'
+  metadata:
+    light.bedroom_led_strip:
+      entity_only: false
+    light.balcony_led_strip:
+      entity_only: false
+    light.extended_color_light_21:
+      entity_only: false
+    light.color_temperature_light_32:
+      entity_only: false
+    light.marias_light:
+      entity_only: false
+    light.henriks_light:
+      entity_only: false
 - id: '00003'
   name: BR Cozy
   entities:
@@ -415,19 +401,8 @@
       - 0.389
       icon: mdi:led-strip-variant
       friendly_name: 'Bedroom LED strip '
-      supported_features: 55
+      supported_features: 36
       state: 'on'
-    light.level_14:
-      supported_color_modes:
-      - brightness
-      node_id: 35
-      value_index: 0
-      value_instance: 1
-      value_id: '72057594629947393'
-      power_consumption: 0
-      friendly_name: Bedroom Ceiling Light
-      supported_features: 32
-      state: 'off'
     light.color_temperature_light_32:
       min_mireds: 140
       max_mireds: 650
@@ -437,15 +412,6 @@
       friendly_name: Bedroom Desk Light
       supported_features: 40
       state: 'off'
-    light.color_light_31:
-      effect_list:
-      - colorloop
-      supported_color_modes:
-      - hs
-      - xy
-      friendly_name: Christmas Church
-      supported_features: 44
-      state: unavailable
     light.extended_color_light_21:
       min_mireds: 140
       max_mireds: 650
@@ -473,6 +439,17 @@
       friendly_name: Bed LED Strip
       supported_features: 44
       state: 'on'
+  metadata:
+    light.bedroom_led_strip:
+      entity_only: false
+    light.extended_color_light_21:
+      entity_only: false
+    light.color_temperature_light_32:
+      entity_only: false
+    light.marias_light:
+      entity_only: false
+    light.henriks_light:
+      entity_only: false
 - id: '00004'
   name: BR Off
   entities:
@@ -502,7 +479,7 @@
       - hs
       icon: mdi:led-strip-variant
       friendly_name: 'Bedroom LED strip '
-      supported_features: 55
+      supported_features: 36
       state: 'off'
     light.henriks_light:
       min_mireds: 140
@@ -539,19 +516,6 @@
       friendly_name: Bedroom Desk Light
       supported_features: 40
       state: 'off'
-    switch.osram_outdoor_plug:
-      icon: mdi:snowman
-      friendly_name: Balcony Outdoor Plug
-      state: unavailable
-    light.color_light_31:
-      effect_list:
-      - colorloop
-      supported_color_modes:
-      - hs
-      - xy
-      friendly_name: Christmas Church
-      supported_features: 44
-      state: unavailable
     light.extended_color_light_21:
       min_mireds: 140
       max_mireds: 650
@@ -572,9 +536,27 @@
     light.bedroom_ceiling_light_5:
       supported_color_modes:
       - brightness
+      icon: mdi:ceiling-light-outline
       friendly_name: Bedroom Ceiling Light
       supported_features: 32
       state: 'off'
+  metadata:
+    light.bedroom_led_strip:
+      entity_only: false
+    light.balcony_led_strip:
+      entity_only: false
+    light.extended_color_light_21:
+      entity_only: false
+    light.color_temperature_light_32:
+      entity_only: false
+    light.marias_light:
+      entity_only: false
+    light.henriks_light:
+      entity_only: false
+    switch.bedroom_ceiling_light_5:
+      entity_only: false
+    light.bedroom_ceiling_light_5:
+      entity_only: false
 - id: '00005'
   name: BR Romantic
   entities:
@@ -1022,13 +1004,6 @@
       friendly_name: Elins LED strip
       supported_features: 55
       state: 'off'
-    switch.telldusextra_switch:
-      node_id: 4
-      value_index: 0
-      value_instance: 1
-      value_id: '72057594109837312'
-      friendly_name: Elin Bed light
-      state: 'on'
     switch.indoor_plug_2:
       icon: mdi:lightbulb-fluorescent-tube-outline
       friendly_name: Elins Bed light
@@ -1043,7 +1018,7 @@
       - hs
       - xy
       color_mode: xy
-      brightness: 51
+      brightness: 28
       hs_color:
       - 29.834
       - 70.98
@@ -1052,7 +1027,7 @@
       - 164
       - 74
       xy_color:
-      - 0.54
+      - 0.5398
       - 0.393
       is_deconz_group: false
       friendly_name: Elins Hue Go
@@ -1329,20 +1304,21 @@
       - color_temp
       - hs
       color_mode: color_temp
-      brightness: 97
-      color_temp: 377
+      brightness: 48
       hs_color:
-      - 28.502
-      - 67.279
+      - 27.911
+      - 58.298
       rgb_color:
       - 255
-      - 164
-      - 83
+      - 175
+      - 106
       xy_color:
-      - 0.532
-      - 0.387
+      - 0.501
+      - 0.384
+      icon: mdi:led-strip-variant
       friendly_name: Livingroom LED Strip
-      supported_features: 55
+      supported_features: 36
+      color_temp: 339
       state: 'on'
     light.floor_light:
       effect_list:
@@ -1363,6 +1339,7 @@
       - 0.554
       - 0.395
       is_deconz_group: false
+      icon: mdi:floor-lamp
       friendly_name: Floor Light
       supported_features: 44
       state: 'on'
@@ -1391,12 +1368,11 @@
       friendly_name: Herstal Tentacle
       supported_features: 44
       state: 'on'
-    switch.indoor_plug_1:
-      friendly_name: Christmas Tree
-      state: 'on'
     switch.indoor_plug_3:
-      friendly_name: Living Room Christmas light
+      icon: mdi:lightbulb-on-10
+      friendly_name: Mr Wattson
       state: 'on'
+  metadata: {}
 - id: '00015'
   name: LR Movie
   entities:
@@ -1406,8 +1382,11 @@
       supported_color_modes:
       - hs
       - xy
+      is_deconz_group: false
+      friendly_name: Ikea PS Uplight
+      supported_features: 44
       color_mode: xy
-      brightness: 30
+      brightness: 2
       hs_color:
       - 254.634
       - 80.392
@@ -1418,9 +1397,6 @@
       xy_color:
       - 0.183
       - 0.073
-      is_deconz_group: false
-      friendly_name: Ikea PS Uplight
-      supported_features: 44
       state: 'on'
     light.living_room_1:
       min_mireds: 140
@@ -1431,6 +1407,9 @@
       - color_temp
       - hs
       - xy
+      is_deconz_group: false
+      friendly_name: Living Room 1
+      supported_features: 44
       color_mode: xy
       brightness: 51
       hs_color:
@@ -1443,9 +1422,6 @@
       xy_color:
       - 0.217
       - 0.077
-      is_deconz_group: false
-      friendly_name: Living Room 1
-      supported_features: 44
       state: 'on'
     light.living_room_2:
       min_mireds: 140
@@ -1456,6 +1432,9 @@
       - color_temp
       - hs
       - xy
+      is_deconz_group: false
+      friendly_name: Living Room 2
+      supported_features: 44
       color_mode: xy
       brightness: 46
       hs_color:
@@ -1468,9 +1447,6 @@
       xy_color:
       - 0.217
       - 0.077
-      is_deconz_group: false
-      friendly_name: Living Room 2
-      supported_features: 44
       state: 'on'
     light.lifx_led_strip:
       min_mireds: 111
@@ -1482,6 +1458,9 @@
       supported_color_modes:
       - color_temp
       - hs
+      icon: mdi:led-strip-variant
+      friendly_name: Livingroom LED Strip
+      supported_features: 36
       color_mode: hs
       brightness: 140
       hs_color:
@@ -1494,8 +1473,6 @@
       xy_color:
       - 0.377
       - 0.398
-      friendly_name: Livingroom LED Strip
-      supported_features: 55
       state: 'on'
     light.floor_light:
       effect_list:
@@ -1503,6 +1480,10 @@
       supported_color_modes:
       - hs
       - xy
+      is_deconz_group: false
+      icon: mdi:floor-lamp
+      friendly_name: Floor Light
+      supported_features: 44
       color_mode: xy
       brightness: 10
       hs_color:
@@ -1515,9 +1496,6 @@
       xy_color:
       - 0.222
       - 0.079
-      is_deconz_group: false
-      friendly_name: Floor Light
-      supported_features: 44
       state: 'on'
     light.herstal_tentacle:
       min_mireds: 140
@@ -1528,6 +1506,9 @@
       - color_temp
       - hs
       - xy
+      is_deconz_group: false
+      friendly_name: Herstal Tentacle
+      supported_features: 44
       color_mode: xy
       brightness: 38
       hs_color:
@@ -1540,16 +1521,12 @@
       xy_color:
       - 0.259
       - 0.122
-      is_deconz_group: false
-      friendly_name: Herstal Tentacle
-      supported_features: 44
       state: 'on'
-    switch.indoor_plug_1:
-      friendly_name: Christmas Tree
-      state: unavailable
     switch.indoor_plug_3:
-      friendly_name: Living Room Christmas light
+      friendly_name: Mr Wattson
+      icon: mdi:lightbulb-outline
       state: 'off'
+  metadata: {}
 - id: '00016'
   name: LR Normal
   entities:
@@ -1559,8 +1536,11 @@
       supported_color_modes:
       - hs
       - xy
+      is_deconz_group: false
+      friendly_name: Ikea PS Uplight
+      supported_features: 44
       color_mode: xy
-      brightness: 227
+      brightness: 184
       hs_color:
       - 30.207
       - 56.863
@@ -1571,9 +1551,6 @@
       xy_color:
       - 0.491
       - 0.39
-      is_deconz_group: false
-      friendly_name: Ikea PS Uplight
-      supported_features: 44
       state: 'on'
     light.living_room_1:
       min_mireds: 140
@@ -1584,8 +1561,11 @@
       - color_temp
       - hs
       - xy
+      is_deconz_group: false
+      friendly_name: Living Room 1
+      supported_features: 44
       color_mode: color_temp
-      brightness: 194
+      brightness: 173
       color_temp: 454
       hs_color:
       - 29.79
@@ -1597,9 +1577,6 @@
       xy_color:
       - 0.579
       - 0.388
-      is_deconz_group: false
-      friendly_name: Living Room 1
-      supported_features: 44
       state: 'on'
     light.living_room_2:
       min_mireds: 140
@@ -1610,6 +1587,9 @@
       - color_temp
       - hs
       - xy
+      is_deconz_group: false
+      friendly_name: Living Room 2
+      supported_features: 44
       color_mode: color_temp
       brightness: 196
       color_temp: 454
@@ -1623,9 +1603,6 @@
       xy_color:
       - 0.579
       - 0.388
-      is_deconz_group: false
-      friendly_name: Living Room 2
-      supported_features: 44
       state: 'on'
     light.lifx_led_strip:
       min_mireds: 111
@@ -1637,21 +1614,21 @@
       supported_color_modes:
       - color_temp
       - hs
-      color_mode: color_temp
-      brightness: 250
-      color_temp: 338
+      icon: mdi:led-strip-variant
+      friendly_name: Livingroom LED Strip
+      supported_features: 36
+      color_mode: hs
+      brightness: 140
       hs_color:
-      - 27.896
-      - 58.048
+      - 54.702
+      - 28.571
       rgb_color:
       - 255
-      - 175
-      - 106
+      - 248
+      - 182
       xy_color:
-      - 0.501
-      - 0.384
-      friendly_name: Livingroom LED Strip
-      supported_features: 55
+      - 0.377
+      - 0.398
       state: 'on'
     light.floor_light:
       effect_list:
@@ -1659,6 +1636,10 @@
       supported_color_modes:
       - hs
       - xy
+      is_deconz_group: false
+      icon: mdi:floor-lamp
+      friendly_name: Floor Light
+      supported_features: 44
       color_mode: xy
       brightness: 199
       hs_color:
@@ -1671,9 +1652,6 @@
       xy_color:
       - 0.497
       - 0.402
-      is_deconz_group: false
-      friendly_name: Floor Light
-      supported_features: 44
       state: 'on'
     light.herstal_tentacle:
       min_mireds: 140
@@ -1684,8 +1662,11 @@
       - color_temp
       - hs
       - xy
+      is_deconz_group: false
+      friendly_name: Herstal Tentacle
+      supported_features: 44
       color_mode: color_temp
-      brightness: 191
+      brightness: 38
       color_temp: 454
       hs_color:
       - 29.79
@@ -1697,16 +1678,12 @@
       xy_color:
       - 0.579
       - 0.388
-      is_deconz_group: false
-      friendly_name: Herstal Tentacle
-      supported_features: 44
       state: 'on'
     switch.indoor_plug_3:
-      friendly_name: Living Room Christmas light
+      friendly_name: Mr Wattson
+      icon: mdi:lightbulb-outline
       state: 'on'
-    switch.indoor_plug_1:
-      friendly_name: Christmas Tree
-      state: 'on'
+  metadata: {}
 - id: '00017'
   name: LR Off
   entities:
@@ -1827,6 +1804,9 @@
       supported_color_modes:
       - hs
       - xy
+      is_deconz_group: false
+      friendly_name: Ikea PS Uplight
+      supported_features: 44
       color_mode: xy
       brightness: 40
       hs_color:
@@ -1839,9 +1819,6 @@
       xy_color:
       - 0.701
       - 0.299
-      is_deconz_group: false
-      friendly_name: Ikea PS Uplight
-      supported_features: 44
       state: 'on'
     light.living_room_1:
       min_mireds: 140
@@ -1852,6 +1829,9 @@
       - color_temp
       - hs
       - xy
+      is_deconz_group: false
+      friendly_name: Living Room 1
+      supported_features: 44
       color_mode: xy
       brightness: 33
       hs_color:
@@ -1864,9 +1844,6 @@
       xy_color:
       - 0.701
       - 0.299
-      is_deconz_group: false
-      friendly_name: Living Room 1
-      supported_features: 44
       state: 'on'
     light.living_room_2:
       min_mireds: 140
@@ -1877,6 +1854,9 @@
       - color_temp
       - hs
       - xy
+      is_deconz_group: false
+      friendly_name: Living Room 2
+      supported_features: 44
       color_mode: xy
       brightness: 51
       hs_color:
@@ -1889,9 +1869,6 @@
       xy_color:
       - 0.701
       - 0.299
-      is_deconz_group: false
-      friendly_name: Living Room 2
-      supported_features: 44
       state: 'on'
     light.lifx_led_strip:
       min_mireds: 111
@@ -1903,20 +1880,21 @@
       supported_color_modes:
       - color_temp
       - hs
-      color_mode: hs
-      brightness: 110
-      hs_color:
-      - 344.998
-      - 100
-      rgb_color:
-      - 255
-      - 0
-      - 63
-      xy_color:
-      - 0.667
-      - 0.284
+      icon: mdi:led-strip-variant
       friendly_name: Livingroom LED Strip
       supported_features: 55
+      color_mode: hs
+      brightness: 140
+      hs_color:
+      - 54.702
+      - 28.571
+      rgb_color:
+      - 255
+      - 248
+      - 182
+      xy_color:
+      - 0.377
+      - 0.398
       state: 'on'
     light.floor_light:
       effect_list:
@@ -1924,6 +1902,10 @@
       supported_color_modes:
       - hs
       - xy
+      is_deconz_group: false
+      icon: mdi:floor-lamp
+      friendly_name: Floor Light
+      supported_features: 44
       color_mode: xy
       brightness: 20
       hs_color:
@@ -1936,9 +1918,6 @@
       xy_color:
       - 0.701
       - 0.299
-      is_deconz_group: false
-      friendly_name: Floor Light
-      supported_features: 44
       state: 'on'
     light.herstal_tentacle:
       min_mireds: 140
@@ -1949,6 +1928,9 @@
       - color_temp
       - hs
       - xy
+      is_deconz_group: false
+      friendly_name: Herstal Tentacle
+      supported_features: 44
       color_mode: xy
       brightness: 82
       hs_color:
@@ -1961,16 +1943,7 @@
       xy_color:
       - 0.701
       - 0.299
-      is_deconz_group: false
-      friendly_name: Herstal Tentacle
-      supported_features: 44
       state: 'on'
-    switch.indoor_plug_1:
-      friendly_name: Christmas Tree
-      state: unavailable
-    switch.indoor_plug_3:
-      friendly_name: Living Room Christmas light
-      state: 'off'
 - id: 00019
   name: OR Gaming
   entities:
@@ -2118,10 +2091,12 @@
       - 0.56
       - 0.39
       is_deconz_group: false
+      icon: mdi:led-strip-variant
       friendly_name: Office Led Strip
       supported_features: 44
       state: 'on'
     switch.office_screen_light:
+      icon: mdi:led-strip-variant
       friendly_name: Office Screen Light
       state: 'on'
     light.office_painting_spotlight:
@@ -2143,23 +2118,41 @@
       - 0.491
       - 0.39
       is_deconz_group: false
+      icon: mdi:lightbulb-spot
       friendly_name: Office Painting Spotlight
       supported_features: 44
       state: 'on'
     light.office_mood_light:
       supported_color_modes:
       - brightness
+      is_deconz_group: false
       friendly_name: Office Mood light
       supported_features: 40
-      state: unavailable
+      color_mode: brightness
+      brightness: 76
+      state: 'on'
     light.elgato_key_light_air:
       min_mireds: 143
       max_mireds: 344
       supported_color_modes:
       - color_temp
+      icon: mdi:spotlight
       friendly_name: Elgato Key Light Air
       supported_features: 0
       state: 'off'
+  metadata:
+    light.office_led_strip:
+      entity_only: false
+    switch.office_screen_light:
+      entity_only: false
+    light.office_mood_light:
+      entity_only: false
+    light.office_painting_spotlight:
+      entity_only: false
+    light.office_table_light:
+      entity_only: false
+    light.elgato_key_light_air:
+      entity_only: false
 - id: '00021'
   name: OR Off
   entities:
@@ -2191,6 +2184,7 @@
       supported_features: 44
       state: 'off'
     switch.office_screen_light:
+      icon: mdi:led-strip-variant
       friendly_name: Office Screen Light
       state: 'off'
     light.office_painting_spotlight:
@@ -2207,9 +2201,10 @@
     light.office_mood_light:
       supported_color_modes:
       - brightness
+      is_deconz_group: false
       friendly_name: Office Mood light
       supported_features: 40
-      state: unavailable
+      state: 'off'
     light.elgato_key_light_air:
       min_mireds: 143
       max_mireds: 344
@@ -2229,6 +2224,23 @@
       friendly_name: Office Ceiling Light
       supported_features: 32
       state: 'off'
+  metadata:
+    light.office_led_strip:
+      entity_only: false
+    switch.office_screen_light:
+      entity_only: false
+    light.office_mood_light:
+      entity_only: false
+    light.office_painting_spotlight:
+      entity_only: false
+    light.office_table_light:
+      entity_only: false
+    light.elgato_key_light_air:
+      entity_only: false
+    switch.office_ceiling_light_6:
+      entity_only: false
+    light.office_ceiling_light_6:
+      entity_only: false
 - id: '00022'
   name: VR Bright
   entities:
